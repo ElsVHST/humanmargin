@@ -1,0 +1,3793 @@
+{
+ "tag": "header",
+ "cls": "elementor elementor-33 elementor-location-header",
+ "s": {
+  "fontSize": "18px",
+  "fontWeight": "400",
+  "fontFamily": "Archivo, sans-serif",
+  "lineHeight": "27px",
+  "color": "rgb(17, 16, 16)",
+  "textAlign": "start",
+  "backgroundPosition": "0% 0%",
+  "width": "1440px",
+  "height": "110px",
+  "display": "block",
+  "flexDirection": "row",
+  "flexWrap": "nowrap",
+  "borderColor": "rgb(17, 16, 16)",
+  "transition": "all",
+  "objectFit": "fill",
+  "objectPosition": "50% 50%"
+ },
+ "rect": [
+  0,
+  0,
+  1440,
+  110
+ ],
+ "kids": [
+  {
+   "tag": "div",
+   "cls": "elementor-element e-con-full e-flex e-con e-parent elementor-sticky",
+   "s": {
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "fontFamily": "Archivo, sans-serif",
+    "lineHeight": "27px",
+    "color": "rgb(17, 16, 16)",
+    "textAlign": "start",
+    "backgroundColor": "rgb(17, 16, 16)",
+    "backgroundPosition": "0% 0%",
+    "paddingTop": "10px",
+    "paddingRight": "10px",
+    "paddingBottom": "10px",
+    "paddingLeft": "10px",
+    "width": "1440px",
+    "height": "110px",
+    "maxWidth": "100%",
+    "minHeight": "110px",
+    "display": "flex",
+    "flexDirection": "row",
+    "alignItems": "stretch",
+    "flexWrap": "nowrap",
+    "gap": "10px",
+    "borderBottomWidth": "2px",
+    "borderColor": "rgb(237, 255, 0)",
+    "borderStyle": "solid",
+    "position": "fixed",
+    "bottom": "790px",
+    "zIndex": "1000",
+    "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s",
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+   },
+   "rect": [
+    0,
+    0,
+    1440,
+    110
+   ],
+   "kids": [
+    {
+     "tag": "div",
+     "cls": "elementor-element e-con-full e-flex e-con e-child",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "backgroundPosition": "0% 0%",
+      "paddingTop": "10px",
+      "paddingRight": "10px",
+      "paddingBottom": "10px",
+      "paddingLeft": "10px",
+      "width": "217.203px",
+      "height": "88px",
+      "display": "flex",
+      "flexDirection": "column",
+      "justifyContent": "center",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "zIndex": "1000",
+      "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      10,
+      10,
+      217,
+      88
+     ],
+     "kids": [
+      {
+       "tag": "div",
+       "cls": "elementor-element elementor-widget elementor-widget-image",
+       "widget": "image.default",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "end",
+        "backgroundPosition": "0% 0%",
+        "width": "197.203px",
+        "height": "52.5312px",
+        "maxWidth": "100%",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "gap": "20px",
+        "borderColor": "rgb(17, 16, 16)",
+        "position": "relative",
+        "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        20,
+        28,
+        197,
+        53
+       ],
+       "kids": [
+        {
+         "tag": "a",
+         "href": "https://humanmargin.eu",
+         "s": {
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "27px",
+          "color": "rgb(255, 92, 23)",
+          "textAlign": "end",
+          "backgroundPosition": "0% 0%",
+          "width": "197.203px",
+          "height": "52.5312px",
+          "display": "inline-block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "borderColor": "rgb(255, 92, 23)",
+          "transition": "all",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+         },
+         "rect": [
+          20,
+          28,
+          197,
+          53
+         ],
+         "kids": [
+          {
+           "tag": "img",
+           "cls": "attachment-large size-large wp-image-160",
+           "img": {
+            "src": "https://humanmargin.eu/wp-content/uploads/2026/06/human-margin-logo-inverted-rgb-900px-w-72ppi.png",
+            "alt": "",
+            "w": 800,
+            "h": 387
+           },
+           "s": {
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "fontFamily": "Archivo, sans-serif",
+            "lineHeight": "27px",
+            "color": "rgb(255, 92, 23)",
+            "textAlign": "end",
+            "backgroundPosition": "0% 0%",
+            "width": "108.453px",
+            "height": "52.5312px",
+            "maxWidth": "100%",
+            "display": "inline-block",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "borderColor": "rgb(255, 92, 23)",
+            "overflow": "clip",
+            "transition": "all",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "aspectRatio": "auto 800 / 388"
+           },
+           "rect": [
+            109,
+            28,
+            108,
+            53
+           ],
+           "kids": []
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "tag": "div",
+     "cls": "elementor-element e-con-full e-flex e-con e-child",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "backgroundPosition": "0% 0%",
+      "paddingRight": "56.7969px",
+      "width": "1192.8px",
+      "height": "88px",
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "flex-end",
+      "alignItems": "center",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "zIndex": "1000",
+      "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      237,
+      10,
+      1193,
+      88
+     ],
+     "kids": [
+      {
+       "tag": "div",
+       "cls": "elementor-element elementor-hidden-widescreen elementor-hidden-desktop elementor-hidden-laptop elementor-hidden-tablet_extra elementor-hidden-mobile",
+       "widget": "heading.default",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "maxWidth": "100%",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "gap": "20px",
+        "borderColor": "rgb(17, 16, 16)",
+        "position": "relative",
+        "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "kids": [
+        {
+         "tag": "h2",
+         "cls": "elementor-heading-title elementor-size-default",
+         "text": "Menu",
+         "s": {
+          "fontSize": "15px",
+          "fontWeight": "700",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "18px",
+          "color": "rgb(221, 221, 211)",
+          "textTransform": "uppercase",
+          "textAlign": "start",
+          "backgroundPosition": "0% 0%",
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "borderColor": "rgb(221, 221, 211)",
+          "transition": "all",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+         },
+         "rect": [
+          0,
+          0,
+          0,
+          0
+         ],
+         "kids": []
+        }
+       ]
+      },
+      {
+       "tag": "div",
+       "cls": "elementor-element elementor-nav-menu__align-end elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit",
+       "widget": "nav-menu.default",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "width": "741.719px",
+        "height": "44px",
+        "maxWidth": "100%",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "gap": "20px",
+        "borderColor": "rgb(17, 16, 16)",
+        "position": "relative",
+        "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        331,
+        32,
+        742,
+        44
+       ],
+       "kids": [
+        {
+         "tag": "nav",
+         "cls": "elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none",
+         "s": {
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "27px",
+          "color": "rgb(17, 16, 16)",
+          "textAlign": "start",
+          "backgroundPosition": "0% 0%",
+          "width": "741.719px",
+          "height": "44px",
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "borderColor": "rgb(17, 16, 16)",
+          "transition": "all",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+         },
+         "rect": [
+          331,
+          32,
+          742,
+          44
+         ],
+         "kids": [
+          {
+           "tag": "ul",
+           "cls": "elementor-nav-menu",
+           "s": {
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "fontFamily": "Archivo, sans-serif",
+            "color": "rgb(17, 16, 16)",
+            "textAlign": "start",
+            "backgroundPosition": "0% 0%",
+            "width": "741.719px",
+            "height": "44px",
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "flex-end",
+            "flexWrap": "wrap",
+            "borderColor": "rgb(17, 16, 16)",
+            "position": "relative",
+            "zIndex": "2",
+            "transition": "all",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%"
+           },
+           "rect": [
+            331,
+            32,
+            742,
+            44
+           ],
+           "kids": [
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item",
+             "s": {
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "width": "70.5px",
+              "height": "44px",
+              "display": "flex",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              331,
+              32,
+              71,
+              44
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item elementor-item-active",
+               "text": "Home",
+               "href": "https://humanmargin.eu/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(237, 255, 0)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "13px",
+                "paddingBottom": "13px",
+                "marginRight": "25.5px",
+                "width": "45px",
+                "height": "44px",
+                "display": "flex",
+                "flexDirection": "row",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(237, 255, 0)",
+                "position": "relative",
+                "transition": "0.4s",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                331,
+                32,
+                45,
+                44
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-193",
+             "s": {
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "width": "127.672px",
+              "height": "44px",
+              "display": "flex",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              402,
+              32,
+              128,
+              44
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item",
+               "text": "Manifest",
+               "href": "https://humanmargin.eu/manifest/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(255, 255, 255)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "13px",
+                "paddingBottom": "13px",
+                "marginRight": "25.5px",
+                "marginLeft": "25.5px",
+                "width": "76.6719px",
+                "height": "44px",
+                "display": "flex",
+                "flexDirection": "row",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(255, 255, 255)",
+                "position": "relative",
+                "transition": "0.4s",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                427,
+                32,
+                77,
+                44
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-194",
+             "s": {
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "width": "155.172px",
+              "height": "44px",
+              "display": "flex",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              529,
+              32,
+              155,
+              44
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item has-submenu",
+               "text": "Leeszaal",
+               "href": "https://humanmargin.eu/leeszaal/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(255, 255, 255)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "13px",
+                "paddingBottom": "13px",
+                "marginRight": "25.5px",
+                "marginLeft": "25.5px",
+                "width": "104.172px",
+                "height": "44px",
+                "display": "flex",
+                "flexDirection": "row",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(255, 255, 255)",
+                "position": "relative",
+                "transition": "0.4s",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                555,
+                32,
+                104,
+                44
+               ],
+               "kids": []
+              },
+              {
+               "tag": "ul",
+               "cls": "sub-menu elementor-nav-menu--dropdown",
+               "s": {
+                "fontSize": "13px",
+                "fontWeight": "400",
+                "fontFamily": "Archivo, sans-serif",
+                "color": "rgb(17, 16, 16)",
+                "textAlign": "start",
+                "backgroundColor": "rgb(0, 44, 207)",
+                "backgroundPosition": "0% 0%",
+                "width": "156px",
+                "flexDirection": "row",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(17, 16, 16)",
+                "boxShadow": "rgba(0, 0, 0, 0.5) 0px 0px 10px 0px",
+                "position": "absolute",
+                "top": "100%",
+                "left": "25.5px",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-195",
+             "s": {
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "width": "167.969px",
+              "height": "44px",
+              "display": "flex",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              685,
+              32,
+              168,
+              44
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item has-submenu",
+               "text": "Neem actie",
+               "href": "https://humanmargin.eu/neem-actie/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(255, 255, 255)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "13px",
+                "paddingBottom": "13px",
+                "marginRight": "25.5px",
+                "marginLeft": "25.5px",
+                "width": "116.969px",
+                "height": "44px",
+                "display": "flex",
+                "flexDirection": "row",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(255, 255, 255)",
+                "position": "relative",
+                "transition": "0.4s",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                710,
+                32,
+                117,
+                44
+               ],
+               "kids": []
+              },
+              {
+               "tag": "ul",
+               "cls": "sub-menu elementor-nav-menu--dropdown",
+               "s": {
+                "fontSize": "13px",
+                "fontWeight": "400",
+                "fontFamily": "Archivo, sans-serif",
+                "color": "rgb(17, 16, 16)",
+                "textAlign": "start",
+                "backgroundColor": "rgb(0, 44, 207)",
+                "backgroundPosition": "0% 0%",
+                "width": "156px",
+                "flexDirection": "row",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(17, 16, 16)",
+                "boxShadow": "rgba(0, 0, 0, 0.5) 0px 0px 10px 0px",
+                "position": "absolute",
+                "top": "100%",
+                "left": "25.5px",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-106",
+             "s": {
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "width": "122.688px",
+              "height": "44px",
+              "display": "flex",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              853,
+              32,
+              123,
+              44
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item",
+               "text": "Over mij",
+               "href": "https://humanmargin.eu/over-mij/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(255, 255, 255)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "13px",
+                "paddingBottom": "13px",
+                "marginRight": "25.5px",
+                "marginLeft": "25.5px",
+                "width": "71.6875px",
+                "height": "44px",
+                "display": "flex",
+                "flexDirection": "row",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(255, 255, 255)",
+                "position": "relative",
+                "transition": "0.4s",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                878,
+                32,
+                72,
+                44
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-108",
+             "s": {
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "width": "97.7188px",
+              "height": "44px",
+              "display": "flex",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              975,
+              32,
+              98,
+              44
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item",
+               "text": "Contact",
+               "href": "https://humanmargin.eu/contact/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(255, 255, 255)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "13px",
+                "paddingBottom": "13px",
+                "marginLeft": "25.5px",
+                "width": "72.2188px",
+                "height": "44px",
+                "display": "flex",
+                "flexDirection": "row",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(255, 255, 255)",
+                "position": "relative",
+                "transition": "0.4s",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                1001,
+                32,
+                72,
+                44
+               ],
+               "kids": []
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "div",
+         "cls": "elementor-menu-toggle",
+         "s": {
+          "fontSize": "22px",
+          "fontWeight": "400",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "33px",
+          "color": "rgb(237, 255, 0)",
+          "textAlign": "start",
+          "backgroundColor": "rgba(0, 0, 0, 0.05)",
+          "backgroundPosition": "0% 0%",
+          "paddingTop": "5.5px",
+          "paddingRight": "5.5px",
+          "paddingBottom": "5.5px",
+          "paddingLeft": "5.5px",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "flexWrap": "nowrap",
+          "borderRadius": "3px",
+          "borderColor": "rgb(237, 255, 0)",
+          "borderStyle": "solid",
+          "transition": "all",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+         },
+         "rect": [
+          0,
+          0,
+          0,
+          0
+         ],
+         "kids": [
+          {
+           "tag": "svg",
+           "cls": "[object SVGAnimatedString]",
+           "svg": "<svg aria-hidden=\"true\" role=\"presentation\" class=\"elementor-menu-toggle__icon--open elementor-animation-grow-rotate e-font-icon-svg e-eicon-menu-bar\" viewBox=\"0 0 1000 1000\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z\">",
+           "s": {
+            "fontSize": "22px",
+            "fontWeight": "400",
+            "fontFamily": "Archivo, sans-serif",
+            "lineHeight": "33px",
+            "color": "rgb(237, 255, 0)",
+            "textAlign": "start",
+            "backgroundPosition": "0% 0%",
+            "width": "22px",
+            "height": "22px",
+            "display": "inline",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "borderColor": "rgb(237, 255, 0)",
+            "overflow": "hidden",
+            "transition": "transform 0.3s",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%"
+           },
+           "rect": [
+            0,
+            0,
+            0,
+            0
+           ],
+           "kids": []
+          },
+          {
+           "tag": "svg",
+           "cls": "[object SVGAnimatedString]",
+           "svg": "<svg aria-hidden=\"true\" role=\"presentation\" class=\"elementor-menu-toggle__icon--close elementor-animation-grow-rotate e-font-icon-svg e-eicon-close\" viewBox=\"0 0 1000 1000\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 84",
+           "s": {
+            "fontSize": "22px",
+            "fontWeight": "400",
+            "fontFamily": "Archivo, sans-serif",
+            "lineHeight": "33px",
+            "color": "rgb(237, 255, 0)",
+            "textAlign": "start",
+            "backgroundPosition": "0% 0%",
+            "width": "22px",
+            "height": "22px",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "borderColor": "rgb(237, 255, 0)",
+            "overflow": "hidden",
+            "transition": "transform 0.3s",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%"
+           },
+           "rect": [
+            0,
+            0,
+            0,
+            0
+           ],
+           "kids": []
+          }
+         ]
+        },
+        {
+         "tag": "nav",
+         "cls": "elementor-nav-menu--dropdown elementor-nav-menu__container",
+         "s": {
+          "fontSize": "13px",
+          "fontWeight": "400",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "19.5px",
+          "color": "rgb(17, 16, 16)",
+          "textAlign": "start",
+          "backgroundColor": "rgb(0, 44, 207)",
+          "backgroundPosition": "0% 0%",
+          "marginTop": "10px",
+          "width": "1440px",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "borderColor": "rgb(17, 16, 16)",
+          "boxShadow": "rgba(0, 0, 0, 0.5) 0px 0px 10px 0px",
+          "overflow": "hidden",
+          "position": "absolute",
+          "top": "44px",
+          "zIndex": "9997",
+          "transition": "max-height 0.3s, transform 0.3s",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+         },
+         "rect": [
+          0,
+          0,
+          0,
+          0
+         ],
+         "kids": [
+          {
+           "tag": "ul",
+           "cls": "elementor-nav-menu",
+           "s": {
+            "fontSize": "13px",
+            "fontWeight": "400",
+            "fontFamily": "Archivo, sans-serif",
+            "color": "rgb(17, 16, 16)",
+            "textAlign": "start",
+            "backgroundPosition": "0% 0%",
+            "display": "block",
+            "flexDirection": "row",
+            "justifyContent": "flex-end",
+            "flexWrap": "nowrap",
+            "borderColor": "rgb(17, 16, 16)",
+            "position": "relative",
+            "zIndex": "2",
+            "transition": "all",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%"
+           },
+           "rect": [
+            0,
+            0,
+            0,
+            0
+           ],
+           "kids": [
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item",
+             "s": {
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "display": "block",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item elementor-item-active",
+               "text": "Home",
+               "href": "https://humanmargin.eu/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(237, 255, 0)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundColor": "rgb(17, 16, 16)",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "10px",
+                "paddingRight": "20px",
+                "paddingBottom": "10px",
+                "paddingLeft": "20px",
+                "display": "flex",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(237, 255, 0)",
+                "position": "relative",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-193",
+             "s": {
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "display": "block",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item",
+               "text": "Manifest",
+               "href": "https://humanmargin.eu/manifest/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(237, 255, 0)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "10px",
+                "paddingRight": "20px",
+                "paddingBottom": "10px",
+                "paddingLeft": "20px",
+                "display": "flex",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(237, 255, 0)",
+                "position": "relative",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-194",
+             "s": {
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "display": "block",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item has-submenu",
+               "text": "Leeszaal",
+               "href": "https://humanmargin.eu/leeszaal/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(237, 255, 0)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "10px",
+                "paddingRight": "20px",
+                "paddingBottom": "10px",
+                "paddingLeft": "20px",
+                "display": "flex",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(237, 255, 0)",
+                "position": "relative",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              },
+              {
+               "tag": "ul",
+               "cls": "sub-menu elementor-nav-menu--dropdown",
+               "s": {
+                "fontSize": "13px",
+                "fontWeight": "400",
+                "fontFamily": "Archivo, sans-serif",
+                "color": "rgb(17, 16, 16)",
+                "textAlign": "start",
+                "backgroundColor": "rgb(0, 44, 207)",
+                "backgroundPosition": "0% 0%",
+                "flexDirection": "row",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(17, 16, 16)",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-195",
+             "s": {
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "display": "block",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item has-submenu",
+               "text": "Neem actie",
+               "href": "https://humanmargin.eu/neem-actie/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(237, 255, 0)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "10px",
+                "paddingRight": "20px",
+                "paddingBottom": "10px",
+                "paddingLeft": "20px",
+                "display": "flex",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(237, 255, 0)",
+                "position": "relative",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              },
+              {
+               "tag": "ul",
+               "cls": "sub-menu elementor-nav-menu--dropdown",
+               "s": {
+                "fontSize": "13px",
+                "fontWeight": "400",
+                "fontFamily": "Archivo, sans-serif",
+                "color": "rgb(17, 16, 16)",
+                "textAlign": "start",
+                "backgroundColor": "rgb(0, 44, 207)",
+                "backgroundPosition": "0% 0%",
+                "flexDirection": "row",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(17, 16, 16)",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-106",
+             "s": {
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "display": "block",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item",
+               "text": "Over mij",
+               "href": "https://humanmargin.eu/over-mij/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(237, 255, 0)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "10px",
+                "paddingRight": "20px",
+                "paddingBottom": "10px",
+                "paddingLeft": "20px",
+                "display": "flex",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(237, 255, 0)",
+                "position": "relative",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-108",
+             "s": {
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "display": "block",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item",
+               "text": "Contact",
+               "href": "https://humanmargin.eu/contact/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(237, 255, 0)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "10px",
+                "paddingRight": "20px",
+                "paddingBottom": "10px",
+                "paddingLeft": "20px",
+                "display": "flex",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(237, 255, 0)",
+                "position": "relative",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tag": "div",
+       "cls": "elementor-element elementor-search-form--skin-full_screen elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile elementor-widget",
+       "widget": "search-form.default",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "width": "33px",
+        "height": "33px",
+        "maxWidth": "100%",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "gap": "20px",
+        "borderColor": "rgb(17, 16, 16)",
+        "position": "relative",
+        "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        1093,
+        38,
+        33,
+        33
+       ],
+       "kids": [
+        {
+         "tag": "search",
+         "s": {
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "27px",
+          "color": "rgb(17, 16, 16)",
+          "textAlign": "start",
+          "backgroundPosition": "0% 0%",
+          "width": "33px",
+          "height": "33px",
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "borderColor": "rgb(17, 16, 16)",
+          "transition": "all",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+         },
+         "rect": [
+          1093,
+          38,
+          33,
+          33
+         ],
+         "kids": [
+          {
+           "tag": "form",
+           "cls": "elementor-search-form",
+           "s": {
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "fontFamily": "Archivo, sans-serif",
+            "lineHeight": "27px",
+            "color": "rgb(17, 16, 16)",
+            "textAlign": "start",
+            "backgroundPosition": "0% 0%",
+            "width": "33px",
+            "height": "33px",
+            "display": "block",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "borderColor": "rgb(17, 16, 16)",
+            "transition": "0.2s",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%"
+           },
+           "rect": [
+            1093,
+            38,
+            33,
+            33
+           ],
+           "kids": [
+            {
+             "tag": "div",
+             "cls": "elementor-search-form__toggle",
+             "s": {
+              "fontSize": "33px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "lineHeight": "49.5px",
+              "color": "rgb(255, 255, 255)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "width": "33px",
+              "height": "33px",
+              "display": "inline-block",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(255, 255, 255)",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              1093,
+              38,
+              33,
+              33
+             ],
+             "kids": [
+              {
+               "tag": "div",
+               "cls": "e-font-icon-svg-container",
+               "s": {
+                "fontSize": "33px",
+                "fontWeight": "400",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "49.5px",
+                "color": "rgb(255, 255, 255)",
+                "textAlign": "start",
+                "backgroundColor": "rgba(0, 0, 0, 0.05)",
+                "backgroundPosition": "0% 0%",
+                "width": "33px",
+                "height": "33px",
+                "display": "block",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderRadius": "3px",
+                "borderColor": "rgb(255, 255, 255)",
+                "borderStyle": "solid",
+                "position": "relative",
+                "transition": "0.2s",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                1093,
+                38,
+                33,
+                33
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "div",
+             "cls": "elementor-search-form__container",
+             "s": {
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "lineHeight": "27px",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundColor": "rgba(0, 0, 0, 0.8)",
+              "backgroundPosition": "0% 0%",
+              "paddingRight": "216px",
+              "paddingLeft": "216px",
+              "width": "1440px",
+              "height": "900px",
+              "minHeight": "50px",
+              "display": "flex",
+              "flexDirection": "row",
+              "alignItems": "center",
+              "flexWrap": "nowrap",
+              "borderStyle": "solid",
+              "overflow": "hidden",
+              "position": "fixed",
+              "zIndex": "9998",
+              "opacity": "0",
+              "transform": "matrix(0, 0, 0, 0, 0, 0)",
+              "transition": "0.3s",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              720,
+              450,
+              0,
+              0
+             ],
+             "kids": [
+              {
+               "tag": "label",
+               "cls": "elementor-screen-only",
+               "text": "Zoeken",
+               "s": {
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(17, 16, 16)",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "marginTop": "-1px",
+                "marginRight": "-1px",
+                "marginBottom": "-1px",
+                "marginLeft": "-1px",
+                "width": "1px",
+                "height": "1px",
+                "display": "block",
+                "flexDirection": "row",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(17, 16, 16)",
+                "overflow": "hidden",
+                "position": "absolute",
+                "top": "-180000px",
+                "right": "1225px",
+                "bottom": "180901px",
+                "left": "216px",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                720,
+                450,
+                0,
+                0
+               ],
+               "kids": []
+              },
+              {
+               "tag": "input",
+               "cls": "elementor-search-form__input",
+               "s": {
+                "fontSize": "50px",
+                "fontWeight": "400",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "75px",
+                "color": "rgb(255, 255, 255)",
+                "textAlign": "center",
+                "backgroundPosition": "0% 0%",
+                "width": "1008px",
+                "height": "76px",
+                "display": "block",
+                "flexDirection": "row",
+                "flexWrap": "nowrap",
+                "borderRadius": "3px",
+                "borderBottomWidth": "1px",
+                "borderColor": "rgb(255, 255, 255)",
+                "borderStyle": "solid",
+                "overflow": "clip",
+                "transition": "0.3s",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                720,
+                450,
+                0,
+                0
+               ],
+               "kids": []
+              },
+              {
+               "tag": "div",
+               "cls": "dialog-lightbox-close-button dialog-close-button",
+               "s": {
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "27px",
+                "color": "rgb(17, 16, 16)",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "flexDirection": "row",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(17, 16, 16)",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tag": "div",
+       "cls": "elementor-element elementor-tablet_extra-align-right elementor-align-right elementor-widget__width-initial elementor-widget elementor-widget-button",
+       "widget": "button.default",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "right",
+        "backgroundPosition": "0% 0%",
+        "width": "227.188px",
+        "height": "35px",
+        "maxWidth": "100%",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "gap": "20px",
+        "borderColor": "rgb(17, 16, 16)",
+        "position": "relative",
+        "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        1146,
+        37,
+        227,
+        35
+       ],
+       "kids": [
+        {
+         "tag": "a",
+         "cls": "elementor-button elementor-button-link elementor-size-sm",
+         "href": "https://humanmargin.eu/ai-reality-check/",
+         "s": {
+          "fontSize": "15px",
+          "fontWeight": "700",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "15px",
+          "color": "rgb(237, 255, 0)",
+          "textTransform": "uppercase",
+          "textAlign": "center",
+          "backgroundColor": "rgb(0, 44, 207)",
+          "backgroundPosition": "0% 0%",
+          "paddingTop": "10px",
+          "paddingRight": "20px",
+          "paddingBottom": "10px",
+          "paddingLeft": "20px",
+          "width": "180.578px",
+          "height": "35px",
+          "display": "inline-block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "borderColor": "rgb(237, 255, 0)",
+          "boxShadow": "rgba(0, 0, 0, 0.43) 0px 0px 3px 0px",
+          "transition": "0.3s",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+         },
+         "rect": [
+          1193,
+          37,
+          181,
+          35
+         ],
+         "kids": [
+          {
+           "tag": "span",
+           "cls": "elementor-button-content-wrapper",
+           "s": {
+            "fontSize": "15px",
+            "fontWeight": "700",
+            "fontFamily": "Archivo, sans-serif",
+            "lineHeight": "15px",
+            "color": "rgb(237, 255, 0)",
+            "textTransform": "uppercase",
+            "textAlign": "center",
+            "backgroundPosition": "0% 0%",
+            "width": "140.578px",
+            "height": "15px",
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "flexWrap": "nowrap",
+            "gap": "5px",
+            "borderColor": "rgb(237, 255, 0)",
+            "transition": "all",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%"
+           },
+           "rect": [
+            1213,
+            47,
+            141,
+            15
+           ],
+           "kids": [
+            {
+             "tag": "span",
+             "cls": "elementor-button-text",
+             "text": "AI reality check",
+             "s": {
+              "fontSize": "15px",
+              "fontWeight": "700",
+              "fontFamily": "Archivo, sans-serif",
+              "lineHeight": "15px",
+              "color": "rgb(237, 255, 0)",
+              "textTransform": "uppercase",
+              "textAlign": "center",
+              "backgroundPosition": "0% 0%",
+              "width": "140.578px",
+              "height": "15px",
+              "display": "block",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(237, 255, 0)",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              1213,
+              47,
+              141,
+              15
+             ],
+             "kids": []
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tag": "div",
+   "cls": "elementor-element e-con-full e-flex e-con e-parent elementor-sticky",
+   "s": {
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "fontFamily": "Archivo, sans-serif",
+    "lineHeight": "27px",
+    "color": "rgb(17, 16, 16)",
+    "textAlign": "start",
+    "backgroundColor": "rgb(17, 16, 16)",
+    "backgroundPosition": "0% 0%",
+    "paddingTop": "10px",
+    "paddingRight": "10px",
+    "paddingBottom": "10px",
+    "paddingLeft": "10px",
+    "width": "1440px",
+    "height": "110px",
+    "maxWidth": "100%",
+    "minHeight": "110px",
+    "display": "flex",
+    "flexDirection": "row",
+    "alignItems": "stretch",
+    "flexWrap": "nowrap",
+    "gap": "10px",
+    "borderBottomWidth": "2px",
+    "borderColor": "rgb(237, 255, 0)",
+    "borderStyle": "solid",
+    "position": "relative",
+    "zIndex": "1000",
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+   },
+   "rect": [
+    0,
+    0,
+    1440,
+    110
+   ],
+   "kids": [
+    {
+     "tag": "div",
+     "cls": "elementor-element e-con-full e-flex e-con e-child",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "backgroundPosition": "0% 0%",
+      "paddingTop": "10px",
+      "paddingRight": "10px",
+      "paddingBottom": "10px",
+      "paddingLeft": "10px",
+      "width": "217.203px",
+      "height": "88px",
+      "display": "flex",
+      "flexDirection": "column",
+      "justifyContent": "center",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "zIndex": "1000",
+      "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      10,
+      10,
+      217,
+      88
+     ],
+     "kids": [
+      {
+       "tag": "div",
+       "cls": "elementor-element elementor-widget elementor-widget-image",
+       "widget": "image.default",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "end",
+        "backgroundPosition": "0% 0%",
+        "width": "197.203px",
+        "height": "52.5312px",
+        "maxWidth": "100%",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "gap": "20px",
+        "borderColor": "rgb(17, 16, 16)",
+        "position": "relative",
+        "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        20,
+        28,
+        197,
+        53
+       ],
+       "kids": [
+        {
+         "tag": "a",
+         "href": "https://humanmargin.eu",
+         "s": {
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "27px",
+          "color": "rgb(255, 92, 23)",
+          "textAlign": "end",
+          "backgroundPosition": "0% 0%",
+          "width": "197.203px",
+          "height": "52.5312px",
+          "display": "inline-block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "borderColor": "rgb(255, 92, 23)",
+          "transition": "all",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+         },
+         "rect": [
+          20,
+          28,
+          197,
+          53
+         ],
+         "kids": [
+          {
+           "tag": "img",
+           "cls": "attachment-large size-large wp-image-160",
+           "img": {
+            "src": "https://humanmargin.eu/wp-content/uploads/2026/06/human-margin-logo-inverted-rgb-900px-w-72ppi.png",
+            "alt": "",
+            "w": 800,
+            "h": 387
+           },
+           "s": {
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "fontFamily": "Archivo, sans-serif",
+            "lineHeight": "27px",
+            "color": "rgb(255, 92, 23)",
+            "textAlign": "end",
+            "backgroundPosition": "0% 0%",
+            "width": "108.453px",
+            "height": "52.5312px",
+            "maxWidth": "100%",
+            "display": "inline-block",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "borderColor": "rgb(255, 92, 23)",
+            "overflow": "clip",
+            "transition": "all",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "aspectRatio": "auto 800 / 388"
+           },
+           "rect": [
+            109,
+            28,
+            108,
+            53
+           ],
+           "kids": []
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "tag": "div",
+     "cls": "elementor-element e-con-full e-flex e-con e-child",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "backgroundPosition": "0% 0%",
+      "paddingRight": "56.7969px",
+      "width": "1192.8px",
+      "height": "88px",
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "flex-end",
+      "alignItems": "center",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "zIndex": "1000",
+      "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      237,
+      10,
+      1193,
+      88
+     ],
+     "kids": [
+      {
+       "tag": "div",
+       "cls": "elementor-element elementor-hidden-widescreen elementor-hidden-desktop elementor-hidden-laptop elementor-hidden-tablet_extra elementor-hidden-mobile",
+       "widget": "heading.default",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "maxWidth": "100%",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "gap": "20px",
+        "borderColor": "rgb(17, 16, 16)",
+        "position": "relative",
+        "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "kids": [
+        {
+         "tag": "h2",
+         "cls": "elementor-heading-title elementor-size-default",
+         "text": "Menu",
+         "s": {
+          "fontSize": "15px",
+          "fontWeight": "700",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "18px",
+          "color": "rgb(221, 221, 211)",
+          "textTransform": "uppercase",
+          "textAlign": "start",
+          "backgroundPosition": "0% 0%",
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "borderColor": "rgb(221, 221, 211)",
+          "transition": "all",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+         },
+         "rect": [
+          0,
+          0,
+          0,
+          0
+         ],
+         "kids": []
+        }
+       ]
+      },
+      {
+       "tag": "div",
+       "cls": "elementor-element elementor-nav-menu__align-end elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit",
+       "widget": "nav-menu.default",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "width": "741.719px",
+        "height": "44px",
+        "maxWidth": "100%",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "gap": "20px",
+        "borderColor": "rgb(17, 16, 16)",
+        "position": "relative",
+        "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        331,
+        32,
+        742,
+        44
+       ],
+       "kids": [
+        {
+         "tag": "nav",
+         "cls": "elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none",
+         "s": {
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "27px",
+          "color": "rgb(17, 16, 16)",
+          "textAlign": "start",
+          "backgroundPosition": "0% 0%",
+          "width": "741.719px",
+          "height": "44px",
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "borderColor": "rgb(17, 16, 16)",
+          "transition": "all",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+         },
+         "rect": [
+          331,
+          32,
+          742,
+          44
+         ],
+         "kids": [
+          {
+           "tag": "ul",
+           "cls": "elementor-nav-menu",
+           "s": {
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "fontFamily": "Archivo, sans-serif",
+            "color": "rgb(17, 16, 16)",
+            "textAlign": "start",
+            "backgroundPosition": "0% 0%",
+            "width": "741.719px",
+            "height": "44px",
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "flex-end",
+            "flexWrap": "wrap",
+            "borderColor": "rgb(17, 16, 16)",
+            "position": "relative",
+            "zIndex": "2",
+            "transition": "all",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%"
+           },
+           "rect": [
+            331,
+            32,
+            742,
+            44
+           ],
+           "kids": [
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item",
+             "s": {
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "width": "70.5px",
+              "height": "44px",
+              "display": "flex",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              331,
+              32,
+              71,
+              44
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item elementor-item-active",
+               "text": "Home",
+               "href": "https://humanmargin.eu/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(237, 255, 0)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "13px",
+                "paddingBottom": "13px",
+                "marginRight": "25.5px",
+                "width": "45px",
+                "height": "44px",
+                "display": "flex",
+                "flexDirection": "row",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(237, 255, 0)",
+                "position": "relative",
+                "transition": "0.4s",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                331,
+                32,
+                45,
+                44
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-193",
+             "s": {
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "width": "127.672px",
+              "height": "44px",
+              "display": "flex",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              402,
+              32,
+              128,
+              44
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item",
+               "text": "Manifest",
+               "href": "https://humanmargin.eu/manifest/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(255, 255, 255)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "13px",
+                "paddingBottom": "13px",
+                "marginRight": "25.5px",
+                "marginLeft": "25.5px",
+                "width": "76.6719px",
+                "height": "44px",
+                "display": "flex",
+                "flexDirection": "row",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(255, 255, 255)",
+                "position": "relative",
+                "transition": "0.4s",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                427,
+                32,
+                77,
+                44
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-194",
+             "s": {
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "width": "155.172px",
+              "height": "44px",
+              "display": "flex",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              529,
+              32,
+              155,
+              44
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item has-submenu",
+               "text": "Leeszaal",
+               "href": "https://humanmargin.eu/leeszaal/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(255, 255, 255)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "13px",
+                "paddingBottom": "13px",
+                "marginRight": "25.5px",
+                "marginLeft": "25.5px",
+                "width": "104.172px",
+                "height": "44px",
+                "display": "flex",
+                "flexDirection": "row",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(255, 255, 255)",
+                "position": "relative",
+                "transition": "0.4s",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                555,
+                32,
+                104,
+                44
+               ],
+               "kids": []
+              },
+              {
+               "tag": "ul",
+               "cls": "sub-menu elementor-nav-menu--dropdown",
+               "s": {
+                "fontSize": "13px",
+                "fontWeight": "400",
+                "fontFamily": "Archivo, sans-serif",
+                "color": "rgb(17, 16, 16)",
+                "textAlign": "start",
+                "backgroundColor": "rgb(0, 44, 207)",
+                "backgroundPosition": "0% 0%",
+                "width": "156px",
+                "flexDirection": "row",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(17, 16, 16)",
+                "boxShadow": "rgba(0, 0, 0, 0.5) 0px 0px 10px 0px",
+                "position": "absolute",
+                "top": "100%",
+                "left": "25.5px",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-195",
+             "s": {
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "width": "167.969px",
+              "height": "44px",
+              "display": "flex",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              685,
+              32,
+              168,
+              44
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item has-submenu",
+               "text": "Neem actie",
+               "href": "https://humanmargin.eu/neem-actie/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(255, 255, 255)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "13px",
+                "paddingBottom": "13px",
+                "marginRight": "25.5px",
+                "marginLeft": "25.5px",
+                "width": "116.969px",
+                "height": "44px",
+                "display": "flex",
+                "flexDirection": "row",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(255, 255, 255)",
+                "position": "relative",
+                "transition": "0.4s",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                710,
+                32,
+                117,
+                44
+               ],
+               "kids": []
+              },
+              {
+               "tag": "ul",
+               "cls": "sub-menu elementor-nav-menu--dropdown",
+               "s": {
+                "fontSize": "13px",
+                "fontWeight": "400",
+                "fontFamily": "Archivo, sans-serif",
+                "color": "rgb(17, 16, 16)",
+                "textAlign": "start",
+                "backgroundColor": "rgb(0, 44, 207)",
+                "backgroundPosition": "0% 0%",
+                "width": "156px",
+                "flexDirection": "row",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(17, 16, 16)",
+                "boxShadow": "rgba(0, 0, 0, 0.5) 0px 0px 10px 0px",
+                "position": "absolute",
+                "top": "100%",
+                "left": "25.5px",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-106",
+             "s": {
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "width": "122.688px",
+              "height": "44px",
+              "display": "flex",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              853,
+              32,
+              123,
+              44
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item",
+               "text": "Over mij",
+               "href": "https://humanmargin.eu/over-mij/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(255, 255, 255)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "13px",
+                "paddingBottom": "13px",
+                "marginRight": "25.5px",
+                "marginLeft": "25.5px",
+                "width": "71.6875px",
+                "height": "44px",
+                "display": "flex",
+                "flexDirection": "row",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(255, 255, 255)",
+                "position": "relative",
+                "transition": "0.4s",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                878,
+                32,
+                72,
+                44
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-108",
+             "s": {
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "width": "97.7188px",
+              "height": "44px",
+              "display": "flex",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              975,
+              32,
+              98,
+              44
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item",
+               "text": "Contact",
+               "href": "https://humanmargin.eu/contact/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(255, 255, 255)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "13px",
+                "paddingBottom": "13px",
+                "marginLeft": "25.5px",
+                "width": "72.2188px",
+                "height": "44px",
+                "display": "flex",
+                "flexDirection": "row",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(255, 255, 255)",
+                "position": "relative",
+                "transition": "0.4s",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                1001,
+                32,
+                72,
+                44
+               ],
+               "kids": []
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "div",
+         "cls": "elementor-menu-toggle",
+         "s": {
+          "fontSize": "22px",
+          "fontWeight": "400",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "33px",
+          "color": "rgb(237, 255, 0)",
+          "textAlign": "start",
+          "backgroundColor": "rgba(0, 0, 0, 0.05)",
+          "backgroundPosition": "0% 0%",
+          "paddingTop": "5.5px",
+          "paddingRight": "5.5px",
+          "paddingBottom": "5.5px",
+          "paddingLeft": "5.5px",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "flexWrap": "nowrap",
+          "borderRadius": "3px",
+          "borderColor": "rgb(237, 255, 0)",
+          "borderStyle": "solid",
+          "transition": "all",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+         },
+         "rect": [
+          0,
+          0,
+          0,
+          0
+         ],
+         "kids": [
+          {
+           "tag": "svg",
+           "cls": "[object SVGAnimatedString]",
+           "svg": "<svg aria-hidden=\"true\" role=\"presentation\" class=\"elementor-menu-toggle__icon--open elementor-animation-grow-rotate e-font-icon-svg e-eicon-menu-bar\" viewBox=\"0 0 1000 1000\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z\">",
+           "s": {
+            "fontSize": "22px",
+            "fontWeight": "400",
+            "fontFamily": "Archivo, sans-serif",
+            "lineHeight": "33px",
+            "color": "rgb(237, 255, 0)",
+            "textAlign": "start",
+            "backgroundPosition": "0% 0%",
+            "width": "22px",
+            "height": "22px",
+            "display": "inline",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "borderColor": "rgb(237, 255, 0)",
+            "overflow": "hidden",
+            "transition": "transform 0.3s",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%"
+           },
+           "rect": [
+            0,
+            0,
+            0,
+            0
+           ],
+           "kids": []
+          },
+          {
+           "tag": "svg",
+           "cls": "[object SVGAnimatedString]",
+           "svg": "<svg aria-hidden=\"true\" role=\"presentation\" class=\"elementor-menu-toggle__icon--close elementor-animation-grow-rotate e-font-icon-svg e-eicon-close\" viewBox=\"0 0 1000 1000\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 84",
+           "s": {
+            "fontSize": "22px",
+            "fontWeight": "400",
+            "fontFamily": "Archivo, sans-serif",
+            "lineHeight": "33px",
+            "color": "rgb(237, 255, 0)",
+            "textAlign": "start",
+            "backgroundPosition": "0% 0%",
+            "width": "22px",
+            "height": "22px",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "borderColor": "rgb(237, 255, 0)",
+            "overflow": "hidden",
+            "transition": "transform 0.3s",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%"
+           },
+           "rect": [
+            0,
+            0,
+            0,
+            0
+           ],
+           "kids": []
+          }
+         ]
+        },
+        {
+         "tag": "nav",
+         "cls": "elementor-nav-menu--dropdown elementor-nav-menu__container",
+         "s": {
+          "fontSize": "13px",
+          "fontWeight": "400",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "19.5px",
+          "color": "rgb(17, 16, 16)",
+          "textAlign": "start",
+          "backgroundColor": "rgb(0, 44, 207)",
+          "backgroundPosition": "0% 0%",
+          "marginTop": "10px",
+          "width": "390px",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "borderColor": "rgb(17, 16, 16)",
+          "boxShadow": "rgba(0, 0, 0, 0.5) 0px 0px 10px 0px",
+          "overflow": "hidden",
+          "position": "absolute",
+          "top": "33px",
+          "left": "-160.594px",
+          "zIndex": "9997",
+          "transition": "max-height 0.3s, transform 0.3s",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+         },
+         "rect": [
+          0,
+          0,
+          0,
+          0
+         ],
+         "kids": [
+          {
+           "tag": "ul",
+           "cls": "elementor-nav-menu",
+           "s": {
+            "fontSize": "13px",
+            "fontWeight": "400",
+            "fontFamily": "Archivo, sans-serif",
+            "color": "rgb(17, 16, 16)",
+            "textAlign": "start",
+            "backgroundPosition": "0% 0%",
+            "display": "block",
+            "flexDirection": "row",
+            "justifyContent": "flex-end",
+            "flexWrap": "nowrap",
+            "borderColor": "rgb(17, 16, 16)",
+            "position": "relative",
+            "zIndex": "2",
+            "transition": "all",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%"
+           },
+           "rect": [
+            0,
+            0,
+            0,
+            0
+           ],
+           "kids": [
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item",
+             "s": {
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "display": "block",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item elementor-item-active",
+               "text": "Home",
+               "href": "https://humanmargin.eu/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(237, 255, 0)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundColor": "rgb(17, 16, 16)",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "10px",
+                "paddingRight": "20px",
+                "paddingBottom": "10px",
+                "paddingLeft": "20px",
+                "display": "flex",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(237, 255, 0)",
+                "position": "relative",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-193",
+             "s": {
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "display": "block",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item",
+               "text": "Manifest",
+               "href": "https://humanmargin.eu/manifest/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(237, 255, 0)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "10px",
+                "paddingRight": "20px",
+                "paddingBottom": "10px",
+                "paddingLeft": "20px",
+                "display": "flex",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(237, 255, 0)",
+                "position": "relative",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-194",
+             "s": {
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "display": "block",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item has-submenu",
+               "text": "Leeszaal",
+               "href": "https://humanmargin.eu/leeszaal/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(237, 255, 0)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "10px",
+                "paddingRight": "20px",
+                "paddingBottom": "10px",
+                "paddingLeft": "20px",
+                "display": "flex",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(237, 255, 0)",
+                "position": "relative",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              },
+              {
+               "tag": "ul",
+               "cls": "sub-menu elementor-nav-menu--dropdown",
+               "s": {
+                "fontSize": "13px",
+                "fontWeight": "400",
+                "fontFamily": "Archivo, sans-serif",
+                "color": "rgb(17, 16, 16)",
+                "textAlign": "start",
+                "backgroundColor": "rgb(0, 44, 207)",
+                "backgroundPosition": "0% 0%",
+                "flexDirection": "row",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(17, 16, 16)",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-195",
+             "s": {
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "display": "block",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item has-submenu",
+               "text": "Neem actie",
+               "href": "https://humanmargin.eu/neem-actie/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(237, 255, 0)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "10px",
+                "paddingRight": "20px",
+                "paddingBottom": "10px",
+                "paddingLeft": "20px",
+                "display": "flex",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(237, 255, 0)",
+                "position": "relative",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              },
+              {
+               "tag": "ul",
+               "cls": "sub-menu elementor-nav-menu--dropdown",
+               "s": {
+                "fontSize": "13px",
+                "fontWeight": "400",
+                "fontFamily": "Archivo, sans-serif",
+                "color": "rgb(17, 16, 16)",
+                "textAlign": "start",
+                "backgroundColor": "rgb(0, 44, 207)",
+                "backgroundPosition": "0% 0%",
+                "flexDirection": "row",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(17, 16, 16)",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-106",
+             "s": {
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "display": "block",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item",
+               "text": "Over mij",
+               "href": "https://humanmargin.eu/over-mij/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(237, 255, 0)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "10px",
+                "paddingRight": "20px",
+                "paddingBottom": "10px",
+                "paddingLeft": "20px",
+                "display": "flex",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(237, 255, 0)",
+                "position": "relative",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "li",
+             "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-108",
+             "s": {
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "display": "block",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(17, 16, 16)",
+              "position": "relative",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "kids": [
+              {
+               "tag": "a",
+               "cls": "elementor-item",
+               "text": "Contact",
+               "href": "https://humanmargin.eu/contact/",
+               "s": {
+                "fontSize": "15px",
+                "fontWeight": "700",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(237, 255, 0)",
+                "textTransform": "uppercase",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "paddingTop": "10px",
+                "paddingRight": "20px",
+                "paddingBottom": "10px",
+                "paddingLeft": "20px",
+                "display": "flex",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(237, 255, 0)",
+                "position": "relative",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tag": "div",
+       "cls": "elementor-element elementor-search-form--skin-full_screen elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile elementor-widget",
+       "widget": "search-form.default",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "width": "33px",
+        "height": "33px",
+        "maxWidth": "100%",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "gap": "20px",
+        "borderColor": "rgb(17, 16, 16)",
+        "position": "relative",
+        "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        1093,
+        38,
+        33,
+        33
+       ],
+       "kids": [
+        {
+         "tag": "search",
+         "s": {
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "27px",
+          "color": "rgb(17, 16, 16)",
+          "textAlign": "start",
+          "backgroundPosition": "0% 0%",
+          "width": "33px",
+          "height": "33px",
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "borderColor": "rgb(17, 16, 16)",
+          "transition": "all",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+         },
+         "rect": [
+          1093,
+          38,
+          33,
+          33
+         ],
+         "kids": [
+          {
+           "tag": "form",
+           "cls": "elementor-search-form",
+           "s": {
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "fontFamily": "Archivo, sans-serif",
+            "lineHeight": "27px",
+            "color": "rgb(17, 16, 16)",
+            "textAlign": "start",
+            "backgroundPosition": "0% 0%",
+            "width": "33px",
+            "height": "33px",
+            "display": "block",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "borderColor": "rgb(17, 16, 16)",
+            "transition": "0.2s",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%"
+           },
+           "rect": [
+            1093,
+            38,
+            33,
+            33
+           ],
+           "kids": [
+            {
+             "tag": "div",
+             "cls": "elementor-search-form__toggle",
+             "s": {
+              "fontSize": "33px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "lineHeight": "49.5px",
+              "color": "rgb(255, 255, 255)",
+              "textAlign": "start",
+              "backgroundPosition": "0% 0%",
+              "width": "33px",
+              "height": "33px",
+              "display": "inline-block",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(255, 255, 255)",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              1093,
+              38,
+              33,
+              33
+             ],
+             "kids": [
+              {
+               "tag": "div",
+               "cls": "e-font-icon-svg-container",
+               "s": {
+                "fontSize": "33px",
+                "fontWeight": "400",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "49.5px",
+                "color": "rgb(255, 255, 255)",
+                "textAlign": "start",
+                "backgroundColor": "rgba(0, 0, 0, 0.05)",
+                "backgroundPosition": "0% 0%",
+                "width": "33px",
+                "height": "33px",
+                "display": "block",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "flexWrap": "nowrap",
+                "borderRadius": "3px",
+                "borderColor": "rgb(255, 255, 255)",
+                "borderStyle": "solid",
+                "position": "relative",
+                "transition": "0.2s",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                1093,
+                38,
+                33,
+                33
+               ],
+               "kids": []
+              }
+             ]
+            },
+            {
+             "tag": "div",
+             "cls": "elementor-search-form__container",
+             "s": {
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "fontFamily": "Archivo, sans-serif",
+              "lineHeight": "27px",
+              "color": "rgb(17, 16, 16)",
+              "textAlign": "start",
+              "backgroundColor": "rgba(0, 0, 0, 0.8)",
+              "backgroundPosition": "0% 0%",
+              "paddingRight": "216px",
+              "paddingLeft": "216px",
+              "width": "1440px",
+              "height": "900px",
+              "minHeight": "50px",
+              "display": "flex",
+              "flexDirection": "row",
+              "alignItems": "center",
+              "flexWrap": "nowrap",
+              "borderStyle": "solid",
+              "overflow": "hidden",
+              "position": "fixed",
+              "zIndex": "9998",
+              "opacity": "0",
+              "transform": "matrix(0, 0, 0, 0, 0, 0)",
+              "transition": "0.3s",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              720,
+              450,
+              0,
+              0
+             ],
+             "kids": [
+              {
+               "tag": "label",
+               "cls": "elementor-screen-only",
+               "text": "Zoeken",
+               "s": {
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "18px",
+                "color": "rgb(17, 16, 16)",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "marginTop": "-1px",
+                "marginRight": "-1px",
+                "marginBottom": "-1px",
+                "marginLeft": "-1px",
+                "width": "1px",
+                "height": "1px",
+                "display": "block",
+                "flexDirection": "row",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(17, 16, 16)",
+                "overflow": "hidden",
+                "position": "absolute",
+                "top": "-180000px",
+                "right": "1225px",
+                "bottom": "180901px",
+                "left": "216px",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                720,
+                450,
+                0,
+                0
+               ],
+               "kids": []
+              },
+              {
+               "tag": "input",
+               "cls": "elementor-search-form__input",
+               "s": {
+                "fontSize": "50px",
+                "fontWeight": "400",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "75px",
+                "color": "rgb(255, 255, 255)",
+                "textAlign": "center",
+                "backgroundPosition": "0% 0%",
+                "width": "1008px",
+                "height": "76px",
+                "display": "block",
+                "flexDirection": "row",
+                "flexWrap": "nowrap",
+                "borderRadius": "3px",
+                "borderBottomWidth": "1px",
+                "borderColor": "rgb(255, 255, 255)",
+                "borderStyle": "solid",
+                "overflow": "clip",
+                "transition": "0.3s",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                720,
+                450,
+                0,
+                0
+               ],
+               "kids": []
+              },
+              {
+               "tag": "div",
+               "cls": "dialog-lightbox-close-button dialog-close-button",
+               "s": {
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "fontFamily": "Archivo, sans-serif",
+                "lineHeight": "27px",
+                "color": "rgb(17, 16, 16)",
+                "textAlign": "start",
+                "backgroundPosition": "0% 0%",
+                "flexDirection": "row",
+                "flexWrap": "nowrap",
+                "borderColor": "rgb(17, 16, 16)",
+                "transition": "all",
+                "objectFit": "fill",
+                "objectPosition": "50% 50%"
+               },
+               "rect": [
+                0,
+                0,
+                0,
+                0
+               ],
+               "kids": []
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tag": "div",
+       "cls": "elementor-element elementor-tablet_extra-align-right elementor-align-right elementor-widget__width-initial elementor-widget elementor-widget-button",
+       "widget": "button.default",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "right",
+        "backgroundPosition": "0% 0%",
+        "width": "227.188px",
+        "height": "35px",
+        "maxWidth": "100%",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "gap": "20px",
+        "borderColor": "rgb(17, 16, 16)",
+        "position": "relative",
+        "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        1146,
+        37,
+        227,
+        35
+       ],
+       "kids": [
+        {
+         "tag": "a",
+         "cls": "elementor-button elementor-button-link elementor-size-sm",
+         "href": "https://humanmargin.eu/ai-reality-check/",
+         "s": {
+          "fontSize": "15px",
+          "fontWeight": "700",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "15px",
+          "color": "rgb(237, 255, 0)",
+          "textTransform": "uppercase",
+          "textAlign": "center",
+          "backgroundColor": "rgb(0, 44, 207)",
+          "backgroundPosition": "0% 0%",
+          "paddingTop": "10px",
+          "paddingRight": "20px",
+          "paddingBottom": "10px",
+          "paddingLeft": "20px",
+          "width": "180.578px",
+          "height": "35px",
+          "display": "inline-block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "borderColor": "rgb(237, 255, 0)",
+          "boxShadow": "rgba(0, 0, 0, 0.43) 0px 0px 3px 0px",
+          "transition": "0.3s",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+         },
+         "rect": [
+          1193,
+          37,
+          181,
+          35
+         ],
+         "kids": [
+          {
+           "tag": "span",
+           "cls": "elementor-button-content-wrapper",
+           "s": {
+            "fontSize": "15px",
+            "fontWeight": "700",
+            "fontFamily": "Archivo, sans-serif",
+            "lineHeight": "15px",
+            "color": "rgb(237, 255, 0)",
+            "textTransform": "uppercase",
+            "textAlign": "center",
+            "backgroundPosition": "0% 0%",
+            "width": "140.578px",
+            "height": "15px",
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "flexWrap": "nowrap",
+            "gap": "5px",
+            "borderColor": "rgb(237, 255, 0)",
+            "transition": "all",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%"
+           },
+           "rect": [
+            1213,
+            47,
+            141,
+            15
+           ],
+           "kids": [
+            {
+             "tag": "span",
+             "cls": "elementor-button-text",
+             "text": "AI reality check",
+             "s": {
+              "fontSize": "15px",
+              "fontWeight": "700",
+              "fontFamily": "Archivo, sans-serif",
+              "lineHeight": "15px",
+              "color": "rgb(237, 255, 0)",
+              "textTransform": "uppercase",
+              "textAlign": "center",
+              "backgroundPosition": "0% 0%",
+              "width": "140.578px",
+              "height": "15px",
+              "display": "block",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "borderColor": "rgb(237, 255, 0)",
+              "transition": "all",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%"
+             },
+             "rect": [
+              1213,
+              47,
+              141,
+              15
+             ],
+             "kids": []
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

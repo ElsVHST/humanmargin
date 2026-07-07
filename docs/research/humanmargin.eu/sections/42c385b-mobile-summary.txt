@@ -1,0 +1,54 @@
+<div> 
+   css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(244, 244, 241)", "width": "390px", "maxWidth": "100%", "minHeight": "633px", "display": "flex", "flexDirection": "row", "position": "relative"}
+   rect(x,y,w,h): [0, 4857, 390, 986]
+  <div> 
+     css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "390px", "display": "flex", "flexDirection": "column", "justifyContent": "center", "gap": "20px", "position": "relative"}
+     rect(x,y,w,h): [0, 4857, 390, 245]
+    <div> [image.default]
+       css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "390px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "gap": "20px", "position": "relative"}
+       rect(x,y,w,h): [0, 4857, 390, 245]
+      <img> 
+         css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "390px", "maxWidth": "100%", "display": "inline-block", "flexDirection": "row"}
+         rect(x,y,w,h): [0, 4857, 390, 245]
+  <div> 
+     css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "paddingTop": "27.2969px", "paddingRight": "27.2969px", "paddingBottom": "27.2969px", "paddingLeft": "27.2969px", "width": "390px", "display": "flex", "flexDirection": "column", "justifyContent": "center", "gap": "20px", "position": "relative"}
+     rect(x,y,w,h): [0, 5102, 390, 742]
+    <div> [heading.default]
+       css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "335.406px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "gap": "20px", "position": "relative"}
+       rect(x,y,w,h): [27, 5129, 335, 59]
+      <h2> TXT:'Je hoeft geen AI-expert te worden.'
+         css: {"fontSize": "27px", "fontWeight": "400", "fontFamily": "\"Archivo Black\", sans-serif", "lineHeight": "29.7px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "335.406px", "display": "block", "flexDirection": "row"}
+         rect(x,y,w,h): [27, 5129, 335, 59]
+    <div> [text-editor.default]
+       css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "335.406px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "gap": "20px", "position": "relative"}
+       rect(x,y,w,h): [27, 5208, 335, 546]
+      <p> TXT:'Je hoeft de AI Act niet vanbuiten te kennen. Je moet gewoon weten wat je gebruik'
+         css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "marginBottom": "27.2px", "width": "335.406px", "display": "block", "flexDirection": "row"}
+         rect(x,y,w,h): [27, 5208, 335, 77]
+      <p> TXT:'Allemaal goed en wel die AI Compliance. Rest één vraag: hoe dan?'
+         css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "marginBottom": "27.2px", "width": "335.406px", "display": "block", "flexDirection": "row"}
+         rect(x,y,w,h): [27, 5312, 335, 51]
+      <p> TXT:'De ene begint met de AI Reality Check. Dat is aan jou de keuze.'
+         css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "marginBottom": "27.2px", "width": "335.406px", "display": "block", "flexDirection": "row"}
+         rect(x,y,w,h): [27, 5390, 335, 51]
+      <p> TXT:'Ga je liever meteen en alleen aan de slag of hou je net van wat peer-pressure? E'
+         css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "marginBottom": "27.2px", "width": "335.406px", "display": "block", "flexDirection": "row"}
+         rect(x,y,w,h): [27, 5468, 335, 77]
+      <p> TXT:'Zit je kniediep in de AI-chaos of werk je samen met anderen? Dan is een op maat '
+         css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "marginBottom": "27.2px", "width": "335.406px", "display": "block", "flexDirection": "row"}
+         rect(x,y,w,h): [27, 5572, 335, 77]
+      <p> TXT:'Hoe dan ook. Je bent op de juiste plaats. Of toch bijna.'
+         css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "marginBottom": "27.2px", "width": "335.406px", "display": "block", "flexDirection": "row"}
+         rect(x,y,w,h): [27, 5676, 335, 51]
+    <div> [button.default]
+       css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "335.406px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "gap": "20px", "position": "relative"}
+       rect(x,y,w,h): [27, 5768, 337, 54]
+      <a> 
+         css: {"fontSize": "12px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "12px", "color": "rgb(0, 44, 207)", "textAlign": "center", "backgroundColor": "rgb(237, 255, 0)", "paddingTop": "15px", "paddingRight": "30px", "paddingBottom": "15px", "paddingLeft": "30px", "width": "133.578px", "display": "inline-block", "flexDirection": "row"}
+         rect(x,y,w,h): [27, 5775, 135, 47]
+        <span> 
+           css: {"fontSize": "12px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "12px", "color": "rgb(0, 44, 207)", "textAlign": "center", "width": "73.5781px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "gap": "5px"}
+           rect(x,y,w,h): [57, 5791, 74, 15]
+          <span> TXT:'Neem actie'
+             css: {"fontSize": "12px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "12px", "color": "rgb(0, 44, 207)", "textAlign": "center", "width": "73.5781px", "display": "block", "flexDirection": "row"}
+             rect(x,y,w,h): [57, 5791, 74, 15]

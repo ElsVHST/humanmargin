@@ -1,0 +1,1100 @@
+- generic [active] [ref=f5e1]:
+  - generic [ref=f5e340]:
+    - button "Close Menu" [ref=f5e342] [cursor=pointer]:
+      - generic "Collapse" [ref=f5e344]:
+        - img [ref=f5e345]
+    - generic [ref=f5e347]:
+      - complementary [ref=f5e348]:
+        - navigation [ref=f5e350]:
+          - generic [ref=f5e351]:
+            - button "Content" [ref=f5e352] [cursor=pointer]:
+              - generic [ref=f5e353]: Content
+              - img [ref=f5e355]
+            - generic [ref=f5e359]:
+              - link "Pagina's" [ref=f5e360] [cursor=pointer]:
+                - /url: /admin/collections/pages
+                - generic [ref=f5e362]: Pagina's
+              - link "Media" [ref=f5e363] [cursor=pointer]:
+                - /url: /admin/collections/media
+                - generic [ref=f5e364]: Media
+          - generic [ref=f5e365]:
+            - button "Beheer" [ref=f5e366] [cursor=pointer]:
+              - generic [ref=f5e367]: Beheer
+              - img [ref=f5e369]
+            - generic [ref=f5e373]:
+              - link "Gebruikers" [ref=f5e374] [cursor=pointer]:
+                - /url: /admin/collections/users
+                - generic [ref=f5e375]: Gebruikers
+              - link "Aanmeldingen" [ref=f5e376] [cursor=pointer]:
+                - /url: /admin/collections/subscribers
+                - generic [ref=f5e377]: Aanmeldingen
+          - generic [ref=f5e378]:
+            - button "Site" [ref=f5e379] [cursor=pointer]:
+              - generic [ref=f5e380]: Site
+              - img [ref=f5e382]
+            - generic [ref=f5e386]:
+              - link "Header / Navigatie" [ref=f5e387] [cursor=pointer]:
+                - /url: /admin/globals/header
+                - generic [ref=f5e388]: Header / Navigatie
+              - link "Footer" [ref=f5e389] [cursor=pointer]:
+                - /url: /admin/globals/footer
+                - generic [ref=f5e390]: Footer
+          - link "Log out" [ref=f5e392] [cursor=pointer]:
+            - /url: /admin/logout
+            - img [ref=f5e393]
+      - generic [ref=f5e397]:
+        - banner [ref=f5e398]:
+          - generic [ref=f5e401]:
+            - navigation [ref=f5e403]:
+              - link "Human Margin" [ref=f5e404] [cursor=pointer]:
+                - /url: /admin
+                - generic "Dashboard" [ref=f5e405]:
+                  - img "Human Margin" [ref=f5e406]
+              - generic [ref=f5e407]: /
+              - link "Pagina's" [ref=f5e408] [cursor=pointer]:
+                - /url: /admin/collections/pages
+                - generic [ref=f5e409]: Pagina's
+              - generic [ref=f5e410]: /
+              - generic [ref=f5e411]: TEAM op maat
+            - link "Account" [ref=f5e412] [cursor=pointer]:
+              - /url: /admin/account
+              - img "yas" [ref=f5e413]
+        - generic [ref=f5e415]:
+          - heading "TEAM op maat" [level=1] [ref=f5e416]
+          - list [ref=f5e419]:
+            - generic "Edit" [ref=f5e420]:
+              - generic:
+                - generic:
+                  - generic: Edit
+            - link "Versions" [ref=f5e421] [cursor=pointer]:
+              - /url: /admin/collections/pages/28/versions
+              - generic:
+                - generic:
+                  - generic:
+                    - text: Versions
+                    - generic: "1"
+            - link "API" [ref=f5e422] [cursor=pointer]:
+              - /url: /admin/collections/pages/28/api
+              - generic:
+                - generic:
+                  - generic: API
+        - main [ref=f5e423]:
+          - generic [ref=f5e424]:
+            - generic [ref=f5e426]:
+              - list [ref=f5e428]:
+                - listitem [ref=f5e429]:
+                  - 'generic "Status: Published" [ref=f5e430]':
+                    - generic [ref=f5e431]:
+                      - generic [ref=f5e432]: "Status:"
+                      - text: Published
+                - listitem
+                - listitem "July 7th 2026, 7:42 PM" [ref=f5e433]:
+                  - paragraph [ref=f5e434]: "Last Modified:"
+                  - paragraph [ref=f5e435]: July 7th 2026, 7:42 PM
+                - listitem "July 7th 2026, 7:42 PM" [ref=f5e436]:
+                  - paragraph [ref=f5e437]: "Created:"
+                  - paragraph [ref=f5e438]: July 7th 2026, 7:42 PM
+              - generic [ref=f5e439]:
+                - generic [ref=f5e440]:
+                  - button "Live Preview" [ref=f5e441] [cursor=pointer]:
+                    - img [ref=f5e442]
+                  - link "Preview" [ref=f5e445] [cursor=pointer]:
+                    - /url: http://localhost:3000/next/preview?path=%2Fteam-op-maat
+                    - img [ref=f5e446]
+                  - button "Publish changes" [disabled] [ref=f5e449]:
+                    - generic:
+                      - generic: Publish changes
+                - button [ref=f5e452] [cursor=pointer]
+            - generic [ref=f5e460]:
+              - generic [ref=f5e463]:
+                - generic [ref=f5e464]:
+                  - generic [ref=f5e465]:
+                    - text: Titel
+                    - generic [ref=f5e466]: "*"
+                  - textbox "Titel *" [ref=f5e468]: TEAM op maat
+                - generic [ref=f5e469]:
+                  - button "Inhoud" [ref=f5e472] [cursor=pointer]
+                  - generic [ref=f5e476]:
+                    - generic [ref=f5e478]:
+                      - heading "Secties" [level=3] [ref=f5e480]
+                      - list [ref=f5e481]:
+                        - listitem [ref=f5e482]:
+                          - button "Collapse All" [ref=f5e483] [cursor=pointer]
+                        - listitem [ref=f5e484]:
+                          - button "Show All" [ref=f5e485] [cursor=pointer]
+                        - listitem [ref=f5e486]:
+                          - button [ref=f5e489] [cursor=pointer]:
+                            - img [ref=f5e490]
+                    - generic [ref=f5e494]:
+                      - generic [ref=f5e496]:
+                        - generic [ref=f5e497]:
+                          - button "Toggle block" [ref=f5e498] [cursor=pointer]
+                          - button [ref=f5e499]:
+                            - img [ref=f5e500]
+                          - generic:
+                            - generic:
+                              - generic: "01"
+                              - generic:
+                                - generic: Foto + tekst
+                              - textbox "Untitled" [ref=f5e508]
+                          - generic:
+                            - button [ref=f5e512] [cursor=pointer]:
+                              - img [ref=f5e513]
+                            - generic:
+                              - img
+                        - generic [ref=f5e520]:
+                          - generic [ref=f5e521]:
+                            - generic [ref=f5e522]: Achtergrond
+                            - generic [ref=f5e524]:
+                              - log [ref=f5e526]
+                              - generic [ref=f5e527]:
+                                - generic "Zwart" [ref=f5e528]:
+                                  - generic [ref=f5e529]:
+                                    - generic [ref=f5e530]: Zwart
+                                    - combobox [ref=f5e532]
+                                - generic [ref=f5e533]:
+                                  - button [ref=f5e534] [cursor=pointer]:
+                                    - img [ref=f5e535]
+                                  - button [ref=f5e537] [cursor=pointer]:
+                                    - img [ref=f5e538]
+                          - generic [ref=f5e540]:
+                            - generic [ref=f5e541]: Fotopositie
+                            - generic [ref=f5e543]:
+                              - log [ref=f5e545]
+                              - generic [ref=f5e546]:
+                                - generic "Links" [ref=f5e547]:
+                                  - generic [ref=f5e548]:
+                                    - generic [ref=f5e549]: Links
+                                    - combobox [ref=f5e551]
+                                - generic [ref=f5e552]:
+                                  - button [ref=f5e553] [cursor=pointer]:
+                                    - img [ref=f5e554]
+                                  - button [ref=f5e556] [cursor=pointer]:
+                                    - img [ref=f5e557]
+                          - generic [ref=f5e559]:
+                            - generic [ref=f5e560]: Foto-weergave
+                            - generic [ref=f5e562]:
+                              - log [ref=f5e564]
+                              - generic [ref=f5e565]:
+                                - generic "Rand-tot-rand (vullend)" [ref=f5e566]:
+                                  - generic [ref=f5e567]:
+                                    - generic [ref=f5e568]: Rand-tot-rand (vullend)
+                                    - combobox [ref=f5e570]
+                                - generic [ref=f5e571]:
+                                  - button [ref=f5e572] [cursor=pointer]:
+                                    - img [ref=f5e573]
+                                  - button [ref=f5e575] [cursor=pointer]:
+                                    - img [ref=f5e576]
+                          - generic [ref=f5e578]:
+                            - generic [ref=f5e579]:
+                              - text: Foto
+                              - generic [ref=f5e580]: "*"
+                            - generic [ref=f5e1497]:
+                              - generic [ref=f5e1498]:
+                                - img "te bewerken fotos landscape contrast 35 highlights 20 schad 2" [ref=f5e1500]
+                                - generic [ref=f5e1501]:
+                                  - paragraph [ref=f5e1502]:
+                                    - link "2026_06_3.jpg" [ref=f5e1503] [cursor=pointer]:
+                                      - /url: /api/media/file/2026_06_3.jpg
+                                  - paragraph [ref=f5e1504]: 483KB — 2500x1666 — image/jpeg
+                              - generic [ref=f5e1505]:
+                                - button [ref=f5e1506] [cursor=pointer]:
+                                  - generic:
+                                    - generic:
+                                      - img
+                                - button [ref=f5e1507] [cursor=pointer]:
+                                  - generic:
+                                    - generic:
+                                      - img
+                          - generic [ref=f5e586]:
+                            - generic [ref=f5e587]: Handgeschreven annotatie (blauw)
+                            - textbox "Handgeschreven annotatie (blauw)" [ref=f5e589]
+                          - generic [ref=f5e590]:
+                            - generic [ref=f5e591]: Kop
+                            - textbox "Kop" [ref=f5e593]: Maatwerk voor teams
+                          - generic [ref=f5e594]:
+                            - generic [ref=f5e595]: Gele subkop
+                            - generic [ref=f5e596]:
+                              - textbox "Gele subkop" [ref=f5e597]
+                              - generic [ref=f5e598]: Strakke Archivo-subkop in geel, onder de hoofdkop
+                          - generic [ref=f5e599]:
+                            - generic [ref=f5e600]: Kopniveau
+                            - generic [ref=f5e602]:
+                              - log [ref=f5e604]
+                              - generic [ref=f5e605]:
+                                - generic "H1 (paginakop)" [ref=f5e606]:
+                                  - generic [ref=f5e607]:
+                                    - generic [ref=f5e608]: H1 (paginakop)
+                                    - combobox [ref=f5e610]
+                                - generic [ref=f5e611]:
+                                  - button [ref=f5e612] [cursor=pointer]:
+                                    - img [ref=f5e613]
+                                  - button [ref=f5e615] [cursor=pointer]:
+                                    - img [ref=f5e616]
+                          - generic [ref=f5e1508]:
+                            - generic [ref=f5e1510]: Tekst
+                            - generic [ref=f5e1512]:
+                              - generic [ref=f5e1514]:
+                                - textbox [ref=f5e1515]:
+                                  - paragraph [ref=f5e1516]:
+                                    - strong [ref=f5e1517]: Een bedrijf met een team werkt anders dan een zelfstandige.
+                                  - paragraph [ref=f5e1518]: Meer mensen, tools, meningen. En meer manieren waarop dingen mis kunnen lopen.
+                                  - paragraph [ref=f5e1519]: En dus ook meer redenen waarom een standaardoplossing zelden werkt.
+                                  - paragraph [ref=f5e1520]: Daarom begin ik met begrijpen wie jullie zijn, hoe jullie werken en wat jullie nodig hebben. Zodat je een beleid hebt dat ook degelijk landt bij jouw mensen.
+                                - button "Drag to move" [ref=f5e1521]
+                                - button "Add block" [ref=f5e1523] [cursor=pointer]
+                                - generic [ref=f5e1526]:
+                                  - button "Edit link" [ref=f5e1527] [cursor=pointer]:
+                                    - img [ref=f5e1528]
+                                  - button "Remove link" [ref=f5e1530] [cursor=pointer]:
+                                    - img [ref=f5e1531]
+                              - button "Insert Paragraph" [ref=f5e1533]
+                          - generic [ref=f5e620]:
+                            - generic [ref=f5e622]:
+                              - heading "Pijl-lijst" [level=3] [ref=f5e624]
+                              - list [ref=f5e625]:
+                                - listitem [ref=f5e626]:
+                                  - button [ref=f5e629] [cursor=pointer]:
+                                    - img [ref=f5e630]
+                            - button "Add Arrow List" [ref=f5e634] [cursor=pointer]:
+                              - generic:
+                                - generic: Add Arrow List
+                                - generic:
+                                  - img
+                          - generic [ref=f5e1535]:
+                            - generic [ref=f5e1537]: Tekst onder de lijst
+                            - generic [ref=f5e1539]:
+                              - generic [ref=f5e1541]:
+                                - textbox [ref=f5e1542]:
+                                  - paragraph [ref=f5e1543]
+                                - paragraph: Start typing, or press '/' for commands...
+                                - button "Drag to move" [ref=f5e1544]
+                                - button "Add block" [ref=f5e1546] [cursor=pointer]
+                                - generic [ref=f5e1549]:
+                                  - button "Edit link" [ref=f5e1550] [cursor=pointer]:
+                                    - img [ref=f5e1551]
+                                  - button "Remove link" [ref=f5e1553] [cursor=pointer]:
+                                    - img [ref=f5e1554]
+                              - button "Insert Paragraph" [ref=f5e1556]
+                          - generic [ref=f5e638]:
+                            - heading "Knop" [level=3] [ref=f5e641]
+                            - generic [ref=f5e1558]:
+                              - generic [ref=f5e1559]:
+                                - generic [ref=f5e1560]: Knoptekst
+                                - textbox "Knoptekst" [ref=f5e1562]: Plan een gesprek
+                              - generic [ref=f5e1563]:
+                                - generic [ref=f5e1564]: Link
+                                - textbox "Link" [ref=f5e1566]: /contact
+                              - generic [ref=f5e1567]:
+                                - generic [ref=f5e1568]: Kleur
+                                - generic [ref=f5e1570]:
+                                  - log [ref=f5e1572]
+                                  - generic [ref=f5e1573]:
+                                    - generic "Geel" [ref=f5e1574]:
+                                      - generic [ref=f5e1575]:
+                                        - generic [ref=f5e1576]: Geel
+                                        - combobox [ref=f5e1578]
+                                    - generic [ref=f5e1579]:
+                                      - button [ref=f5e1580] [cursor=pointer]:
+                                        - img [ref=f5e1581]
+                                      - button [ref=f5e1583] [cursor=pointer]:
+                                        - img [ref=f5e1584]
+                          - generic [ref=f5e642]:
+                            - generic [ref=f5e643]: Gele handschrift-kop (onder de tekst)
+                            - generic [ref=f5e644]:
+                              - textbox "Gele handschrift-kop (onder de tekst)" [ref=f5e645]
+                              - generic [ref=f5e646]: Marker-lettertype in geel, onder de tekst (bijv. "Ontvang 'in de marge'"). Voor de nieuwsbrief-variant.
+                          - generic [ref=f5e648]:
+                            - checkbox "Toon nieuwsbrief-formulier" [ref=f5e650]
+                            - generic [ref=f5e651]: Toon nieuwsbrief-formulier
+                      - generic [ref=f5e653]:
+                        - generic [ref=f5e654]:
+                          - button "Toggle block" [ref=f5e655] [cursor=pointer]
+                          - button [ref=f5e656]:
+                            - img [ref=f5e657]
+                          - generic:
+                            - generic:
+                              - generic: "02"
+                              - generic:
+                                - generic: Marge-notitie
+                              - textbox "Untitled" [ref=f5e665]
+                          - generic:
+                            - button [ref=f5e669] [cursor=pointer]:
+                              - img [ref=f5e670]
+                            - generic:
+                              - img
+                        - generic [ref=f5e677]:
+                          - generic [ref=f5e678]:
+                            - generic [ref=f5e679]: Gele handschrift-kop
+                            - generic [ref=f5e680]:
+                              - textbox "Gele handschrift-kop" [ref=f5e681]
+                              - generic [ref=f5e682]: Marker-lettertype, geel, bovenaan (bijv. "In de Marge"). Leeg laten mag.
+                          - generic [ref=f5e1586]:
+                            - generic [ref=f5e1588]: Tekst
+                            - generic [ref=f5e1590]:
+                              - generic [ref=f5e1592]:
+                                - textbox [ref=f5e1593]:
+                                  - paragraph [ref=f5e1594]: Geen prijs op deze pagina.
+                                  - paragraph [ref=f5e1595]: En met opzet.
+                                  - paragraph [ref=f5e1596]: Elk bedrijf is anders. In een gesprek bepalen we samen wat nodig is, zodat je weet waar je aan toe bent.
+                                - button "Drag to move" [ref=f5e1597]
+                                - button "Add block" [ref=f5e1599] [cursor=pointer]
+                                - generic [ref=f5e1602]:
+                                  - button "Edit link" [ref=f5e1603] [cursor=pointer]:
+                                    - img [ref=f5e1604]
+                                  - button "Remove link" [ref=f5e1606] [cursor=pointer]:
+                                    - img [ref=f5e1607]
+                              - button "Insert Paragraph" [ref=f5e1609]
+                          - generic [ref=f5e685]:
+                            - generic [ref=f5e686]: Naam bij quote
+                            - generic [ref=f5e687]:
+                              - textbox "Naam bij quote" [ref=f5e688]
+                              - generic [ref=f5e689]: Geel handschrift onder de tekst (bijv. "- Stephan Molle"). Alleen voor de quote-variant.
+                          - generic [ref=f5e691]:
+                            - checkbox "Toon nieuwsbrief-formulier" [ref=f5e693]
+                            - generic [ref=f5e694]: Toon nieuwsbrief-formulier
+                          - generic [ref=f5e695]:
+                            - generic [ref=f5e696]: Penseelstreek (geel)
+                            - generic [ref=f5e1612]:
+                              - generic [ref=f5e1613]:
+                                - img "in de marge" [ref=f5e1615]
+                                - generic [ref=f5e1616]:
+                                  - paragraph [ref=f5e1617]:
+                                    - link "2026_06_in-de-marge-e1781177869154.png" [ref=f5e1618] [cursor=pointer]:
+                                      - /url: /api/media/file/2026_06_in-de-marge-e1781177869154.png
+                                  - paragraph [ref=f5e1619]: 50KB — 470x1470 — image/png
+                              - generic [ref=f5e1620]:
+                                - button [ref=f5e1621] [cursor=pointer]:
+                                  - generic:
+                                    - generic:
+                                      - img
+                                - button [ref=f5e1622] [cursor=pointer]:
+                                  - generic:
+                                    - generic:
+                                      - img
+                            - generic [ref=f5e702]: Optioneel. Leeg = standaard gele penseelstreek.
+                      - generic [ref=f5e704]:
+                        - generic [ref=f5e705]:
+                          - button "Toggle block" [ref=f5e706] [cursor=pointer]
+                          - button [ref=f5e707]:
+                            - img [ref=f5e708]
+                          - generic:
+                            - generic:
+                              - generic: "03"
+                              - generic:
+                                - generic: Foto + tekst
+                              - textbox "Untitled" [ref=f5e716]
+                          - generic:
+                            - button [ref=f5e720] [cursor=pointer]:
+                              - img [ref=f5e721]
+                            - generic:
+                              - img
+                        - generic [ref=f5e728]:
+                          - generic [ref=f5e729]:
+                            - generic [ref=f5e730]: Achtergrond
+                            - generic [ref=f5e732]:
+                              - log [ref=f5e734]
+                              - generic [ref=f5e735]:
+                                - generic "Gebroken wit (#F4F4F1)" [ref=f5e736]:
+                                  - generic [ref=f5e737]:
+                                    - generic [ref=f5e738]: Gebroken wit (#F4F4F1)
+                                    - combobox [ref=f5e740]
+                                - generic [ref=f5e741]:
+                                  - button [ref=f5e742] [cursor=pointer]:
+                                    - img [ref=f5e743]
+                                  - button [ref=f5e745] [cursor=pointer]:
+                                    - img [ref=f5e746]
+                          - generic [ref=f5e748]:
+                            - generic [ref=f5e749]: Fotopositie
+                            - generic [ref=f5e751]:
+                              - log [ref=f5e753]
+                              - generic [ref=f5e754]:
+                                - generic "Rechts" [ref=f5e755]:
+                                  - generic [ref=f5e756]:
+                                    - generic [ref=f5e757]: Rechts
+                                    - combobox [ref=f5e759]
+                                - generic [ref=f5e760]:
+                                  - button [ref=f5e761] [cursor=pointer]:
+                                    - img [ref=f5e762]
+                                  - button [ref=f5e764] [cursor=pointer]:
+                                    - img [ref=f5e765]
+                          - generic [ref=f5e767]:
+                            - generic [ref=f5e768]: Foto-weergave
+                            - generic [ref=f5e770]:
+                              - log [ref=f5e772]
+                              - generic [ref=f5e773]:
+                                - generic "Rand-tot-rand (vullend)" [ref=f5e774]:
+                                  - generic [ref=f5e775]:
+                                    - generic [ref=f5e776]: Rand-tot-rand (vullend)
+                                    - combobox [ref=f5e778]
+                                - generic [ref=f5e779]:
+                                  - button [ref=f5e780] [cursor=pointer]:
+                                    - img [ref=f5e781]
+                                  - button [ref=f5e783] [cursor=pointer]:
+                                    - img [ref=f5e784]
+                          - generic [ref=f5e786]:
+                            - generic [ref=f5e787]:
+                              - text: Foto
+                              - generic [ref=f5e788]: "*"
+                            - generic [ref=f5e1624]:
+                              - generic [ref=f5e1625]:
+                                - img "ontwerp zonder titel 14" [ref=f5e1627]
+                                - generic [ref=f5e1628]:
+                                  - paragraph [ref=f5e1629]:
+                                    - link "2026_06_14-1.jpg" [ref=f5e1630] [cursor=pointer]:
+                                      - /url: /api/media/file/2026_06_14-1.jpg
+                                  - paragraph [ref=f5e1631]: 499KB — 1666x2500 — image/jpeg
+                              - generic [ref=f5e1632]:
+                                - button [ref=f5e1633] [cursor=pointer]:
+                                  - generic:
+                                    - generic:
+                                      - img
+                                - button [ref=f5e1634] [cursor=pointer]:
+                                  - generic:
+                                    - generic:
+                                      - img
+                          - generic [ref=f5e794]:
+                            - generic [ref=f5e795]: Handgeschreven annotatie (blauw)
+                            - textbox "Handgeschreven annotatie (blauw)" [ref=f5e797]
+                          - generic [ref=f5e798]:
+                            - generic [ref=f5e799]: Kop
+                            - textbox "Kop" [ref=f5e801]: Voor wie?
+                          - generic [ref=f5e802]:
+                            - generic [ref=f5e803]: Gele subkop
+                            - generic [ref=f5e804]:
+                              - textbox "Gele subkop" [ref=f5e805]
+                              - generic [ref=f5e806]: Strakke Archivo-subkop in geel, onder de hoofdkop
+                          - generic [ref=f5e807]:
+                            - generic [ref=f5e808]: Kopniveau
+                            - generic [ref=f5e810]:
+                              - log [ref=f5e812]
+                              - generic [ref=f5e813]:
+                                - generic "H2" [ref=f5e814]:
+                                  - generic [ref=f5e815]:
+                                    - generic [ref=f5e816]: H2
+                                    - combobox [ref=f5e818]
+                                - generic [ref=f5e819]:
+                                  - button [ref=f5e820] [cursor=pointer]:
+                                    - img [ref=f5e821]
+                                  - button [ref=f5e823] [cursor=pointer]:
+                                    - img [ref=f5e824]
+                          - generic [ref=f5e1635]:
+                            - generic [ref=f5e1637]: Tekst
+                            - generic [ref=f5e1639]:
+                              - generic [ref=f5e1641]:
+                                - textbox [ref=f5e1642]:
+                                  - paragraph [ref=f5e1643]: Voor organisaties groter dan één persoon.
+                                  - paragraph [ref=f5e1644]: "Bijvoorbeeld wanneer:"
+                                - button "Drag to move" [ref=f5e1645]
+                                - button "Add block" [ref=f5e1647] [cursor=pointer]
+                                - generic [ref=f5e1650]:
+                                  - button "Edit link" [ref=f5e1651] [cursor=pointer]:
+                                    - img [ref=f5e1652]
+                                  - button "Remove link" [ref=f5e1654] [cursor=pointer]:
+                                    - img [ref=f5e1655]
+                              - button "Insert Paragraph" [ref=f5e1657]
+                          - generic [ref=f5e828]:
+                            - generic [ref=f5e830]:
+                              - heading "Pijl-lijst" [level=3] [ref=f5e832]
+                              - list [ref=f5e833]:
+                                - listitem [ref=f5e834]:
+                                  - button "Collapse All" [ref=f5e835] [cursor=pointer]
+                                - listitem [ref=f5e836]:
+                                  - button "Show All" [ref=f5e837] [cursor=pointer]
+                                - listitem [ref=f5e838]:
+                                  - button [ref=f5e841] [cursor=pointer]:
+                                    - img [ref=f5e842]
+                            - generic [ref=f5e846]:
+                              - generic [ref=f5e849]:
+                                - button "Toggle block" [ref=f5e850] [cursor=pointer]
+                                - button [ref=f5e851]:
+                                  - img [ref=f5e852]
+                                - generic:
+                                  - generic:
+                                    - generic: Arrow List 01
+                                - generic:
+                                  - button [ref=f5e862] [cursor=pointer]:
+                                    - img [ref=f5e863]
+                                  - generic:
+                                    - img
+                              - generic [ref=f5e872]:
+                                - button "Toggle block" [ref=f5e873] [cursor=pointer]
+                                - button [ref=f5e874]:
+                                  - img [ref=f5e875]
+                                - generic:
+                                  - generic:
+                                    - generic: Arrow List 02
+                                - generic:
+                                  - button [ref=f5e885] [cursor=pointer]:
+                                    - img [ref=f5e886]
+                                  - generic:
+                                    - img
+                              - generic [ref=f5e895]:
+                                - button "Toggle block" [ref=f5e896] [cursor=pointer]
+                                - button [ref=f5e897]:
+                                  - img [ref=f5e898]
+                                - generic:
+                                  - generic:
+                                    - generic: Arrow List 03
+                                - generic:
+                                  - button [ref=f5e908] [cursor=pointer]:
+                                    - img [ref=f5e909]
+                                  - generic:
+                                    - img
+                              - generic [ref=f5e918]:
+                                - button "Toggle block" [ref=f5e919] [cursor=pointer]
+                                - button [ref=f5e920]:
+                                  - img [ref=f5e921]
+                                - generic:
+                                  - generic:
+                                    - generic: Arrow List 04
+                                - generic:
+                                  - button [ref=f5e931] [cursor=pointer]:
+                                    - img [ref=f5e932]
+                                  - generic:
+                                    - img
+                            - status [ref=f5e939]
+                            - button "Add Arrow List" [ref=f5e940] [cursor=pointer]:
+                              - generic:
+                                - generic: Add Arrow List
+                                - generic:
+                                  - img
+                          - generic [ref=f5e941]:
+                            - generic [ref=f5e942]: Pijl-kleur
+                            - generic [ref=f5e944]:
+                              - log [ref=f5e946]
+                              - generic [ref=f5e947]:
+                                - generic "Blauw" [ref=f5e948]:
+                                  - generic [ref=f5e949]:
+                                    - generic [ref=f5e950]: Blauw
+                                    - combobox [ref=f5e952]
+                                - generic [ref=f5e953]:
+                                  - button [ref=f5e954] [cursor=pointer]:
+                                    - img [ref=f5e955]
+                                  - button [ref=f5e957] [cursor=pointer]:
+                                    - img [ref=f5e958]
+                          - generic [ref=f5e1659]:
+                            - generic [ref=f5e1661]: Tekst onder de lijst
+                            - generic [ref=f5e1663]:
+                              - generic [ref=f5e1665]:
+                                - textbox [ref=f5e1666]:
+                                  - paragraph [ref=f5e1667]: Werk je daarnaast ook in een hoog-risicodomein?
+                                  - paragraph [ref=f5e1668]: Dan nemen we dat gewoon mee in hetzelfde gesprek.
+                                - button "Drag to move" [ref=f5e1669]
+                                - button "Add block" [ref=f5e1671] [cursor=pointer]
+                                - generic [ref=f5e1674]:
+                                  - button "Edit link" [ref=f5e1675] [cursor=pointer]:
+                                    - img [ref=f5e1676]
+                                  - button "Remove link" [ref=f5e1678] [cursor=pointer]:
+                                    - img [ref=f5e1679]
+                              - button "Insert Paragraph" [ref=f5e1681]
+                          - heading "Knop" [level=3] [ref=f5e966]
+                          - generic [ref=f5e967]:
+                            - generic [ref=f5e968]: Gele handschrift-kop (onder de tekst)
+                            - generic [ref=f5e969]:
+                              - textbox "Gele handschrift-kop (onder de tekst)" [ref=f5e970]
+                              - generic [ref=f5e971]: Marker-lettertype in geel, onder de tekst (bijv. "Ontvang 'in de marge'"). Voor de nieuwsbrief-variant.
+                          - generic [ref=f5e973]:
+                            - checkbox "Toon nieuwsbrief-formulier" [ref=f5e975]
+                            - generic [ref=f5e976]: Toon nieuwsbrief-formulier
+                      - generic [ref=f5e978]:
+                        - generic [ref=f5e979]:
+                          - button "Toggle block" [ref=f5e980] [cursor=pointer]
+                          - button [ref=f5e981]:
+                            - img [ref=f5e982]
+                          - generic:
+                            - generic:
+                              - generic: "04"
+                              - generic:
+                                - generic: Donkere longform-sectie
+                              - textbox "Untitled" [ref=f5e990]
+                          - generic:
+                            - button [ref=f5e994] [cursor=pointer]:
+                              - img [ref=f5e995]
+                            - generic:
+                              - img
+                        - generic [ref=f5e1002]:
+                          - generic [ref=f5e1003]:
+                            - generic [ref=f5e1004]: Kop
+                            - textbox "Kop" [ref=f5e1006]: Hoe het werkt
+                          - generic [ref=f5e1007]:
+                            - generic [ref=f5e1008]: Geel gemarkeerde subkop
+                            - textbox "Geel gemarkeerde subkop" [ref=f5e1011]: "Het begint met een gesprek. Ik wil je bedrijf snappen: wie gebruikt wat, waar zit het risico, en wat staat er al."
+                          - generic [ref=f5e1683]:
+                            - generic [ref=f5e1685]: Tekst boven de afbeelding
+                            - generic [ref=f5e1687]:
+                              - generic [ref=f5e1689]:
+                                - textbox [ref=f5e1690]:
+                                  - paragraph [ref=f5e1691]: "Daarna bouwen we een aanpak op maat: beleid, afspraken en training, zodat je team niet alleen wéét wat mag, maar het ook doet. En zodat je het nodige doet. Niet te weinig, maar ook niet te veel."
+                                  - paragraph [ref=f5e1692]: Geen dik rapport dat in een la verdwijnt, zo hebben we er genoeg. Maar wat werkt op de vloer zodat mensen weten wat ze moeten doen en dat ook daadwerkelijk doen.
+                                - button "Drag to move" [ref=f5e1693]
+                                - button "Add block" [ref=f5e1695] [cursor=pointer]
+                                - generic [ref=f5e1698]:
+                                  - button "Edit link" [ref=f5e1699] [cursor=pointer]:
+                                    - img [ref=f5e1700]
+                                  - button "Remove link" [ref=f5e1702] [cursor=pointer]:
+                                    - img [ref=f5e1703]
+                              - button "Insert Paragraph" [ref=f5e1705]
+                          - generic [ref=f5e1014]:
+                            - generic [ref=f5e1015]:
+                              - generic [ref=f5e1016]:
+                                - heading "Blauwe annotaties" [level=3] [ref=f5e1018]
+                                - list [ref=f5e1019]:
+                                  - listitem [ref=f5e1020]:
+                                    - button [ref=f5e1023] [cursor=pointer]:
+                                      - img [ref=f5e1024]
+                              - generic [ref=f5e1028]: Decoratieve blauwe handgeschreven woorden. Op desktop rond de tekst geplaatst, op mobiel inline.
+                            - button "Add Annotatie" [ref=f5e1029] [cursor=pointer]:
+                              - generic:
+                                - generic: Add Annotatie
+                                - generic:
+                                  - img
+                          - generic [ref=f5e1030]:
+                            - generic [ref=f5e1031]: Ingekaderde afbeelding
+                            - generic [ref=f5e1034]:
+                              - generic [ref=f5e1035]:
+                                - button "Create New" [ref=f5e1036] [cursor=pointer]:
+                                  - generic:
+                                    - generic: Create New
+                                - generic [ref=f5e1037]: Or
+                                - button "Choose from existing" [ref=f5e1038] [cursor=pointer]:
+                                  - generic:
+                                    - generic: Choose from existing
+                              - paragraph [ref=f5e1039]: Or Drag and drop a file
+                          - generic [ref=f5e1707]:
+                            - generic [ref=f5e1709]: Tekst onder de afbeelding
+                            - generic [ref=f5e1711]:
+                              - generic [ref=f5e1713]:
+                                - textbox [ref=f5e1714]:
+                                  - paragraph [ref=f5e1715]
+                                - paragraph: Start typing, or press '/' for commands...
+                                - button "Drag to move" [ref=f5e1716]
+                                - button "Add block" [ref=f5e1718] [cursor=pointer]
+                                - generic [ref=f5e1721]:
+                                  - button "Edit link" [ref=f5e1722] [cursor=pointer]:
+                                    - img [ref=f5e1723]
+                                  - button "Remove link" [ref=f5e1725] [cursor=pointer]:
+                                    - img [ref=f5e1726]
+                              - button "Insert Paragraph" [ref=f5e1728]
+                          - generic [ref=f5e1042]:
+                            - generic [ref=f5e1044]:
+                              - heading "Pijl-lijst" [level=3] [ref=f5e1046]
+                              - list [ref=f5e1047]:
+                                - listitem [ref=f5e1048]:
+                                  - button [ref=f5e1051] [cursor=pointer]:
+                                    - img [ref=f5e1052]
+                            - button "Add Regel" [ref=f5e1056] [cursor=pointer]:
+                              - generic:
+                                - generic: Add Regel
+                                - generic:
+                                  - img
+                          - heading "Knop" [level=3] [ref=f5e1061]
+                      - generic [ref=f5e1063]:
+                        - generic [ref=f5e1064]:
+                          - button "Toggle block" [ref=f5e1065] [cursor=pointer]
+                          - button [ref=f5e1066]:
+                            - img [ref=f5e1067]
+                          - generic:
+                            - generic:
+                              - generic: "05"
+                              - generic:
+                                - generic: Foto + tekst
+                              - textbox "Untitled" [ref=f5e1075]
+                          - generic:
+                            - button [ref=f5e1079] [cursor=pointer]:
+                              - img [ref=f5e1080]
+                            - generic:
+                              - img
+                        - generic [ref=f5e1087]:
+                          - generic [ref=f5e1088]:
+                            - generic [ref=f5e1089]: Achtergrond
+                            - generic [ref=f5e1091]:
+                              - log [ref=f5e1093]
+                              - generic [ref=f5e1094]:
+                                - generic "Wit" [ref=f5e1095]:
+                                  - generic [ref=f5e1096]:
+                                    - generic [ref=f5e1097]: Wit
+                                    - combobox [ref=f5e1099]
+                                - generic [ref=f5e1100]:
+                                  - button [ref=f5e1101] [cursor=pointer]:
+                                    - img [ref=f5e1102]
+                                  - button [ref=f5e1104] [cursor=pointer]:
+                                    - img [ref=f5e1105]
+                          - generic [ref=f5e1107]:
+                            - generic [ref=f5e1108]: Fotopositie
+                            - generic [ref=f5e1110]:
+                              - log [ref=f5e1112]
+                              - generic [ref=f5e1113]:
+                                - generic "Links" [ref=f5e1114]:
+                                  - generic [ref=f5e1115]:
+                                    - generic [ref=f5e1116]: Links
+                                    - combobox [ref=f5e1118]
+                                - generic [ref=f5e1119]:
+                                  - button [ref=f5e1120] [cursor=pointer]:
+                                    - img [ref=f5e1121]
+                                  - button [ref=f5e1123] [cursor=pointer]:
+                                    - img [ref=f5e1124]
+                          - generic [ref=f5e1126]:
+                            - generic [ref=f5e1127]: Foto-weergave
+                            - generic [ref=f5e1129]:
+                              - log [ref=f5e1131]
+                              - generic [ref=f5e1132]:
+                                - generic "Rand-tot-rand (vullend)" [ref=f5e1133]:
+                                  - generic [ref=f5e1134]:
+                                    - generic [ref=f5e1135]: Rand-tot-rand (vullend)
+                                    - combobox [ref=f5e1137]
+                                - generic [ref=f5e1138]:
+                                  - button [ref=f5e1139] [cursor=pointer]:
+                                    - img [ref=f5e1140]
+                                  - button [ref=f5e1142] [cursor=pointer]:
+                                    - img [ref=f5e1143]
+                          - generic [ref=f5e1145]:
+                            - generic [ref=f5e1146]:
+                              - text: Foto
+                              - generic [ref=f5e1147]: "*"
+                            - generic [ref=f5e1731]:
+                              - generic [ref=f5e1732]:
+                                - img "els 2" [ref=f5e1734]
+                                - generic [ref=f5e1735]:
+                                  - paragraph [ref=f5e1736]:
+                                    - link "2026_06_Els-1.png" [ref=f5e1737] [cursor=pointer]:
+                                      - /url: /api/media/file/2026_06_Els-1.png
+                                  - paragraph [ref=f5e1738]: 1MB — 1200x1200 — image/png
+                              - generic [ref=f5e1739]:
+                                - button [ref=f5e1740] [cursor=pointer]:
+                                  - generic:
+                                    - generic:
+                                      - img
+                                - button [ref=f5e1741] [cursor=pointer]:
+                                  - generic:
+                                    - generic:
+                                      - img
+                          - generic [ref=f5e1153]:
+                            - generic [ref=f5e1154]: Handgeschreven annotatie (blauw)
+                            - textbox "Handgeschreven annotatie (blauw)" [ref=f5e1156]
+                          - generic [ref=f5e1157]:
+                            - generic [ref=f5e1158]: Kop
+                            - textbox "Kop" [ref=f5e1160]: Waarom ik?
+                          - generic [ref=f5e1161]:
+                            - generic [ref=f5e1162]: Gele subkop
+                            - generic [ref=f5e1163]:
+                              - textbox "Gele subkop" [ref=f5e1164]
+                              - generic [ref=f5e1165]: Strakke Archivo-subkop in geel, onder de hoofdkop
+                          - generic [ref=f5e1166]:
+                            - generic [ref=f5e1167]: Kopniveau
+                            - generic [ref=f5e1169]:
+                              - log [ref=f5e1171]
+                              - generic [ref=f5e1172]:
+                                - generic "H2" [ref=f5e1173]:
+                                  - generic [ref=f5e1174]:
+                                    - generic [ref=f5e1175]: H2
+                                    - combobox [ref=f5e1177]
+                                - generic [ref=f5e1178]:
+                                  - button [ref=f5e1179] [cursor=pointer]:
+                                    - img [ref=f5e1180]
+                                  - button [ref=f5e1182] [cursor=pointer]:
+                                    - img [ref=f5e1183]
+                          - generic [ref=f5e1742]:
+                            - generic [ref=f5e1744]: Tekst
+                            - generic [ref=f5e1746]:
+                              - generic [ref=f5e1748]:
+                                - textbox [ref=f5e1749]:
+                                  - paragraph [ref=f5e1750]: Omdat ik zelf al meer dan vijftien jaar ondernemer ben en ik in verschillende bedrijven heb meegedraaid, zowel van mezelf als van anderen.
+                                  - paragraph [ref=f5e1751]: Omdat ik weet hoeveel ballen je tegelijk in de lucht probeert te houden.
+                                  - paragraph [ref=f5e1752]: Omdat beleid pas werkt als het op de vloer landt in plaats van in een la.
+                                  - paragraph [ref=f5e1753]: Omdat ik je het advies geef dat ik zelf zou willen krijgen, en de scope reken die je echt nodig hebt. Geen duurste-traject-verkoper.
+                                  - paragraph [ref=f5e1754]: Omdat ik liever heb dat je een probleem niet hebt, dan dat ik er een traject rond moet verkopen.
+                                  - paragraph [ref=f5e1755]: Omdat ik Certified AI Compliance Officer (CAICO®) ben en Gewoon Mens spreek, zodat niet alleen jij het snapt, maar je hele team.
+                                - button "Drag to move" [ref=f5e1756]
+                                - button "Add block" [ref=f5e1758] [cursor=pointer]
+                                - generic [ref=f5e1761]:
+                                  - button "Edit link" [ref=f5e1762] [cursor=pointer]:
+                                    - img [ref=f5e1763]
+                                  - button "Remove link" [ref=f5e1765] [cursor=pointer]:
+                                    - img [ref=f5e1766]
+                              - button "Insert Paragraph" [ref=f5e1768]
+                          - generic [ref=f5e1187]:
+                            - generic [ref=f5e1189]:
+                              - heading "Pijl-lijst" [level=3] [ref=f5e1191]
+                              - list [ref=f5e1192]:
+                                - listitem [ref=f5e1193]:
+                                  - button [ref=f5e1196] [cursor=pointer]:
+                                    - img [ref=f5e1197]
+                            - button "Add Arrow List" [ref=f5e1201] [cursor=pointer]:
+                              - generic:
+                                - generic: Add Arrow List
+                                - generic:
+                                  - img
+                          - generic [ref=f5e1770]:
+                            - generic [ref=f5e1772]: Tekst onder de lijst
+                            - generic [ref=f5e1774]:
+                              - generic [ref=f5e1776]:
+                                - textbox [ref=f5e1777]:
+                                  - paragraph [ref=f5e1778]
+                                - paragraph: Start typing, or press '/' for commands...
+                                - button "Drag to move" [ref=f5e1779]
+                                - button "Add block" [ref=f5e1781] [cursor=pointer]
+                                - generic [ref=f5e1784]:
+                                  - button "Edit link" [ref=f5e1785] [cursor=pointer]:
+                                    - img [ref=f5e1786]
+                                  - button "Remove link" [ref=f5e1788] [cursor=pointer]:
+                                    - img [ref=f5e1789]
+                              - button "Insert Paragraph" [ref=f5e1791]
+                          - heading "Knop" [level=3] [ref=f5e1208]
+                          - generic [ref=f5e1209]:
+                            - generic [ref=f5e1210]: Gele handschrift-kop (onder de tekst)
+                            - generic [ref=f5e1211]:
+                              - textbox "Gele handschrift-kop (onder de tekst)" [ref=f5e1212]
+                              - generic [ref=f5e1213]: Marker-lettertype in geel, onder de tekst (bijv. "Ontvang 'in de marge'"). Voor de nieuwsbrief-variant.
+                          - generic [ref=f5e1215]:
+                            - checkbox "Toon nieuwsbrief-formulier" [ref=f5e1217]
+                            - generic [ref=f5e1218]: Toon nieuwsbrief-formulier
+                      - generic [ref=f5e1220]:
+                        - generic [ref=f5e1221]:
+                          - button "Toggle block" [ref=f5e1222] [cursor=pointer]
+                          - button [ref=f5e1223]:
+                            - img [ref=f5e1224]
+                          - generic:
+                            - generic:
+                              - generic: "06"
+                              - generic:
+                                - generic: Donkere longform-sectie
+                              - textbox "Untitled" [ref=f5e1232]
+                          - generic:
+                            - button [ref=f5e1236] [cursor=pointer]:
+                              - img [ref=f5e1237]
+                            - generic:
+                              - img
+                        - generic [ref=f5e1244]:
+                          - generic [ref=f5e1245]:
+                            - generic [ref=f5e1246]: Kop
+                            - textbox "Kop" [ref=f5e1248]: Wat het kost
+                          - generic [ref=f5e1249]:
+                            - generic [ref=f5e1250]: Geel gemarkeerde subkop
+                            - textbox "Geel gemarkeerde subkop" [ref=f5e1253]
+                          - generic [ref=f5e1793]:
+                            - generic [ref=f5e1795]: Tekst boven de afbeelding
+                            - generic [ref=f5e1797]:
+                              - generic [ref=f5e1799]:
+                                - textbox [ref=f5e1800]:
+                                  - paragraph [ref=f5e1801]: Dat hangt af van de omvang van je toepassing, de sector waarin je werkt en wat er al aanwezig is.
+                                  - paragraph [ref=f5e1802]: Daarom werken we niet met vaste pakketten.
+                                  - paragraph [ref=f5e1803]: Na een eerste gesprek krijg je een duidelijke inschatting van de aanpak, de scope en de investering.
+                                  - paragraph [ref=f5e1804]: Dan weet je waar je aan toe bent.
+                                - button "Drag to move" [ref=f5e1805]
+                                - button "Add block" [ref=f5e1807] [cursor=pointer]
+                                - generic [ref=f5e1810]:
+                                  - button "Edit link" [ref=f5e1811] [cursor=pointer]:
+                                    - img [ref=f5e1812]
+                                  - button "Remove link" [ref=f5e1814] [cursor=pointer]:
+                                    - img [ref=f5e1815]
+                              - button "Insert Paragraph" [ref=f5e1817]
+                          - generic [ref=f5e1256]:
+                            - generic [ref=f5e1257]:
+                              - generic [ref=f5e1258]:
+                                - heading "Blauwe annotaties" [level=3] [ref=f5e1260]
+                                - list [ref=f5e1261]:
+                                  - listitem [ref=f5e1262]:
+                                    - button [ref=f5e1265] [cursor=pointer]:
+                                      - img [ref=f5e1266]
+                              - generic [ref=f5e1270]: Decoratieve blauwe handgeschreven woorden. Op desktop rond de tekst geplaatst, op mobiel inline.
+                            - button "Add Annotatie" [ref=f5e1271] [cursor=pointer]:
+                              - generic:
+                                - generic: Add Annotatie
+                                - generic:
+                                  - img
+                          - generic [ref=f5e1272]:
+                            - generic [ref=f5e1273]: Ingekaderde afbeelding
+                            - generic [ref=f5e1276]:
+                              - generic [ref=f5e1277]:
+                                - button "Create New" [ref=f5e1278] [cursor=pointer]:
+                                  - generic:
+                                    - generic: Create New
+                                - generic [ref=f5e1279]: Or
+                                - button "Choose from existing" [ref=f5e1280] [cursor=pointer]:
+                                  - generic:
+                                    - generic: Choose from existing
+                              - paragraph [ref=f5e1281]: Or Drag and drop a file
+                          - generic [ref=f5e1819]:
+                            - generic [ref=f5e1821]: Tekst onder de afbeelding
+                            - generic [ref=f5e1823]:
+                              - generic [ref=f5e1825]:
+                                - textbox [ref=f5e1826]:
+                                  - paragraph [ref=f5e1827]
+                                - paragraph: Start typing, or press '/' for commands...
+                                - button "Drag to move" [ref=f5e1828]
+                                - button "Add block" [ref=f5e1830] [cursor=pointer]
+                                - generic [ref=f5e1833]:
+                                  - button "Edit link" [ref=f5e1834] [cursor=pointer]:
+                                    - img [ref=f5e1835]
+                                  - button "Remove link" [ref=f5e1837] [cursor=pointer]:
+                                    - img [ref=f5e1838]
+                              - button "Insert Paragraph" [ref=f5e1840]
+                          - generic [ref=f5e1284]:
+                            - generic [ref=f5e1286]:
+                              - heading "Pijl-lijst" [level=3] [ref=f5e1288]
+                              - list [ref=f5e1289]:
+                                - listitem [ref=f5e1290]:
+                                  - button [ref=f5e1293] [cursor=pointer]:
+                                    - img [ref=f5e1294]
+                            - button "Add Regel" [ref=f5e1298] [cursor=pointer]:
+                              - generic:
+                                - generic: Add Regel
+                                - generic:
+                                  - img
+                          - heading "Knop" [level=3] [ref=f5e1303]
+                      - generic [ref=f5e1305]:
+                        - generic [ref=f5e1306]:
+                          - button "Toggle block" [ref=f5e1307] [cursor=pointer]
+                          - button [ref=f5e1308]:
+                            - img [ref=f5e1309]
+                          - generic:
+                            - generic:
+                              - generic: "07"
+                              - generic:
+                                - generic: Tekstkolommen
+                              - textbox "Untitled" [ref=f5e1317]
+                          - generic:
+                            - button [ref=f5e1321] [cursor=pointer]:
+                              - img [ref=f5e1322]
+                            - generic:
+                              - img
+                        - generic [ref=f5e1329]:
+                          - generic [ref=f5e1330]:
+                            - generic [ref=f5e1331]: Achtergrond
+                            - generic [ref=f5e1333]:
+                              - log [ref=f5e1335]
+                              - generic [ref=f5e1336]:
+                                - generic "Zwart" [ref=f5e1337]:
+                                  - generic [ref=f5e1338]:
+                                    - generic [ref=f5e1339]: Zwart
+                                    - combobox [ref=f5e1341]
+                                - generic [ref=f5e1342]:
+                                  - button [ref=f5e1343] [cursor=pointer]:
+                                    - img [ref=f5e1344]
+                                  - button [ref=f5e1346] [cursor=pointer]:
+                                    - img [ref=f5e1347]
+                          - generic [ref=f5e1349]:
+                            - generic [ref=f5e1350]: Kop
+                            - textbox "Kop" [ref=f5e1352]
+                          - generic [ref=f5e1353]:
+                            - generic [ref=f5e1354]:
+                              - checkbox "Compact (vervolgtekst)" [ref=f5e1356]
+                              - generic [ref=f5e1357]: Compact (vervolgtekst)
+                            - generic [ref=f5e1358]: Vinkje = geen minimumhoogte van 630px en kleinere verticale padding. Voor korte vervolgteksten die bij de vorige sectie horen.
+                          - generic [ref=f5e1359]:
+                            - generic [ref=f5e1360]: Uitlijning
+                            - generic [ref=f5e1362]:
+                              - log [ref=f5e1364]
+                              - generic [ref=f5e1365]:
+                                - generic "Links" [ref=f5e1366]:
+                                  - generic [ref=f5e1367]:
+                                    - generic [ref=f5e1368]: Links
+                                    - combobox [ref=f5e1370]
+                                - generic [ref=f5e1371]:
+                                  - button [ref=f5e1372] [cursor=pointer]:
+                                    - img [ref=f5e1373]
+                                  - button [ref=f5e1375] [cursor=pointer]:
+                                    - img [ref=f5e1376]
+                          - generic [ref=f5e1378]:
+                            - generic [ref=f5e1380]:
+                              - heading "Tekstkolommen" [level=3] [ref=f5e1382]
+                              - list [ref=f5e1383]:
+                                - listitem [ref=f5e1384]:
+                                  - button "Collapse All" [ref=f5e1385] [cursor=pointer]
+                                - listitem [ref=f5e1386]:
+                                  - button "Show All" [ref=f5e1387] [cursor=pointer]
+                                - listitem [ref=f5e1388]:
+                                  - button [ref=f5e1391] [cursor=pointer]:
+                                    - img [ref=f5e1392]
+                            - generic [ref=f5e1399]:
+                              - button "Toggle block" [ref=f5e1400] [cursor=pointer]
+                              - button [ref=f5e1401]:
+                                - img [ref=f5e1402]
+                              - generic:
+                                - generic:
+                                  - generic: Tekstkolom 01
+                              - generic:
+                                - button [ref=f5e1412] [cursor=pointer]:
+                                  - img [ref=f5e1413]
+                                - generic:
+                                  - img
+                            - status [ref=f5e1420]
+                            - button "Add Tekstkolom" [ref=f5e1421] [cursor=pointer]:
+                              - generic:
+                                - generic: Add Tekstkolom
+                                - generic:
+                                  - img
+                    - status [ref=f5e1422]
+                    - button "Add Layout" [ref=f5e1423]:
+                      - generic [ref=f5e1424] [cursor=pointer]:
+                        - generic:
+                          - generic: Add Layout
+                          - generic:
+                            - img
+                - generic [ref=f5e1426]:
+                  - heading "SEO" [level=3] [ref=f5e1429]
+                  - generic [ref=f5e1430]:
+                    - generic [ref=f5e1432]: 0/3 checks are passing
+                    - generic [ref=f5e1433]:
+                      - generic [ref=f5e1434]:
+                        - generic [ref=f5e1435]:
+                          - text: Title —
+                          - button "Auto-generate" [ref=f5e1436] [cursor=pointer]
+                        - generic [ref=f5e1437]:
+                          - text: This should be between 50 and 60 characters. For help in writing quality meta titles, see
+                          - link "best practices" [ref=f5e1438] [cursor=pointer]:
+                            - /url: https://developers.google.com/search/docs/advanced/appearance/title-link#page-titles
+                          - text: .
+                      - textbox "Title" [ref=f5e1442]: TEAM op maat - Human Margin
+                      - generic [ref=f5e1444]:
+                        - generic [ref=f5e1445]: Too short
+                        - generic [ref=f5e1447]: 27/50-60 chars, 23 to go
+                    - generic [ref=f5e1450]:
+                      - generic [ref=f5e1451]:
+                        - generic [ref=f5e1452]: Description
+                        - generic [ref=f5e1453]:
+                          - text: This should be between 100 and 150 characters. For help in writing quality meta descriptions, see
+                          - link "best practices" [ref=f5e1454] [cursor=pointer]:
+                            - /url: https://developers.google.com/search/docs/advanced/appearance/snippet#meta-descriptions
+                      - textbox "Description" [ref=f5e1459]: Meer mensen, tools, meningen. En meer manieren waarop dingen mis kunnen lopen.
+                      - generic [ref=f5e1461]:
+                        - generic [ref=f5e1462]: Too short
+                        - generic [ref=f5e1464]: 78/100-150 chars, 22 to go
+                    - generic [ref=f5e1467]:
+                      - generic [ref=f5e1469]: Meta Image
+                      - generic [ref=f5e1474]:
+                        - generic [ref=f5e1475]:
+                          - button "Create New" [ref=f5e1476] [cursor=pointer]:
+                            - generic:
+                              - generic: Create New
+                          - generic [ref=f5e1477]: Or
+                          - button "Choose from existing" [ref=f5e1478] [cursor=pointer]:
+                            - generic:
+                              - generic: Choose from existing
+                        - paragraph [ref=f5e1479]: Or Drag and drop a file
+                      - generic [ref=f5e1481]: No image
+                    - generic [ref=f5e1482]:
+                      - generic [ref=f5e1483]: Preview
+                      - generic [ref=f5e1484]: Exact result listings may vary based on content and search relevancy.
+                      - generic:
+                        - generic:
+                          - link "http://localhost:3000/team-op-maat":
+                            - /url: http://localhost:3000/team-op-maat
+                        - heading "TEAM op maat - Human Margin" [level=4]:
+                          - link "TEAM op maat - Human Margin":
+                            - /url: /
+                        - paragraph: Meer mensen, tools, meningen. En meer manieren waarop dingen mis kunnen lopen.
+              - generic [ref=f5e1489]:
+                - generic [ref=f5e1490]:
+                  - text: Slug
+                  - generic [ref=f5e1491]: "*"
+                - generic [ref=f5e1492]:
+                  - textbox "Slug *" [ref=f5e1493]: team-op-maat
+                  - generic [ref=f5e1494]: URL-pad van de pagina. Gebruik "home" voor de homepage.
+        - status [ref=f5e1495]
+  - status [ref=f5e334]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f5e251] [cursor=pointer]:
+    - img [ref=f5e252]
+  - alert [ref=f5e335]: Editing - Pagina — Human Margin CMS

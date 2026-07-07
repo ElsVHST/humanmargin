@@ -1,0 +1,48 @@
+<div> 
+   css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(17, 16, 16)", "backgroundPosition": "0% 0%", "paddingRight": "115.188px", "paddingLeft": "115.188px", "width": "1440px", "height": "503.828px", "maxWidth": "100%", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+   rect(x,y,w,h): [0, 110, 1440, 504]
+  <div> 
+     css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "96.7656px", "paddingBottom": "96.7656px", "marginRight": "324.016px", "marginLeft": "324.016px", "width": "561.594px", "height": "503.828px", "maxWidth": "561.6px", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+     rect(x,y,w,h): [439, 110, 562, 504]
+    <div> [image.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "561.594px", "height": "133.297px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [439, 207, 562, 133]
+      <img> IMG:https://humanmargin.eu/wp-content/uploads/2026/06/human-margin-logo-inverted-rgb-900px-w-72ppi.png (800x387) alt=''
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "275.172px", "height": "133.297px", "maxWidth": "100%", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill", "aspectRatio": "auto 800 / 388"}
+         rect(x,y,w,h): [582, 207, 275, 133]
+    <div> [button.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "561.594px", "height": "39px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [439, 360, 562, 39]
+      <a> HREF:https://humanmargin.eu/
+         css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "center", "backgroundColor": "rgb(0, 44, 207)", "backgroundPosition": "0% 0%", "paddingTop": "12px", "paddingRight": "24px", "paddingBottom": "12px", "paddingLeft": "24px", "width": "561.594px", "height": "39px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "boxShadow": "rgba(0, 0, 0, 0.43) 0px 0px 3px 0px", "transition": "0.3s", "objectFit": "fill"}
+         rect(x,y,w,h): [439, 360, 562, 39]
+        <span> 
+           css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "513.594px", "height": "15px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "flexWrap": "nowrap", "gap": "5px", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [463, 372, 514, 15]
+          <span> TXT:'Home'
+             css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "45px", "height": "15px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [698, 372, 45, 15]
+    <div> [button.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "561.594px", "height": "39px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [439, 419, 562, 39]
+      <a> HREF:https://humanmargin.eu/ai-reality-check/
+         css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(0, 44, 207)", "textTransform": "uppercase", "textAlign": "center", "backgroundColor": "rgb(237, 255, 0)", "backgroundPosition": "0% 0%", "paddingTop": "12px", "paddingRight": "24px", "paddingBottom": "12px", "paddingLeft": "24px", "width": "561.594px", "height": "39px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(0, 44, 207)", "boxShadow": "rgba(0, 0, 0, 0.43) 0px 0px 3px 0px", "transition": "0.3s", "objectFit": "fill"}
+         rect(x,y,w,h): [439, 419, 562, 39]
+        <span> 
+           css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(0, 44, 207)", "textTransform": "uppercase", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "513.594px", "height": "15px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "flexWrap": "nowrap", "gap": "5px", "borderColor": "rgb(0, 44, 207)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [463, 431, 514, 15]
+          <span> TXT:'AI Reality check'
+             css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(0, 44, 207)", "textTransform": "uppercase", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "140.578px", "height": "15px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(0, 44, 207)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [650, 431, 141, 15]
+    <div> [button.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "561.594px", "height": "39px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [439, 478, 562, 39]
+      <a> HREF:https://humanmargin.eu/manifest/
+         css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "center", "backgroundColor": "rgb(0, 44, 207)", "backgroundPosition": "0% 0%", "paddingTop": "12px", "paddingRight": "24px", "paddingBottom": "12px", "paddingLeft": "24px", "width": "561.594px", "height": "39px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "boxShadow": "rgba(0, 0, 0, 0.43) 0px 0px 3px 0px", "transition": "0.3s", "objectFit": "fill"}
+         rect(x,y,w,h): [439, 478, 562, 39]
+        <span> 
+           css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "513.594px", "height": "15px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "flexWrap": "nowrap", "gap": "5px", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [463, 490, 514, 15]
+          <span> TXT:'Manifest'
+             css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "76.6719px", "height": "15px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [682, 490, 77, 15]

@@ -1,0 +1,183 @@
+<div> 
+   css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(17, 16, 16)", "backgroundPosition": "0% 0%", "width": "1440px", "height": "1984.67px", "maxWidth": "100%", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s"}
+   rect(x,y,w,h): [0, 1865, 1440, 1985]
+  <div> 
+     css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "100px", "paddingBottom": "100px", "marginRight": "324px", "marginLeft": "324px", "width": "792px", "height": "1984.67px", "maxWidth": "55%", "display": "flex", "flexDirection": "column", "alignItems": "center", "flexWrap": "nowrap", "transition": "all"}
+     rect(x,y,w,h): [324, 1865, 792, 1985]
+    <div> 
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingRight": "79.1875px", "paddingLeft": "79.1875px", "width": "792px", "height": "1784.67px", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s"}
+       rect(x,y,w,h): [324, 1965, 792, 1785]
+      <div> [heading.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "633.625px", "height": "96px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [403, 1965, 634, 96]
+        <h2> TXT:'Voor zij die lezen, maar niet zomaar aannemen'
+           css: {"fontSize": "40px", "fontWeight": "400", "fontFamily": "\"Archivo Black\", sans-serif", "lineHeight": "48px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "633.625px", "height": "96px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 1965, 634, 96]
+      <div> [heading.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "633.625px", "height": "93.6094px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [403, 2081, 634, 94]
+        <h3> TXT:'Voor zij die willen verstaan. Omdat ze begrijpen dat vrijheid en autonomie samengaan met begrip.'
+           css: {"fontSize": "26px", "fontWeight": "500", "fontFamily": "Archivo, sans-serif", "lineHeight": "31.2px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "633.625px", "height": "93.6094px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 2081, 634, 94]
+      <div> [text-editor.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "633.625px", "height": "714.469px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [403, 2195, 634, 714]
+        <p> TXT:'Voor zij die dingen in twijfel trekken. Niet omdat het kan, maar omdat het moet.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "27px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 2195, 634, 27]
+        <p> TXT:'Voor zij die doorhebben wat er op het spel staat. Die te hard gewerkt hebben aan hun vrijheid om die nu uit handen te geven.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "54px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 2236, 634, 54]
+        <p> TXT:'Aan anderen, of aan AI.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "27px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 2304, 634, 27]
+        <p> TXT:'Zij zijn wij.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "27px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 2346, 634, 27]
+        <p> TXT:'Wij zijn niet tegen AI. Wij zijn anti-zombie en pro-mens. We zijn tegen zij die ons willen overtuigen dat AI een trein is die je moet halen, in plaats van een krachtig gereedschap dat je bewust moet inzetten.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "81px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 2387, 634, 81]
+        <p> TXT:'Tegen gedachteloos AI-gebruik. Tegen het uitbesteden van ons denken.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "27px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 2483, 634, 27]
+        <p> TXT:'Tegen het idee dat sneller altijd beter is, en productiviteit het hoogste goed is.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "27px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 2524, 634, 27]
+        <p> TXT:'De mens is geen fabriek. AI is geen religie. En autonomie is geen detail.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "27px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 2565, 634, 27]
+        <p> TXT:'Wij geloven dat AI een gereedschap is. Krachtig, nuttig, soms briljant. Maar alleen als je begrijpt wat je gebruikt, waarom, en welke gevolgen dat heeft.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "54px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 2607, 634, 54]
+        <p> TXT:'Want de grootste risico’s ontstaan niet doordat mensen AI gebruiken. Ze ontstaan doordat mensen AI gebruiken zonder te begrijpen wat ze gebruiken.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "54px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 2675, 634, 54]
+        <p> TXT:'Begrip is autonomie. Nieuwsgierigheid is verzet.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "27px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 2743, 634, 27]
+        <p> TXT:'Daarom bestaat Human Margin.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "27px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 2785, 634, 27]
+        <p> TXT:'Lees het'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "27px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 2826, 634, 27]
+          <span> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(237, 255, 0)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+             rect(x,y,w,h): [477, 2829, 68, 21]
+            <a> TXT:'manifest' HREF:https://humanmargin.eu/manifest/
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(237, 255, 0)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+               rect(x,y,w,h): [477, 2829, 68, 21]
+        <p> TXT:'Of begin'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "27px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 2868, 634, 27]
+          <span> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textDecorationLine": "underline", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+             rect(x,y,w,h): [476, 2871, 34, 21]
+            <span> TXT:'.'
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(237, 255, 0)", "textDecorationLine": "underline", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+               rect(x,y,w,h): [476, 2871, 34, 21]
+              <a> TXT:'hier' HREF:https://humanmargin.eu/ai-reality-check/
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(237, 255, 0)", "textDecorationLine": "underline", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+                 rect(x,y,w,h): [476, 2871, 30, 21]
+      <div> [heading.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "end", "backgroundPosition": "0% 0%", "width": "147.641px", "height": "36px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "absolute", "top": "416.674px", "right": "763.266px", "bottom": "1332px", "left": "-118.907px", "transform": "matrix3d(0.987688, -0.156434, 0, 0, 0.156434, 0.987688, 0, 0, 0, 0, 1, -1, 0, 0, 0, 1)", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [203, 2370, 151, 59]
+        <p> TXT:'Anti-zombie'
+           css: {"fontSize": "30px", "fontWeight": "400", "fontFamily": "Handwritten, sans-serif", "lineHeight": "36px", "color": "rgb(0, 44, 207)", "textAlign": "end", "backgroundPosition": "0% 0%", "width": "147.641px", "height": "36px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [203, 2370, 151, 59]
+      <div> [heading.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "end", "backgroundPosition": "0% 0%", "width": "174.234px", "height": "36px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "absolute", "top": "772.248px", "right": "123.625px", "bottom": "976.438px", "left": "494.153px", "transform": "matrix3d(0.987688, -0.156434, 0, 0, 0.156434, 0.987688, 0, 0, 0, 0, 1, -1, 0, 0, 0, 1)", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [816, 2724, 178, 63]
+        <p> TXT:'Be curious!'
+           css: {"fontSize": "30px", "fontWeight": "400", "fontFamily": "Handwritten, sans-serif", "lineHeight": "36px", "color": "rgb(0, 44, 207)", "textAlign": "end", "backgroundPosition": "0% 0%", "width": "174.234px", "height": "36px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [816, 2724, 178, 63]
+      <div> [image.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "633.625px", "height": "271.641px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [403, 2929, 634, 272]
+        <img> IMG:https://humanmargin.eu/wp-content/uploads/2026/06/AI-compliance-woordenboek-1-1024x439.jpg (800x342) alt=''
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "633.625px", "height": "271.641px", "maxWidth": "100%", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all", "aspectRatio": "auto 800 / 343"}
+           rect(x,y,w,h): [403, 2929, 634, 272]
+      <div> [text-editor.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "-20px", "width": "633.625px", "height": "287.953px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [403, 3221, 634, 288]
+        <p> TXT:'Dat is de definitie. Maar wat wil dat in godsnaam zeggen in de praktijk?'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "27px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 3221, 634, 27]
+        <p> TXT:'Dat iedereen die AI gebruikt voor zijn werk aan een aantal vereisten moet voldoen.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "54px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 3262, 634, 54]
+        <p> TXT:'Denk je nu: dit is niets voor mij want ik werk enkel met mijn lievelingsmannen Chat en Claude.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "54px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 3330, 634, 54]
+        <p> TXT:'Dan heb je even een AI Reality Check nodig. Want helaas pindakaas geldt het dan ook voor jou.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "54px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 3399, 634, 54]
+        <p> TXT:'In vier minuten weet je:'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "633.625px", "height": "27px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 3467, 634, 27]
+      <div> [icon-list.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "633.625px", "height": "176px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [403, 3509, 634, 176]
+        <ul> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "633.625px", "height": "176px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [403, 3509, 634, 176]
+          <li> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "633.625px", "height": "44px", "display": "flex", "flexDirection": "row", "justifyContent": "start", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+             rect(x,y,w,h): [403, 3509, 634, 44]
+            <span> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "55px", "height": "44px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [403, 3509, 55, 44]
+              <svg> SVG:<svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 125.82 24.71"><g id="Layer_1-2" data-name="Layer 1"><path d="M125.62,11.77s-.06-.05-.09-.07c-5.52-3.34-10.69-7.18-
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginRight": "11px", "width": "44px", "height": "44px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "fill 0.3s"}
+                 rect(x,y,w,h): [403, 3509, 44, 44]
+            <span> TXT:'of de AI Act voor jou geldt'
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingLeft": "5px", "width": "209.156px", "height": "27px", "display": "block", "flexDirection": "row", "alignSelf": "center", "flexWrap": "nowrap", "transition": "color 0.3s"}
+               rect(x,y,w,h): [458, 3517, 209, 27]
+          <li> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "633.625px", "height": "44px", "display": "flex", "flexDirection": "row", "justifyContent": "start", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+             rect(x,y,w,h): [403, 3553, 634, 44]
+            <span> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "55px", "height": "44px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [403, 3553, 55, 44]
+              <svg> SVG:<svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 125.82 24.71"><g id="Layer_1-2" data-name="Layer 1"><path d="M125.62,11.77s-.06-.05-.09-.07c-5.52-3.34-10.69-7.18-
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginRight": "11px", "width": "44px", "height": "44px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "fill 0.3s"}
+                 rect(x,y,w,h): [403, 3553, 44, 44]
+            <span> TXT:'welke rol je hebt onder de wet'
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingLeft": "5px", "width": "244.156px", "height": "27px", "display": "block", "flexDirection": "row", "alignSelf": "center", "flexWrap": "nowrap", "transition": "color 0.3s"}
+               rect(x,y,w,h): [458, 3561, 244, 27]
+          <li> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "633.625px", "height": "44px", "display": "flex", "flexDirection": "row", "justifyContent": "start", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+             rect(x,y,w,h): [403, 3597, 634, 44]
+            <span> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "55px", "height": "44px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [403, 3597, 55, 44]
+              <svg> SVG:<svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 125.82 24.71"><g id="Layer_1-2" data-name="Layer 1"><path d="M125.62,11.77s-.06-.05-.09-.07c-5.52-3.34-10.69-7.18-
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginRight": "11px", "width": "44px", "height": "44px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "fill 0.3s"}
+                 rect(x,y,w,h): [403, 3597, 44, 44]
+            <span> TXT:'welke verplichtingen daarbij horen'
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingLeft": "5px", "width": "277.172px", "height": "27px", "display": "block", "flexDirection": "row", "alignSelf": "center", "flexWrap": "nowrap", "transition": "color 0.3s"}
+               rect(x,y,w,h): [458, 3605, 277, 27]
+          <li> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "633.625px", "height": "44px", "display": "flex", "flexDirection": "row", "justifyContent": "start", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+             rect(x,y,w,h): [403, 3641, 634, 44]
+            <span> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "55px", "height": "44px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [403, 3641, 55, 44]
+              <svg> SVG:<svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 125.82 24.71"><g id="Layer_1-2" data-name="Layer 1"><path d="M125.62,11.77s-.06-.05-.09-.07c-5.52-3.34-10.69-7.18-
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginRight": "11px", "width": "44px", "height": "44px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "fill 0.3s"}
+                 rect(x,y,w,h): [403, 3641, 44, 44]
+            <span> TXT:'en wat je slimste volgende stap is'
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingLeft": "5px", "width": "273.141px", "height": "27px", "display": "block", "flexDirection": "row", "alignSelf": "center", "flexWrap": "nowrap", "transition": "color 0.3s"}
+               rect(x,y,w,h): [458, 3649, 273, 27]
+      <div> [button.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "left", "backgroundPosition": "0% 0%", "width": "633.625px", "height": "45px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [403, 3705, 634, 45]
+        <a> HREF:https://humanmargin.eu/ai-reality-check/
+           css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "center", "backgroundColor": "rgb(0, 44, 207)", "backgroundPosition": "0% 0%", "paddingTop": "15px", "paddingRight": "30px", "paddingBottom": "15px", "paddingLeft": "30px", "width": "261.703px", "height": "45px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "boxShadow": "rgba(0, 0, 0, 0.5) 0px 0px 4px 0px", "transition": "transform 0.3s"}
+           rect(x,y,w,h): [403, 3705, 262, 45]
+          <span> 
+             css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "201.703px", "height": "15px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "flexWrap": "nowrap", "gap": "5px", "transition": "all"}
+             rect(x,y,w,h): [433, 3720, 202, 15]
+            <span> TXT:'Doe de AI Reality Check'
+               css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "201.703px", "height": "15px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+               rect(x,y,w,h): [433, 3720, 202, 15]

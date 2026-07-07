@@ -1,0 +1,375 @@
+/*
+ * Human Margin — admin-thema voor Payload CMS
+ * Brand: zwart #111010 · geel #EDFF00 · blauw #002CCF · grijs #DDDDD3 ·
+ * gebroken wit #F4F4F1 · oranje #FF5C17 · Archivo / Archivo Black · radius 0
+ */
+
+/* ── Fonts (Google + self-hosted, zelfde set als de site) ─────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Archivo+Black&display=swap");
+
+@font-face {
+  font-family: "Handwritten";
+  src: url("/fonts/feisty.woff2") format("woff2");
+  font-display: swap;
+}
+
+:root {
+  --hm-black: #111010;
+  --hm-blue: #002ccf;
+  --hm-yellow: #edff00;
+  --hm-gray: #ddddd3;
+  --hm-offwhite: #f4f4f1;
+  --hm-orange: #ff5c17;
+
+  --font-body: "Archivo", system-ui, sans-serif;
+  --hm-font-heading: "Archivo Black", "Archivo", sans-serif;
+
+  /* Scherpe hoeken — merkbreed */
+  --style-radius-s: 0px;
+  --style-radius-m: 0px;
+  --style-radius-l: 0px;
+}
+
+/* ── Licht thema: gebroken wit canvas, zwart op wit, warme grijzen ────── */
+[data-theme="light"] {
+  --theme-bg: var(--hm-offwhite);
+  --theme-input-bg: #ffffff;
+  --theme-text: var(--hm-black);
+
+  --theme-elevation-0: var(--hm-offwhite);
+  --theme-elevation-50: #ffffff;
+  --theme-elevation-100: #eeeee8;
+  --theme-elevation-150: #e6e6df;
+  --theme-elevation-200: var(--hm-gray);
+  --theme-elevation-250: #cfcfc4;
+  --theme-elevation-300: #c0c0b5;
+  --theme-elevation-400: #a3a399;
+  --theme-elevation-500: #86867d;
+  --theme-elevation-600: #696961;
+  --theme-elevation-650: #5b5b54;
+  --theme-elevation-700: #4d4d47;
+  --theme-elevation-800: #30302c;
+  --theme-elevation-900: #21211e;
+  --theme-elevation-1000: var(--hm-black);
+
+  /* "success"/actie-tinten → merkblauw */
+  --theme-success-50: #e8edff;
+  --theme-success-100: #ccd7ff;
+  --theme-success-200: #99aeff;
+  --theme-success-300: #6685ff;
+  --theme-success-400: #335cff;
+  --theme-success-500: var(--hm-blue);
+  --theme-success-600: #0026b3;
+  --theme-success-700: #001f8f;
+  --theme-success-800: #00186b;
+  --theme-success-900: #001048;
+  --theme-success-950: #000a2e;
+
+  --theme-error-500: var(--hm-orange);
+  --theme-warning-500: var(--hm-orange);
+}
+
+/* ── Donker thema: merk-zwart met gele accenten ───────────────────────── */
+[data-theme="dark"] {
+  --theme-bg: var(--hm-black);
+  --theme-input-bg: #1c1b1b;
+  --theme-text: #f4f4f1;
+
+  --theme-elevation-0: var(--hm-black);
+  --theme-elevation-50: #181717;
+  --theme-elevation-100: #1f1e1e;
+  --theme-elevation-150: #262525;
+  --theme-elevation-200: #2e2d2c;
+  --theme-elevation-250: #363534;
+  --theme-elevation-300: #45443f;
+  --theme-elevation-400: #5c5b54;
+  --theme-elevation-500: #75746c;
+  --theme-elevation-600: #93928a;
+  --theme-elevation-650: #a3a29a;
+  --theme-elevation-700: #b6b5ac;
+  --theme-elevation-800: #d3d2c8;
+  --theme-elevation-900: #e8e7dd;
+  --theme-elevation-1000: var(--hm-offwhite);
+
+  --theme-success-500: var(--hm-yellow);
+  --theme-error-500: var(--hm-orange);
+  --theme-warning-500: var(--hm-orange);
+}
+
+/* ── Typografie: koppen in Archivo Black uppercase, net als de site ───── */
+h1,
+.doc-header__title,
+.dashboard__label,
+.list-header h1,
+.login h1,
+.collection-list__header h1 {
+  font-family: var(--hm-font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.dashboard__label {
+  font-size: 13px;
+  color: var(--theme-elevation-600);
+}
+
+/* Dashboard-groepskoppen (Content / Beheer / Site) in merkstijl */
+.collections__label {
+  font-family: var(--hm-font-heading);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 22px;
+  border-bottom: 2px solid var(--hm-black);
+  padding-bottom: 8px;
+}
+
+/* ── Knoppen: exact het merk-knopsysteem (blauw↔geel swap op hover) ──── */
+.btn {
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.btn--style-primary {
+  background: var(--hm-blue);
+  color: var(--hm-yellow);
+  border: none;
+  transition: all 0.3s;
+}
+
+.btn--style-primary:hover,
+.btn--style-primary:focus-visible {
+  background: var(--hm-yellow);
+  color: var(--hm-black);
+}
+
+.btn--style-secondary {
+  border-radius: 0;
+  box-shadow: inset 0 0 0 1px var(--hm-black);
+  color: var(--hm-black);
+}
+
+.btn--style-secondary:hover {
+  background: var(--hm-yellow);
+  box-shadow: inset 0 0 0 1px var(--hm-black);
+}
+
+[data-theme="dark"] .btn--style-secondary {
+  box-shadow: inset 0 0 0 1px var(--theme-elevation-400);
+  color: var(--theme-text);
+}
+
+/* ── Navigatie/sidebar: zwart met gele actieve items — de site-header ── */
+.nav {
+  background: var(--hm-black);
+}
+
+.nav .nav__link,
+.nav .nav-group__toggle {
+  color: #f4f4f1;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.nav .nav__link:hover,
+.nav .nav-group__toggle:hover {
+  color: var(--hm-yellow);
+}
+
+.nav .nav__link--active,
+.nav .nav__link[aria-current] {
+  color: var(--hm-yellow);
+}
+
+.nav .nav__link--active::before {
+  background: var(--hm-yellow);
+}
+
+.nav__controls,
+.nav__header {
+  background: var(--hm-black);
+}
+
+/* Iconen in de zwarte nav zichtbaar houden */
+.nav .icon,
+.nav__controls .icon {
+  color: #f4f4f1;
+}
+
+/* App-header (bovenbalk) — gele merkstreep zoals de site-header */
+.app-header {
+  background: var(--theme-bg);
+  border-bottom: 2px solid var(--hm-yellow);
+}
+
+.app-header__step-nav a,
+.step-nav a {
+  color: var(--hm-blue);
+}
+
+/* ── Login & minimal templates: zwart merkscherm met geel accent ─────── */
+.template-minimal {
+  background: var(--hm-black);
+}
+
+.template-minimal .template-minimal__wrap {
+  background: var(--hm-offwhite);
+  border-radius: 0;
+  border-top: 4px solid var(--hm-yellow);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
+  padding: 0 0 40px;
+  overflow: hidden;
+}
+
+.template-minimal h1 {
+  color: var(--hm-black);
+}
+
+/* Zwarte logo-band bovenin de kaart — het inverted logo (geel/wit) hoort op zwart */
+.template-minimal .login__brand,
+.template-minimal .graphic-logo,
+.template-minimal .brand {
+  display: flex;
+  justify-content: center;
+  background: var(--hm-black);
+  padding: 32px 40px;
+  margin: 0 0 24px;
+}
+
+/* Formulier binnen de kaart wat lucht geven */
+.template-minimal form,
+.template-minimal .login__form {
+  padding: 0 40px;
+}
+
+/* ── Formuliervelden: strak, 0 radius, gele focus zoals de site ───────── */
+input,
+textarea,
+select,
+.react-select .rs__control {
+  border-radius: 0 !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+.react-select .rs__control--is-focused {
+  outline: none;
+  border-color: var(--hm-blue) !important;
+  box-shadow: 0 0 0 2px var(--hm-yellow) !important;
+}
+
+.field-type .field-label {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--theme-elevation-650);
+}
+
+/* ── Tabellen/lijstweergaven ──────────────────────────────────────────── */
+.table table {
+  border-collapse: collapse;
+}
+
+.table thead th {
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--hm-black);
+}
+
+.table tbody tr:hover {
+  background: rgba(237, 255, 0, 0.12);
+}
+
+[data-theme="dark"] .table thead th {
+  border-bottom-color: var(--hm-yellow);
+}
+
+/* Rij-links in merkblauw */
+.cell-title a,
+.table a {
+  color: var(--hm-blue);
+}
+
+[data-theme="dark"] .cell-title a,
+[data-theme="dark"] .table a {
+  color: var(--hm-yellow);
+}
+
+/* ── Dashboard-kaarten: witte kaarten, gele hover-rand — SaaS-strak ───── */
+.dashboard__card,
+.card {
+  background: var(--theme-input-bg);
+  border-radius: 0;
+  border: 1px solid var(--theme-elevation-150);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.dashboard__card:hover,
+.card:hover {
+  border-color: var(--hm-yellow);
+  box-shadow: 0 0 0 2px var(--hm-yellow);
+}
+
+.card__title {
+  font-family: var(--hm-font-heading);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* ── Pillen, badges, drawers ──────────────────────────────────────────── */
+.pill {
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.pill--style-success {
+  background: var(--hm-yellow);
+  color: var(--hm-black);
+}
+
+.drawer__content,
+.popup__content {
+  border-radius: 0;
+}
+
+/* ── Blocks-veld (de paginasecties die Els versleept) ─────────────────── */
+.blocks-field__block,
+.collapsible {
+  border-radius: 0;
+}
+
+.blocks-field__block-pill,
+.section-title {
+  text-transform: uppercase;
+}
+
+/* ── Live preview-frame ───────────────────────────────────────────────── */
+.live-preview-window {
+  border: 2px solid var(--hm-black);
+}
+
+/* ── Scrollbars in merkstijl (subtiel) ────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--hm-gray);
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hm-yellow);
+}

@@ -1,0 +1,354 @@
+{
+ "tag": "div",
+ "cls": "elementor-element e-con-full e-flex e-con e-parent e-lazyloaded",
+ "s": {
+  "fontSize": "18px",
+  "fontWeight": "400",
+  "fontFamily": "Archivo, sans-serif",
+  "lineHeight": "27px",
+  "color": "rgb(17, 16, 16)",
+  "textAlign": "start",
+  "backgroundColor": "rgb(244, 244, 241)",
+  "backgroundPosition": "0% 0%",
+  "width": "1440px",
+  "height": "642.547px",
+  "maxWidth": "100%",
+  "minHeight": "630px",
+  "display": "flex",
+  "flexDirection": "row",
+  "flexWrap": "nowrap",
+  "borderColor": "rgb(17, 16, 16)",
+  "position": "relative",
+  "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s",
+  "objectFit": "fill",
+  "objectPosition": "50% 50%"
+ },
+ "rect": [
+  0,
+  3850,
+  1440,
+  643
+ ],
+ "kids": [
+  {
+   "tag": "div",
+   "cls": "elementor-element e-con-full e-flex e-con e-child",
+   "s": {
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "fontFamily": "Archivo, sans-serif",
+    "lineHeight": "27px",
+    "color": "rgb(17, 16, 16)",
+    "textAlign": "start",
+    "backgroundPosition": "0% 0%",
+    "paddingTop": "100.797px",
+    "paddingRight": "100.797px",
+    "paddingBottom": "100.797px",
+    "paddingLeft": "144px",
+    "width": "828.812px",
+    "height": "642.547px",
+    "display": "flex",
+    "flexDirection": "column",
+    "justifyContent": "center",
+    "flexWrap": "nowrap",
+    "gap": "20px",
+    "borderColor": "rgb(17, 16, 16)",
+    "position": "relative",
+    "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s",
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+   },
+   "rect": [
+    0,
+    3850,
+    829,
+    643
+   ],
+   "kids": [
+    {
+     "tag": "div",
+     "cls": "elementor-element elementor-widget elementor-widget-heading",
+     "widget": "heading.default",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "backgroundPosition": "0% 0%",
+      "width": "584.016px",
+      "height": "96px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      144,
+      3950,
+      584,
+      96
+     ],
+     "kids": [
+      {
+       "tag": "h2",
+       "cls": "elementor-heading-title elementor-size-default",
+       "text": "De Human Margin Methode",
+       "s": {
+        "fontSize": "40px",
+        "fontWeight": "400",
+        "fontFamily": "\"Archivo Black\", sans-serif",
+        "lineHeight": "48px",
+        "color": "rgb(17, 16, 16)",
+        "textTransform": "uppercase",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "width": "584.016px",
+        "height": "96px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        144,
+        3950,
+        584,
+        96
+       ],
+       "kids": []
+      }
+     ]
+    },
+    {
+     "tag": "div",
+     "cls": "elementor-element elementor-widget elementor-widget-text-editor",
+     "widget": "text-editor.default",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "backgroundPosition": "0% 0%",
+      "paddingBottom": "10px",
+      "width": "584.016px",
+      "height": "324.953px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      144,
+      4066,
+      584,
+      325
+     ],
+     "kids": [
+      {
+       "tag": "p",
+       "text": "Geen juristenkantoor of standaard AI-compliancebureau. Onleesbaarheid is een verdienmodel. Dat breken we door.",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "marginBottom": "14.4px",
+        "width": "584.016px",
+        "height": "54px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        144,
+        4066,
+        584,
+        54
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "Want om je autonomie te bewaren moet je eerst begrijpen.",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "marginBottom": "14.4px",
+        "width": "584.016px",
+        "height": "27px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        144,
+        4135,
+        584,
+        27
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "We werken volgens de Human Margin Methode, en die vertrekt van drie simpele vragen:",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "marginBottom": "14.4px",
+        "width": "584.016px",
+        "height": "54px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        144,
+        4176,
+        584,
+        54
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "Wat gebruik je? Wat betekent dat? En welke verantwoordelijkheid hoort daarbij?",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "marginBottom": "14.4px",
+        "width": "584.016px",
+        "height": "54px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        144,
+        4245,
+        584,
+        54
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "Want de AI Act gaat eigenlijk niet over AI. Ze gaat over verantwoordelijkheid. En die begint met begrijpen.",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "marginBottom": "14.4px",
+        "width": "584.016px",
+        "height": "54px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        144,
+        4313,
+        584,
+        54
+       ],
+       "kids": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tag": "div",
+   "cls": "elementor-element e-con-full e-flex e-con e-child",
+   "s": {
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "fontFamily": "Archivo, sans-serif",
+    "lineHeight": "27px",
+    "color": "rgb(17, 16, 16)",
+    "textAlign": "start",
+    "backgroundImage": "url(\"https://humanmargin.eu/wp-content/uploads/2026/06/4-1.jpg\")",
+    "backgroundSize": "cover",
+    "backgroundPosition": "50% 50%",
+    "width": "611.188px",
+    "height": "642.547px",
+    "display": "flex",
+    "flexDirection": "column",
+    "flexWrap": "nowrap",
+    "gap": "20px",
+    "borderColor": "rgb(17, 16, 16)",
+    "position": "relative",
+    "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s",
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+   },
+   "rect": [
+    829,
+    3850,
+    611,
+    643
+   ],
+   "kids": []
+  }
+ ]
+}

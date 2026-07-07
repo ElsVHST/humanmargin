@@ -1,0 +1,18 @@
+<div> 
+   css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "390px", "maxWidth": "100%", "minHeight": "362.92px", "display": "flex", "flexDirection": "column", "position": "relative"}
+   rect(x,y,w,h): [0, 89, 390, 363]
+  <div> 
+     css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "paddingTop": "100px", "width": "390px", "maxWidth": "min(100%, 767px)", "display": "flex", "flexDirection": "column", "justifyContent": "center", "gap": "20px"}
+     rect(x,y,w,h): [0, 89, 390, 363]
+    <div> [button.default]
+       css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "center", "paddingLeft": "45px", "width": "390px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "gap": "20px", "position": "relative"}
+       rect(x,y,w,h): [0, 304, 390, 32]
+      <a> 
+         css: {"fontSize": "12px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "12px", "color": "rgb(237, 255, 0)", "textAlign": "center", "backgroundColor": "rgb(0, 44, 207)", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "181.375px", "display": "inline-block", "flexDirection": "row"}
+         rect(x,y,w,h): [127, 304, 181, 32]
+        <span> 
+           css: {"fontSize": "12px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "12px", "color": "rgb(237, 255, 0)", "textAlign": "center", "width": "161.375px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "gap": "5px"}
+           rect(x,y,w,h): [137, 314, 161, 12]
+          <span> TXT:'doe de AI reality check'
+             css: {"fontSize": "12px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "12px", "color": "rgb(237, 255, 0)", "textAlign": "center", "width": "161.375px", "display": "block", "flexDirection": "row"}
+             rect(x,y,w,h): [137, 314, 161, 12]

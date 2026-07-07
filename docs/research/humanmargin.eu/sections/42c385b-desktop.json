@@ -1,0 +1,593 @@
+{
+ "tag": "div",
+ "cls": "elementor-element e-con-full e-flex e-con e-parent e-lazyloaded",
+ "s": {
+  "fontSize": "18px",
+  "fontWeight": "400",
+  "fontFamily": "Archivo, sans-serif",
+  "lineHeight": "27px",
+  "color": "rgb(17, 16, 16)",
+  "textAlign": "start",
+  "backgroundColor": "rgb(244, 244, 241)",
+  "backgroundPosition": "0% 0%",
+  "width": "1440px",
+  "height": "711.938px",
+  "maxWidth": "100%",
+  "minHeight": "675px",
+  "display": "flex",
+  "flexDirection": "row",
+  "flexWrap": "nowrap",
+  "borderColor": "rgb(17, 16, 16)",
+  "position": "relative",
+  "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s",
+  "objectFit": "fill",
+  "objectPosition": "50% 50%"
+ },
+ "rect": [
+  0,
+  4492,
+  1440,
+  712
+ ],
+ "kids": [
+  {
+   "tag": "div",
+   "cls": "elementor-element e-con-full e-flex e-con e-child",
+   "s": {
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "fontFamily": "Archivo, sans-serif",
+    "lineHeight": "27px",
+    "color": "rgb(17, 16, 16)",
+    "textAlign": "start",
+    "backgroundPosition": "0% 0%",
+    "paddingLeft": "144px",
+    "width": "653.031px",
+    "height": "711.938px",
+    "display": "flex",
+    "flexDirection": "column",
+    "justifyContent": "center",
+    "flexWrap": "nowrap",
+    "gap": "20px",
+    "borderColor": "rgb(17, 16, 16)",
+    "position": "relative",
+    "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s",
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+   },
+   "rect": [
+    0,
+    4492,
+    653,
+    712
+   ],
+   "kids": [
+    {
+     "tag": "div",
+     "cls": "elementor-element elementor-widget elementor-widget-image",
+     "widget": "image.default",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "center",
+      "backgroundPosition": "0% 0%",
+      "width": "509.031px",
+      "height": "630px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      144,
+      4533,
+      509,
+      630
+     ],
+     "kids": [
+      {
+       "tag": "img",
+       "cls": "attachment-large size-large wp-image-269",
+       "img": {
+        "src": "https://humanmargin.eu/wp-content/uploads/2026/06/MARGESCHRIJVER-3-1024x750.jpg",
+        "alt": "",
+        "w": 800,
+        "h": 585
+       },
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "center",
+        "backgroundPosition": "0% 0%",
+        "width": "509.031px",
+        "height": "630px",
+        "maxWidth": "100%",
+        "display": "inline-block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "overflow": "clip",
+        "transition": "all",
+        "objectFit": "cover",
+        "objectPosition": "50% 50%",
+        "aspectRatio": "auto 800 / 586"
+       },
+       "rect": [
+        144,
+        4533,
+        509,
+        630
+       ],
+       "kids": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tag": "div",
+   "cls": "elementor-element e-con-full e-flex e-con e-child",
+   "s": {
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "fontFamily": "Archivo, sans-serif",
+    "lineHeight": "27px",
+    "color": "rgb(17, 16, 16)",
+    "textAlign": "start",
+    "backgroundPosition": "0% 0%",
+    "paddingTop": "100.797px",
+    "paddingRight": "100.797px",
+    "paddingBottom": "100.797px",
+    "paddingLeft": "100.797px",
+    "width": "786.969px",
+    "height": "711.938px",
+    "display": "flex",
+    "flexDirection": "column",
+    "justifyContent": "center",
+    "flexWrap": "nowrap",
+    "gap": "20px",
+    "borderColor": "rgb(17, 16, 16)",
+    "position": "relative",
+    "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s",
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+   },
+   "rect": [
+    653,
+    4492,
+    787,
+    712
+   ],
+   "kids": [
+    {
+     "tag": "div",
+     "cls": "elementor-element elementor-widget elementor-widget-heading",
+     "widget": "heading.default",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "backgroundPosition": "0% 0%",
+      "width": "585.375px",
+      "height": "96px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      754,
+      4593,
+      585,
+      96
+     ],
+     "kids": [
+      {
+       "tag": "h2",
+       "cls": "elementor-heading-title elementor-size-default",
+       "text": "Je hoeft geen AI-expert te worden.",
+       "s": {
+        "fontSize": "40px",
+        "fontWeight": "400",
+        "fontFamily": "\"Archivo Black\", sans-serif",
+        "lineHeight": "48px",
+        "color": "rgb(17, 16, 16)",
+        "textTransform": "uppercase",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "width": "585.375px",
+        "height": "96px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        754,
+        4593,
+        585,
+        96
+       ],
+       "kids": []
+      }
+     ]
+    },
+    {
+     "tag": "div",
+     "cls": "elementor-element elementor-widget elementor-widget-text-editor",
+     "widget": "text-editor.default",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "backgroundPosition": "0% 0%",
+      "width": "585.375px",
+      "height": "329.344px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      754,
+      4709,
+      585,
+      329
+     ],
+     "kids": [
+      {
+       "tag": "p",
+       "text": "Je hoeft de AI Act niet vanbuiten te kennen. Je moet gewoon weten wat je gebruikt, en wat dat betekent.",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "marginBottom": "14.4px",
+        "width": "585.375px",
+        "height": "54px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        754,
+        4709,
+        585,
+        54
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "Allemaal goed en wel die AI Compliance. Rest \u00e9\u00e9n vraag: hoe dan?",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "marginBottom": "14.4px",
+        "width": "585.375px",
+        "height": "27px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        754,
+        4777,
+        585,
+        27
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "De ene begint met de AI Reality Check. Dat is aan jou de keuze.",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "marginBottom": "14.4px",
+        "width": "585.375px",
+        "height": "27px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        754,
+        4819,
+        585,
+        27
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "Ga je liever meteen en alleen aan de slag of hou je net van wat peer-pressure? Er is een AI Compliance Kit voor beiden.",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "marginBottom": "14.4px",
+        "width": "585.375px",
+        "height": "54px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        754,
+        4860,
+        585,
+        54
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "Zit je kniediep in de AI-chaos of werk je samen met anderen? Dan is een op maat traject eerder wat voor jou.",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "marginBottom": "14.4px",
+        "width": "585.375px",
+        "height": "54px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        754,
+        4929,
+        585,
+        54
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "Hoe dan ook. Je bent op de juiste plaats. Of toch bijna.",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "marginBottom": "14.4px",
+        "width": "585.375px",
+        "height": "27px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        754,
+        4997,
+        585,
+        27
+       ],
+       "kids": []
+      }
+     ]
+    },
+    {
+     "tag": "div",
+     "cls": "elementor-element e-transform elementor-widget elementor-widget-button",
+     "widget": "button.default",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "backgroundPosition": "0% 0%",
+      "width": "585.375px",
+      "height": "45px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "transform": "matrix3d(0.999391, -0.0348995, 0, 0, 0.0348995, 0.999391, 0, 0, 0, 0, 1, -1, 0, 0, 0, 1)",
+      "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      753,
+      5048,
+      587,
+      65
+     ],
+     "kids": [
+      {
+       "tag": "a",
+       "cls": "elementor-button elementor-button-link elementor-size-md elementor-animation-grow",
+       "href": "https://humanmargin.eu/neem-actie/",
+       "s": {
+        "fontSize": "15px",
+        "fontWeight": "700",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "15px",
+        "color": "rgb(0, 44, 207)",
+        "textTransform": "uppercase",
+        "textAlign": "center",
+        "backgroundColor": "rgb(237, 255, 0)",
+        "backgroundPosition": "0% 0%",
+        "paddingTop": "15px",
+        "paddingRight": "30px",
+        "paddingBottom": "15px",
+        "paddingLeft": "30px",
+        "width": "151.969px",
+        "height": "45px",
+        "display": "inline-block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(0, 44, 207)",
+        "boxShadow": "rgba(0, 0, 0, 0.45) 0px 0px 4px 0px",
+        "transition": "transform 0.3s",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        753,
+        5063,
+        153,
+        50
+       ],
+       "kids": [
+        {
+         "tag": "span",
+         "cls": "elementor-button-content-wrapper",
+         "s": {
+          "fontSize": "15px",
+          "fontWeight": "700",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "15px",
+          "color": "rgb(0, 44, 207)",
+          "textTransform": "uppercase",
+          "textAlign": "center",
+          "backgroundPosition": "0% 0%",
+          "width": "91.9688px",
+          "height": "15px",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "flexWrap": "nowrap",
+          "gap": "5px",
+          "borderColor": "rgb(0, 44, 207)",
+          "transition": "all",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+         },
+         "rect": [
+          784,
+          5079,
+          92,
+          18
+         ],
+         "kids": [
+          {
+           "tag": "span",
+           "cls": "elementor-button-text",
+           "text": "Neem actie",
+           "s": {
+            "fontSize": "15px",
+            "fontWeight": "700",
+            "fontFamily": "Archivo, sans-serif",
+            "lineHeight": "15px",
+            "color": "rgb(0, 44, 207)",
+            "textTransform": "uppercase",
+            "textAlign": "center",
+            "backgroundPosition": "0% 0%",
+            "width": "91.9688px",
+            "height": "15px",
+            "display": "block",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "borderColor": "rgb(0, 44, 207)",
+            "transition": "all",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%"
+           },
+           "rect": [
+            784,
+            5079,
+            92,
+            18
+           ],
+           "kids": []
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

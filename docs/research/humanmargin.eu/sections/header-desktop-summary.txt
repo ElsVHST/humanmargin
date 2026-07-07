@@ -1,0 +1,345 @@
+<header> 
+   css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "1440px", "height": "110px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+   rect(x,y,w,h): [0, 0, 1440, 110]
+  <div> 
+     css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(17, 16, 16)", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "1440px", "height": "110px", "maxWidth": "100%", "minHeight": "110px", "display": "flex", "flexDirection": "row", "alignItems": "stretch", "flexWrap": "nowrap", "gap": "10px", "borderBottomWidth": "2px", "borderStyle": "solid", "position": "fixed", "bottom": "790px", "zIndex": "1000", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s"}
+     rect(x,y,w,h): [0, 0, 1440, 110]
+    <div> 
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "217.203px", "height": "88px", "display": "flex", "flexDirection": "column", "justifyContent": "center", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "zIndex": "1000", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s"}
+       rect(x,y,w,h): [10, 10, 217, 88]
+      <div> [image.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "end", "backgroundPosition": "0% 0%", "width": "197.203px", "height": "52.5312px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [20, 28, 197, 53]
+        <a> HREF:https://humanmargin.eu
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 92, 23)", "textAlign": "end", "backgroundPosition": "0% 0%", "width": "197.203px", "height": "52.5312px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [20, 28, 197, 53]
+          <img> IMG:https://humanmargin.eu/wp-content/uploads/2026/06/human-margin-logo-inverted-rgb-900px-w-72ppi.png (800x387) alt=''
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 92, 23)", "textAlign": "end", "backgroundPosition": "0% 0%", "width": "108.453px", "height": "52.5312px", "maxWidth": "100%", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all", "aspectRatio": "auto 800 / 388"}
+             rect(x,y,w,h): [109, 28, 108, 53]
+    <div> 
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingRight": "56.7969px", "width": "1192.8px", "height": "88px", "display": "flex", "flexDirection": "row", "justifyContent": "flex-end", "alignItems": "center", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "zIndex": "1000", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s"}
+       rect(x,y,w,h): [237, 10, 1193, 88]
+      <div> [heading.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "maxWidth": "100%", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [0, 0, 0, 0]
+        <h2> TXT:'Menu'
+           css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(221, 221, 211)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [0, 0, 0, 0]
+      <div> [nav-menu.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "741.719px", "height": "44px", "maxWidth": "100%", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [331, 32, 742, 44]
+        <nav> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "741.719px", "height": "44px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [331, 32, 742, 44]
+          <ul> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "741.719px", "height": "44px", "display": "flex", "flexDirection": "row", "justifyContent": "flex-end", "flexWrap": "wrap", "position": "relative", "zIndex": "2", "transition": "all"}
+             rect(x,y,w,h): [331, 32, 742, 44]
+            <li> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "70.5px", "height": "44px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [331, 32, 71, 44]
+              <a> TXT:'Home' HREF:https://humanmargin.eu/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "13px", "paddingBottom": "13px", "marginRight": "25.5px", "width": "45px", "height": "44px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "0.4s"}
+                 rect(x,y,w,h): [331, 32, 45, 44]
+            <li> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "127.672px", "height": "44px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [402, 32, 128, 44]
+              <a> TXT:'Manifest' HREF:https://humanmargin.eu/manifest/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "13px", "paddingBottom": "13px", "marginRight": "25.5px", "marginLeft": "25.5px", "width": "76.6719px", "height": "44px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "0.4s"}
+                 rect(x,y,w,h): [427, 32, 77, 44]
+            <li> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "155.172px", "height": "44px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [529, 32, 155, 44]
+              <a> TXT:'Leeszaal' HREF:https://humanmargin.eu/leeszaal/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "13px", "paddingBottom": "13px", "marginRight": "25.5px", "marginLeft": "25.5px", "width": "104.172px", "height": "44px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "0.4s"}
+                 rect(x,y,w,h): [555, 32, 104, 44]
+              <ul> 
+                 css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(0, 44, 207)", "backgroundPosition": "0% 0%", "width": "156px", "flexDirection": "row", "flexWrap": "nowrap", "boxShadow": "rgba(0, 0, 0, 0.5) 0px 0px 10px 0px", "position": "absolute", "top": "100%", "left": "25.5px", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+            <li> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "167.969px", "height": "44px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [685, 32, 168, 44]
+              <a> TXT:'Neem actie' HREF:https://humanmargin.eu/neem-actie/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "13px", "paddingBottom": "13px", "marginRight": "25.5px", "marginLeft": "25.5px", "width": "116.969px", "height": "44px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "0.4s"}
+                 rect(x,y,w,h): [710, 32, 117, 44]
+              <ul> 
+                 css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(0, 44, 207)", "backgroundPosition": "0% 0%", "width": "156px", "flexDirection": "row", "flexWrap": "nowrap", "boxShadow": "rgba(0, 0, 0, 0.5) 0px 0px 10px 0px", "position": "absolute", "top": "100%", "left": "25.5px", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+            <li> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "122.688px", "height": "44px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [853, 32, 123, 44]
+              <a> TXT:'Over mij' HREF:https://humanmargin.eu/over-mij/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "13px", "paddingBottom": "13px", "marginRight": "25.5px", "marginLeft": "25.5px", "width": "71.6875px", "height": "44px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "0.4s"}
+                 rect(x,y,w,h): [878, 32, 72, 44]
+            <li> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "97.7188px", "height": "44px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [975, 32, 98, 44]
+              <a> TXT:'Contact' HREF:https://humanmargin.eu/contact/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "13px", "paddingBottom": "13px", "marginLeft": "25.5px", "width": "72.2188px", "height": "44px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "0.4s"}
+                 rect(x,y,w,h): [1001, 32, 72, 44]
+        <div> 
+           css: {"fontSize": "22px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "33px", "color": "rgb(237, 255, 0)", "textAlign": "start", "backgroundColor": "rgba(0, 0, 0, 0.05)", "backgroundPosition": "0% 0%", "paddingTop": "5.5px", "paddingRight": "5.5px", "paddingBottom": "5.5px", "paddingLeft": "5.5px", "flexDirection": "row", "justifyContent": "center", "alignItems": "center", "flexWrap": "nowrap", "borderRadius": "3px", "borderStyle": "solid", "transition": "all"}
+           rect(x,y,w,h): [0, 0, 0, 0]
+          <svg> SVG:<svg aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open elementor-animation-grow-rotate e-font-icon-svg e-eicon-menu-bar" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/
+             css: {"fontSize": "22px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "33px", "color": "rgb(237, 255, 0)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "22px", "height": "22px", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "transition": "transform 0.3s"}
+             rect(x,y,w,h): [0, 0, 0, 0]
+          <svg> SVG:<svg aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close elementor-animation-grow-rotate e-font-icon-svg e-eicon-close" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/20
+             css: {"fontSize": "22px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "33px", "color": "rgb(237, 255, 0)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "22px", "height": "22px", "flexDirection": "row", "flexWrap": "nowrap", "transition": "transform 0.3s"}
+             rect(x,y,w,h): [0, 0, 0, 0]
+        <nav> 
+           css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "19.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(0, 44, 207)", "backgroundPosition": "0% 0%", "marginTop": "10px", "width": "1440px", "flexDirection": "row", "flexWrap": "nowrap", "boxShadow": "rgba(0, 0, 0, 0.5) 0px 0px 10px 0px", "position": "absolute", "top": "44px", "zIndex": "9997", "transition": "max-height 0.3s, transform 0.3s"}
+           rect(x,y,w,h): [0, 0, 0, 0]
+          <ul> 
+             css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "block", "flexDirection": "row", "justifyContent": "flex-end", "flexWrap": "nowrap", "position": "relative", "zIndex": "2", "transition": "all"}
+             rect(x,y,w,h): [0, 0, 0, 0]
+            <li> 
+               css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [0, 0, 0, 0]
+              <a> TXT:'Home' HREF:https://humanmargin.eu/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "start", "backgroundColor": "rgb(17, 16, 16)", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "20px", "paddingBottom": "10px", "paddingLeft": "20px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+            <li> 
+               css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [0, 0, 0, 0]
+              <a> TXT:'Manifest' HREF:https://humanmargin.eu/manifest/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "20px", "paddingBottom": "10px", "paddingLeft": "20px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+            <li> 
+               css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [0, 0, 0, 0]
+              <a> TXT:'Leeszaal' HREF:https://humanmargin.eu/leeszaal/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "20px", "paddingBottom": "10px", "paddingLeft": "20px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+              <ul> 
+                 css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(0, 44, 207)", "backgroundPosition": "0% 0%", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+            <li> 
+               css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [0, 0, 0, 0]
+              <a> TXT:'Neem actie' HREF:https://humanmargin.eu/neem-actie/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "20px", "paddingBottom": "10px", "paddingLeft": "20px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+              <ul> 
+                 css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(0, 44, 207)", "backgroundPosition": "0% 0%", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+            <li> 
+               css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [0, 0, 0, 0]
+              <a> TXT:'Over mij' HREF:https://humanmargin.eu/over-mij/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "20px", "paddingBottom": "10px", "paddingLeft": "20px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+            <li> 
+               css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [0, 0, 0, 0]
+              <a> TXT:'Contact' HREF:https://humanmargin.eu/contact/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "20px", "paddingBottom": "10px", "paddingLeft": "20px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+      <div> [search-form.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "33px", "height": "33px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [1093, 38, 33, 33]
+        <search> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "33px", "height": "33px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [1093, 38, 33, 33]
+          <form> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "33px", "height": "33px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "0.2s"}
+             rect(x,y,w,h): [1093, 38, 33, 33]
+            <div> 
+               css: {"fontSize": "33px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "49.5px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "33px", "height": "33px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+               rect(x,y,w,h): [1093, 38, 33, 33]
+              <div> 
+                 css: {"fontSize": "33px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "49.5px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundColor": "rgba(0, 0, 0, 0.05)", "backgroundPosition": "0% 0%", "width": "33px", "height": "33px", "display": "block", "flexDirection": "row", "justifyContent": "center", "alignItems": "center", "flexWrap": "nowrap", "borderRadius": "3px", "borderStyle": "solid", "position": "relative", "transition": "0.2s"}
+                 rect(x,y,w,h): [1093, 38, 33, 33]
+            <div> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgba(0, 0, 0, 0.8)", "backgroundPosition": "0% 0%", "paddingRight": "216px", "paddingLeft": "216px", "width": "1440px", "height": "900px", "minHeight": "50px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "borderStyle": "solid", "position": "fixed", "zIndex": "9998", "opacity": "0", "transform": "matrix(0, 0, 0, 0, 0, 0)", "transition": "0.3s"}
+               rect(x,y,w,h): [720, 450, 0, 0]
+              <label> TXT:'Zoeken'
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginTop": "-1px", "marginRight": "-1px", "marginBottom": "-1px", "marginLeft": "-1px", "width": "1px", "height": "1px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "position": "absolute", "top": "-180000px", "right": "1225px", "bottom": "180901px", "left": "216px", "transition": "all"}
+                 rect(x,y,w,h): [720, 450, 0, 0]
+              <input> 
+                 css: {"fontSize": "50px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "75px", "color": "rgb(255, 255, 255)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "1008px", "height": "76px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderRadius": "3px", "borderBottomWidth": "1px", "borderStyle": "solid", "transition": "0.3s"}
+                 rect(x,y,w,h): [720, 450, 0, 0]
+              <div> 
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+      <div> [button.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "right", "backgroundPosition": "0% 0%", "width": "227.188px", "height": "35px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [1146, 37, 227, 35]
+        <a> HREF:https://humanmargin.eu/ai-reality-check/
+           css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "center", "backgroundColor": "rgb(0, 44, 207)", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "20px", "paddingBottom": "10px", "paddingLeft": "20px", "width": "180.578px", "height": "35px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "boxShadow": "rgba(0, 0, 0, 0.43) 0px 0px 3px 0px", "transition": "0.3s"}
+           rect(x,y,w,h): [1193, 37, 181, 35]
+          <span> 
+             css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "140.578px", "height": "15px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "flexWrap": "nowrap", "gap": "5px", "transition": "all"}
+             rect(x,y,w,h): [1213, 47, 141, 15]
+            <span> TXT:'AI reality check'
+               css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "140.578px", "height": "15px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+               rect(x,y,w,h): [1213, 47, 141, 15]
+  <div> 
+     css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(17, 16, 16)", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "1440px", "height": "110px", "maxWidth": "100%", "minHeight": "110px", "display": "flex", "flexDirection": "row", "alignItems": "stretch", "flexWrap": "nowrap", "gap": "10px", "borderBottomWidth": "2px", "borderStyle": "solid", "position": "relative", "zIndex": "1000"}
+     rect(x,y,w,h): [0, 0, 1440, 110]
+    <div> 
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "217.203px", "height": "88px", "display": "flex", "flexDirection": "column", "justifyContent": "center", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "zIndex": "1000", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s"}
+       rect(x,y,w,h): [10, 10, 217, 88]
+      <div> [image.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "end", "backgroundPosition": "0% 0%", "width": "197.203px", "height": "52.5312px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [20, 28, 197, 53]
+        <a> HREF:https://humanmargin.eu
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 92, 23)", "textAlign": "end", "backgroundPosition": "0% 0%", "width": "197.203px", "height": "52.5312px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [20, 28, 197, 53]
+          <img> IMG:https://humanmargin.eu/wp-content/uploads/2026/06/human-margin-logo-inverted-rgb-900px-w-72ppi.png (800x387) alt=''
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 92, 23)", "textAlign": "end", "backgroundPosition": "0% 0%", "width": "108.453px", "height": "52.5312px", "maxWidth": "100%", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all", "aspectRatio": "auto 800 / 388"}
+             rect(x,y,w,h): [109, 28, 108, 53]
+    <div> 
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingRight": "56.7969px", "width": "1192.8px", "height": "88px", "display": "flex", "flexDirection": "row", "justifyContent": "flex-end", "alignItems": "center", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "zIndex": "1000", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s"}
+       rect(x,y,w,h): [237, 10, 1193, 88]
+      <div> [heading.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "maxWidth": "100%", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [0, 0, 0, 0]
+        <h2> TXT:'Menu'
+           css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(221, 221, 211)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [0, 0, 0, 0]
+      <div> [nav-menu.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "741.719px", "height": "44px", "maxWidth": "100%", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [331, 32, 742, 44]
+        <nav> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "741.719px", "height": "44px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [331, 32, 742, 44]
+          <ul> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "741.719px", "height": "44px", "display": "flex", "flexDirection": "row", "justifyContent": "flex-end", "flexWrap": "wrap", "position": "relative", "zIndex": "2", "transition": "all"}
+             rect(x,y,w,h): [331, 32, 742, 44]
+            <li> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "70.5px", "height": "44px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [331, 32, 71, 44]
+              <a> TXT:'Home' HREF:https://humanmargin.eu/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "13px", "paddingBottom": "13px", "marginRight": "25.5px", "width": "45px", "height": "44px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "0.4s"}
+                 rect(x,y,w,h): [331, 32, 45, 44]
+            <li> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "127.672px", "height": "44px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [402, 32, 128, 44]
+              <a> TXT:'Manifest' HREF:https://humanmargin.eu/manifest/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "13px", "paddingBottom": "13px", "marginRight": "25.5px", "marginLeft": "25.5px", "width": "76.6719px", "height": "44px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "0.4s"}
+                 rect(x,y,w,h): [427, 32, 77, 44]
+            <li> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "155.172px", "height": "44px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [529, 32, 155, 44]
+              <a> TXT:'Leeszaal' HREF:https://humanmargin.eu/leeszaal/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "13px", "paddingBottom": "13px", "marginRight": "25.5px", "marginLeft": "25.5px", "width": "104.172px", "height": "44px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "0.4s"}
+                 rect(x,y,w,h): [555, 32, 104, 44]
+              <ul> 
+                 css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(0, 44, 207)", "backgroundPosition": "0% 0%", "width": "156px", "flexDirection": "row", "flexWrap": "nowrap", "boxShadow": "rgba(0, 0, 0, 0.5) 0px 0px 10px 0px", "position": "absolute", "top": "100%", "left": "25.5px", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+            <li> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "167.969px", "height": "44px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [685, 32, 168, 44]
+              <a> TXT:'Neem actie' HREF:https://humanmargin.eu/neem-actie/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "13px", "paddingBottom": "13px", "marginRight": "25.5px", "marginLeft": "25.5px", "width": "116.969px", "height": "44px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "0.4s"}
+                 rect(x,y,w,h): [710, 32, 117, 44]
+              <ul> 
+                 css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(0, 44, 207)", "backgroundPosition": "0% 0%", "width": "156px", "flexDirection": "row", "flexWrap": "nowrap", "boxShadow": "rgba(0, 0, 0, 0.5) 0px 0px 10px 0px", "position": "absolute", "top": "100%", "left": "25.5px", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+            <li> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "122.688px", "height": "44px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [853, 32, 123, 44]
+              <a> TXT:'Over mij' HREF:https://humanmargin.eu/over-mij/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "13px", "paddingBottom": "13px", "marginRight": "25.5px", "marginLeft": "25.5px", "width": "71.6875px", "height": "44px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "0.4s"}
+                 rect(x,y,w,h): [878, 32, 72, 44]
+            <li> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "97.7188px", "height": "44px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [975, 32, 98, 44]
+              <a> TXT:'Contact' HREF:https://humanmargin.eu/contact/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "13px", "paddingBottom": "13px", "marginLeft": "25.5px", "width": "72.2188px", "height": "44px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "0.4s"}
+                 rect(x,y,w,h): [1001, 32, 72, 44]
+        <div> 
+           css: {"fontSize": "22px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "33px", "color": "rgb(237, 255, 0)", "textAlign": "start", "backgroundColor": "rgba(0, 0, 0, 0.05)", "backgroundPosition": "0% 0%", "paddingTop": "5.5px", "paddingRight": "5.5px", "paddingBottom": "5.5px", "paddingLeft": "5.5px", "flexDirection": "row", "justifyContent": "center", "alignItems": "center", "flexWrap": "nowrap", "borderRadius": "3px", "borderStyle": "solid", "transition": "all"}
+           rect(x,y,w,h): [0, 0, 0, 0]
+          <svg> SVG:<svg aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open elementor-animation-grow-rotate e-font-icon-svg e-eicon-menu-bar" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/
+             css: {"fontSize": "22px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "33px", "color": "rgb(237, 255, 0)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "22px", "height": "22px", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "transition": "transform 0.3s"}
+             rect(x,y,w,h): [0, 0, 0, 0]
+          <svg> SVG:<svg aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close elementor-animation-grow-rotate e-font-icon-svg e-eicon-close" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/20
+             css: {"fontSize": "22px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "33px", "color": "rgb(237, 255, 0)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "22px", "height": "22px", "flexDirection": "row", "flexWrap": "nowrap", "transition": "transform 0.3s"}
+             rect(x,y,w,h): [0, 0, 0, 0]
+        <nav> 
+           css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "19.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(0, 44, 207)", "backgroundPosition": "0% 0%", "marginTop": "10px", "width": "390px", "flexDirection": "row", "flexWrap": "nowrap", "boxShadow": "rgba(0, 0, 0, 0.5) 0px 0px 10px 0px", "position": "absolute", "top": "33px", "left": "-160.594px", "zIndex": "9997", "transition": "max-height 0.3s, transform 0.3s"}
+           rect(x,y,w,h): [0, 0, 0, 0]
+          <ul> 
+             css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "block", "flexDirection": "row", "justifyContent": "flex-end", "flexWrap": "nowrap", "position": "relative", "zIndex": "2", "transition": "all"}
+             rect(x,y,w,h): [0, 0, 0, 0]
+            <li> 
+               css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [0, 0, 0, 0]
+              <a> TXT:'Home' HREF:https://humanmargin.eu/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "start", "backgroundColor": "rgb(17, 16, 16)", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "20px", "paddingBottom": "10px", "paddingLeft": "20px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+            <li> 
+               css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [0, 0, 0, 0]
+              <a> TXT:'Manifest' HREF:https://humanmargin.eu/manifest/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "20px", "paddingBottom": "10px", "paddingLeft": "20px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+            <li> 
+               css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [0, 0, 0, 0]
+              <a> TXT:'Leeszaal' HREF:https://humanmargin.eu/leeszaal/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "20px", "paddingBottom": "10px", "paddingLeft": "20px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+              <ul> 
+                 css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(0, 44, 207)", "backgroundPosition": "0% 0%", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+            <li> 
+               css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [0, 0, 0, 0]
+              <a> TXT:'Neem actie' HREF:https://humanmargin.eu/neem-actie/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "20px", "paddingBottom": "10px", "paddingLeft": "20px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+              <ul> 
+                 css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(0, 44, 207)", "backgroundPosition": "0% 0%", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+            <li> 
+               css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [0, 0, 0, 0]
+              <a> TXT:'Over mij' HREF:https://humanmargin.eu/over-mij/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "20px", "paddingBottom": "10px", "paddingLeft": "20px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+            <li> 
+               css: {"fontSize": "13px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+               rect(x,y,w,h): [0, 0, 0, 0]
+              <a> TXT:'Contact' HREF:https://humanmargin.eu/contact/
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "20px", "paddingBottom": "10px", "paddingLeft": "20px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "alignItems": "center", "flexWrap": "nowrap", "position": "relative", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+      <div> [search-form.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "33px", "height": "33px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [1093, 38, 33, 33]
+        <search> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "33px", "height": "33px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [1093, 38, 33, 33]
+          <form> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "33px", "height": "33px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "0.2s"}
+             rect(x,y,w,h): [1093, 38, 33, 33]
+            <div> 
+               css: {"fontSize": "33px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "49.5px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "33px", "height": "33px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+               rect(x,y,w,h): [1093, 38, 33, 33]
+              <div> 
+                 css: {"fontSize": "33px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "49.5px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundColor": "rgba(0, 0, 0, 0.05)", "backgroundPosition": "0% 0%", "width": "33px", "height": "33px", "display": "block", "flexDirection": "row", "justifyContent": "center", "alignItems": "center", "flexWrap": "nowrap", "borderRadius": "3px", "borderStyle": "solid", "position": "relative", "transition": "0.2s"}
+                 rect(x,y,w,h): [1093, 38, 33, 33]
+            <div> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgba(0, 0, 0, 0.8)", "backgroundPosition": "0% 0%", "paddingRight": "216px", "paddingLeft": "216px", "width": "1440px", "height": "900px", "minHeight": "50px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "borderStyle": "solid", "position": "fixed", "zIndex": "9998", "opacity": "0", "transform": "matrix(0, 0, 0, 0, 0, 0)", "transition": "0.3s"}
+               rect(x,y,w,h): [720, 450, 0, 0]
+              <label> TXT:'Zoeken'
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginTop": "-1px", "marginRight": "-1px", "marginBottom": "-1px", "marginLeft": "-1px", "width": "1px", "height": "1px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "position": "absolute", "top": "-180000px", "right": "1225px", "bottom": "180901px", "left": "216px", "transition": "all"}
+                 rect(x,y,w,h): [720, 450, 0, 0]
+              <input> 
+                 css: {"fontSize": "50px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "75px", "color": "rgb(255, 255, 255)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "1008px", "height": "76px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderRadius": "3px", "borderBottomWidth": "1px", "borderStyle": "solid", "transition": "0.3s"}
+                 rect(x,y,w,h): [720, 450, 0, 0]
+              <div> 
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+                 rect(x,y,w,h): [0, 0, 0, 0]
+      <div> [button.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "right", "backgroundPosition": "0% 0%", "width": "227.188px", "height": "35px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+         rect(x,y,w,h): [1146, 37, 227, 35]
+        <a> HREF:https://humanmargin.eu/ai-reality-check/
+           css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "center", "backgroundColor": "rgb(0, 44, 207)", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "20px", "paddingBottom": "10px", "paddingLeft": "20px", "width": "180.578px", "height": "35px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "boxShadow": "rgba(0, 0, 0, 0.43) 0px 0px 3px 0px", "transition": "0.3s"}
+           rect(x,y,w,h): [1193, 37, 181, 35]
+          <span> 
+             css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "140.578px", "height": "15px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "flexWrap": "nowrap", "gap": "5px", "transition": "all"}
+             rect(x,y,w,h): [1213, 47, 141, 15]
+            <span> TXT:'AI reality check'
+               css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "140.578px", "height": "15px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+               rect(x,y,w,h): [1213, 47, 141, 15]

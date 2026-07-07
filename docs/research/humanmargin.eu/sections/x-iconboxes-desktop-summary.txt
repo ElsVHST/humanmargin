@@ -1,0 +1,186 @@
+<div> 
+   css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(221, 221, 211)", "backgroundPosition": "0% 0%", "width": "1440px", "height": "630px", "maxWidth": "100%", "minHeight": "630px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+   rect(x,y,w,h): [0, 3317, 1440, 630]
+  <div> 
+     css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "100.797px", "paddingRight": "100.797px", "paddingBottom": "100.797px", "paddingLeft": "144px", "width": "828.812px", "height": "630px", "display": "flex", "flexDirection": "column", "justifyContent": "center", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+     rect(x,y,w,h): [0, 3317, 829, 630]
+    <div> [heading.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "48px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [144, 3420, 584, 48]
+      <h2> TXT:'Wat je krijgt'
+         css: {"fontSize": "40px", "fontWeight": "400", "fontFamily": "\"Archivo Black\", sans-serif", "lineHeight": "48px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "48px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 3420, 584, 48]
+    <div> [icon-box.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "80px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [144, 3488, 584, 80]
+      <div> 
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "80px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "gap": "46px", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 3488, 584, 80]
+        <div> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [144, 3515, 26, 26]
+          <span> 
+             css: {"fontSize": "26px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "26px", "color": "rgb(237, 255, 0)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(237, 255, 0)", "transition": "transform 0.3s", "objectFit": "fill"}
+             rect(x,y,w,h): [144, 3515, 26, 26]
+            <svg> SVG:<svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 
+               css: {"fontSize": "26px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "26px", "color": "rgb(237, 255, 0)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(237, 255, 0)", "position": "relative", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [144, 3515, 26, 26]
+        <div> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "512.016px", "height": "80px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [216, 3488, 512, 80]
+          <h3> 
+             css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "marginTop": "8px", "width": "512.016px", "height": "18px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [216, 3496, 512, 18]
+            <span> TXT:'De volledige AICK (€349 waarde)'
+               css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [216, 3496, 273, 17]
+          <p> TXT:'inclusief AI-geletterdheidstraining, AI Kompas, templates, disclaimers en alle werkdocumenten.'
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "512.016px", "height": "54px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [216, 3514, 512, 54]
+    <div> [icon-box.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "26px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [144, 3588, 584, 26]
+      <div> 
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "26px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "gap": "46px", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 3588, 584, 26]
+        <div> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [144, 3588, 26, 26]
+          <span> 
+             css: {"fontSize": "26px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "26px", "color": "rgb(237, 255, 0)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(237, 255, 0)", "transition": "transform 0.3s", "objectFit": "fill"}
+             rect(x,y,w,h): [144, 3588, 26, 26]
+            <svg> SVG:<svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 
+               css: {"fontSize": "26px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "26px", "color": "rgb(237, 255, 0)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(237, 255, 0)", "position": "relative", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [144, 3588, 26, 26]
+        <div> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "512.016px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [216, 3588, 512, 26]
+          <h3> 
+             css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "marginTop": "8px", "width": "512.016px", "height": "18px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [216, 3596, 512, 18]
+            <span> TXT:'Drie uur live begeleiding door mij.'
+               css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [216, 3596, 300, 17]
+    <div> [icon-box.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "26px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [144, 3634, 584, 26]
+      <div> 
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "26px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "gap": "46px", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 3634, 584, 26]
+        <div> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [144, 3634, 26, 26]
+          <span> 
+             css: {"fontSize": "26px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "26px", "color": "rgb(237, 255, 0)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(237, 255, 0)", "transition": "transform 0.3s", "objectFit": "fill"}
+             rect(x,y,w,h): [144, 3634, 26, 26]
+            <svg> SVG:<svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 
+               css: {"fontSize": "26px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "26px", "color": "rgb(237, 255, 0)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(237, 255, 0)", "position": "relative", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [144, 3634, 26, 26]
+        <div> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "512.016px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [216, 3634, 512, 26]
+          <h3> 
+             css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "marginTop": "8px", "width": "512.016px", "height": "18px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [216, 3642, 512, 18]
+            <span> TXT:'Een kleine groep van maximaal twaalf deelnemers.'
+               css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [216, 3642, 447, 17]
+    <div> [icon-box.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "26px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [144, 3680, 584, 26]
+      <div> 
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "26px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "gap": "46px", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 3680, 584, 26]
+        <div> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [144, 3680, 26, 26]
+          <span> 
+             css: {"fontSize": "26px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "26px", "color": "rgb(237, 255, 0)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(237, 255, 0)", "transition": "transform 0.3s", "objectFit": "fill"}
+             rect(x,y,w,h): [144, 3680, 26, 26]
+            <svg> SVG:<svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 
+               css: {"fontSize": "26px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "26px", "color": "rgb(237, 255, 0)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(237, 255, 0)", "position": "relative", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [144, 3680, 26, 26]
+        <div> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "512.016px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [216, 3680, 512, 26]
+          <h3> 
+             css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "marginTop": "8px", "width": "512.016px", "height": "18px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [216, 3688, 512, 18]
+            <span> TXT:'Antwoorden op al je vragen terwijl je bezig bent.'
+               css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [216, 3688, 440, 17]
+    <div> [icon-box.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "26px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [144, 3726, 584, 26]
+      <div> 
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "26px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "gap": "46px", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 3726, 584, 26]
+        <div> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [144, 3726, 26, 26]
+          <span> 
+             css: {"fontSize": "26px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "26px", "color": "rgb(237, 255, 0)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(237, 255, 0)", "transition": "transform 0.3s", "objectFit": "fill"}
+             rect(x,y,w,h): [144, 3726, 26, 26]
+            <svg> SVG:<svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 
+               css: {"fontSize": "26px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "26px", "color": "rgb(237, 255, 0)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(237, 255, 0)", "position": "relative", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [144, 3726, 26, 26]
+        <div> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "512.016px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [216, 3726, 512, 26]
+          <h3> 
+             css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "marginTop": "8px", "width": "512.016px", "height": "18px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [216, 3734, 512, 18]
+            <span> TXT:'Een jaar toegang tot de volledige Kit.'
+               css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [216, 3734, 336, 17]
+    <div> [icon-box.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "26px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [144, 3772, 584, 26]
+      <div> 
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "26px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "gap": "46px", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 3772, 584, 26]
+        <div> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [144, 3772, 26, 26]
+          <span> 
+             css: {"fontSize": "26px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "26px", "color": "rgb(237, 255, 0)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(237, 255, 0)", "transition": "transform 0.3s", "objectFit": "fill"}
+             rect(x,y,w,h): [144, 3772, 26, 26]
+            <svg> SVG:<svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 
+               css: {"fontSize": "26px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "26px", "color": "rgb(237, 255, 0)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(237, 255, 0)", "position": "relative", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [144, 3772, 26, 26]
+        <div> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "512.016px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [216, 3772, 512, 26]
+          <h3> 
+             css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "marginTop": "8px", "width": "512.016px", "height": "18px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [216, 3780, 512, 18]
+            <span> TXT:'Updates wanneer er iets verandert in de AI Act.'
+               css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [216, 3780, 411, 17]
+    <div> [icon-box.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "26px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [144, 3818, 584, 26]
+      <div> 
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "26px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "gap": "46px", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 3818, 584, 26]
+        <div> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [144, 3818, 26, 26]
+          <span> 
+             css: {"fontSize": "26px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "26px", "color": "rgb(237, 255, 0)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(237, 255, 0)", "transition": "transform 0.3s", "objectFit": "fill"}
+             rect(x,y,w,h): [144, 3818, 26, 26]
+            <svg> SVG:<svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 
+               css: {"fontSize": "26px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "26px", "color": "rgb(237, 255, 0)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "26px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(237, 255, 0)", "position": "relative", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [144, 3818, 26, 26]
+        <div> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "512.016px", "height": "26px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [216, 3818, 512, 26]
+          <h3> 
+             css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "marginTop": "8px", "width": "512.016px", "height": "18px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [216, 3826, 512, 18]
+            <span> TXT:'Een certificaat en badge voor wie het traject afrondt.'
+               css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [216, 3826, 485, 17]
+  <div> 
+     css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundSize": "cover", "backgroundPosition": "50% 50%", "width": "611.188px", "height": "630px", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+     rect(x,y,w,h): [829, 3317, 611, 630]

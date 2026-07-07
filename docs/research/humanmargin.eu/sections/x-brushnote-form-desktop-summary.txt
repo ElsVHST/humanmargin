@@ -1,0 +1,78 @@
+<div> 
+   css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(17, 16, 16)", "backgroundPosition": "0% 0%", "width": "1440px", "height": "431.781px", "maxWidth": "100%", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+   rect(x,y,w,h): [0, 1934, 1440, 432]
+  <div> 
+     css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "50px", "paddingBottom": "50px", "marginRight": "70px", "marginLeft": "70px", "width": "1300px", "height": "431.781px", "maxWidth": "1300px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "alignItems": "stretch", "flexWrap": "nowrap", "gap": "10px", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+     rect(x,y,w,h): [70, 1934, 1300, 432]
+    <div> 
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "793px", "height": "331.781px", "display": "flex", "flexDirection": "column", "justifyContent": "center", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [324, 1984, 793, 332]
+      <div> [heading.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "26px", "marginLeft": "-49px", "width": "773px", "height": "42px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transform": "matrix3d(0.997564, -0.0697565, 0, 0, 0.0697565, 0.997564, 0, 0, 0, 0, 1, -1, 0, 0, 0, 1)", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+         rect(x,y,w,h): [284, 1967, 774, 96]
+        <h2> TXT:'In de Marge'
+           css: {"fontSize": "35px", "fontWeight": "400", "fontFamily": "Marker, sans-serif", "lineHeight": "42px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "773px", "height": "42px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(237, 255, 0)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [284, 1967, 774, 96]
+      <div> 
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "773px", "height": "156.781px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+         rect(x,y,w,h): [334, 2082, 773, 157]
+        <div> [image.default]
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "center", "backgroundPosition": "0% 0%", "marginLeft": "-55px", "width": "46.6719px", "height": "136.781px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+           rect(x,y,w,h): [289, 2092, 47, 137]
+          <img> IMG:https://humanmargin.eu/wp-content/uploads/2026/06/in-de-marge-e1781177869154-327x1024.png (327x1024) alt=''
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "46.6719px", "height": "110px", "maxWidth": "100%", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "contain", "aspectRatio": "auto 327 / 1024"}
+             rect(x,y,w,h): [289, 2092, 47, 110]
+        <div> [text-editor.default]
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "741.328px", "height": "136.781px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(255, 255, 255)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+           rect(x,y,w,h): [355, 2092, 741, 137]
+          <p> TXT:'Af en toe stuur ik een mail. Niet omdat een contentkalender dat zegt, maar omdat ik iets gelezen, geleerd of uitgezocht heb dat de moeite waard is om door te geven.'
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "741.328px", "height": "54px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [355, 2092, 741, 54]
+          <p> TXT:'Over AI, de AI Act, werk en mens blijven in een tijd die je voortdurend het tegenovergestelde probeert aan te praten.'
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "741.328px", "height": "54px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [355, 2160, 741, 54]
+      <div> [form.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "773px", "height": "47px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+         rect(x,y,w,h): [334, 2258, 773, 47]
+        <form> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "773px", "height": "57px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [334, 2258, 773, 57]
+          <input> INPUT:{'type': 'hidden', 'placeholder': '', 'name': 'post_id'}
+             css: {"fontSize": "16px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "24px", "color": "rgb(0, 0, 0)", "textAlign": "start", "backgroundPosition": "0% 0%", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(0, 0, 0)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [0, 1, 0, 0]
+          <input> INPUT:{'type': 'hidden', 'placeholder': '', 'name': 'form_id'}
+             css: {"fontSize": "16px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "24px", "color": "rgb(0, 0, 0)", "textAlign": "start", "backgroundPosition": "0% 0%", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(0, 0, 0)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [0, 1, 0, 0]
+          <input> INPUT:{'type': 'hidden', 'placeholder': '', 'name': 'referer_title'}
+             css: {"fontSize": "16px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "24px", "color": "rgb(0, 0, 0)", "textAlign": "start", "backgroundPosition": "0% 0%", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(0, 0, 0)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [0, 1, 0, 0]
+          <input> INPUT:{'type': 'hidden', 'placeholder': '', 'name': 'queried_id'}
+             css: {"fontSize": "16px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "24px", "color": "rgb(0, 0, 0)", "textAlign": "start", "backgroundPosition": "0% 0%", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(0, 0, 0)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [0, 1, 0, 0]
+          <div> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginRight": "-7.5px", "marginBottom": "-10px", "marginLeft": "-7.5px", "width": "788px", "height": "57px", "display": "flex", "flexDirection": "row", "flexWrap": "wrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [326, 2258, 788, 57]
+            <div> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingRight": "7.5px", "paddingLeft": "7.5px", "marginBottom": "10px", "width": "197px", "height": "47px", "minHeight": "1px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "wrap", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [326, 2258, 197, 47]
+              <label> TXT:'Naam'
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginTop": "-1px", "marginRight": "-1px", "marginBottom": "-1px", "marginLeft": "-1px", "width": "1px", "height": "1px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "position": "absolute", "top": "-180000px", "left": "7.5px", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [333, -177743, 1, 1]
+              <input> INPUT:{'type': 'text', 'placeholder': 'Naam', 'name': 'form_fields[name]'}
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.2px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(255, 255, 255)", "backgroundPosition": "0% 0%", "paddingTop": "8px", "paddingRight": "16px", "paddingBottom": "8px", "paddingLeft": "16px", "width": "182px", "height": "43.1875px", "maxWidth": "100%", "minHeight": "40px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderTopWidth": "1px", "borderColor": "rgb(105, 114, 125)", "borderStyle": "solid", "transition": "0.3s", "objectFit": "fill"}
+                 rect(x,y,w,h): [334, 2260, 182, 43]
+            <div> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingRight": "7.5px", "paddingLeft": "7.5px", "marginBottom": "10px", "width": "394px", "height": "47px", "minHeight": "1px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "wrap", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [523, 2258, 394, 47]
+              <label> TXT:'E-mail'
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "18px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginTop": "-1px", "marginRight": "-1px", "marginBottom": "-1px", "marginLeft": "-1px", "width": "1px", "height": "1px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "position": "absolute", "top": "-180000px", "left": "7.5px", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [530, -177743, 1, 1]
+              <input> INPUT:{'type': 'email', 'placeholder': 'E-mail', 'name': 'form_fields[email]'}
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.2px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(255, 255, 255)", "backgroundPosition": "0% 0%", "paddingTop": "8px", "paddingRight": "16px", "paddingBottom": "8px", "paddingLeft": "16px", "width": "379px", "height": "43.1875px", "maxWidth": "100%", "minHeight": "40px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderTopWidth": "1px", "borderColor": "rgb(105, 114, 125)", "borderStyle": "solid", "transition": "0.3s", "objectFit": "fill"}
+                 rect(x,y,w,h): [531, 2260, 379, 43]
+            <div> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingRight": "7.5px", "paddingLeft": "7.5px", "marginBottom": "10px", "width": "197px", "height": "47px", "minHeight": "1px", "display": "flex", "flexDirection": "row", "alignItems": "flex-end", "flexWrap": "wrap", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [917, 2258, 197, 47]
+              <button> INPUT:{'type': 'submit', 'name': '', 'value': 'Schrijf me in'}
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "center", "backgroundColor": "rgb(0, 44, 207)", "backgroundPosition": "0% 0%", "paddingTop": "15px", "paddingRight": "30px", "paddingBottom": "15px", "paddingLeft": "30px", "width": "182px", "height": "47px", "minHeight": "47px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(237, 255, 0)", "boxShadow": "rgba(0, 0, 0, 0.43) 0px 0px 3px 0px", "transition": "0.3s", "objectFit": "fill"}
+                 rect(x,y,w,h): [925, 2258, 182, 47]

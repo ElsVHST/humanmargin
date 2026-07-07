@@ -1,0 +1,499 @@
+{
+ "tag": "div",
+ "cls": "elementor-element e-con-full e-flex e-con e-parent e-lazyloaded",
+ "s": {
+  "fontSize": "18px",
+  "fontWeight": "400",
+  "fontFamily": "Archivo, sans-serif",
+  "lineHeight": "27px",
+  "color": "rgb(17, 16, 16)",
+  "textAlign": "start",
+  "backgroundColor": "rgb(221, 221, 211)",
+  "backgroundPosition": "0% 0%",
+  "width": "1440px",
+  "height": "653.766px",
+  "maxWidth": "100%",
+  "minHeight": "630px",
+  "display": "flex",
+  "flexDirection": "row",
+  "flexWrap": "nowrap",
+  "borderColor": "rgb(17, 16, 16)",
+  "position": "relative",
+  "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s",
+  "objectFit": "fill",
+  "objectPosition": "50% 50%"
+ },
+ "rect": [
+  0,
+  1211,
+  1440,
+  654
+ ],
+ "kids": [
+  {
+   "tag": "div",
+   "cls": "elementor-element e-con-full e-flex e-con e-child",
+   "s": {
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "fontFamily": "Archivo, sans-serif",
+    "lineHeight": "27px",
+    "color": "rgb(17, 16, 16)",
+    "textAlign": "start",
+    "backgroundImage": "url(\"https://humanmargin.eu/wp-content/uploads/2026/06/20-1.jpg\")",
+    "backgroundSize": "cover",
+    "backgroundPosition": "50% 50%",
+    "width": "612.391px",
+    "height": "653.766px",
+    "display": "flex",
+    "flexDirection": "column",
+    "flexWrap": "nowrap",
+    "gap": "20px",
+    "borderColor": "rgb(17, 16, 16)",
+    "position": "relative",
+    "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s",
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+   },
+   "rect": [
+    0,
+    1211,
+    612,
+    654
+   ],
+   "kids": []
+  },
+  {
+   "tag": "div",
+   "cls": "elementor-element e-con-full e-flex e-con e-child",
+   "s": {
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "fontFamily": "Archivo, sans-serif",
+    "lineHeight": "27px",
+    "color": "rgb(17, 16, 16)",
+    "textAlign": "start",
+    "backgroundPosition": "0% 0%",
+    "paddingTop": "100.797px",
+    "paddingRight": "100.797px",
+    "paddingBottom": "100.797px",
+    "paddingLeft": "100.797px",
+    "width": "827.609px",
+    "height": "653.766px",
+    "display": "flex",
+    "flexDirection": "column",
+    "justifyContent": "center",
+    "flexWrap": "nowrap",
+    "gap": "20px",
+    "borderColor": "rgb(17, 16, 16)",
+    "position": "relative",
+    "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s",
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+   },
+   "rect": [
+    612,
+    1211,
+    828,
+    654
+   ],
+   "kids": [
+    {
+     "tag": "div",
+     "cls": "elementor-element elementor-widget elementor-widget-heading",
+     "widget": "heading.default",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "backgroundPosition": "0% 0%",
+      "width": "626.016px",
+      "height": "96px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      713,
+      1312,
+      626,
+      96
+     ],
+     "kids": [
+      {
+       "tag": "h1",
+       "cls": "elementor-heading-title elementor-size-default",
+       "text": "Gebruik je ChatGPT, Claude of Copilot voor je werk?",
+       "s": {
+        "fontSize": "40px",
+        "fontWeight": "400",
+        "fontFamily": "\"Archivo Black\", sans-serif",
+        "lineHeight": "48px",
+        "color": "rgb(17, 16, 16)",
+        "textTransform": "uppercase",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "width": "626.016px",
+        "height": "96px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        713,
+        1312,
+        626,
+        96
+       ],
+       "kids": []
+      }
+     ]
+    },
+    {
+     "tag": "div",
+     "cls": "elementor-element e-transform elementor-widget elementor-widget-heading",
+     "widget": "heading.default",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "end",
+      "backgroundPosition": "0% 0%",
+      "marginTop": "-1px",
+      "marginBottom": "1px",
+      "marginLeft": "-35px",
+      "width": "626.016px",
+      "height": "36px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "transform": "matrix3d(0.997564, -0.0697565, 0, 0, 0.0697565, 0.997564, 0, 0, 0, 0, 1, -1, 0, 0, 0, 1)",
+      "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      678,
+      1405,
+      627,
+      80
+     ],
+     "kids": [
+      {
+       "tag": "h3",
+       "cls": "elementor-heading-title elementor-size-default",
+       "text": "Dan gaat de AI Act ook over jou.",
+       "s": {
+        "fontSize": "30px",
+        "fontWeight": "400",
+        "fontFamily": "Handwritten, sans-serif",
+        "lineHeight": "36px",
+        "color": "rgb(0, 44, 207)",
+        "textAlign": "end",
+        "backgroundPosition": "0% 0%",
+        "width": "626.016px",
+        "height": "36px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(0, 44, 207)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        678,
+        1405,
+        627,
+        80
+       ],
+       "kids": []
+      }
+     ]
+    },
+    {
+     "tag": "div",
+     "cls": "elementor-element elementor-widget elementor-widget-text-editor",
+     "widget": "text-editor.default",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "backgroundPosition": "0% 0%",
+      "paddingBottom": "10px",
+      "width": "626.016px",
+      "height": "215.172px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      713,
+      1484,
+      626,
+      215
+     ],
+     "kids": [
+      {
+       "tag": "p",
+       "text": "Ja, ook als je \u2018m alleen gebruikt om teksten te schrijven. Nee, niet alleen voor grote bedrijven met een juridische afdeling. Ook voor zelfstandigen, freelancers en kleine bedrijven.",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "marginBottom": "14.4px",
+        "width": "626.016px",
+        "height": "81px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        713,
+        1484,
+        626,
+        81
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "Geen paniek. Het betekent niet dat je morgen een advocaat nodig hebt. Het betekent dat je moet weten wat je gebruikt, en waarom.",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "marginBottom": "14.4px",
+        "width": "626.016px",
+        "height": "54px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        713,
+        1579,
+        626,
+        54
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "Want autonomie begint bij begrip.",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "marginBottom": "14.4px",
+        "width": "626.016px",
+        "height": "27px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        713,
+        1648,
+        626,
+        27
+       ],
+       "kids": []
+      }
+     ]
+    },
+    {
+     "tag": "div",
+     "cls": "elementor-element e-transform elementor-widget elementor-widget-button",
+     "widget": "button.default",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "backgroundPosition": "0% 0%",
+      "width": "626.016px",
+      "height": "45px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "transform": "matrix3d(0.999391, -0.0348995, 0, 0, 0.0348995, 0.999391, 0, 0, 0, 0, 1, -1, 0, 0, 0, 1)",
+      "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      713,
+      1708,
+      627,
+      67
+     ],
+     "kids": [
+      {
+       "tag": "a",
+       "cls": "elementor-button elementor-button-link elementor-size-md elementor-animation-grow",
+       "href": "https://humanmargin.eu/ai-reality-check/",
+       "s": {
+        "fontSize": "15px",
+        "fontWeight": "700",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "15px",
+        "color": "rgb(0, 44, 207)",
+        "textTransform": "uppercase",
+        "textAlign": "center",
+        "backgroundColor": "rgb(237, 255, 0)",
+        "backgroundPosition": "0% 0%",
+        "paddingTop": "15px",
+        "paddingRight": "30px",
+        "paddingBottom": "15px",
+        "paddingLeft": "30px",
+        "width": "261.703px",
+        "height": "45px",
+        "display": "inline-block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(0, 44, 207)",
+        "boxShadow": "rgba(0, 0, 0, 0.45) 0px 0px 4px 0px",
+        "transition": "transform 0.3s",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        713,
+        1721,
+        263,
+        54
+       ],
+       "kids": [
+        {
+         "tag": "span",
+         "cls": "elementor-button-content-wrapper",
+         "s": {
+          "fontSize": "15px",
+          "fontWeight": "700",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "15px",
+          "color": "rgb(0, 44, 207)",
+          "textTransform": "uppercase",
+          "textAlign": "center",
+          "backgroundPosition": "0% 0%",
+          "width": "201.703px",
+          "height": "15px",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "flexWrap": "nowrap",
+          "gap": "5px",
+          "borderColor": "rgb(0, 44, 207)",
+          "transition": "all",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+         },
+         "rect": [
+          743,
+          1737,
+          202,
+          22
+         ],
+         "kids": [
+          {
+           "tag": "span",
+           "cls": "elementor-button-text",
+           "text": "Doe de AI Reality Check",
+           "s": {
+            "fontSize": "15px",
+            "fontWeight": "700",
+            "fontFamily": "Archivo, sans-serif",
+            "lineHeight": "15px",
+            "color": "rgb(0, 44, 207)",
+            "textTransform": "uppercase",
+            "textAlign": "center",
+            "backgroundPosition": "0% 0%",
+            "width": "201.703px",
+            "height": "15px",
+            "display": "block",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "borderColor": "rgb(0, 44, 207)",
+            "transition": "all",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%"
+           },
+           "rect": [
+            743,
+            1737,
+            202,
+            22
+           ],
+           "kids": []
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

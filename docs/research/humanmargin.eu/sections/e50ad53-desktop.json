@@ -1,0 +1,207 @@
+{
+ "tag": "div",
+ "cls": "elementor-element e-flex e-con-boxed e-con e-parent e-lazyloaded",
+ "s": {
+  "fontSize": "18px",
+  "fontWeight": "400",
+  "fontFamily": "Archivo, sans-serif",
+  "lineHeight": "27px",
+  "color": "rgb(17, 16, 16)",
+  "textAlign": "start",
+  "backgroundImage": "url(\"https://humanmargin.eu/wp-content/uploads/2026/06/CECI-NEST-PAS-UNE-LANCERING-4.jpg\")",
+  "backgroundSize": "cover",
+  "backgroundPosition": "50% 0%",
+  "width": "1440px",
+  "height": "810px",
+  "maxWidth": "100%",
+  "minHeight": "810px",
+  "display": "flex",
+  "flexDirection": "column",
+  "flexWrap": "nowrap",
+  "borderColor": "rgb(17, 16, 16)",
+  "position": "relative",
+  "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s",
+  "objectFit": "fill",
+  "objectPosition": "50% 50%"
+ },
+ "rect": [
+  0,
+  110,
+  1440,
+  810
+ ],
+ "kids": [
+  {
+   "tag": "div",
+   "cls": "e-con-inner",
+   "s": {
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "fontFamily": "Archivo, sans-serif",
+    "lineHeight": "27px",
+    "color": "rgb(17, 16, 16)",
+    "textAlign": "start",
+    "backgroundPosition": "0% 0%",
+    "paddingTop": "300px",
+    "marginRight": "150px",
+    "marginLeft": "150px",
+    "width": "1140px",
+    "height": "810px",
+    "maxWidth": "min(100%, 1140px)",
+    "display": "flex",
+    "flexDirection": "column",
+    "justifyContent": "center",
+    "flexWrap": "nowrap",
+    "gap": "20px",
+    "borderColor": "rgb(17, 16, 16)",
+    "transition": "all",
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+   },
+   "rect": [
+    150,
+    110,
+    1140,
+    810
+   ],
+   "kids": [
+    {
+     "tag": "div",
+     "cls": "elementor-element elementor-align-center elementor-widget elementor-widget-button",
+     "widget": "button.default",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "center",
+      "backgroundPosition": "0% 0%",
+      "width": "1140px",
+      "height": "55px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      150,
+      638,
+      1140,
+      55
+     ],
+     "kids": [
+      {
+       "tag": "a",
+       "cls": "elementor-button elementor-button-link elementor-size-sm",
+       "href": "https://humanmargin.eu/ai-reality-check/",
+       "s": {
+        "fontSize": "15px",
+        "fontWeight": "700",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "15px",
+        "color": "rgb(237, 255, 0)",
+        "textTransform": "uppercase",
+        "textAlign": "center",
+        "backgroundColor": "rgb(0, 44, 207)",
+        "backgroundPosition": "0% 0%",
+        "paddingTop": "20px",
+        "paddingRight": "50px",
+        "paddingBottom": "20px",
+        "paddingLeft": "50px",
+        "width": "301.703px",
+        "height": "55px",
+        "display": "inline-block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(237, 255, 0)",
+        "boxShadow": "rgba(0, 0, 0, 0.5) 0px 0px 10px 0px",
+        "transition": "0.3s",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        569,
+        638,
+        302,
+        55
+       ],
+       "kids": [
+        {
+         "tag": "span",
+         "cls": "elementor-button-content-wrapper",
+         "s": {
+          "fontSize": "15px",
+          "fontWeight": "700",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "15px",
+          "color": "rgb(237, 255, 0)",
+          "textTransform": "uppercase",
+          "textAlign": "center",
+          "backgroundPosition": "0% 0%",
+          "width": "201.703px",
+          "height": "15px",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "flexWrap": "nowrap",
+          "gap": "5px",
+          "borderColor": "rgb(237, 255, 0)",
+          "transition": "all",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+         },
+         "rect": [
+          619,
+          658,
+          202,
+          15
+         ],
+         "kids": [
+          {
+           "tag": "span",
+           "cls": "elementor-button-text",
+           "text": "doe de AI reality check",
+           "s": {
+            "fontSize": "15px",
+            "fontWeight": "700",
+            "fontFamily": "Archivo, sans-serif",
+            "lineHeight": "15px",
+            "color": "rgb(237, 255, 0)",
+            "textTransform": "uppercase",
+            "textAlign": "center",
+            "backgroundPosition": "0% 0%",
+            "width": "201.703px",
+            "height": "15px",
+            "display": "block",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "borderColor": "rgb(237, 255, 0)",
+            "transition": "all",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%"
+           },
+           "rect": [
+            619,
+            658,
+            202,
+            15
+           ],
+           "kids": []
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

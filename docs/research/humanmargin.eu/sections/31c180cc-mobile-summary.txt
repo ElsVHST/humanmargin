@@ -1,0 +1,45 @@
+<div> 
+   css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "390px", "maxWidth": "100%", "minHeight": "633px", "display": "flex", "flexDirection": "row", "position": "relative"}
+   rect(x,y,w,h): [0, 6577, 390, 891]
+  <div> 
+     css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "paddingTop": "39px", "paddingRight": "39px", "paddingLeft": "39px", "width": "390px", "display": "flex", "flexDirection": "column", "justifyContent": "flex-end", "gap": "20px", "position": "relative"}
+     rect(x,y,w,h): [0, 6577, 390, 334]
+    <div> [image.default]
+       css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "312px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "gap": "20px", "position": "relative"}
+       rect(x,y,w,h): [-36, 6616, 312, 295]
+      <img> 
+         css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "312px", "maxWidth": "100%", "display": "inline-block", "flexDirection": "row"}
+         rect(x,y,w,h): [-36, 6616, 312, 295]
+  <div> 
+     css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "paddingTop": "27.2969px", "paddingRight": "27.2969px", "paddingBottom": "27.2969px", "paddingLeft": "105.297px", "width": "390px", "display": "flex", "flexDirection": "column", "justifyContent": "center", "gap": "20px", "position": "relative"}
+     rect(x,y,w,h): [0, 6911, 390, 556]
+    <div> [heading.default]
+       css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "257.406px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "gap": "20px", "position": "relative"}
+       rect(x,y,w,h): [105, 6938, 257, 89]
+      <h2> TXT:'En wie ben ik überhaupt om dit te zeggen?'
+         css: {"fontSize": "27px", "fontWeight": "400", "fontFamily": "\"Archivo Black\", sans-serif", "lineHeight": "29.7px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "257.406px", "display": "block", "flexDirection": "row"}
+         rect(x,y,w,h): [105, 6938, 257, 89]
+    <div> [text-editor.default]
+       css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "257.406px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "gap": "20px", "position": "relative"}
+       rect(x,y,w,h): [105, 7048, 257, 337]
+      <p> TXT:'Fair enough.'
+         css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "marginBottom": "27.2px", "width": "257.406px", "display": "block", "flexDirection": "row"}
+         rect(x,y,w,h): [105, 7048, 257, 26]
+      <p> TXT:'Ik vind ook niet dat je iemand moet vertrouwen omdat die zichzelf expert noemt. '
+         css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "marginBottom": "27.2px", "width": "257.406px", "display": "block", "flexDirection": "row"}
+         rect(x,y,w,h): [105, 7100, 257, 128]
+      <p> TXT:'Dus voor je mij gelooft: lees wie ik ben, waarom ik dit doe, en waarom ik zo kop'
+         css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "marginBottom": "27.2px", "width": "257.406px", "display": "block", "flexDirection": "row"}
+         rect(x,y,w,h): [105, 7255, 257, 102]
+    <div> [button.default]
+       css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "257.406px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "gap": "20px", "position": "relative"}
+       rect(x,y,w,h): [105, 7404, 257, 36]
+      <a> 
+         css: {"fontSize": "12px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "12px", "color": "rgb(255, 255, 255)", "textAlign": "center", "backgroundColor": "rgb(0, 44, 207)", "paddingTop": "12px", "paddingRight": "24px", "paddingBottom": "12px", "paddingLeft": "24px", "width": "143.359px", "display": "inline-block", "flexDirection": "row"}
+         rect(x,y,w,h): [105, 7404, 143, 36]
+        <span> 
+           css: {"fontSize": "12px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "12px", "color": "rgb(255, 255, 255)", "textAlign": "center", "width": "95.3594px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "gap": "5px"}
+           rect(x,y,w,h): [129, 7416, 95, 12]
+          <span> TXT:'Meer over mij'
+             css: {"fontSize": "12px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "12px", "color": "rgb(255, 255, 255)", "textAlign": "center", "width": "95.3594px", "display": "block", "flexDirection": "row"}
+             rect(x,y,w,h): [129, 7416, 95, 12]

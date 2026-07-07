@@ -1,0 +1,387 @@
+{
+ "tag": "div",
+ "s": {
+  "fontSize": "17px",
+  "fontWeight": "400",
+  "fontFamily": "Archivo, sans-serif",
+  "lineHeight": "25.5px",
+  "color": "rgb(17, 16, 16)",
+  "textAlign": "start",
+  "width": "390px",
+  "maxWidth": "100%",
+  "minHeight": "633px",
+  "display": "flex",
+  "flexDirection": "row",
+  "position": "relative",
+  "objectFit": "fill"
+ },
+ "rect": [
+  0,
+  6577,
+  390,
+  891
+ ],
+ "kids": [
+  {
+   "tag": "div",
+   "s": {
+    "fontSize": "17px",
+    "fontWeight": "400",
+    "fontFamily": "Archivo, sans-serif",
+    "lineHeight": "25.5px",
+    "color": "rgb(17, 16, 16)",
+    "textAlign": "start",
+    "paddingTop": "39px",
+    "paddingRight": "39px",
+    "paddingLeft": "39px",
+    "width": "390px",
+    "display": "flex",
+    "flexDirection": "column",
+    "justifyContent": "flex-end",
+    "gap": "20px",
+    "position": "relative",
+    "objectFit": "fill"
+   },
+   "rect": [
+    0,
+    6577,
+    390,
+    334
+   ],
+   "kids": [
+    {
+     "tag": "div",
+     "widget": "image.default",
+     "s": {
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "25.5px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "width": "312px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "gap": "20px",
+      "position": "relative",
+      "objectFit": "fill"
+     },
+     "rect": [
+      -36,
+      6616,
+      312,
+      295
+     ],
+     "kids": [
+      {
+       "tag": "img",
+       "s": {
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "25.5px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "width": "312px",
+        "maxWidth": "100%",
+        "display": "inline-block",
+        "flexDirection": "row",
+        "objectFit": "cover"
+       },
+       "rect": [
+        -36,
+        6616,
+        312,
+        295
+       ],
+       "kids": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tag": "div",
+   "s": {
+    "fontSize": "17px",
+    "fontWeight": "400",
+    "fontFamily": "Archivo, sans-serif",
+    "lineHeight": "25.5px",
+    "color": "rgb(17, 16, 16)",
+    "textAlign": "start",
+    "paddingTop": "27.2969px",
+    "paddingRight": "27.2969px",
+    "paddingBottom": "27.2969px",
+    "paddingLeft": "105.297px",
+    "width": "390px",
+    "display": "flex",
+    "flexDirection": "column",
+    "justifyContent": "center",
+    "gap": "20px",
+    "position": "relative",
+    "objectFit": "fill"
+   },
+   "rect": [
+    0,
+    6911,
+    390,
+    556
+   ],
+   "kids": [
+    {
+     "tag": "div",
+     "widget": "heading.default",
+     "s": {
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "25.5px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "width": "257.406px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "gap": "20px",
+      "position": "relative",
+      "objectFit": "fill"
+     },
+     "rect": [
+      105,
+      6938,
+      257,
+      89
+     ],
+     "kids": [
+      {
+       "tag": "h2",
+       "text": "En wie ben ik \u00fcberhaupt om dit te zeggen?",
+       "s": {
+        "fontSize": "27px",
+        "fontWeight": "400",
+        "fontFamily": "\"Archivo Black\", sans-serif",
+        "lineHeight": "29.7px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "width": "257.406px",
+        "display": "block",
+        "flexDirection": "row",
+        "objectFit": "fill"
+       },
+       "rect": [
+        105,
+        6938,
+        257,
+        89
+       ],
+       "kids": []
+      }
+     ]
+    },
+    {
+     "tag": "div",
+     "widget": "text-editor.default",
+     "s": {
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "25.5px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "width": "257.406px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "gap": "20px",
+      "position": "relative",
+      "objectFit": "fill"
+     },
+     "rect": [
+      105,
+      7048,
+      257,
+      337
+     ],
+     "kids": [
+      {
+       "tag": "p",
+       "text": "Fair enough.",
+       "s": {
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "25.5px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "marginBottom": "27.2px",
+        "width": "257.406px",
+        "display": "block",
+        "flexDirection": "row",
+        "objectFit": "fill"
+       },
+       "rect": [
+        105,
+        7048,
+        257,
+        26
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "Ik vind ook niet dat je iemand moet vertrouwen omdat die zichzelf expert noemt. ",
+       "s": {
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "25.5px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "marginBottom": "27.2px",
+        "width": "257.406px",
+        "display": "block",
+        "flexDirection": "row",
+        "objectFit": "fill"
+       },
+       "rect": [
+        105,
+        7100,
+        257,
+        128
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "Dus voor je mij gelooft: lees wie ik ben, waarom ik dit doe, en waarom ik zo kop",
+       "s": {
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "25.5px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "marginBottom": "27.2px",
+        "width": "257.406px",
+        "display": "block",
+        "flexDirection": "row",
+        "objectFit": "fill"
+       },
+       "rect": [
+        105,
+        7255,
+        257,
+        102
+       ],
+       "kids": []
+      }
+     ]
+    },
+    {
+     "tag": "div",
+     "widget": "button.default",
+     "s": {
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "25.5px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "width": "257.406px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "gap": "20px",
+      "position": "relative",
+      "objectFit": "fill"
+     },
+     "rect": [
+      105,
+      7404,
+      257,
+      36
+     ],
+     "kids": [
+      {
+       "tag": "a",
+       "s": {
+        "fontSize": "12px",
+        "fontWeight": "700",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "12px",
+        "color": "rgb(255, 255, 255)",
+        "textAlign": "center",
+        "backgroundColor": "rgb(0, 44, 207)",
+        "paddingTop": "12px",
+        "paddingRight": "24px",
+        "paddingBottom": "12px",
+        "paddingLeft": "24px",
+        "width": "143.359px",
+        "display": "inline-block",
+        "flexDirection": "row",
+        "objectFit": "fill"
+       },
+       "rect": [
+        105,
+        7404,
+        143,
+        36
+       ],
+       "kids": [
+        {
+         "tag": "span",
+         "s": {
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "12px",
+          "color": "rgb(255, 255, 255)",
+          "textAlign": "center",
+          "width": "95.3594px",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "gap": "5px",
+          "objectFit": "fill"
+         },
+         "rect": [
+          129,
+          7416,
+          95,
+          12
+         ],
+         "kids": [
+          {
+           "tag": "span",
+           "text": "Meer over mij",
+           "s": {
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "fontFamily": "Archivo, sans-serif",
+            "lineHeight": "12px",
+            "color": "rgb(255, 255, 255)",
+            "textAlign": "center",
+            "width": "95.3594px",
+            "display": "block",
+            "flexDirection": "row",
+            "objectFit": "fill"
+           },
+           "rect": [
+            129,
+            7416,
+            95,
+            12
+           ],
+           "kids": []
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

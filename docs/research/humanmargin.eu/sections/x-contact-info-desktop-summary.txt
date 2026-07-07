@@ -1,0 +1,72 @@
+<div> 
+   css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(17, 16, 16)", "backgroundPosition": "0% 0%", "width": "1440px", "height": "630px", "maxWidth": "100%", "minHeight": "630px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+   rect(x,y,w,h): [0, 110, 1440, 630]
+  <div> 
+     css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundImage": "url(\"https://humanmargin.eu/wp-content/uploads/2026/06/34.jpg\")", "backgroundSize": "cover", "backgroundPosition": "50% 100%", "width": "611.188px", "height": "630px", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+     rect(x,y,w,h): [829, 110, 611, 630]
+  <div> 
+     css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "100.797px", "paddingRight": "100.797px", "paddingBottom": "100.797px", "paddingLeft": "144px", "width": "828.812px", "height": "630px", "display": "flex", "flexDirection": "column", "justifyContent": "center", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+     rect(x,y,w,h): [0, 110, 829, 630]
+    <div> [heading.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "48px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [144, 215, 584, 48]
+      <h3> TXT:'CONTACT'
+         css: {"fontSize": "40px", "fontWeight": "400", "fontFamily": "\"Archivo Black\", sans-serif", "lineHeight": "48px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "48px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 215, 584, 48]
+    <div> [text-editor.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingBottom": "10px", "width": "584.016px", "height": "202.562px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(255, 255, 255)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [144, 283, 584, 203]
+      <p> 
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "584.016px", "height": "54px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 283, 584, 54]
+        <span> TXT:'Geen formulier, geen ticketsysteem, geen bot die “ik begrijp je vraag” zegt en je vraag dan niet begrijpt.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [144, 286, 549, 48]
+      <p> 
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "584.016px", "height": "27px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 351, 584, 27]
+        <span> TXT:'Gewoon ik.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [144, 354, 95, 21]
+      <p> 
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "584.016px", "height": "27px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 393, 584, 27]
+        <span> TXT:'En dat kan op verschillende manieren.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [144, 396, 311, 21]
+      <p> 
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "584.016px", "height": "27px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 434, 584, 27]
+        <span> TXT:'Vind me op LinkedIn.'
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [144, 437, 169, 21]
+    <div> [social-icons.default]
+       css: {"fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "left", "backgroundPosition": "0% 0%", "marginTop": "-33px", "width": "584.016px", "height": "50px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [144, 472, 584, 50]
+      <div> 
+         css: {"fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "left", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "50px", "display": "inline-block", "flexDirection": "row", "justifyContent": "center", "flexWrap": "nowrap", "gap": "0px 5px", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 472, 584, 50]
+        <span> 
+           css: {"fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "left", "backgroundPosition": "0% 0%", "width": "50px", "height": "50px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [144, 472, 50, 50]
+          <a> HREF:https://www.linkedin.com/in/els-verheirstraeten/
+             css: {"fontSize": "25px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25px", "color": "rgb(255, 92, 23)", "textAlign": "center", "backgroundColor": "rgb(0, 119, 181)", "backgroundPosition": "0% 0%", "width": "50px", "height": "50px", "display": "inline-flex", "flexDirection": "row", "justifyContent": "center", "alignItems": "center", "flexWrap": "nowrap", "borderRadius": "50%", "borderColor": "rgb(255, 92, 23)", "transition": "0.3s", "objectFit": "fill"}
+             rect(x,y,w,h): [144, 472, 50, 50]
+            <span> TXT:'Linkedin'
+               css: {"fontSize": "25px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25px", "color": "rgb(255, 92, 23)", "textAlign": "center", "backgroundPosition": "0% 0%", "marginTop": "-1px", "marginRight": "-1px", "marginBottom": "-1px", "marginLeft": "-1px", "width": "1px", "height": "1px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 92, 23)", "position": "absolute", "top": "-250000px", "left": "25.5px", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [169, -249529, 1, 1]
+            <svg> SVG:<svg aria-hidden="true" class="e-font-icon-svg e-fab-linkedin" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32
+               css: {"fontSize": "25px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25px", "color": "rgb(255, 92, 23)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "25px", "height": "25px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 92, 23)", "position": "relative", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [157, 485, 25, 25]
+    <div> [text-editor.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingBottom": "10px", "width": "584.016px", "height": "92.7812px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(255, 255, 255)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [144, 542, 584, 93]
+      <p> TXT:'Of mail me op .'
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "584.016px", "height": "27px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 542, 584, 27]
+        <a> TXT:'els@humanmargin.eu' HREF:mailto:els@humanmargin.eu
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [261, 545, 176, 21]
+      <p> TXT:'Ik antwoord zelf. Dat duurt soms iets langer.'
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "584.016px", "height": "27px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 584, 584, 27]

@@ -1,0 +1,192 @@
+<div> 
+   css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(244, 244, 241)", "backgroundPosition": "0% 0%", "width": "1440px", "height": "797.375px", "maxWidth": "100%", "minHeight": "630px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+   rect(x,y,w,h): [0, 5659, 1440, 797]
+  <div> 
+     css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "100.797px", "paddingRight": "100.797px", "paddingBottom": "100.797px", "paddingLeft": "144px", "width": "828.812px", "height": "797.375px", "display": "flex", "flexDirection": "column", "justifyContent": "center", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+     rect(x,y,w,h): [0, 5659, 829, 797]
+    <div> [heading.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "48px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [144, 5760, 584, 48]
+      <h2> TXT:'Veelgestelde vragen'
+         css: {"fontSize": "40px", "fontWeight": "400", "fontFamily": "\"Archivo Black\", sans-serif", "lineHeight": "48px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "48px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 5760, 584, 48]
+    <div> [nested-accordion.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "389.391px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [144, 5828, 584, 389]
+      <div> 
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "389.391px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 5828, 584, 389]
+        <details> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "188.891px", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [144, 5828, 584, 189]
+          <summary> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(31, 33, 36)", "textAlign": "start", "backgroundColor": "rgb(237, 255, 0)", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "584.016px", "height": "44.5px", "display": "flex", "flexDirection": "row", "justifyContent": "space-between", "alignItems": "center", "flexWrap": "nowrap", "gap": "0px 10px", "borderTopWidth": "1px", "borderColor": "rgb(213, 216, 220)", "borderStyle": "solid", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [144, 5828, 584, 45]
+            <span> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(31, 33, 36)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "290.875px", "height": "22.5px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(31, 33, 36)", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [155, 5839, 291, 23]
+              <div> TXT:'Wat als ik geen drie uur vrij heb?'
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "22.5px", "color": "rgb(31, 33, 36)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "290.875px", "height": "22.5px", "display": "block", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "borderColor": "rgb(31, 33, 36)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [155, 5839, 291, 23]
+            <span> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(31, 33, 36)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "13.125px", "height": "15px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "borderColor": "rgb(31, 33, 36)", "position": "relative", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [704, 5843, 13, 15]
+              <span> 
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(31, 33, 36)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "13.125px", "height": "15px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(31, 33, 36)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [704, 5843, 13, 15]
+              <span> 
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(31, 33, 36)", "textAlign": "start", "backgroundPosition": "0% 0%", "height": "15px", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(31, 33, 36)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [0, 82, 0, 0]
+          <div> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "584.016px", "height": "144.391px", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "gap": "20px", "borderTopWidth": "1px", "borderColor": "rgb(213, 216, 220)", "borderStyle": "solid", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+             rect(x,y,w,h): [144, 5872, 584, 144]
+            <div> [text-editor.default]
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "562.016px", "height": "122.391px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+               rect(x,y,w,h): [155, 5883, 562, 122]
+              <p> TXT:'Wel, als we eerlijk zijn, heb je die wel. Maar alleen niet hiervoor en dat is fair enough. Er zijn zowat om de twee maanden Sprint sessies, met data ruim op voorhand gepland. Maar als dat niet lukt, dan is meer wat voor jou. Dan doe je het allemaal op je eigen tempo.'
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "562.016px", "height": "108px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [155, 5883, 562, 108]
+        <details> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "44.5px", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [144, 6017, 584, 45]
+          <summary> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(221, 221, 211)", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "584.016px", "height": "44.5px", "display": "flex", "flexDirection": "row", "justifyContent": "space-between", "alignItems": "center", "flexWrap": "nowrap", "gap": "0px 10px", "borderTopWidth": "1px", "borderColor": "rgb(213, 216, 220)", "borderStyle": "solid", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [144, 6017, 584, 45]
+            <span> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "319.766px", "height": "22.5px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [155, 6028, 320, 23]
+              <div> TXT:'Wat als ik niet graag in groep werk?'
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "22.5px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "319.766px", "height": "22.5px", "display": "block", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [155, 6028, 320, 23]
+            <span> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "13.125px", "height": "15px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [704, 6032, 13, 15]
+              <span> 
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "height": "15px", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [0, 82, 0, 0]
+              <span> 
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "13.125px", "height": "15px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [704, 6032, 13, 15]
+          <div> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "100%", "flexDirection": "column", "flexWrap": "nowrap", "gap": "20px", "borderTopWidth": "1px", "borderColor": "rgb(213, 216, 220)", "borderStyle": "solid", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+             rect(x,y,w,h): [0, 82, 0, 0]
+            <div> [text-editor.default]
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+               rect(x,y,w,h): [0, 82, 0, 0]
+              <p> TXT:'Begrijpelijk. Dan is de Sprint waarschijnlijk niet jouw ding en is de een betere keuze.'
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [0, 82, 0, 0]
+        <details> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "44.5px", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [144, 6061, 584, 45]
+          <summary> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(221, 221, 211)", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "584.016px", "height": "44.5px", "display": "flex", "flexDirection": "row", "justifyContent": "space-between", "alignItems": "center", "flexWrap": "nowrap", "gap": "0px 10px", "borderTopWidth": "1px", "borderColor": "rgb(213, 216, 220)", "borderStyle": "solid", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [144, 6061, 584, 45]
+            <span> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "346.156px", "height": "22.5px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [155, 6072, 346, 23]
+              <div> TXT:'Wat als ik na de Sprint nog vragen heb?'
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "22.5px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "346.156px", "height": "22.5px", "display": "block", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [155, 6072, 346, 23]
+            <span> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "13.125px", "height": "15px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [704, 6076, 13, 15]
+              <span> 
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "height": "15px", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [0, 82, 0, 0]
+              <span> 
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "13.125px", "height": "15px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [704, 6076, 13, 15]
+          <div> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "100%", "flexDirection": "column", "flexWrap": "nowrap", "gap": "20px", "borderTopWidth": "1px", "borderColor": "rgb(213, 216, 220)", "borderStyle": "solid", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+             rect(x,y,w,h): [0, 82, 0, 0]
+            <div> [text-editor.default]
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+               rect(x,y,w,h): [0, 82, 0, 0]
+              <p> TXT:'Je houdt een jaar toegang tot alle materialen en kunt één opvolggesprek inplannen als je ergens op vastloopt.'
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [0, 82, 0, 0]
+        <details> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "44.5px", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [144, 6106, 584, 45]
+          <summary> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(221, 221, 211)", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "584.016px", "height": "44.5px", "display": "flex", "flexDirection": "row", "justifyContent": "space-between", "alignItems": "center", "flexWrap": "nowrap", "gap": "0px 10px", "borderTopWidth": "1px", "borderColor": "rgb(213, 216, 220)", "borderStyle": "solid", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [144, 6106, 584, 45]
+            <span> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "401.719px", "height": "22.5px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [155, 6117, 402, 23]
+              <div> TXT:'Wat als ik toch niet kan op de gekozen datum?'
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "22.5px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "401.719px", "height": "22.5px", "display": "block", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [155, 6117, 402, 23]
+            <span> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "13.125px", "height": "15px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [704, 6121, 13, 15]
+              <span> 
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "height": "15px", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [0, 82, 0, 0]
+              <span> 
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "13.125px", "height": "15px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [704, 6121, 13, 15]
+          <div> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "100%", "flexDirection": "column", "flexWrap": "nowrap", "gap": "20px", "borderTopWidth": "1px", "borderColor": "rgb(213, 216, 220)", "borderStyle": "solid", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+             rect(x,y,w,h): [0, 82, 0, 0]
+            <div> [text-editor.default]
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+               rect(x,y,w,h): [0, 82, 0, 0]
+              <p> TXT:'Tot een week vooraf kun je doorschuiven naar een volgende Sprint. En je krijgt sowieso toegang tot de volledige AICK.'
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [0, 82, 0, 0]
+        <details> 
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "584.016px", "height": "67px", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [144, 6150, 584, 67]
+          <summary> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(221, 221, 211)", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "584.016px", "height": "67px", "display": "flex", "flexDirection": "row", "justifyContent": "space-between", "alignItems": "center", "flexWrap": "nowrap", "gap": "0px 10px", "borderTopWidth": "1px", "borderColor": "rgb(213, 216, 220)", "borderStyle": "solid", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [144, 6150, 584, 67]
+            <span> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "538.891px", "height": "45px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [155, 6161, 539, 45]
+              <div> TXT:'Wat als ik niet graag in groep werk én het alleen niet zie zitten?'
+                 css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "22.5px", "color": "rgb(17, 16, 16)", "textTransform": "uppercase", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "538.891px", "height": "45px", "display": "block", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [155, 6161, 539, 45]
+            <span> 
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "13.125px", "height": "15px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "all", "objectFit": "fill"}
+               rect(x,y,w,h): [704, 6176, 13, 15]
+              <span> 
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "height": "15px", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [0, 82, 0, 0]
+              <span> 
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "13.125px", "height": "15px", "display": "flex", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [704, 6176, 13, 15]
+          <div> 
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "100%", "flexDirection": "column", "flexWrap": "nowrap", "gap": "20px", "borderTopWidth": "1px", "borderColor": "rgb(213, 216, 220)", "borderStyle": "solid", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+             rect(x,y,w,h): [0, 82, 0, 0]
+            <div> [text-editor.default]
+               css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+               rect(x,y,w,h): [0, 82, 0, 0]
+              <p> TXT:'Stuur me gewoon een bericht. Dan kijken we samen hoe we het geregeld krijgen.'
+                 css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+                 rect(x,y,w,h): [0, 82, 0, 0]
+    <div> [text-editor.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginTop": "20px", "marginBottom": "-26px", "width": "584.016px", "height": "41.3906px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [144, 6257, 584, 41]
+      <p> 
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "584.016px", "height": "27px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+         rect(x,y,w,h): [144, 6257, 584, 27]
+        <strong> TXT:'Klaar?'
+           css: {"fontSize": "18px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [144, 6260, 56, 21]
+    <div> [button.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "18px", "width": "584.016px", "height": "45px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transform": "matrix3d(0.999391, -0.0348995, 0, 0, 0.0348995, 0.999391, 0, 0, 0, 0, 1, -1, 0, 0, 0, 1)", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [143, 6282, 585, 65]
+      <a> HREF:https://checkout.aicompliancekit.eu/wachtlijst-aick-sprint
+         css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(0, 44, 207)", "textTransform": "uppercase", "textAlign": "center", "backgroundColor": "rgb(237, 255, 0)", "backgroundPosition": "0% 0%", "paddingTop": "15px", "paddingRight": "30px", "paddingBottom": "15px", "paddingLeft": "30px", "width": "523.734px", "height": "45px", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(0, 44, 207)", "boxShadow": "rgba(0, 0, 0, 0.45) 0px 0px 4px 0px", "transition": "transform 0.3s", "objectFit": "fill"}
+         rect(x,y,w,h): [143, 6285, 525, 63]
+        <span> 
+           css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(0, 44, 207)", "textTransform": "uppercase", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "463.734px", "height": "15px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "flexWrap": "nowrap", "gap": "5px", "borderColor": "rgb(0, 44, 207)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [174, 6301, 464, 31]
+          <span> TXT:'Schrijf je in voor de volgende Sprint (€499 excl. btw)'
+             css: {"fontSize": "15px", "fontWeight": "700", "fontFamily": "Archivo, sans-serif", "lineHeight": "15px", "color": "rgb(0, 44, 207)", "textTransform": "uppercase", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "463.734px", "height": "15px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(0, 44, 207)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [174, 6301, 464, 31]
+  <div> 
+     css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundSize": "cover", "backgroundPosition": "50% 50%", "width": "611.188px", "height": "797.375px", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+     rect(x,y,w,h): [829, 5659, 611, 797]

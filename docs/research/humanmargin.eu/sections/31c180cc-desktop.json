@@ -1,0 +1,503 @@
+{
+ "tag": "div",
+ "cls": "elementor-element e-con-full e-flex e-con e-parent e-lazyloaded",
+ "s": {
+  "fontSize": "18px",
+  "fontWeight": "400",
+  "fontFamily": "Archivo, sans-serif",
+  "lineHeight": "27px",
+  "color": "rgb(17, 16, 16)",
+  "textAlign": "start",
+  "backgroundImage": "linear-gradient(270deg, rgb(255, 255, 255) 80%, rgb(17, 16, 16) 40%)",
+  "backgroundPosition": "0% 0%",
+  "width": "1440px",
+  "height": "675px",
+  "maxWidth": "100%",
+  "minHeight": "675px",
+  "display": "flex",
+  "flexDirection": "row",
+  "flexWrap": "nowrap",
+  "borderColor": "rgb(17, 16, 16)",
+  "position": "relative",
+  "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s",
+  "objectFit": "fill",
+  "objectPosition": "50% 50%"
+ },
+ "rect": [
+  0,
+  5841,
+  1440,
+  675
+ ],
+ "kids": [
+  {
+   "tag": "div",
+   "cls": "elementor-element e-con-full e-flex e-con e-child",
+   "s": {
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "fontFamily": "Archivo, sans-serif",
+    "lineHeight": "27px",
+    "color": "rgb(17, 16, 16)",
+    "textAlign": "start",
+    "backgroundPosition": "0% 0%",
+    "paddingLeft": "144px",
+    "width": "653.031px",
+    "height": "675px",
+    "display": "flex",
+    "flexDirection": "column",
+    "justifyContent": "flex-end",
+    "flexWrap": "nowrap",
+    "gap": "20px",
+    "borderColor": "rgb(17, 16, 16)",
+    "position": "relative",
+    "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s",
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+   },
+   "rect": [
+    0,
+    5841,
+    653,
+    675
+   ],
+   "kids": [
+    {
+     "tag": "div",
+     "cls": "elementor-element e-transform elementor-widget elementor-widget-image",
+     "widget": "image.default",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "center",
+      "backgroundPosition": "0% 0%",
+      "width": "509.031px",
+      "height": "630px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "transform": "matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -1, 0, 0, 0, 1)",
+      "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      144,
+      5886,
+      509,
+      630
+     ],
+     "kids": [
+      {
+       "tag": "img",
+       "cls": "attachment-large size-large wp-image-354",
+       "img": {
+        "src": "https://humanmargin.eu/wp-content/uploads/2026/06/Els-1-1024x1024.png",
+        "alt": "",
+        "w": 800,
+        "h": 800
+       },
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "center",
+        "backgroundPosition": "0% 0%",
+        "width": "509.031px",
+        "height": "630px",
+        "maxWidth": "100%",
+        "display": "inline-block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "overflow": "clip",
+        "transition": "all",
+        "objectFit": "cover",
+        "objectPosition": "50% 50%",
+        "aspectRatio": "auto 800 / 800"
+       },
+       "rect": [
+        144,
+        5886,
+        509,
+        630
+       ],
+       "kids": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tag": "div",
+   "cls": "elementor-element e-con-full e-flex e-con e-child",
+   "s": {
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "fontFamily": "Archivo, sans-serif",
+    "lineHeight": "27px",
+    "color": "rgb(17, 16, 16)",
+    "textAlign": "start",
+    "backgroundPosition": "0% 0%",
+    "paddingTop": "100.797px",
+    "paddingRight": "100.797px",
+    "paddingBottom": "100.797px",
+    "paddingLeft": "100.797px",
+    "width": "786.969px",
+    "height": "675px",
+    "display": "flex",
+    "flexDirection": "column",
+    "justifyContent": "center",
+    "flexWrap": "nowrap",
+    "gap": "20px",
+    "borderColor": "rgb(17, 16, 16)",
+    "position": "relative",
+    "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s",
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+   },
+   "rect": [
+    653,
+    5841,
+    787,
+    675
+   ],
+   "kids": [
+    {
+     "tag": "div",
+     "cls": "elementor-element elementor-widget elementor-widget-heading",
+     "widget": "heading.default",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "backgroundPosition": "0% 0%",
+      "width": "585.375px",
+      "height": "96px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      754,
+      6001,
+      585,
+      96
+     ],
+     "kids": [
+      {
+       "tag": "h2",
+       "cls": "elementor-heading-title elementor-size-default",
+       "text": "En wie ben ik \u00fcberhaupt om dit te zeggen?",
+       "s": {
+        "fontSize": "40px",
+        "fontWeight": "400",
+        "fontFamily": "\"Archivo Black\", sans-serif",
+        "lineHeight": "48px",
+        "color": "rgb(17, 16, 16)",
+        "textTransform": "uppercase",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "width": "585.375px",
+        "height": "96px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        754,
+        6001,
+        585,
+        96
+       ],
+       "kids": []
+      }
+     ]
+    },
+    {
+     "tag": "div",
+     "cls": "elementor-element elementor-widget elementor-widget-text-editor",
+     "widget": "text-editor.default",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "backgroundPosition": "0% 0%",
+      "width": "585.375px",
+      "height": "178.172px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      754,
+      6117,
+      585,
+      178
+     ],
+     "kids": [
+      {
+       "tag": "p",
+       "text": "Fair enough.",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "marginBottom": "14.4px",
+        "width": "585.375px",
+        "height": "27px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        754,
+        6117,
+        585,
+        27
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "Ik vind ook niet dat je iemand moet vertrouwen omdat die zichzelf expert noemt. Zeker niet op LinkedIn. Zeker niet over iets met AI.",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "marginBottom": "14.4px",
+        "width": "585.375px",
+        "height": "54px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        754,
+        6159,
+        585,
+        54
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "Dus voor je mij gelooft: lees wie ik ben, waarom ik dit doe, en waarom ik zo koppig blijf hameren op begrip boven blind vertrouwen.",
+       "s": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "27px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "backgroundPosition": "0% 0%",
+        "marginBottom": "14.4px",
+        "width": "585.375px",
+        "height": "54px",
+        "display": "block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(17, 16, 16)",
+        "transition": "all",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        754,
+        6227,
+        585,
+        54
+       ],
+       "kids": []
+      }
+     ]
+    },
+    {
+     "tag": "div",
+     "cls": "elementor-element elementor-widget elementor-widget-button",
+     "widget": "button.default",
+     "s": {
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "27px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "backgroundPosition": "0% 0%",
+      "width": "585.375px",
+      "height": "39px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "gap": "20px",
+      "borderColor": "rgb(17, 16, 16)",
+      "position": "relative",
+      "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%"
+     },
+     "rect": [
+      754,
+      6316,
+      585,
+      39
+     ],
+     "kids": [
+      {
+       "tag": "a",
+       "cls": "elementor-button elementor-button-link elementor-size-sm elementor-animation-grow",
+       "href": "https://kate.elementor-kit.nl/over-mij/",
+       "s": {
+        "fontSize": "15px",
+        "fontWeight": "700",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "15px",
+        "color": "rgb(255, 255, 255)",
+        "textTransform": "uppercase",
+        "textAlign": "center",
+        "backgroundColor": "rgb(0, 44, 207)",
+        "backgroundPosition": "0% 0%",
+        "paddingTop": "12px",
+        "paddingRight": "24px",
+        "paddingBottom": "12px",
+        "paddingLeft": "24px",
+        "width": "167.188px",
+        "height": "39px",
+        "display": "inline-block",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "borderColor": "rgb(255, 255, 255)",
+        "boxShadow": "rgba(0, 0, 0, 0.43) 0px 0px 3px 0px",
+        "transition": "transform 0.3s",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%"
+       },
+       "rect": [
+        754,
+        6316,
+        167,
+        39
+       ],
+       "kids": [
+        {
+         "tag": "span",
+         "cls": "elementor-button-content-wrapper",
+         "s": {
+          "fontSize": "15px",
+          "fontWeight": "700",
+          "fontFamily": "Archivo, sans-serif",
+          "lineHeight": "15px",
+          "color": "rgb(255, 255, 255)",
+          "textTransform": "uppercase",
+          "textAlign": "center",
+          "backgroundPosition": "0% 0%",
+          "width": "119.188px",
+          "height": "15px",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "flexWrap": "nowrap",
+          "gap": "5px",
+          "borderColor": "rgb(255, 255, 255)",
+          "transition": "all",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+         },
+         "rect": [
+          778,
+          6328,
+          119,
+          15
+         ],
+         "kids": [
+          {
+           "tag": "span",
+           "cls": "elementor-button-text",
+           "text": "Meer over mij",
+           "s": {
+            "fontSize": "15px",
+            "fontWeight": "700",
+            "fontFamily": "Archivo, sans-serif",
+            "lineHeight": "15px",
+            "color": "rgb(255, 255, 255)",
+            "textTransform": "uppercase",
+            "textAlign": "center",
+            "backgroundPosition": "0% 0%",
+            "width": "119.188px",
+            "height": "15px",
+            "display": "block",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "borderColor": "rgb(255, 255, 255)",
+            "transition": "all",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%"
+           },
+           "rect": [
+            778,
+            6328,
+            119,
+            15
+           ],
+           "kids": []
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

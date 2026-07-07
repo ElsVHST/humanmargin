@@ -1,0 +1,30 @@
+<div> 
+   css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(17, 16, 16)", "backgroundPosition": "0% 0%", "width": "1440px", "height": "273px", "maxWidth": "100%", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+   rect(x,y,w,h): [0, 854, 1440, 273]
+  <div> 
+     css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "50px", "paddingBottom": "50px", "marginRight": "70px", "marginLeft": "70px", "width": "1300px", "height": "273px", "maxWidth": "1300px", "display": "flex", "flexDirection": "row", "justifyContent": "center", "alignItems": "stretch", "flexWrap": "nowrap", "gap": "10px", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "fill"}
+     rect(x,y,w,h): [70, 854, 1300, 273]
+    <div> 
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "793px", "height": "173px", "display": "flex", "flexDirection": "column", "justifyContent": "center", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+       rect(x,y,w,h): [324, 904, 793, 173]
+      <div> 
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "773px", "height": "117px", "display": "flex", "flexDirection": "row", "alignItems": "center", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+         rect(x,y,w,h): [334, 914, 773, 117]
+        <div> [image.default]
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "center", "backgroundPosition": "0% 0%", "marginLeft": "-55px", "width": "64.4688px", "height": "97px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+           rect(x,y,w,h): [289, 924, 64, 97]
+          <img> IMG:https://humanmargin.eu/wp-content/uploads/2026/06/in-de-marge-e1781177869154-327x1024.png (327x1024) alt=''
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "64.4688px", "height": "97px", "maxWidth": "100%", "display": "inline-block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(17, 16, 16)", "transition": "all", "objectFit": "contain", "aspectRatio": "auto 327 / 1024"}
+             rect(x,y,w,h): [289, 924, 64, 97]
+        <div> [text-editor.default]
+           css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "width": "723.531px", "height": "68.3906px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(255, 255, 255)", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+           rect(x,y,w,h): [373, 938, 724, 68]
+          <p> TXT:'“Els weet niet alleen waar ze over praat, ze begrijpt ook echt hoe ondernemers werken: weinig tijd, veel op het bord.”'
+             css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(255, 255, 255)", "textAlign": "start", "backgroundPosition": "0% 0%", "marginBottom": "14.4px", "width": "723.531px", "height": "54px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(255, 255, 255)", "transition": "all", "objectFit": "fill"}
+             rect(x,y,w,h): [373, 938, 724, 54]
+      <div> [heading.default]
+         css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "center", "backgroundPosition": "0% 0%", "marginTop": "-26px", "marginLeft": "-49px", "width": "773px", "height": "42px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "borderColor": "rgb(17, 16, 16)", "position": "relative", "transform": "matrix3d(0.997564, -0.0697565, 0, 0, 0.0697565, 0.997564, 0, 0, 0, 0, 1, -1, 0, 0, 0, 1)", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s", "objectFit": "fill"}
+         rect(x,y,w,h): [284, 998, 774, 96]
+        <h3> TXT:'- Stephan Molle'
+           css: {"fontSize": "35px", "fontWeight": "400", "fontFamily": "Marker, sans-serif", "lineHeight": "42px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "773px", "height": "42px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "borderColor": "rgb(237, 255, 0)", "transition": "all", "objectFit": "fill"}
+           rect(x,y,w,h): [284, 998, 774, 96]

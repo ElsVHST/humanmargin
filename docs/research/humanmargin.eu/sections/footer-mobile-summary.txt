@@ -1,0 +1,45 @@
+<footer> 
+   css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "390px", "display": "block", "flexDirection": "row"}
+   rect(x,y,w,h): [0, 7467, 390, 320]
+  <div> 
+     css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(17, 16, 16)", "width": "390px", "maxWidth": "100%", "display": "flex", "flexDirection": "column", "position": "relative"}
+     rect(x,y,w,h): [0, 7467, 390, 320]
+    <div> 
+       css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "paddingTop": "25px", "width": "390px", "maxWidth": "min(100%, 767px)", "display": "flex", "flexDirection": "column"}
+       rect(x,y,w,h): [0, 7469, 390, 318]
+      <div> 
+         css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "390px", "display": "flex", "flexDirection": "row", "position": "relative"}
+         rect(x,y,w,h): [0, 7494, 390, 207]
+        <div> 
+           css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "width": "206.688px", "display": "flex", "flexDirection": "column", "justifyContent": "center", "alignItems": "center", "gap": "20px", "position": "relative"}
+           rect(x,y,w,h): [0, 7494, 207, 102]
+          <div> [heading.default]
+             css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "61.3438px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "gap": "20px", "position": "relative"}
+             rect(x,y,w,h): [73, 7522, 61, 13]
+          <div> [social-icons.default]
+             css: {"fontWeight": "400", "fontFamily": "Archivo, sans-serif", "color": "rgb(17, 16, 16)", "textAlign": "left", "width": "40px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "gap": "20px", "position": "relative"}
+             rect(x,y,w,h): [83, 7555, 40, 15]
+        <div> 
+           css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "paddingTop": "10px", "paddingRight": "10px", "paddingBottom": "10px", "paddingLeft": "10px", "marginTop": "11.6875px", "marginBottom": "7.79688px", "width": "183.297px", "display": "flex", "flexDirection": "column", "justifyContent": "center", "alignItems": "center", "gap": "20px", "position": "relative"}
+           rect(x,y,w,h): [207, 7506, 183, 83]
+          <div> [nav-menu.default]
+             css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "162.297px", "maxWidth": "100%", "display": "flex", "flexDirection": "column", "gap": "20px", "position": "relative"}
+             rect(x,y,w,h): [218, 7516, 162, 63]
+        <div> 
+           css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "paddingTop": "27.2969px", "width": "390px", "display": "flex", "flexDirection": "column", "justifyContent": "center", "alignItems": "center", "gap": "10px", "position": "relative"}
+           rect(x,y,w,h): [0, 7597, 390, 103]
+          <div> [heading.default]
+             css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "width": "57.7812px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "gap": "10px", "position": "relative"}
+             rect(x,y,w,h): [166, 7624, 58, 13]
+          <div> [text-editor.default]
+             css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Poppins, sans-serif", "lineHeight": "25.5px", "color": "rgb(221, 221, 211)", "textAlign": "start", "width": "166.578px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "gap": "10px", "position": "relative"}
+             rect(x,y,w,h): [112, 7647, 167, 53]
+      <div> 
+         css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "paddingRight": "20px", "paddingLeft": "20px", "width": "390px", "display": "flex", "flexDirection": "column", "position": "relative"}
+         rect(x,y,w,h): [0, 7701, 390, 86]
+        <div> 
+           css: {"fontSize": "17px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "25.5px", "color": "rgb(17, 16, 16)", "textAlign": "start", "paddingTop": "20px", "paddingBottom": "20px", "width": "350px", "maxWidth": "min(100%, 767px)", "display": "flex", "flexDirection": "column", "gap": "20px"}
+           rect(x,y,w,h): [20, 7701, 350, 86]
+          <div> [text-editor.default]
+             css: {"fontSize": "10px", "fontWeight": "500", "fontFamily": "Poppins, sans-serif", "lineHeight": "15px", "color": "rgb(221, 221, 211)", "textAlign": "center", "width": "350px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "gap": "20px", "position": "relative"}
+             rect(x,y,w,h): [20, 7721, 350, 46]

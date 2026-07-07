@@ -1,0 +1,280 @@
+{
+ "tag": "div",
+ "s": {
+  "fontSize": "17px",
+  "fontWeight": "400",
+  "fontFamily": "Archivo, sans-serif",
+  "lineHeight": "25.5px",
+  "color": "rgb(17, 16, 16)",
+  "textAlign": "start",
+  "backgroundColor": "rgb(244, 244, 241)",
+  "width": "390px",
+  "maxWidth": "100%",
+  "minHeight": "590.8px",
+  "display": "flex",
+  "flexDirection": "row",
+  "position": "relative",
+  "objectFit": "fill"
+ },
+ "rect": [
+  0,
+  3950,
+  390,
+  907
+ ],
+ "kids": [
+  {
+   "tag": "div",
+   "s": {
+    "fontSize": "17px",
+    "fontWeight": "400",
+    "fontFamily": "Archivo, sans-serif",
+    "lineHeight": "25.5px",
+    "color": "rgb(17, 16, 16)",
+    "textAlign": "start",
+    "paddingTop": "27.2969px",
+    "paddingRight": "27.2969px",
+    "paddingBottom": "27.2969px",
+    "paddingLeft": "27.2969px",
+    "width": "390px",
+    "display": "flex",
+    "flexDirection": "column",
+    "justifyContent": "center",
+    "gap": "20px",
+    "position": "relative",
+    "objectFit": "fill"
+   },
+   "rect": [
+    0,
+    4245,
+    390,
+    611
+   ],
+   "kids": [
+    {
+     "tag": "div",
+     "widget": "heading.default",
+     "s": {
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "25.5px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "width": "335.406px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "gap": "20px",
+      "position": "relative",
+      "objectFit": "fill"
+     },
+     "rect": [
+      27,
+      4273,
+      335,
+      59
+     ],
+     "kids": [
+      {
+       "tag": "h2",
+       "text": "De Human Margin Methode",
+       "s": {
+        "fontSize": "27px",
+        "fontWeight": "400",
+        "fontFamily": "\"Archivo Black\", sans-serif",
+        "lineHeight": "29.7px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "width": "335.406px",
+        "display": "block",
+        "flexDirection": "row",
+        "objectFit": "fill"
+       },
+       "rect": [
+        27,
+        4273,
+        335,
+        59
+       ],
+       "kids": []
+      }
+     ]
+    },
+    {
+     "tag": "div",
+     "widget": "text-editor.default",
+     "s": {
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "25.5px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "start",
+      "paddingBottom": "10px",
+      "width": "335.406px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "gap": "20px",
+      "position": "relative",
+      "objectFit": "fill"
+     },
+     "rect": [
+      27,
+      4352,
+      335,
+      477
+     ],
+     "kids": [
+      {
+       "tag": "p",
+       "text": "Geen juristenkantoor of standaard AI-compliancebureau. Onleesbaarheid is een ver",
+       "s": {
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "25.5px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "marginBottom": "27.2px",
+        "width": "335.406px",
+        "display": "block",
+        "flexDirection": "row",
+        "objectFit": "fill"
+       },
+       "rect": [
+        27,
+        4352,
+        335,
+        77
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "Want om je autonomie te bewaren moet je eerst begrijpen.",
+       "s": {
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "25.5px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "marginBottom": "27.2px",
+        "width": "335.406px",
+        "display": "block",
+        "flexDirection": "row",
+        "objectFit": "fill"
+       },
+       "rect": [
+        27,
+        4456,
+        335,
+        51
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "We werken volgens de Human Margin Methode, en die vertrekt van drie simpele vrag",
+       "s": {
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "25.5px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "marginBottom": "27.2px",
+        "width": "335.406px",
+        "display": "block",
+        "flexDirection": "row",
+        "objectFit": "fill"
+       },
+       "rect": [
+        27,
+        4534,
+        335,
+        77
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "Wat gebruik je? Wat betekent dat? En welke verantwoordelijkheid hoort daarbij?",
+       "s": {
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "25.5px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "marginBottom": "27.2px",
+        "width": "335.406px",
+        "display": "block",
+        "flexDirection": "row",
+        "objectFit": "fill"
+       },
+       "rect": [
+        27,
+        4638,
+        335,
+        51
+       ],
+       "kids": []
+      },
+      {
+       "tag": "p",
+       "text": "Want de AI Act gaat eigenlijk niet over AI. Ze gaat over verantwoordelijkheid. E",
+       "s": {
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "25.5px",
+        "color": "rgb(17, 16, 16)",
+        "textAlign": "start",
+        "marginBottom": "27.2px",
+        "width": "335.406px",
+        "display": "block",
+        "flexDirection": "row",
+        "objectFit": "fill"
+       },
+       "rect": [
+        27,
+        4716,
+        335,
+        77
+       ],
+       "kids": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tag": "div",
+   "s": {
+    "fontSize": "17px",
+    "fontWeight": "400",
+    "fontFamily": "Archivo, sans-serif",
+    "lineHeight": "25.5px",
+    "color": "rgb(17, 16, 16)",
+    "textAlign": "start",
+    "width": "390px",
+    "minHeight": "295.4px",
+    "display": "flex",
+    "flexDirection": "column",
+    "gap": "20px",
+    "position": "relative",
+    "objectFit": "fill"
+   },
+   "rect": [
+    0,
+    3950,
+    390,
+    295
+   ],
+   "kids": []
+  }
+ ]
+}

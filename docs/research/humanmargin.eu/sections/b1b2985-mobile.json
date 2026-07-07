@@ -1,0 +1,175 @@
+{
+ "tag": "div",
+ "s": {
+  "fontSize": "17px",
+  "fontWeight": "400",
+  "fontFamily": "Archivo, sans-serif",
+  "lineHeight": "25.5px",
+  "color": "rgb(17, 16, 16)",
+  "textAlign": "start",
+  "backgroundColor": "rgb(17, 16, 16)",
+  "width": "390px",
+  "maxWidth": "100%",
+  "display": "flex",
+  "flexDirection": "column",
+  "position": "relative",
+  "objectFit": "fill"
+ },
+ "rect": [
+  0,
+  452,
+  390,
+  238
+ ],
+ "kids": [
+  {
+   "tag": "div",
+   "s": {
+    "fontSize": "17px",
+    "fontWeight": "400",
+    "fontFamily": "Archivo, sans-serif",
+    "lineHeight": "25.5px",
+    "color": "rgb(17, 16, 16)",
+    "textAlign": "start",
+    "paddingTop": "39px",
+    "paddingBottom": "39px",
+    "width": "331.5px",
+    "maxWidth": "85%",
+    "display": "flex",
+    "flexDirection": "column",
+    "gap": "20px",
+    "objectFit": "fill"
+   },
+   "rect": [
+    29,
+    452,
+    332,
+    238
+   ],
+   "kids": [
+    {
+     "tag": "div",
+     "widget": "heading.default",
+     "s": {
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "25.5px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "center",
+      "width": "331.5px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "gap": "20px",
+      "position": "relative",
+      "objectFit": "fill"
+     },
+     "rect": [
+      29,
+      491,
+      332,
+      119
+     ],
+     "kids": [
+      {
+       "tag": "h2",
+       "text": "AI hoef je niet te vrezen, niet blind te vertrouwen.",
+       "s": {
+        "fontSize": "27px",
+        "fontWeight": "400",
+        "fontFamily": "\"Archivo Black\", sans-serif",
+        "lineHeight": "29.7px",
+        "color": "rgb(255, 255, 255)",
+        "textAlign": "center",
+        "width": "331.5px",
+        "display": "block",
+        "flexDirection": "row",
+        "objectFit": "fill"
+       },
+       "rect": [
+        29,
+        491,
+        332,
+        119
+       ],
+       "kids": [
+        {
+         "tag": "br",
+         "s": {
+          "fontSize": "27px",
+          "fontWeight": "400",
+          "fontFamily": "\"Archivo Black\", sans-serif",
+          "lineHeight": "29.7px",
+          "color": "rgb(255, 255, 255)",
+          "textAlign": "center",
+          "display": "inline",
+          "flexDirection": "row",
+          "objectFit": "fill"
+         },
+         "rect": [
+          254,
+          519,
+          0,
+          31
+         ],
+         "kids": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "tag": "div",
+     "widget": "heading.default",
+     "s": {
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontFamily": "Archivo, sans-serif",
+      "lineHeight": "25.5px",
+      "color": "rgb(17, 16, 16)",
+      "textAlign": "center",
+      "width": "331.5px",
+      "maxWidth": "100%",
+      "display": "block",
+      "flexDirection": "row",
+      "gap": "20px",
+      "position": "relative",
+      "objectFit": "fill"
+     },
+     "rect": [
+      29,
+      629,
+      332,
+      21
+     ],
+     "kids": [
+      {
+       "tag": "h3",
+       "text": "Wel te begrijpen.",
+       "s": {
+        "fontSize": "19px",
+        "fontWeight": "500",
+        "fontFamily": "Archivo, sans-serif",
+        "lineHeight": "20.9px",
+        "color": "rgb(237, 255, 0)",
+        "textAlign": "center",
+        "width": "331.5px",
+        "display": "block",
+        "flexDirection": "row",
+        "objectFit": "fill"
+       },
+       "rect": [
+        29,
+        629,
+        332,
+        21
+       ],
+       "kids": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

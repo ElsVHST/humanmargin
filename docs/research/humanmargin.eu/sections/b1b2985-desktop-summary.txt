@@ -1,0 +1,21 @@
+<div> 
+   css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundColor": "rgb(17, 16, 16)", "backgroundPosition": "0% 0%", "width": "1440px", "height": "291.203px", "maxWidth": "100%", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "position": "relative", "transition": "background 0.3s, border 0.3s, box-shadow 0.3s, transform 0.4s"}
+   rect(x,y,w,h): [0, 920, 1440, 291]
+  <div> 
+     css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "start", "backgroundPosition": "0% 0%", "paddingTop": "72px", "paddingBottom": "72px", "marginRight": "150px", "marginLeft": "150px", "width": "1140px", "height": "291.203px", "maxWidth": "min(100%, 1140px)", "display": "flex", "flexDirection": "column", "flexWrap": "nowrap", "gap": "20px", "transition": "all"}
+     rect(x,y,w,h): [150, 920, 1140, 291]
+    <div> [heading.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "1140px", "height": "96px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+       rect(x,y,w,h): [150, 992, 1140, 96]
+      <h2> TXT:'AI hoef je niet te vrezen, niet blind te vertrouwen.'
+         css: {"fontSize": "40px", "fontWeight": "400", "fontFamily": "\"Archivo Black\", sans-serif", "lineHeight": "48px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "1140px", "height": "96px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+         rect(x,y,w,h): [150, 992, 1140, 96]
+        <br> 
+           css: {"fontSize": "40px", "fontWeight": "400", "fontFamily": "\"Archivo Black\", sans-serif", "lineHeight": "48px", "color": "rgb(255, 255, 255)", "textTransform": "uppercase", "textAlign": "center", "backgroundPosition": "0% 0%", "display": "inline", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+           rect(x,y,w,h): [1003, 993, 0, 46]
+    <div> [heading.default]
+       css: {"fontSize": "18px", "fontWeight": "400", "fontFamily": "Archivo, sans-serif", "lineHeight": "27px", "color": "rgb(17, 16, 16)", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "1140px", "height": "31.2031px", "maxWidth": "100%", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "gap": "20px", "position": "relative", "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s"}
+       rect(x,y,w,h): [150, 1108, 1140, 31]
+      <h3> TXT:'Wel te begrijpen.'
+         css: {"fontSize": "26px", "fontWeight": "500", "fontFamily": "Archivo, sans-serif", "lineHeight": "31.2px", "color": "rgb(237, 255, 0)", "textTransform": "uppercase", "textAlign": "center", "backgroundPosition": "0% 0%", "width": "1140px", "height": "31.2031px", "display": "block", "flexDirection": "row", "flexWrap": "nowrap", "transition": "all"}
+         rect(x,y,w,h): [150, 1108, 1140, 31]
