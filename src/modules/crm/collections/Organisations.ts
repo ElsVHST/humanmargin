@@ -34,6 +34,13 @@ export const Organisations: CollectionConfig = {
       collection: "deals",
       on: "organisatie",
     },
+    {
+      name: "projecten",
+      label: "Projecten",
+      type: "join",
+      collection: "projects",
+      on: "organisatie",
+    },
     tagsField,
     eigenaarField,
     {

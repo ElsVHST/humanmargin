@@ -75,6 +75,8 @@ export interface Config {
     contacts: Contact;
     deals: Deal;
     'deal-stages': DealStage;
+    projects: Project;
+    tasks: Task;
     'task-statuses': TaskStatus;
     'content-channels': ContentChannel;
     activities: Activity;
@@ -87,9 +89,13 @@ export interface Config {
     organisations: {
       contacten: 'contacts';
       deals: 'deals';
+      projecten: 'projects';
     };
     contacts: {
       deals: 'deals';
+    };
+    projects: {
+      taken: 'tasks';
     };
   };
   collectionsSelect: {
@@ -101,6 +107,8 @@ export interface Config {
     contacts: ContactsSelect<false> | ContactsSelect<true>;
     deals: DealsSelect<false> | DealsSelect<true>;
     'deal-stages': DealStagesSelect<false> | DealStagesSelect<true>;
+    projects: ProjectsSelect<false> | ProjectsSelect<true>;
+    tasks: TasksSelect<false> | TasksSelect<true>;
     'task-statuses': TaskStatusesSelect<false> | TaskStatusesSelect<true>;
     'content-channels': ContentChannelsSelect<false> | ContentChannelsSelect<true>;
     activities: ActivitiesSelect<false> | ActivitiesSelect<true>;
@@ -856,6 +864,11 @@ export interface Organisation {
     hasNextPage?: boolean;
     totalDocs?: number;
   };
+  projecten?: {
+    docs?: (number | Project)[];
+    hasNextPage?: boolean;
+    totalDocs?: number;
+  };
   tags?: string[] | null;
   eigenaar?: (number | null) | User;
   updatedAt: string;
@@ -933,6 +946,65 @@ export interface DealStage {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "projects".
+ */
+export interface Project {
+  id: number;
+  naam: string;
+  status: 'actief' | 'gepauzeerd' | 'afgerond';
+  /**
+   * Leeg laten voor interne projecten.
+   */
+  organisatie?: (number | null) | Organisation;
+  deal?: (number | null) | Deal;
+  teamleden?: (number | User)[] | null;
+  startdatum?: string | null;
+  deadline?: string | null;
+  omschrijving?: string | null;
+  taken?: {
+    docs?: (number | Task)[];
+    hasNextPage?: boolean;
+    totalDocs?: number;
+  };
+  tags?: string[] | null;
+  eigenaar?: (number | null) | User;
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "tasks".
+ */
+export interface Task {
+  id: number;
+  titel: string;
+  /**
+   * Kolom op het taken-board. Leeg of verwijderde status = kolom 'Geen status'.
+   */
+  status?: (number | null) | TaskStatus;
+  /**
+   * Leeg laten voor een losse taak.
+   */
+  project?: (number | null) | Project;
+  toegewezen?: (number | null) | User;
+  deadline?: string | null;
+  prioriteit: 'laag' | 'normaal' | 'hoog';
+  checklist?:
+    | {
+        tekst: string;
+        klaar?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
+  omschrijving?: string | null;
+  position?: number | null;
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "task-statuses".
  */
 export interface TaskStatus {
@@ -999,6 +1071,10 @@ export interface Activity {
     | {
         relationTo: 'deals';
         value: number | Deal;
+      }
+    | {
+        relationTo: 'projects';
+        value: number | Project;
       }
   )[];
   auteur?: (number | null) | User;
@@ -1071,6 +1147,14 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'deal-stages';
         value: number | DealStage;
+      } | null)
+    | ({
+        relationTo: 'projects';
+        value: number | Project;
+      } | null)
+    | ({
+        relationTo: 'tasks';
+        value: number | Task;
       } | null)
     | ({
         relationTo: 'task-statuses';
@@ -1595,6 +1679,7 @@ export interface OrganisationsSelect<T extends boolean = true> {
   notities?: T;
   contacten?: T;
   deals?: T;
+  projecten?: T;
   tags?: T;
   eigenaar?: T;
   updatedAt?: T;
@@ -1653,6 +1738,50 @@ export interface DealStagesSelect<T extends boolean = true> {
   _order?: T;
   naam?: T;
   kleur?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  deletedAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "projects_select".
+ */
+export interface ProjectsSelect<T extends boolean = true> {
+  naam?: T;
+  status?: T;
+  organisatie?: T;
+  deal?: T;
+  teamleden?: T;
+  startdatum?: T;
+  deadline?: T;
+  omschrijving?: T;
+  taken?: T;
+  tags?: T;
+  eigenaar?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  deletedAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "tasks_select".
+ */
+export interface TasksSelect<T extends boolean = true> {
+  titel?: T;
+  status?: T;
+  project?: T;
+  toegewezen?: T;
+  deadline?: T;
+  prioriteit?: T;
+  checklist?:
+    | T
+    | {
+        tekst?: T;
+        klaar?: T;
+        id?: T;
+      };
+  omschrijving?: T;
+  position?: T;
   updatedAt?: T;
   createdAt?: T;
   deletedAt?: T;

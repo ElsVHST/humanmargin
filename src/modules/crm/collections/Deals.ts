@@ -1,5 +1,6 @@
 import type { CollectionConfig } from "payload";
 
+import { createProjectOnWin } from "@/modules/crm/hooks/createProjectOnWin";
 import { logDealStatusChange } from "@/modules/crm/hooks/logDealStatusChange";
 import { dashboardCollectionAccess } from "@/modules/shared/access";
 import { eigenaarField } from "@/modules/shared/fields";
@@ -9,7 +10,7 @@ export const Deals: CollectionConfig = {
   labels: { singular: "Deal", plural: "Deals" },
   trash: true,
   access: dashboardCollectionAccess,
-  hooks: { afterChange: [logDealStatusChange] },
+  hooks: { afterChange: [logDealStatusChange, createProjectOnWin] },
   admin: {
     useAsTitle: "titel",
     defaultColumns: ["titel", "organisatie", "fase", "uitkomst", "bedrag"],

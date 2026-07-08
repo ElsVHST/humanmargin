@@ -51,7 +51,7 @@ export const Activities: CollectionConfig = {
       name: "targets",
       label: "Gekoppeld aan",
       type: "relationship",
-      relationTo: ["organisations", "contacts", "deals"],
+      relationTo: ["organisations", "contacts", "deals", "projects"],
       hasMany: true,
       required: true,
     },
