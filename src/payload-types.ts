@@ -78,6 +78,7 @@ export interface Config {
     projects: Project;
     tasks: Task;
     'task-statuses': TaskStatus;
+    'content-items': ContentItem;
     'content-channels': ContentChannel;
     activities: Activity;
     'payload-kv': PayloadKv;
@@ -110,6 +111,7 @@ export interface Config {
     projects: ProjectsSelect<false> | ProjectsSelect<true>;
     tasks: TasksSelect<false> | TasksSelect<true>;
     'task-statuses': TaskStatusesSelect<false> | TaskStatusesSelect<true>;
+    'content-items': ContentItemsSelect<false> | ContentItemsSelect<true>;
     'content-channels': ContentChannelsSelect<false> | ContentChannelsSelect<true>;
     activities: ActivitiesSelect<false> | ActivitiesSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
@@ -1018,6 +1020,39 @@ export interface TaskStatus {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "content-items".
+ */
+export interface ContentItem {
+  id: number;
+  titel: string;
+  /**
+   * Waar dit verschijnt. Een blog-kanaal maakt bij status 'Gepland' automatisch een conceptpagina op de site.
+   */
+  kanaal?: (number | null) | ContentChannel;
+  status: 'idee' | 'concept' | 'gepland' | 'gepubliceerd';
+  /**
+   * Zonder datum verschijnt dit item alleen in de lijstweergave.
+   */
+  publishDate?: string | null;
+  /**
+   * Korte werkomschrijving — de echte content leeft in de gekoppelde pagina of het kanaal zelf.
+   */
+  brief?: string | null;
+  /**
+   * De sitepagina waar deze content leeft (blogposts).
+   */
+  gekoppeldePagina?: (number | null) | Page;
+  organisatie?: (number | null) | Organisation;
+  project?: (number | null) | Project;
+  toegewezen?: (number | null) | User;
+  publicatielink?: string | null;
+  groupId?: string | null;
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "content-channels".
  */
 export interface ContentChannel {
@@ -1159,6 +1194,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'task-statuses';
         value: number | TaskStatus;
+      } | null)
+    | ({
+        relationTo: 'content-items';
+        value: number | ContentItem;
       } | null)
     | ({
         relationTo: 'content-channels';
@@ -1794,6 +1833,26 @@ export interface TaskStatusesSelect<T extends boolean = true> {
   _order?: T;
   naam?: T;
   kleur?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  deletedAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "content-items_select".
+ */
+export interface ContentItemsSelect<T extends boolean = true> {
+  titel?: T;
+  kanaal?: T;
+  status?: T;
+  publishDate?: T;
+  brief?: T;
+  gekoppeldePagina?: T;
+  organisatie?: T;
+  project?: T;
+  toegewezen?: T;
+  publicatielink?: T;
+  groupId?: T;
   updatedAt?: T;
   createdAt?: T;
   deletedAt?: T;
