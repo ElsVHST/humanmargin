@@ -71,6 +71,7 @@ export interface Config {
     media: Media;
     users: User;
     subscribers: Subscriber;
+    organisations: Organisation;
     'deal-stages': DealStage;
     'task-statuses': TaskStatus;
     'content-channels': ContentChannel;
@@ -85,6 +86,7 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     subscribers: SubscribersSelect<false> | SubscribersSelect<true>;
+    organisations: OrganisationsSelect<false> | OrganisationsSelect<true>;
     'deal-stages': DealStagesSelect<false> | DealStagesSelect<true>;
     'task-statuses': TaskStatusesSelect<false> | TaskStatusesSelect<true>;
     'content-channels': ContentChannelsSelect<false> | ContentChannelsSelect<true>;
@@ -820,6 +822,24 @@ export interface Subscriber {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "organisations".
+ */
+export interface Organisation {
+  id: number;
+  naam: string;
+  website?: string | null;
+  linkedin?: string | null;
+  sector?: string | null;
+  logo?: (number | null) | Media;
+  notities?: string | null;
+  tags?: string[] | null;
+  eigenaar?: (number | null) | User;
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "deal-stages".
  */
 export interface DealStage {
@@ -900,6 +920,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'subscribers';
         value: number | Subscriber;
+      } | null)
+    | ({
+        relationTo: 'organisations';
+        value: number | Organisation;
       } | null)
     | ({
         relationTo: 'deal-stages';
@@ -1410,6 +1434,23 @@ export interface SubscribersSelect<T extends boolean = true> {
   source?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "organisations_select".
+ */
+export interface OrganisationsSelect<T extends boolean = true> {
+  naam?: T;
+  website?: T;
+  linkedin?: T;
+  sector?: T;
+  logo?: T;
+  notities?: T;
+  tags?: T;
+  eigenaar?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  deletedAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
