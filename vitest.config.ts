@@ -8,7 +8,7 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
 export default defineConfig({
   test: {
     environment: "node",
-    include: ["tests/int/**/*.test.ts"],
+    include: ["tests/int/**/*.test.ts", "tests/unit/**/*.test.ts"],
     setupFiles: ["tests/int/setup.ts"],
     testTimeout: 60_000,
     hookTimeout: 60_000,
