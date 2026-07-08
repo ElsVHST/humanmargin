@@ -77,3 +77,7 @@ Payload 3.85.2 embedded in de Next-app. Entry: `src/payload.config.ts`. Collecti
 
 - **Collectie:** `knowledge-docs` (titel, Lexical `inhoud`, `parent` self-relatie = boom, `position` sibling-volgorde, zichtbaarheid vast intern/publiek — publieke site-rendering is een latere fase, organisatie/project-koppeling, auteur auto). Bewust géén nested-docs-plugin: eigen parent+position dekt de boom zonder dependency.
 - **View:** `/admin/kennisbank` — `src/modules/knowledge/views/kennisbank/` (lib.ts: `buildTree` — wees-parent wordt root — en `filterTree`, unit-getest). Zoeken filtert de boom mét pad; "+ Nieuw document" en "+" per tak maken direct een doc en navigeren naar de Lexical-editor; hernesten via het parent-veld in de editview.
+
+## Dashboard-modules (Fase 6: home)
+
+- **Home:** `admin.components.views.dashboard` vervangt de admin-homepage door `src/modules/shared/views/home/HomeView.tsx` — server component (Local API), géén DefaultTemplate (de dashboard-route wordt door Payload zelf al in het admin-template gewikkeld; custom-path-views zoals /pipeline hebben DefaultTemplate wél nodig). Toont begroeting op dagdeel, snelkoppelingen (+Deal/+Taak/+Content/+Organisatie/+Kennisdocument) en vier kaarten: pipeline-telling per fase + totale waarde, mijn taken (toegewezen aan ingelogde gebruiker, deadline-badges), content komende 7 dagen, recente activiteit.
