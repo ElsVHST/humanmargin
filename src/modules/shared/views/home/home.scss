@@ -1,87 +1,165 @@
-/* Dashboard-home */
+/* =========================================================================
+   Dashboard-home — SaaS-laag op het dashboard-designsysteem.
+   Tokens & kit: src/modules/shared/styles/dashboard.scss
+   ========================================================================= */
 
 .hm-home__kop {
   margin-bottom: 1rem;
-
-  h1 {
-    margin-bottom: 0.25rem;
-  }
 }
-
+.hm-home__kop h1 {
+  font-family: var(--hm-font-head);
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 1.8rem;
+  margin: 0 0 0.25rem;
+}
 .hm-home__datum {
-  color: var(--theme-elevation-500);
+  color: var(--hm-muted);
   text-transform: capitalize;
+  font-size: 0.9rem;
 }
 
+/* Snelkoppelingen */
 .hm-home__snel {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1.25rem 0 1.75rem;
-
-  a {
-    background: var(--theme-elevation-50);
-    border: 1px solid var(--theme-elevation-150);
-    border-radius: 4px;
-    color: var(--theme-text);
-    font-size: 0.8125rem;
-    padding: 0.375rem 0.75rem;
-    text-decoration: none;
-
-    &:hover {
-      background: var(--theme-elevation-100);
-    }
-  }
+  gap: 8px;
+  margin: 1.25rem 0 1.5rem;
+}
+.hm-home__snel a {
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line-2);
+  border-radius: var(--hm-r-s);
+  box-shadow: var(--hm-sh-1);
+  color: var(--hm-ink);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 7px 13px;
+  text-decoration: none;
+  transition: border-color 0.14s, background 0.14s;
+}
+.hm-home__snel a:hover {
+  background: var(--hm-surface-2);
+  border-color: var(--hm-accent);
 }
 
+/* Stat-tegels (samenvatting vóór detail) */
+.hm-home__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px;
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 760px) {
+  .hm-home__stats {
+    grid-template-columns: 1fr;
+  }
+}
+.hm-home__stat {
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-r);
+  box-shadow: var(--hm-sh-1);
+  padding: 15px 17px;
+}
+.hm-home__statlb {
+  color: var(--hm-faint);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.hm-home__statbig {
+  font-size: 1.7rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  margin-top: 5px;
+  font-variant-numeric: tabular-nums;
+}
+.hm-home__statbig small {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--hm-faint);
+  letter-spacing: 0;
+}
+.hm-home__statfoot {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 20px;
+}
+.hm-home__ok {
+  color: var(--hm-faint);
+  font-size: 0.74rem;
+}
+.hm-home__chandots .hm-kleur {
+  width: 11px;
+  height: 11px;
+}
+
+/* Fase-verdelingsbalk (echte data) */
+.hm-home__bar {
+  display: flex;
+  gap: 2px;
+  height: 7px;
+  margin-top: 12px;
+  border-radius: var(--hm-pill);
+  overflow: hidden;
+}
+.hm-home__barseg {
+  background: var(--k, var(--hm-grijs));
+  border-radius: 2px;
+  min-width: 4px;
+}
+
+/* Detailkaarten */
 .hm-home__grid {
   display: grid;
-  gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 13px;
 }
-
 .hm-home__kaart {
-  background: var(--theme-elevation-50);
-  border: 1px solid var(--theme-elevation-100);
-  border-radius: 6px;
-  padding: 1rem 1.125rem;
-
-  header {
-    align-items: baseline;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.75rem;
-
-    h2 {
-      font-size: 1rem;
-      margin: 0;
-    }
-
-    a {
-      color: var(--theme-elevation-600);
-      font-size: 0.8125rem;
-      text-decoration: none;
-
-      &:hover {
-        color: var(--theme-text);
-      }
-    }
-  }
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-r);
+  box-shadow: var(--hm-sh-1);
+  padding: 17px 18px;
+}
+.hm-home__kaart header {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 0.85rem;
+}
+.hm-home__kaart header h2 {
+  font-size: 1rem;
+  font-weight: 730;
+  margin: 0;
+}
+.hm-home__kaart header a {
+  color: var(--hm-muted);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+.hm-home__kaart header a:hover {
+  color: var(--hm-brand-blue);
 }
 
 .hm-home__cijfer {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 750;
   margin-bottom: 0.75rem;
-
-  span {
-    font-size: 0.875rem;
-    font-weight: 400;
-  }
+  font-variant-numeric: tabular-nums;
 }
-
+.hm-home__cijfer span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--hm-muted);
+}
 .hm-home__waarde {
-  color: var(--theme-elevation-600);
+  color: var(--hm-muted);
 }
 
 .hm-home__lijst {
@@ -91,56 +169,55 @@
   list-style: none;
   margin: 0;
   padding: 0;
-
-  li {
-    align-items: center;
-    display: flex;
-    gap: 0.5rem;
-  }
 }
-
+.hm-home__lijst li {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
 .hm-home__itemtekst {
-  color: var(--theme-text);
+  color: var(--hm-ink);
   flex: 1;
   min-width: 0;
   overflow: hidden;
   text-decoration: none;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 0.88rem;
 }
-
 a.hm-home__itemtekst:hover {
   text-decoration: underline;
 }
-
 .hm-home__aantal {
-  background: var(--theme-elevation-150);
-  border-radius: 10px;
-  font-size: 0.75rem;
-  padding: 0.05rem 0.5rem;
+  background: var(--hm-surface-2);
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-pill);
+  color: var(--hm-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 1px 8px;
+  font-variant-numeric: tabular-nums;
 }
-
 .hm-home__badge {
-  background: var(--theme-elevation-100);
-  border-radius: 3px;
+  background: var(--hm-surface-2);
+  border-radius: var(--hm-pill);
   flex-shrink: 0;
-  font-size: 0.6875rem;
+  font-size: 0.68rem;
   font-weight: 600;
-  padding: 0.1rem 0.375rem;
-
-  &.is-verlopen {
-    background: var(--theme-error-100);
-    color: var(--theme-error-750);
-  }
+  padding: 2px 8px;
+  color: var(--hm-muted);
 }
-
+.hm-home__badge.is-verlopen {
+  background: color-mix(in srgb, var(--hm-rood) 14%, transparent);
+  color: var(--hm-rood);
+  font-weight: 700;
+}
 .hm-home__meta {
-  color: var(--theme-elevation-500);
+  color: var(--hm-faint);
   flex-shrink: 0;
-  font-size: 0.75rem;
+  font-size: 0.74rem;
 }
-
 .hm-home__leeg {
-  color: var(--theme-elevation-500);
-  font-size: 0.875rem;
+  color: var(--hm-faint);
+  font-size: 0.88rem;
 }

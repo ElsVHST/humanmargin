@@ -25,6 +25,7 @@ import {
 } from "@/modules/content/views/kalender/lib";
 import type { ContentItem } from "@/payload-types";
 
+import "@/modules/shared/styles/dashboard.scss";
 import "./kalender.scss";
 
 type Weergave = "maand" | "week" | "lijst";

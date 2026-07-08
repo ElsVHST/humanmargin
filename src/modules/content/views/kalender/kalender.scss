@@ -1,184 +1,219 @@
-/* Contentkalender — maand/week/lijst */
+/* =========================================================================
+   Contentkalender — maand/week/lijst, SaaS-laag op het dashboard-designsysteem.
+   Tokens & kit: src/modules/shared/styles/dashboard.scss
+   ========================================================================= */
+
+.hm-kalender {
+  font-family: var(--hm-font);
+}
 
 .hm-kalender__balk {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
 }
 
 .hm-kalender__nav,
 .hm-kalender__weergaven {
   display: flex;
-  gap: 0.375rem;
-
-  button {
-    background: var(--theme-elevation-50);
-    border: 1px solid var(--theme-elevation-150);
-    border-radius: 4px;
-    color: var(--theme-text);
-    cursor: pointer;
-    font: inherit;
-    font-size: 0.8125rem;
-    padding: 0.375rem 0.75rem;
-
-    &:hover {
-      background: var(--theme-elevation-100);
-    }
-
-    &.is-actief {
-      background: var(--theme-elevation-800);
-      border-color: var(--theme-elevation-800);
-      color: var(--theme-elevation-0);
-    }
-  }
+  gap: 6px;
+  align-items: center;
 }
-
+.hm-kalender__nav button,
+.hm-kalender__weergaven button {
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line-2);
+  border-radius: var(--hm-r-s);
+  color: var(--hm-ink);
+  cursor: pointer;
+  font-family: var(--hm-font);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  transition: background 0.14s, border-color 0.14s;
+}
+.hm-kalender__nav button:hover,
+.hm-kalender__weergaven button:hover {
+  background: var(--hm-surface-2);
+}
+.hm-kalender__weergaven button.is-actief {
+  background: var(--hm-brand-blue);
+  border-color: var(--hm-brand-blue);
+  color: var(--hm-accent);
+}
 .hm-kalender__label {
   align-self: center;
-  font-weight: 600;
-  margin-left: 0.5rem;
+  font-weight: 700;
+  margin-left: 8px;
   text-transform: capitalize;
+  font-size: 0.95rem;
 }
 
+/* Maand/week-grid */
 .hm-kalender__grid {
-  border: 1px solid var(--theme-elevation-150);
-  border-radius: 6px;
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-r);
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   overflow: hidden;
+  box-shadow: var(--hm-sh-1);
+  background: var(--hm-surface);
 }
 
 .hm-kalender__dagkop {
-  background: var(--theme-elevation-50);
-  border-bottom: 1px solid var(--theme-elevation-150);
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.375rem 0.5rem;
+  background: var(--hm-surface-2);
+  border-bottom: 1px solid var(--hm-line);
+  color: var(--hm-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 7px 9px;
   text-transform: uppercase;
 }
 
 .hm-kalender__dag {
-  border-bottom: 1px solid var(--theme-elevation-100);
-  border-right: 1px solid var(--theme-elevation-100);
+  border-bottom: 1px solid var(--hm-line);
+  border-right: 1px solid var(--hm-line);
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  min-height: 6.5rem;
-  padding: 0.375rem;
+  gap: 4px;
+  min-height: 116px;
+  padding: 7px;
 
   &:nth-child(7n + 7) {
     border-right: none;
   }
-
   &.is-andere-maand {
-    background: var(--theme-elevation-25);
-
-    .hm-kalender__dagnummer {
-      color: var(--theme-elevation-400);
-    }
+    background: var(--hm-bg);
   }
-
+  &.is-andere-maand .hm-kalender__dagnummer {
+    color: var(--hm-faint);
+  }
   &.is-vandaag .hm-kalender__dagnummer {
-    background: var(--theme-elevation-800);
+    background: var(--hm-accent);
+    color: var(--hm-accent-ink);
     border-radius: 50%;
-    color: var(--theme-elevation-0);
   }
-
   &.is-over {
-    background: var(--theme-elevation-100);
+    background: color-mix(in srgb, var(--hm-accent) 12%, transparent);
   }
 }
-
 .is-week .hm-kalender__dag {
   min-height: 18rem;
 }
 
 .hm-kalender__dagnummer {
   align-items: center;
+  align-self: flex-start;
+  box-sizing: border-box;
   display: inline-flex;
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.375rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  height: 22px;
   justify-content: center;
-  width: 1.375rem;
+  min-width: 22px;
+  padding: 0 5px;
 }
 
 .hm-kalender__item {
   align-items: center;
-  background: var(--theme-input-bg);
-  border: 1px solid var(--theme-elevation-150);
-  border-radius: 4px;
-  color: var(--theme-text);
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-r-s);
+  color: var(--hm-ink);
   display: flex;
-  font-size: 0.75rem;
-  gap: 0.375rem;
-  padding: 0.25rem 0.375rem;
+  font-size: 0.72rem;
+  gap: 6px;
+  padding: 4px 7px;
   text-decoration: none;
+  box-shadow: var(--hm-sh-1);
+  transition: border-color 0.12s, transform 0.12s;
 
   &:hover {
-    border-color: var(--theme-elevation-400);
+    border-color: var(--hm-line-2);
+    transform: translateY(-1px);
   }
-
   &.is-gepubliceerd {
-    opacity: 0.65;
+    opacity: 0.62;
   }
 }
-
 .hm-kalender__itemtitel {
   flex: 1;
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-weight: 550;
 }
-
 .hm-kalender__status {
-  background: var(--theme-elevation-100);
-  border-radius: 3px;
+  background: var(--hm-surface-2);
+  border-radius: var(--hm-pill);
+  color: var(--hm-muted);
   flex-shrink: 0;
-  font-size: 0.625rem;
-  font-weight: 600;
-  padding: 0.05rem 0.3rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 1px 6px;
   text-transform: uppercase;
 }
-
 .is-gepland .hm-kalender__status {
-  background: var(--theme-success-100);
-  color: var(--theme-success-750);
+  background: color-mix(in srgb, var(--hm-groen) 16%, transparent);
+  color: var(--hm-groen);
+}
+.is-concept .hm-kalender__status {
+  background: color-mix(in srgb, var(--hm-blauw) 16%, transparent);
+  color: var(--hm-blauw);
+}
+.is-gepubliceerd .hm-kalender__status {
+  background: color-mix(in srgb, var(--hm-grijs) 20%, transparent);
 }
 
+/* Lijstweergave */
 .hm-kalender__lijst {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  max-width: 40rem;
+  gap: 7px;
+  max-width: 42rem;
 
   h3 {
-    margin: 0.75rem 0 0.25rem;
+    font-size: 0.82rem;
+    font-weight: 730;
+    margin: 0.85rem 0 0.15rem;
+    color: var(--hm-ink);
   }
-
   .hm-kalender__item {
-    font-size: 0.875rem;
-    padding: 0.5rem 0.625rem;
+    font-size: 0.85rem;
+    padding: 8px 11px;
   }
 }
-
 .hm-kalender__datum {
-  color: var(--theme-elevation-500);
+  color: var(--hm-faint);
   flex-shrink: 0;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
 }
 
 .hm-kalender__voet {
   margin-top: 1rem;
+}
+.hm-kalender__voet a {
+  color: var(--hm-muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.hm-kalender__voet a:hover {
+  color: var(--hm-brand-blue);
+}
 
-  a {
-    color: var(--theme-elevation-600);
-    text-decoration: none;
-
-    &:hover {
-      color: var(--theme-text);
-    }
-  }
+/* View-titel (server-view rendert h1.hm-pipeline__titel) */
+h1.hm-pipeline__titel {
+  font-family: var(--hm-font-head);
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 1.7rem;
+  margin: 0 0 1.25rem;
 }

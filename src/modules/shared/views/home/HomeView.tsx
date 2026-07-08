@@ -6,6 +6,7 @@ import React from "react";
 import { relationId } from "@/modules/crm/views/pipeline/lib";
 import type { Activity, ContentItem, Task } from "@/payload-types";
 
+import "@/modules/shared/styles/dashboard.scss";
 import "./home.scss";
 
 function begroeting(naam?: string | null): string {
@@ -138,6 +139,71 @@ export async function HomeView({ initPageResult }: AdminViewServerProps) {
           <Link href="/admin/collections/knowledge-docs/create">
             + Kennisdocument
           </Link>
+        </div>
+
+        <div className="hm-home__stats">
+          <div className="hm-home__stat">
+            <div className="hm-home__statlb">Open pipeline</div>
+            <div className="hm-home__statbig">
+              {totaalWaarde > 0 ? euro(totaalWaarde) : openDeals.totalDocs}
+              <small>
+                {totaalWaarde > 0
+                  ? ` · ${openDeals.totalDocs} deal${openDeals.totalDocs === 1 ? "" : "s"}`
+                  : ` open deal${openDeals.totalDocs === 1 ? "" : "s"}`}
+              </small>
+            </div>
+            {openDeals.totalDocs > 0 && (
+              <div className="hm-home__bar">
+                {stages.docs.map((fase) => {
+                  const c = perFase.get(String(fase.id)) ?? 0;
+                  if (c === 0) return null;
+                  return (
+                    <span
+                      key={fase.id}
+                      className={`hm-home__barseg hm-kleur--${fase.kleur}`}
+                      style={{ width: `${(c / openDeals.totalDocs) * 100}%` }}
+                      title={`${fase.naam}: ${c}`}
+                    />
+                  );
+                })}
+              </div>
+            )}
+          </div>
+          <div className="hm-home__stat">
+            <div className="hm-home__statlb">Mijn taken</div>
+            <div className="hm-home__statbig">{mijnTaken.docs.length}</div>
+            <div className="hm-home__statfoot">
+              {(() => {
+                const verlopen = mijnTaken.docs.filter(
+                  (t) => t.deadline && new Date(t.deadline).getTime() < nu,
+                ).length;
+                return verlopen > 0 ? (
+                  <span className="hm-pill hm-pill--rose">
+                    {verlopen} verlopen
+                  </span>
+                ) : (
+                  <span className="hm-home__ok">Niets over de datum</span>
+                );
+              })()}
+            </div>
+          </div>
+          <div className="hm-home__stat">
+            <div className="hm-home__statlb">Content deze week</div>
+            <div className="hm-home__statbig">{weekContent.totalDocs}</div>
+            <div className="hm-home__statfoot hm-home__chandots">
+              {weekContent.docs.slice(0, 6).map((item) => {
+                const kanaal = item.kanaal;
+                const kleur =
+                  kanaal && typeof kanaal === "object" ? kanaal.kleur : "grijs";
+                return (
+                  <span
+                    key={item.id}
+                    className={`hm-kleur hm-kleur--${kleur}`}
+                  />
+                );
+              })}
+            </div>
+          </div>
         </div>
 
         <div className="hm-home__grid">
