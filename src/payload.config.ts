@@ -16,6 +16,7 @@ import { Users } from "@/collections/Users";
 import { Footer } from "@/globals/Footer";
 import { Header } from "@/globals/Header";
 import { getServerSideURL } from "@/lib/url";
+import { crmCollections } from "@/modules/crm";
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -48,7 +49,7 @@ export default buildConfig({
   },
   // Els beheert de site in het Nederlands; admin UI valt terug op nl
   i18n: { supportedLanguages: { en, nl }, fallbackLanguage: "nl" },
-  collections: [Pages, Media, Users, Subscribers],
+  collections: [Pages, Media, Users, Subscribers, ...crmCollections],
   globals: [Header, Footer],
   editor: lexicalEditor(),
   db: postgresAdapter({

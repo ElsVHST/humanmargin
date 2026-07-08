@@ -71,6 +71,7 @@ export interface Config {
     media: Media;
     users: User;
     subscribers: Subscriber;
+    'deal-stages': DealStage;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -82,6 +83,7 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     subscribers: SubscribersSelect<false> | SubscribersSelect<true>;
+    'deal-stages': DealStagesSelect<false> | DealStagesSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -814,6 +816,19 @@ export interface Subscriber {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "deal-stages".
+ */
+export interface DealStage {
+  id: number;
+  _order?: string | null;
+  naam: string;
+  kleur: 'groen' | 'blauw' | 'paars' | 'rood' | 'oranje' | 'geel' | 'turquoise' | 'roze' | 'grijs';
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -851,6 +866,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'subscribers';
         value: number | Subscriber;
+      } | null)
+    | ({
+        relationTo: 'deal-stages';
+        value: number | DealStage;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -1349,6 +1368,18 @@ export interface SubscribersSelect<T extends boolean = true> {
   source?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "deal-stages_select".
+ */
+export interface DealStagesSelect<T extends boolean = true> {
+  _order?: T;
+  naam?: T;
+  kleur?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  deletedAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
