@@ -18,6 +18,7 @@ import { Header } from "@/globals/Header";
 import { getServerSideURL } from "@/lib/url";
 import { contentCollections } from "@/modules/content";
 import { crmCollections } from "@/modules/crm";
+import { knowledgeCollections } from "@/modules/knowledge";
 import { projectsCollections } from "@/modules/projects";
 import { sharedCollections } from "@/modules/shared";
 
@@ -75,6 +76,7 @@ export default buildConfig({
     ...crmCollections,
     ...projectsCollections,
     ...contentCollections,
+    ...knowledgeCollections,
     ...sharedCollections,
   ],
   globals: [Header, Footer],

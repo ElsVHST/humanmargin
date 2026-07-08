@@ -80,6 +80,7 @@ export interface Config {
     'task-statuses': TaskStatus;
     'content-items': ContentItem;
     'content-channels': ContentChannel;
+    'knowledge-docs': KnowledgeDoc;
     activities: Activity;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
@@ -113,6 +114,7 @@ export interface Config {
     'task-statuses': TaskStatusesSelect<false> | TaskStatusesSelect<true>;
     'content-items': ContentItemsSelect<false> | ContentItemsSelect<true>;
     'content-channels': ContentChannelsSelect<false> | ContentChannelsSelect<true>;
+    'knowledge-docs': KnowledgeDocsSelect<false> | KnowledgeDocsSelect<true>;
     activities: ActivitiesSelect<false> | ActivitiesSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
@@ -1070,6 +1072,42 @@ export interface ContentChannel {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "knowledge-docs".
+ */
+export interface KnowledgeDoc {
+  id: number;
+  titel: string;
+  inhoud?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  /**
+   * Leeg = hoofdstuk op het hoogste niveau.
+   */
+  parent?: (number | null) | KnowledgeDoc;
+  zichtbaarheid: 'intern' | 'publiek';
+  organisatie?: (number | null) | Organisation;
+  project?: (number | null) | Project;
+  tags?: string[] | null;
+  auteur?: (number | null) | User;
+  position?: number | null;
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "activities".
  */
 export interface Activity {
@@ -1202,6 +1240,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'content-channels';
         value: number | ContentChannel;
+      } | null)
+    | ({
+        relationTo: 'knowledge-docs';
+        value: number | KnowledgeDoc;
       } | null)
     | ({
         relationTo: 'activities';
@@ -1866,6 +1908,24 @@ export interface ContentChannelsSelect<T extends boolean = true> {
   naam?: T;
   kleur?: T;
   type?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  deletedAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "knowledge-docs_select".
+ */
+export interface KnowledgeDocsSelect<T extends boolean = true> {
+  titel?: T;
+  inhoud?: T;
+  parent?: T;
+  zichtbaarheid?: T;
+  organisatie?: T;
+  project?: T;
+  tags?: T;
+  auteur?: T;
+  position?: T;
   updatedAt?: T;
   createdAt?: T;
   deletedAt?: T;
