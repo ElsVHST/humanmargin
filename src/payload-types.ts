@@ -73,6 +73,7 @@ export interface Config {
     subscribers: Subscriber;
     organisations: Organisation;
     contacts: Contact;
+    deals: Deal;
     'deal-stages': DealStage;
     'task-statuses': TaskStatus;
     'content-channels': ContentChannel;
@@ -84,6 +85,10 @@ export interface Config {
   collectionsJoins: {
     organisations: {
       contacten: 'contacts';
+      deals: 'deals';
+    };
+    contacts: {
+      deals: 'deals';
     };
   };
   collectionsSelect: {
@@ -93,6 +98,7 @@ export interface Config {
     subscribers: SubscribersSelect<false> | SubscribersSelect<true>;
     organisations: OrganisationsSelect<false> | OrganisationsSelect<true>;
     contacts: ContactsSelect<false> | ContactsSelect<true>;
+    deals: DealsSelect<false> | DealsSelect<true>;
     'deal-stages': DealStagesSelect<false> | DealStagesSelect<true>;
     'task-statuses': TaskStatusesSelect<false> | TaskStatusesSelect<true>;
     'content-channels': ContentChannelsSelect<false> | ContentChannelsSelect<true>;
@@ -843,6 +849,11 @@ export interface Organisation {
     hasNextPage?: boolean;
     totalDocs?: number;
   };
+  deals?: {
+    docs?: (number | Deal)[];
+    hasNextPage?: boolean;
+    totalDocs?: number;
+  };
   tags?: string[] | null;
   eigenaar?: (number | null) | User;
   updatedAt: string;
@@ -868,9 +879,39 @@ export interface Contact {
   linkedin?: string | null;
   avatar?: (number | null) | Media;
   organisatie?: (number | null) | Organisation;
+  deals?: {
+    docs?: (number | Deal)[];
+    hasNextPage?: boolean;
+    totalDocs?: number;
+  };
   bron?: string | null;
   tags?: string[] | null;
   eigenaar?: (number | null) | User;
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "deals".
+ */
+export interface Deal {
+  id: number;
+  titel: string;
+  bedrag?: number | null;
+  valuta?: ('EUR' | 'USD') | null;
+  /**
+   * Kolom op het pipeline-board. Leeg of verwijderde fase = kolom 'Geen fase'.
+   */
+  fase?: (number | null) | DealStage;
+  uitkomst: 'open' | 'gewonnen' | 'verloren';
+  verlorenReden?: string | null;
+  verwachteSluitdatum?: string | null;
+  kans?: number | null;
+  organisatie?: (number | null) | Organisation;
+  contactpersoon?: (number | null) | Contact;
+  eigenaar?: (number | null) | User;
+  position?: number | null;
   updatedAt: string;
   createdAt: string;
   deletedAt?: string | null;
@@ -965,6 +1006,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'contacts';
         value: number | Contact;
+      } | null)
+    | ({
+        relationTo: 'deals';
+        value: number | Deal;
       } | null)
     | ({
         relationTo: 'deal-stages';
@@ -1488,6 +1533,7 @@ export interface OrganisationsSelect<T extends boolean = true> {
   logo?: T;
   notities?: T;
   contacten?: T;
+  deals?: T;
   tags?: T;
   eigenaar?: T;
   updatedAt?: T;
@@ -1509,9 +1555,31 @@ export interface ContactsSelect<T extends boolean = true> {
   linkedin?: T;
   avatar?: T;
   organisatie?: T;
+  deals?: T;
   bron?: T;
   tags?: T;
   eigenaar?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  deletedAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "deals_select".
+ */
+export interface DealsSelect<T extends boolean = true> {
+  titel?: T;
+  bedrag?: T;
+  valuta?: T;
+  fase?: T;
+  uitkomst?: T;
+  verlorenReden?: T;
+  verwachteSluitdatum?: T;
+  kans?: T;
+  organisatie?: T;
+  contactpersoon?: T;
+  eigenaar?: T;
+  position?: T;
   updatedAt?: T;
   createdAt?: T;
   deletedAt?: T;

@@ -58,6 +58,13 @@ export const Contacts: CollectionConfig = {
       type: "relationship",
       relationTo: "organisations",
     },
+    {
+      name: "deals",
+      label: "Deals",
+      type: "join",
+      collection: "deals",
+      on: "contactpersoon",
+    },
     { name: "bron", label: "Bron", type: "text" },
     tagsField,
     eigenaarField,
