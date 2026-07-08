@@ -65,3 +65,10 @@ Payload 3.85.2 embedded in de Next-app. Entry: `src/payload.config.ts`. Collecti
 - **Taken-board:** `/admin/taken` — `src/modules/projects/views/taken/` + `projectsApi`. Client-side filters op project en toegewezen persoon; kaart-badges: prioriteit hoog (rood) en deadline (rood indien verstreken). Kolommenbeheer identiek aan pipeline.
 - **Gedeeld:** `buildGenericColumns` in pipeline/lib.ts (wrappers `buildColumns` en `buildTaskColumns`); `ColumnHeader` in `src/modules/shared/components/`; boardstyling in `src/modules/shared/components/board.scss`; nav via `DashboardNavLinks` (uitbreiden bij nieuwe views).
 - **activities.targets** bevat nu ook `projects`.
+
+## Dashboard-modules (Fase 4: contentkalender)
+
+- **Collectie:** `content-items` (kanaal→content-channels, status vast idee/concept/gepland/gepubliceerd, publishDate dag+tijd, brief textarea, gekoppeldePagina→pages, organisatie/project/toegewezen optioneel, `groupId` gereserveerd). Zonder publishDate alleen zichtbaar in de lijstweergave.
+- **Blog-hook:** `createPageOnPlan` — kanaaltype blog + status→gepland zonder koppeling ⇒ conceptpagina (draft, geslugificeerde titel, conflict-suffix) + terugkoppeling op het item; hook geeft het bijgewerkte doc terug zodat de API-respons de koppeling direct toont. Idempotent, faalt stil.
+- **Kalender:** `/admin/kalender` — `src/modules/content/views/kalender/` (lib.ts: maandGrid/weekDagen/itemsPerDag, unit-getest; maandgrid start maandag, 42 dagen). Slepen naar een dag = PATCH publishDate met behoud van tijd; bevestiging bij gepubliceerde items; vandaag-markering; kanaal-kleurstip + statusbadge per item.
+- **Bewuste afwijking spec §6:** taak-/contentstatus-wijzigingen worden niet in activities gelogd (targets bevatten geen tasks/content-items; boards/kalender tonen status al).
