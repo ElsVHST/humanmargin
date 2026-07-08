@@ -47,6 +47,13 @@ export default buildConfig({
         Logo: "/components/admin/Logo#Logo",
         Icon: "/components/admin/Icon#Icon",
       },
+      afterNavLinks: ["/components/admin/PipelineNavLink#PipelineNavLink"],
+      views: {
+        pipeline: {
+          Component: "/modules/crm/views/pipeline/PipelineView#PipelineView",
+          path: "/pipeline",
+        },
+      },
     },
     theme: "light",
   },
