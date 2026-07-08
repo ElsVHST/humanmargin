@@ -50,6 +50,9 @@ export default buildConfig({
       },
       afterNavLinks: ["/components/admin/DashboardNavLinks#DashboardNavLinks"],
       views: {
+        dashboard: {
+          Component: "/modules/shared/views/home/HomeView#HomeView",
+        },
         pipeline: {
           Component: "/modules/crm/views/pipeline/PipelineView#PipelineView",
           path: "/pipeline",

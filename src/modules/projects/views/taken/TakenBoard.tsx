@@ -20,7 +20,6 @@ import {
   buildTaskColumns,
   GEEN_FASE,
   positionBetween,
-  relationId,
 } from "@/modules/crm/views/pipeline/lib";
 import { projectsApi } from "@/modules/projects/api";
 import { ColumnHeader } from "@/modules/shared/components/ColumnHeader";

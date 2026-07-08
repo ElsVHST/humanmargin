@@ -31,6 +31,7 @@ import { NieuwsbriefStatusField as NieuwsbriefStatusField_1ad3c41e669439371709c4
 import { Icon as Icon_dfe4008080d895d460898c3a6155e9ba } from '../../../components/admin/Icon'
 import { Logo as Logo_91a09b539d3c86b0aebf520e7564ce08 } from '../../../components/admin/Logo'
 import { DashboardNavLinks as DashboardNavLinks_f6287bcb61e11205475b555cb042f203 } from '../../../components/admin/DashboardNavLinks'
+import { HomeView as HomeView_0ff1cdb8ae1b9a3ca44a9d7c3acd510a } from '../../../modules/shared/views/home/HomeView'
 import { PipelineView as PipelineView_c2d7079cb045a404329cfb047e31eb9a } from '../../../modules/crm/views/pipeline/PipelineView'
 import { TakenView as TakenView_b658dd106fd11b3e14cedee19664119f } from '../../../modules/projects/views/taken/TakenView'
 import { KalenderView as KalenderView_3b7a9f2c3f256b8966c2ab6081d93acc } from '../../../modules/content/views/kalender/KalenderView'
@@ -72,6 +73,7 @@ export const importMap = {
   "/components/admin/Icon#Icon": Icon_dfe4008080d895d460898c3a6155e9ba,
   "/components/admin/Logo#Logo": Logo_91a09b539d3c86b0aebf520e7564ce08,
   "/components/admin/DashboardNavLinks#DashboardNavLinks": DashboardNavLinks_f6287bcb61e11205475b555cb042f203,
+  "/modules/shared/views/home/HomeView#HomeView": HomeView_0ff1cdb8ae1b9a3ca44a9d7c3acd510a,
   "/modules/crm/views/pipeline/PipelineView#PipelineView": PipelineView_c2d7079cb045a404329cfb047e31eb9a,
   "/modules/projects/views/taken/TakenView#TakenView": TakenView_b658dd106fd11b3e14cedee19664119f,
   "/modules/content/views/kalender/KalenderView#KalenderView": KalenderView_3b7a9f2c3f256b8966c2ab6081d93acc,
