@@ -72,3 +72,8 @@ Payload 3.85.2 embedded in de Next-app. Entry: `src/payload.config.ts`. Collecti
 - **Blog-hook:** `createPageOnPlan` — kanaaltype blog + status→gepland zonder koppeling ⇒ conceptpagina (draft, geslugificeerde titel, conflict-suffix) + terugkoppeling op het item; hook geeft het bijgewerkte doc terug zodat de API-respons de koppeling direct toont. Idempotent, faalt stil.
 - **Kalender:** `/admin/kalender` — `src/modules/content/views/kalender/` (lib.ts: maandGrid/weekDagen/itemsPerDag, unit-getest; maandgrid start maandag, 42 dagen). Slepen naar een dag = PATCH publishDate met behoud van tijd; bevestiging bij gepubliceerde items; vandaag-markering; kanaal-kleurstip + statusbadge per item.
 - **Bewuste afwijking spec §6:** taak-/contentstatus-wijzigingen worden niet in activities gelogd (targets bevatten geen tasks/content-items; boards/kalender tonen status al).
+
+## Dashboard-modules (Fase 5: kennisbank)
+
+- **Collectie:** `knowledge-docs` (titel, Lexical `inhoud`, `parent` self-relatie = boom, `position` sibling-volgorde, zichtbaarheid vast intern/publiek — publieke site-rendering is een latere fase, organisatie/project-koppeling, auteur auto). Bewust géén nested-docs-plugin: eigen parent+position dekt de boom zonder dependency.
+- **View:** `/admin/kennisbank` — `src/modules/knowledge/views/kennisbank/` (lib.ts: `buildTree` — wees-parent wordt root — en `filterTree`, unit-getest). Zoeken filtert de boom mét pad; "+ Nieuw document" en "+" per tak maken direct een doc en navigeren naar de Lexical-editor; hernesten via het parent-veld in de editview.
