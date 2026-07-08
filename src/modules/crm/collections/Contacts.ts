@@ -47,6 +47,16 @@ export const Contacts: CollectionConfig = {
           "Uniek — dit is de matchsleutel voor nieuwsbriefstatus en latere e-mailkoppeling.",
       },
     },
+    {
+      name: "nieuwsbriefStatus",
+      label: " ",
+      type: "ui",
+      admin: {
+        components: {
+          Field: "/components/admin/NieuwsbriefStatus#NieuwsbriefStatusField",
+        },
+      },
+    },
     { name: "extraEmails", label: "Extra e-mailadressen", type: "text", hasMany: true },
     { name: "telefoons", label: "Telefoonnummers", type: "text", hasMany: true },
     { name: "functie", label: "Functie", type: "text" },
