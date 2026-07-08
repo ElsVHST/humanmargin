@@ -100,3 +100,46 @@ describe("kolom-collecties: deal-stages", () => {
     expect(inPrullenbak.docs).toHaveLength(1);
   });
 });
+
+describe("kolom-collecties: task-statuses en content-channels", () => {
+  it("task-statuses gedraagt zich als kolom-collectie", async () => {
+    const status = await payload.create({
+      collection: "task-statuses",
+      data: { naam: "Teststatus", kleur: "groen" },
+      overrideAccess: false,
+      user: beheerder,
+    });
+    expect(typeof status._order).toBe("string");
+  });
+
+  it("content-channels vereist een vast kanaaltype", async () => {
+    const kanaal = await payload.create({
+      collection: "content-channels",
+      data: { naam: "Blog", kleur: "groen", type: "blog" },
+      overrideAccess: false,
+      user: beheerder,
+    });
+    expect(kanaal.type).toBe("blog");
+
+    await expect(
+      payload.create({
+        collection: "content-channels",
+        // @ts-expect-error bewust ongeldig kanaaltype
+        data: { naam: "Fout", kleur: "rood", type: "podcast" },
+        overrideAccess: false,
+        user: beheerder,
+      }),
+    ).rejects.toThrow();
+  });
+
+  it("teamlid kan geen kanalen beheren", async () => {
+    await expect(
+      payload.create({
+        collection: "content-channels",
+        data: { naam: "Verboden", kleur: "grijs", type: "overig" },
+        overrideAccess: false,
+        user: teamlid,
+      }),
+    ).rejects.toThrow();
+  });
+});

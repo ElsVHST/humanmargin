@@ -72,6 +72,8 @@ export interface Config {
     users: User;
     subscribers: Subscriber;
     'deal-stages': DealStage;
+    'task-statuses': TaskStatus;
+    'content-channels': ContentChannel;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -84,6 +86,8 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     subscribers: SubscribersSelect<false> | SubscribersSelect<true>;
     'deal-stages': DealStagesSelect<false> | DealStagesSelect<true>;
+    'task-statuses': TaskStatusesSelect<false> | TaskStatusesSelect<true>;
+    'content-channels': ContentChannelsSelect<false> | ContentChannelsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -829,6 +833,36 @@ export interface DealStage {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "task-statuses".
+ */
+export interface TaskStatus {
+  id: number;
+  _order?: string | null;
+  naam: string;
+  kleur: 'groen' | 'blauw' | 'paars' | 'rood' | 'oranje' | 'geel' | 'turquoise' | 'roze' | 'grijs';
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "content-channels".
+ */
+export interface ContentChannel {
+  id: number;
+  _order?: string | null;
+  naam: string;
+  kleur: 'groen' | 'blauw' | 'paars' | 'rood' | 'oranje' | 'geel' | 'turquoise' | 'roze' | 'grijs';
+  /**
+   * Vast type dat gedrag bepaalt (blog-kanaal koppelt aan sitepagina's). De naam hierboven is vrij te kiezen.
+   */
+  type: 'blog' | 'nieuwsbrief' | 'linkedin' | 'instagram' | 'overig';
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -870,6 +904,14 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'deal-stages';
         value: number | DealStage;
+      } | null)
+    | ({
+        relationTo: 'task-statuses';
+        value: number | TaskStatus;
+      } | null)
+    | ({
+        relationTo: 'content-channels';
+        value: number | ContentChannel;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -1377,6 +1419,31 @@ export interface DealStagesSelect<T extends boolean = true> {
   _order?: T;
   naam?: T;
   kleur?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  deletedAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "task-statuses_select".
+ */
+export interface TaskStatusesSelect<T extends boolean = true> {
+  _order?: T;
+  naam?: T;
+  kleur?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  deletedAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "content-channels_select".
+ */
+export interface ContentChannelsSelect<T extends boolean = true> {
+  _order?: T;
+  naam?: T;
+  kleur?: T;
+  type?: T;
   updatedAt?: T;
   createdAt?: T;
   deletedAt?: T;
