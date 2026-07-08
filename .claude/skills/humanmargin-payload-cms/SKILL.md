@@ -33,3 +33,11 @@ Payload 3.85.2 embedded in de Next-app. Entry: `src/payload.config.ts`. Collecti
 ## Omgeving & deploy
 
 `.env` (gitignored): `DATABASE_URI` (Neon van Els), `PAYLOAD_SECRET`, `NEXT_PUBLIC_SITE_URL`. Lokale fallback-DB: `brew services start postgresql@17`, db `humanmargin`. Dev-login: zie `clone-qa-status.md` in projectgeheugen. **Voor Vercel-deploy:** media staat nu op disk — `@payloadcms/storage-vercel-blob` toevoegen (zie `/payload` sub-skill storage-vercel-blob) en dev-push vervangen door echte migraties (`payload migrate:create`).
+
+## Dashboard-modules (Fase 1: fundament)
+
+- **Module-structuur:** dashboard-collections leven in `src/modules/<domein>/collections/` met een `index.ts` per module die `<domein>Collections: CollectionConfig[]` exporteert; `src/payload.config.ts` spreidt die arrays in `collections`. Gedeelde bouwstenen (access-helpers, kolomcollectie-factory) in `src/modules/shared/`.
+- **Rollen:** `users.role` = `beheerder` | `teamlid` (select, `saveToJWT`). Access-helpers: `isAuthenticated`, `isBeheerder`, `isBeheerderOrSelf`, `beheerderFieldOnly` uit `src/modules/shared/access.ts`. Promoveren: `npx payload run scripts/seed/make-beheerder.ts -- <email>`.
+- **Kolom-collecties** (door Els beheerd): `deal-stages`, `task-statuses`, `content-channels` via `makeColumnCollection()` — `orderable: true` (fractional `_order`), `trash: true` (prullenbak), alleen beheerders muteren. `content-channels.type` is een vaste enum (blog/nieuwsbrief/linkedin/instagram/overig) waar hooks aan hangen. Standaardseed: `npx payload run scripts/seed/seed-dashboard-columns.ts` (idempotent).
+- **Tests:** `npm test` (Vitest + Local API). Tests draaien ALTIJD tegen de lokale `humanmargin_test`-database — `tests/int/setup.ts` overschrijft `DATABASE_URI` onvoorwaardelijk (bescherming van Els's Neon). Testdatabase aanmaken: `createdb humanmargin_test`.
+- **Spec & onderzoek:** `docs/superpowers/specs/2026-07-08-els-dashboard-design.md`, `docs/research/dashboard/`.
