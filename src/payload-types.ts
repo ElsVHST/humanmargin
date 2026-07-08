@@ -772,6 +772,10 @@ export interface TextCtaBlock {
 export interface User {
   id: number;
   name: string;
+  /**
+   * Beheerders beheren gebruikers, kolommen en de prullenbak; teamleden werken in alle domeinen.
+   */
+  role: 'beheerder' | 'teamlid';
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -1317,6 +1321,7 @@ export interface MediaSelect<T extends boolean = true> {
  */
 export interface UsersSelect<T extends boolean = true> {
   name?: T;
+  role?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;
