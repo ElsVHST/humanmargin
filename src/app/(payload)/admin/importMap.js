@@ -30,8 +30,9 @@ import { TimelineField as TimelineField_ddadcaa27f5ac1c323b1bd7501bcec73 } from 
 import { NieuwsbriefStatusField as NieuwsbriefStatusField_1ad3c41e669439371709c47c6eb8f2fa } from '../../../components/admin/NieuwsbriefStatus'
 import { Icon as Icon_dfe4008080d895d460898c3a6155e9ba } from '../../../components/admin/Icon'
 import { Logo as Logo_91a09b539d3c86b0aebf520e7564ce08 } from '../../../components/admin/Logo'
-import { PipelineNavLink as PipelineNavLink_be5d92887f3700a03ce1a2ad751f9ded } from '../../../components/admin/PipelineNavLink'
+import { DashboardNavLinks as DashboardNavLinks_f6287bcb61e11205475b555cb042f203 } from '../../../components/admin/DashboardNavLinks'
 import { PipelineView as PipelineView_c2d7079cb045a404329cfb047e31eb9a } from '../../../modules/crm/views/pipeline/PipelineView'
+import { TakenView as TakenView_b658dd106fd11b3e14cedee19664119f } from '../../../modules/projects/views/taken/TakenView'
 import { CollectionCards as CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1 } from '@payloadcms/next/rsc'
 
 /** @type import('payload').ImportMap */
@@ -68,7 +69,8 @@ export const importMap = {
   "/components/admin/NieuwsbriefStatus#NieuwsbriefStatusField": NieuwsbriefStatusField_1ad3c41e669439371709c47c6eb8f2fa,
   "/components/admin/Icon#Icon": Icon_dfe4008080d895d460898c3a6155e9ba,
   "/components/admin/Logo#Logo": Logo_91a09b539d3c86b0aebf520e7564ce08,
-  "/components/admin/PipelineNavLink#PipelineNavLink": PipelineNavLink_be5d92887f3700a03ce1a2ad751f9ded,
+  "/components/admin/DashboardNavLinks#DashboardNavLinks": DashboardNavLinks_f6287bcb61e11205475b555cb042f203,
   "/modules/crm/views/pipeline/PipelineView#PipelineView": PipelineView_c2d7079cb045a404329cfb047e31eb9a,
+  "/modules/projects/views/taken/TakenView#TakenView": TakenView_b658dd106fd11b3e14cedee19664119f,
   "@payloadcms/next/rsc#CollectionCards": CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1
 }

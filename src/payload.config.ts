@@ -47,11 +47,15 @@ export default buildConfig({
         Logo: "/components/admin/Logo#Logo",
         Icon: "/components/admin/Icon#Icon",
       },
-      afterNavLinks: ["/components/admin/PipelineNavLink#PipelineNavLink"],
+      afterNavLinks: ["/components/admin/DashboardNavLinks#DashboardNavLinks"],
       views: {
         pipeline: {
           Component: "/modules/crm/views/pipeline/PipelineView#PipelineView",
           path: "/pipeline",
+        },
+        taken: {
+          Component: "/modules/projects/views/taken/TakenView#TakenView",
+          path: "/taken",
         },
       },
     },

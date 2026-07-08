@@ -17,6 +17,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 import { crmApi } from "@/modules/crm/api";
+import { ColumnHeader } from "@/modules/shared/components/ColumnHeader";
 import {
   buildColumns,
   GEEN_FASE,
@@ -24,7 +25,7 @@ import {
 } from "@/modules/crm/views/pipeline/lib";
 import type { Deal, DealStage } from "@/payload-types";
 
-import "./pipeline.scss";
+import "@/modules/shared/components/board.scss";
 
 type Props = {
   initialStages: DealStage[];
@@ -72,81 +73,6 @@ function eigenaarInitialen(deal: Deal): string | null {
       .join("");
   }
   return null;
-}
-
-type ColumnHeaderProps = {
-  kolom: ReturnType<typeof buildColumns>[number];
-  isBeheerder: boolean;
-  onRename: (id: number, naam: string) => void;
-  onTrash: (id: number, kaartAantal: number, naam: string) => void;
-};
-
-function ColumnHeader({
-  kolom,
-  isBeheerder,
-  onRename,
-  onTrash,
-}: ColumnHeaderProps) {
-  const [bewerkt, setBewerkt] = useState(false);
-  const [naam, setNaam] = useState(kolom.naam);
-
-  const magBeheren = isBeheerder && !kolom.isFallback;
-
-  const bevestigNaam = () => {
-    setBewerkt(false);
-    const schoon = naam.trim();
-    if (schoon && schoon !== kolom.naam) {
-      onRename(Number(kolom.id), schoon);
-    } else {
-      setNaam(kolom.naam);
-    }
-  };
-
-  return (
-    <div className="hm-pipeline__kolomkop">
-      <span className={`hm-kleur hm-kleur--${kolom.kleur}`} />
-      {bewerkt ? (
-        <input
-          autoFocus
-          className="hm-pipeline__kolominput"
-          onBlur={bevestigNaam}
-          onChange={(e) => setNaam(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === "Enter") bevestigNaam();
-            if (e.key === "Escape") {
-              setNaam(kolom.naam);
-              setBewerkt(false);
-            }
-          }}
-          value={naam}
-        />
-      ) : (
-        <button
-          className="hm-pipeline__kolomnaam"
-          disabled={!magBeheren}
-          onClick={() => magBeheren && setBewerkt(true)}
-          title={magBeheren ? "Klik om te hernoemen" : undefined}
-          type="button"
-        >
-          {kolom.naam}
-        </button>
-      )}
-      <span className="hm-pipeline__aantal">{kolom.deals.length}</span>
-      {magBeheren && (
-        <button
-          aria-label={`Fase ${kolom.naam} verwijderen`}
-          className="hm-pipeline__verwijder"
-          onClick={() =>
-            onTrash(Number(kolom.id), kolom.deals.length, kolom.naam)
-          }
-          title="Fase verwijderen (naar prullenbak)"
-          type="button"
-        >
-          ×
-        </button>
-      )}
-    </div>
-  );
 }
 
 function Board({ initialStages, initialDeals, isBeheerder }: Props) {
