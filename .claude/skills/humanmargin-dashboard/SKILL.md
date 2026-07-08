@@ -68,3 +68,14 @@ Alle hooks zijn idempotent en falen stil (opslag blijft intact; fout in payload-
 ## Nog niet gebouwd (bewust, spec §1 "later")
 
 E-mailsync, support-inbox, social auto-publish (schema is er klaar voor: channels krijgen token-velden + cron-poller), Cal.com-boekingen, klant-deellinks, publieke kennisbank-rendering, kolom-slepen óp het board (volgorde nu via de lijstweergave). Spec: `docs/superpowers/specs/2026-07-08-els-dashboard-design.md`.
+
+## Designsysteem (SaaS-redesign, 2026-07-08)
+
+Het dashboard heeft een eigen SaaS-designlaag bovenop de Payload-admin, gegrond in het merk (electric yellow #edff00, Archivo, merk-blauw #002ccf). Referenties: goedgekeurde analyse-artifact + manakuro/asana-clone-app (boards) en subnub/myDrive (kennisbank), herbouwd op onze stack (géén Mongo/Go/Recoil).
+
+- **Tokens + componentkit:** `src/modules/shared/styles/dashboard.scss` — `--hm-*` tokens. Oppervlakken/lijnen erven van Payload's `--theme-elevation-*` (dus licht/donker automatisch; admin staat nu vast op `theme:"light"`, dark-tokens liggen klaar). Kit: `.hm-card(--hover)`, `.hm-pill(+--rose/amber/slate/emerald)`, `.hm-kleur(+--<token>)` (dot + `--k` setter), `.hm-av(--sm)`, `.hm-meter`, `.hm-btn(--primary/--ghost)`, `.hm-seg`, `.hm-slideover`, `.hm-view__head/title`.
+- **Radius zit in één token** `--hm-r` (nu 8px voor SaaS-zachtheid; op 0 = volledig scherp/merkpuur). Merk-knoppen blijven scherp (blauw↔geel).
+- **Kleurtokens** (Els's kolomkleuren) leven als `--hm-<kleur>` + `.hm-kleur--<kleur>` (groen/blauw/paars/rood/oranje/geel/turquoise/roze/grijs); pills/dots/balken lezen `--k`.
+- **UI-helpers:** `src/modules/shared/ui.ts` → `initialen(naam)`, `avatarKleur(seed)` (deterministisch, 8-kleurenpalet). Gebruik voor alle avatars.
+- **Per view:** boards `src/modules/shared/components/board.scss` (deal/taak-kaart = `.hm-card .hm-card--hover .hm-deal` met co-avatar/titel/foot/kans-meter); kennisbank myDrive-browser (`KennisbankBrowser.tsx` + `kennisbank.scss`: breadcrumb, kaartgrid, quick-access, detailrail); kalender `kalender.scss`; home `home.scss` (stat-tegels + echte fase-verdelingsbalk).
+- **Regels bij uitbreiden:** styling via `--hm-*` tokens (nooit hardcoded hex behalve de kleurtokens); nieuwe admin-component → `generate:importmap`; geen `Date.now()`/`setState` in render (React-lint streng); interne links via `next/link`; elke view importeert `@/modules/shared/styles/dashboard.scss`.
