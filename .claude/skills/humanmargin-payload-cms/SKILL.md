@@ -48,3 +48,12 @@ Payload 3.85.2 embedded in de Next-app. Entry: `src/payload.config.ts`. Collecti
 - **Timeline:** `activities` in `src/modules/shared/collections/` — polymorf `targets` (hasMany → organisations/contacts/deals; fase 3 voegt projects toe), types notitie/statuswijziging/systeem/email/boeking. Deal-hook `logDealStatusChange` logt fase/uitkomst-wijzigingen met voor/na in `properties`; faalt stil.
 - **Presets:** `dashboardCollectionAccess` (teamlid: CRUD + prullenbak — Payload geeft delete-access `data` mee bij trash-poging; permanent verwijderen alleen beheerder), `eigenaarField`, `tagsField` in `src/modules/shared/`.
 - **Let op bij create-calls in code/tests:** verplichte selects met defaultValue (zoals `deals.uitkomst`) moeten in getypeerde Local-API-calls expliciet mee.
+
+## Dashboard-modules (Fase 2b: pipeline-UI)
+
+- **Pipeline-board:** custom admin-view op `/admin/pipeline` — `src/modules/crm/views/pipeline/` (PipelineView = server/Local API, PipelineBoard = client/React Query + @hello-pangea/dnd, lib.ts = pure kolom/positie-logica met unit-tests). Registratie: `admin.components.views.pipeline` + `afterNavLinks` in payload.config.
+- **Board-gedrag:** alleen open deals; drop = één PATCH {fase, position} optimistic met rollback; wees-deals (fase leeg/verwijderd) vallen in virtuele kolom "Geen fase" vooraan; kolommen toevoegen/inline hernoemen/verwijderen (bevestiging + terugval) alleen beheerder; kolom-вolgorde via de Pipeline-fases-lijst.
+- **REST-laag:** `src/modules/crm/api.ts` (`crmApi.updateDeal/createStage/updateStage/trashStage`) — views praten nooit rechtstreeks met endpoints.
+- **Timeline:** ui-veld `/components/admin/Timeline#TimelineField` op deals/organisaties/contacten — toont activities polymorf + notitie-invoer (POST activities met `samenvatting`). Statuswijzigingen krijgen leesbare namen (hook zoekt fase-namen op, ook uit prullenbak).
+- **Nieuwsbriefstatus:** ui-veld `/components/admin/NieuwsbriefStatus` op contacten — live subscribers-lookup op e-mail.
+- **Admin-componenten:** na elke nieuwe component `npm run generate:importmap`; styling in eigen .scss op Payload-theme-vars (`--theme-elevation-*`), zelfde patroon als custom.scss.
