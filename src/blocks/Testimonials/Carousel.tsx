@@ -13,7 +13,9 @@ type TestimonialItem = NonNullable<TestimonialsBlock["items"]>[number];
 export function TestimonialsCarousel({ items }: { items: TestimonialItem[] }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start", duration: 25 });
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+  // Afgeleid tijdens render (geen setState in effect): emblaApi is state,
+  // dus zodra die beschikbaar is rendert dit vanzelf opnieuw.
+  const scrollSnaps = emblaApi?.scrollSnapList() ?? [];
 
   const scrollTo = useCallback((index: number) => emblaApi?.scrollTo(index), [emblaApi]);
 
@@ -24,9 +26,10 @@ export function TestimonialsCarousel({ items }: { items: TestimonialItem[] }) {
 
   useEffect(() => {
     if (!emblaApi) return;
-    setScrollSnaps(emblaApi.scrollSnapList());
-    onSelect();
     emblaApi.on("select", onSelect).on("reInit", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect).off("reInit", onSelect);
+    };
   }, [emblaApi, onSelect]);
 
   return (
