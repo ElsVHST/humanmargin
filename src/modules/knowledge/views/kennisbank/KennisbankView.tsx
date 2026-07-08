@@ -32,7 +32,6 @@ export async function KennisbankView({
       visibleEntities={visibleEntities}
     >
       <Gutter>
-        <h1 className="hm-pipeline__titel">Kennisbank</h1>
         <KennisbankBrowser initialDocs={docs.docs} />
       </Gutter>
     </DefaultTemplate>
