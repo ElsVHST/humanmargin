@@ -74,6 +74,81 @@ function eigenaarInitialen(deal: Deal): string | null {
   return null;
 }
 
+type ColumnHeaderProps = {
+  kolom: ReturnType<typeof buildColumns>[number];
+  isBeheerder: boolean;
+  onRename: (id: number, naam: string) => void;
+  onTrash: (id: number, kaartAantal: number, naam: string) => void;
+};
+
+function ColumnHeader({
+  kolom,
+  isBeheerder,
+  onRename,
+  onTrash,
+}: ColumnHeaderProps) {
+  const [bewerkt, setBewerkt] = useState(false);
+  const [naam, setNaam] = useState(kolom.naam);
+
+  const magBeheren = isBeheerder && !kolom.isFallback;
+
+  const bevestigNaam = () => {
+    setBewerkt(false);
+    const schoon = naam.trim();
+    if (schoon && schoon !== kolom.naam) {
+      onRename(Number(kolom.id), schoon);
+    } else {
+      setNaam(kolom.naam);
+    }
+  };
+
+  return (
+    <div className="hm-pipeline__kolomkop">
+      <span className={`hm-kleur hm-kleur--${kolom.kleur}`} />
+      {bewerkt ? (
+        <input
+          autoFocus
+          className="hm-pipeline__kolominput"
+          onBlur={bevestigNaam}
+          onChange={(e) => setNaam(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") bevestigNaam();
+            if (e.key === "Escape") {
+              setNaam(kolom.naam);
+              setBewerkt(false);
+            }
+          }}
+          value={naam}
+        />
+      ) : (
+        <button
+          className="hm-pipeline__kolomnaam"
+          disabled={!magBeheren}
+          onClick={() => magBeheren && setBewerkt(true)}
+          title={magBeheren ? "Klik om te hernoemen" : undefined}
+          type="button"
+        >
+          {kolom.naam}
+        </button>
+      )}
+      <span className="hm-pipeline__aantal">{kolom.deals.length}</span>
+      {magBeheren && (
+        <button
+          aria-label={`Fase ${kolom.naam} verwijderen`}
+          className="hm-pipeline__verwijder"
+          onClick={() =>
+            onTrash(Number(kolom.id), kolom.deals.length, kolom.naam)
+          }
+          title="Fase verwijderen (naar prullenbak)"
+          type="button"
+        >
+          ×
+        </button>
+      )}
+    </div>
+  );
+}
+
 function Board({ initialStages, initialDeals, isBeheerder }: Props) {
   const qc = useQueryClient();
 
@@ -123,6 +198,46 @@ function Board({ initialStages, initialDeals, isBeheerder }: Props) {
     onSettled: () => qc.invalidateQueries({ queryKey: ["pipeline", "deals"] }),
   });
 
+  const stageInvalidate = () =>
+    qc.invalidateQueries({ queryKey: ["pipeline", "stages"] });
+
+  const createStage = useMutation({
+    mutationFn: () => crmApi.createStage({ naam: "Nieuwe fase", kleur: "grijs" }),
+    onSettled: stageInvalidate,
+  });
+
+  const renameStage = useMutation({
+    mutationFn: (input: { id: number; naam: string }) =>
+      crmApi.updateStage(input.id, { naam: input.naam }),
+    onMutate: async (input) => {
+      await qc.cancelQueries({ queryKey: ["pipeline", "stages"] });
+      qc.setQueryData<DealStage[]>(["pipeline", "stages"], (oud) =>
+        (oud ?? []).map((s) =>
+          String(s.id) === String(input.id) ? { ...s, naam: input.naam } : s,
+        ),
+      );
+    },
+    onSettled: stageInvalidate,
+  });
+
+  const trashStage = useMutation({
+    mutationFn: (id: number) => crmApi.trashStage(id),
+    onSettled: () => {
+      stageInvalidate();
+      qc.invalidateQueries({ queryKey: ["pipeline", "deals"] });
+    },
+  });
+
+  const handleTrash = (id: number, kaartAantal: number, naam: string) => {
+    const melding =
+      kaartAantal > 0
+        ? `${kaartAantal} kaart${kaartAantal === 1 ? "" : "en"} vallen terug naar 'Geen fase'. Fase '${naam}' verwijderen?`
+        : `Fase '${naam}' verwijderen? (Herstellen kan via de prullenbak van Pipeline-fases.)`;
+    if (window.confirm(melding)) {
+      trashStage.mutate(id);
+    }
+  };
+
   const kolommen = buildColumns(stagesQuery.data ?? [], dealsQuery.data ?? []);
 
   const onDragEnd = (result: DropResult) => {
@@ -168,13 +283,12 @@ function Board({ initialStages, initialDeals, isBeheerder }: Props) {
                   ref={provided.innerRef}
                   {...provided.droppableProps}
                 >
-                  <div className="hm-pipeline__kolomkop">
-                    <span className={`hm-kleur hm-kleur--${kolom.kleur}`} />
-                    <span className="hm-pipeline__kolomnaam">{kolom.naam}</span>
-                    <span className="hm-pipeline__aantal">
-                      {kolom.deals.length}
-                    </span>
-                  </div>
+                  <ColumnHeader
+                    isBeheerder={isBeheerder}
+                    kolom={kolom}
+                    onRename={(id, naam) => renameStage.mutate({ id, naam })}
+                    onTrash={handleTrash}
+                  />
                   <div className="hm-pipeline__kaarten">
                     {kolom.deals.map((deal, index) => (
                       <Draggable
@@ -229,6 +343,16 @@ function Board({ initialStages, initialDeals, isBeheerder }: Props) {
               )}
             </Droppable>
           ))}
+          {isBeheerder && (
+            <button
+              className="hm-pipeline__nieuwekolom"
+              disabled={createStage.isPending}
+              onClick={() => createStage.mutate()}
+              type="button"
+            >
+              + Fase
+            </button>
+          )}
         </div>
       </DragDropContext>
       {!isBeheerder && (
