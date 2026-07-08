@@ -1,0 +1,119 @@
+/* Kennisbank — documentboom */
+
+.hm-kennisbank {
+  max-width: 48rem;
+}
+
+.hm-kennisbank__balk {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.hm-kennisbank__zoek {
+  background: var(--theme-input-bg);
+  border: 1px solid var(--theme-elevation-250);
+  border-radius: 4px;
+  color: var(--theme-text);
+  flex: 1;
+  font: inherit;
+  padding: 0.5rem 0.75rem;
+}
+
+.hm-kennisbank__nieuw {
+  background: var(--theme-elevation-800);
+  border: none;
+  border-radius: 4px;
+  color: var(--theme-elevation-0);
+  cursor: pointer;
+  font: inherit;
+  padding: 0.5rem 1rem;
+
+  &:disabled {
+    background: var(--theme-elevation-200);
+  }
+}
+
+.hm-kennisbank__leeg {
+  color: var(--theme-elevation-500);
+}
+
+.hm-kennisbank__boom,
+.hm-kennisbank__kinderen {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hm-kennisbank__kinderen {
+  border-left: 1px solid var(--theme-elevation-150);
+  margin-left: 0.6rem;
+  padding-left: 0.75rem;
+}
+
+.hm-kennisbank__regel {
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  gap: 0.375rem;
+  padding: 0.25rem 0.375rem;
+
+  &:hover {
+    background: var(--theme-elevation-50);
+
+    .hm-kennisbank__subdoc {
+      opacity: 1;
+    }
+  }
+}
+
+.hm-kennisbank__pijl {
+  background: none;
+  border: none;
+  color: var(--theme-elevation-500);
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 0.125rem;
+  width: 1.25rem;
+
+  &.is-leeg {
+    cursor: default;
+    opacity: 0.4;
+  }
+}
+
+.hm-kennisbank__titel {
+  color: var(--theme-text);
+  flex: 1;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.hm-kennisbank__publiek {
+  background: var(--theme-success-100);
+  border-radius: 3px;
+  color: var(--theme-success-750);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 0.1rem 0.375rem;
+}
+
+.hm-kennisbank__subdoc {
+  background: none;
+  border: 1px solid var(--theme-elevation-250);
+  border-radius: 3px;
+  color: var(--theme-elevation-600);
+  cursor: pointer;
+  font-size: 0.8125rem;
+  line-height: 1;
+  opacity: 0;
+  padding: 0.125rem 0.375rem;
+
+  &:hover {
+    background: var(--theme-elevation-100);
+    color: var(--theme-text);
+  }
+}

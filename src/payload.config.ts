@@ -62,6 +62,11 @@ export default buildConfig({
           Component: "/modules/content/views/kalender/KalenderView#KalenderView",
           path: "/kalender",
         },
+        kennisbank: {
+          Component:
+            "/modules/knowledge/views/kennisbank/KennisbankView#KennisbankView",
+          path: "/kennisbank",
+        },
       },
     },
     theme: "light",
