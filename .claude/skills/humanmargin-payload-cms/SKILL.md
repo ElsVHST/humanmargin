@@ -41,3 +41,10 @@ Payload 3.85.2 embedded in de Next-app. Entry: `src/payload.config.ts`. Collecti
 - **Kolom-collecties** (door Els beheerd): `deal-stages`, `task-statuses`, `content-channels` via `makeColumnCollection()` — `orderable: true` (fractional `_order`), `trash: true` (prullenbak), alleen beheerders muteren. `content-channels.type` is een vaste enum (blog/nieuwsbrief/linkedin/instagram/overig) waar hooks aan hangen. Standaardseed: `npx payload run scripts/seed/seed-dashboard-columns.ts` (idempotent).
 - **Tests:** `npm test` (Vitest + Local API). Tests draaien ALTIJD tegen de lokale `humanmargin_test`-database — `tests/int/setup.ts` overschrijft `DATABASE_URI` onvoorwaardelijk (bescherming van Els's Neon). Testdatabase aanmaken: `createdb humanmargin_test`.
 - **Spec & onderzoek:** `docs/superpowers/specs/2026-07-08-els-dashboard-design.md`, `docs/research/dashboard/`.
+
+## Dashboard-modules (Fase 2a: CRM-datamodel)
+
+- **CRM-collecties:** `organisations`, `contacts` (uniek `email` = matchsleutel; `naam` auto uit voor+achternaam), `deals` (`fase`→deal-stages optioneel, `uitkomst` vast open/gewonnen/verloren, `position` auto voor kaartvolgorde). Joins: `organisations.contacten`, `organisations.deals`, `contacts.deals`.
+- **Timeline:** `activities` in `src/modules/shared/collections/` — polymorf `targets` (hasMany → organisations/contacts/deals; fase 3 voegt projects toe), types notitie/statuswijziging/systeem/email/boeking. Deal-hook `logDealStatusChange` logt fase/uitkomst-wijzigingen met voor/na in `properties`; faalt stil.
+- **Presets:** `dashboardCollectionAccess` (teamlid: CRUD + prullenbak — Payload geeft delete-access `data` mee bij trash-poging; permanent verwijderen alleen beheerder), `eigenaarField`, `tagsField` in `src/modules/shared/`.
+- **Let op bij create-calls in code/tests:** verplichte selects met defaultValue (zoals `deals.uitkomst`) moeten in getypeerde Local-API-calls expliciet mee.
