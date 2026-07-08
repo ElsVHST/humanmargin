@@ -57,6 +57,10 @@ export default buildConfig({
           Component: "/modules/projects/views/taken/TakenView#TakenView",
           path: "/taken",
         },
+        kalender: {
+          Component: "/modules/content/views/kalender/KalenderView#KalenderView",
+          path: "/kalender",
+        },
       },
     },
     theme: "light",

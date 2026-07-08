@@ -33,6 +33,7 @@ import { Logo as Logo_91a09b539d3c86b0aebf520e7564ce08 } from '../../../componen
 import { DashboardNavLinks as DashboardNavLinks_f6287bcb61e11205475b555cb042f203 } from '../../../components/admin/DashboardNavLinks'
 import { PipelineView as PipelineView_c2d7079cb045a404329cfb047e31eb9a } from '../../../modules/crm/views/pipeline/PipelineView'
 import { TakenView as TakenView_b658dd106fd11b3e14cedee19664119f } from '../../../modules/projects/views/taken/TakenView'
+import { KalenderView as KalenderView_3b7a9f2c3f256b8966c2ab6081d93acc } from '../../../modules/content/views/kalender/KalenderView'
 import { CollectionCards as CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1 } from '@payloadcms/next/rsc'
 
 /** @type import('payload').ImportMap */
@@ -72,5 +73,6 @@ export const importMap = {
   "/components/admin/DashboardNavLinks#DashboardNavLinks": DashboardNavLinks_f6287bcb61e11205475b555cb042f203,
   "/modules/crm/views/pipeline/PipelineView#PipelineView": PipelineView_c2d7079cb045a404329cfb047e31eb9a,
   "/modules/projects/views/taken/TakenView#TakenView": TakenView_b658dd106fd11b3e14cedee19664119f,
+  "/modules/content/views/kalender/KalenderView#KalenderView": KalenderView_3b7a9f2c3f256b8966c2ab6081d93acc,
   "@payloadcms/next/rsc#CollectionCards": CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1
 }

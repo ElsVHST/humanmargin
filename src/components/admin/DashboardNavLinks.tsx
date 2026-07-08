@@ -7,6 +7,7 @@ import React from "react";
 const LINKS: { href: string; label: string }[] = [
   { href: "/admin/pipeline", label: "Pipeline" },
   { href: "/admin/taken", label: "Taken" },
+  { href: "/admin/kalender", label: "Kalender" },
 ];
 
 export function DashboardNavLinks() {
