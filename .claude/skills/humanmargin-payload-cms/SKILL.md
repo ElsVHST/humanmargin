@@ -57,3 +57,11 @@ Payload 3.85.2 embedded in de Next-app. Entry: `src/payload.config.ts`. Collecti
 - **Timeline:** ui-veld `/components/admin/Timeline#TimelineField` op deals/organisaties/contacten — toont activities polymorf + notitie-invoer (POST activities met `samenvatting`). Statuswijzigingen krijgen leesbare namen (hook zoekt fase-namen op, ook uit prullenbak).
 - **Nieuwsbriefstatus:** ui-veld `/components/admin/NieuwsbriefStatus` op contacten — live subscribers-lookup op e-mail.
 - **Admin-componenten:** na elke nieuwe component `npm run generate:importmap`; styling in eigen .scss op Payload-theme-vars (`--theme-elevation-*`), zelfde patroon als custom.scss.
+
+## Dashboard-modules (Fase 3: projecten & taken)
+
+- **Collecties:** `projects` (status vast: actief/gepauzeerd/afgerond; organisatie optioneel = intern; join `taken`; timeline-ui-veld) en `tasks` (status→task-statuses, project optioneel = losse taak, prioriteit vast laag/normaal/hoog, checklist-array, `position`). Join `organisations.projecten`.
+- **Gewonnen-hook:** `createProjectOnWin` (afterChange deals, ná log-hook) — deal-uitkomst → gewonnen maakt idempotent één project (naam/organisatie van de deal, aanmaker = teamlid), faalt stil.
+- **Taken-board:** `/admin/taken` — `src/modules/projects/views/taken/` + `projectsApi`. Client-side filters op project en toegewezen persoon; kaart-badges: prioriteit hoog (rood) en deadline (rood indien verstreken). Kolommenbeheer identiek aan pipeline.
+- **Gedeeld:** `buildGenericColumns` in pipeline/lib.ts (wrappers `buildColumns` en `buildTaskColumns`); `ColumnHeader` in `src/modules/shared/components/`; boardstyling in `src/modules/shared/components/board.scss`; nav via `DashboardNavLinks` (uitbreiden bij nieuwe views).
+- **activities.targets** bevat nu ook `projects`.
