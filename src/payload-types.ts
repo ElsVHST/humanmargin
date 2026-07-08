@@ -72,6 +72,7 @@ export interface Config {
     users: User;
     subscribers: Subscriber;
     organisations: Organisation;
+    contacts: Contact;
     'deal-stages': DealStage;
     'task-statuses': TaskStatus;
     'content-channels': ContentChannel;
@@ -80,13 +81,18 @@ export interface Config {
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
-  collectionsJoins: {};
+  collectionsJoins: {
+    organisations: {
+      contacten: 'contacts';
+    };
+  };
   collectionsSelect: {
     pages: PagesSelect<false> | PagesSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     subscribers: SubscribersSelect<false> | SubscribersSelect<true>;
     organisations: OrganisationsSelect<false> | OrganisationsSelect<true>;
+    contacts: ContactsSelect<false> | ContactsSelect<true>;
     'deal-stages': DealStagesSelect<false> | DealStagesSelect<true>;
     'task-statuses': TaskStatusesSelect<false> | TaskStatusesSelect<true>;
     'content-channels': ContentChannelsSelect<false> | ContentChannelsSelect<true>;
@@ -832,6 +838,37 @@ export interface Organisation {
   sector?: string | null;
   logo?: (number | null) | Media;
   notities?: string | null;
+  contacten?: {
+    docs?: (number | Contact)[];
+    hasNextPage?: boolean;
+    totalDocs?: number;
+  };
+  tags?: string[] | null;
+  eigenaar?: (number | null) | User;
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contacts".
+ */
+export interface Contact {
+  id: number;
+  voornaam: string;
+  achternaam?: string | null;
+  naam?: string | null;
+  /**
+   * Uniek — dit is de matchsleutel voor nieuwsbriefstatus en latere e-mailkoppeling.
+   */
+  email: string;
+  extraEmails?: string[] | null;
+  telefoons?: string[] | null;
+  functie?: string | null;
+  linkedin?: string | null;
+  avatar?: (number | null) | Media;
+  organisatie?: (number | null) | Organisation;
+  bron?: string | null;
   tags?: string[] | null;
   eigenaar?: (number | null) | User;
   updatedAt: string;
@@ -924,6 +961,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'organisations';
         value: number | Organisation;
+      } | null)
+    | ({
+        relationTo: 'contacts';
+        value: number | Contact;
       } | null)
     | ({
         relationTo: 'deal-stages';
@@ -1446,6 +1487,29 @@ export interface OrganisationsSelect<T extends boolean = true> {
   sector?: T;
   logo?: T;
   notities?: T;
+  contacten?: T;
+  tags?: T;
+  eigenaar?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  deletedAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contacts_select".
+ */
+export interface ContactsSelect<T extends boolean = true> {
+  voornaam?: T;
+  achternaam?: T;
+  naam?: T;
+  email?: T;
+  extraEmails?: T;
+  telefoons?: T;
+  functie?: T;
+  linkedin?: T;
+  avatar?: T;
+  organisatie?: T;
+  bron?: T;
   tags?: T;
   eigenaar?: T;
   updatedAt?: T;

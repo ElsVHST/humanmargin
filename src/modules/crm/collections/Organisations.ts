@@ -20,6 +20,13 @@ export const Organisations: CollectionConfig = {
     { name: "sector", label: "Sector", type: "text" },
     { name: "logo", label: "Logo", type: "upload", relationTo: "media" },
     { name: "notities", label: "Notities", type: "textarea" },
+    {
+      name: "contacten",
+      label: "Contactpersonen",
+      type: "join",
+      collection: "contacts",
+      on: "organisatie",
+    },
     tagsField,
     eigenaarField,
   ],
