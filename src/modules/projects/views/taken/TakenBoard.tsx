@@ -23,8 +23,10 @@ import {
 } from "@/modules/crm/views/pipeline/lib";
 import { projectsApi } from "@/modules/projects/api";
 import { ColumnHeader } from "@/modules/shared/components/ColumnHeader";
+import { avatarKleur, initialen } from "@/modules/shared/ui";
 import type { Project, Task, TaskStatus } from "@/payload-types";
 
+import "@/modules/shared/styles/dashboard.scss";
 import "@/modules/shared/components/board.scss";
 
 type Props = {
@@ -55,15 +57,9 @@ function projectNaam(taak: Task): string | null {
   return null;
 }
 
-function toegewezenInitialen(taak: Task): string | null {
+function toegewezenInfo(taak: Task): { naam: string; id: string | number } | null {
   const wie = taak.toegewezen;
-  if (wie && typeof wie === "object" && wie.name) {
-    return wie.name
-      .split(/\s+/)
-      .map((w) => w[0]?.toUpperCase() ?? "")
-      .slice(0, 2)
-      .join("");
-  }
+  if (wie && typeof wie === "object" && wie.name) return { naam: wie.name, id: wie.id };
   return null;
 }
 
@@ -272,48 +268,59 @@ function Board({ initialStatussen, initialTaken, projecten, isBeheerder }: Props
                           index={index}
                           key={taak.id}
                         >
-                          {(p, kaartSnapshot) => (
-                            <Link
-                              className={`hm-pipeline__kaart${kaartSnapshot.isDragging ? " is-dragging" : ""}`}
-                              href={`/admin/collections/tasks/${taak.id}`}
-                              ref={p.innerRef}
-                              {...p.draggableProps}
-                              {...p.dragHandleProps}
-                            >
-                              <span className="hm-pipeline__kaarttitel">
-                                {taak.titel}
-                              </span>
-                              {projectNaam(taak) && (
-                                <span className="hm-pipeline__kaartorg">
-                                  {projectNaam(taak)}
-                                </span>
-                              )}
-                              <span className="hm-pipeline__kaartvoet">
-                                <span className="hm-board__badges">
-                                  {taak.prioriteit === "hoog" && (
-                                    <span className="hm-board__prioriteit">
-                                      Hoog
+                          {(p, kaartSnapshot) => {
+                            const wie = toegewezenInfo(taak);
+                            return (
+                              <Link
+                                className={`hm-card hm-card--hover hm-deal${kaartSnapshot.isDragging ? " is-dragging" : ""}`}
+                                href={`/admin/collections/tasks/${taak.id}`}
+                                ref={p.innerRef}
+                                {...p.draggableProps}
+                                {...p.dragHandleProps}
+                              >
+                                {projectNaam(taak) && (
+                                  <span className="hm-deal__co">
+                                    <span className="hm-deal__coname">
+                                      {projectNaam(taak)}
                                     </span>
-                                  )}
-                                  {deadline && (
-                                    <span
-                                      className={`hm-board__deadline${deadline.verlopen ? " is-verlopen" : ""}`}
-                                    >
-                                      {deadline.tekst}
-                                    </span>
-                                  )}
-                                </span>
-                                {toegewezenInitialen(taak) && (
-                                  <span
-                                    className="hm-pipeline__avatar"
-                                    title="Toegewezen aan"
-                                  >
-                                    {toegewezenInitialen(taak)}
                                   </span>
                                 )}
-                              </span>
-                            </Link>
-                          )}
+                                <span className="hm-deal__title">
+                                  {taak.titel}
+                                </span>
+                                <span className="hm-deal__foot">
+                                  <span className="hm-board__badges">
+                                    {taak.prioriteit === "hoog" && (
+                                      <span className="hm-pill hm-pill--rose">
+                                        Hoog
+                                      </span>
+                                    )}
+                                    {taak.prioriteit === "laag" && (
+                                      <span className="hm-pill hm-pill--slate">
+                                        Laag
+                                      </span>
+                                    )}
+                                    {deadline && (
+                                      <span
+                                        className={`hm-pill ${deadline.verlopen ? "hm-pill--rose" : "hm-pill--slate"}`}
+                                      >
+                                        {deadline.tekst}
+                                      </span>
+                                    )}
+                                  </span>
+                                  {wie && (
+                                    <span
+                                      className="hm-av hm-av--sm"
+                                      style={{ background: avatarKleur(wie.id) }}
+                                      title={`Toegewezen aan: ${wie.naam}`}
+                                    >
+                                      {initialen(wie.naam)}
+                                    </span>
+                                  )}
+                                </span>
+                              </Link>
+                            );
+                          }}
                         </Draggable>
                       );
                     })}

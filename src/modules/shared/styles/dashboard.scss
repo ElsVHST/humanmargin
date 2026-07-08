@@ -1,0 +1,304 @@
+/* =========================================================================
+   Human Margin — dashboard designsysteem (SaaS-laag over de Payload-admin)
+   Gegrond in het merk (custom.scss): electric yellow #edff00, Archivo,
+   merk-blauw #002ccf. Neutralen + licht/donker erven van Payload's
+   --theme-elevation-* schaal, zodat thema-wissel automatisch klopt.
+   Radius zit in één token (--hm-r); op 0 zetten = volledig scherp/merkpuur.
+   ========================================================================= */
+
+:root {
+  /* Merk-accent */
+  --hm-accent: #edff00;
+  --hm-accent-ink: #111010;
+  --hm-brand-blue: #002ccf;
+
+  /* Oppervlakken & lijnen — volgen Payload's thema */
+  --hm-bg: var(--theme-elevation-0);
+  --hm-surface: var(--theme-elevation-50);
+  --hm-surface-2: var(--theme-elevation-100);
+  --hm-line: var(--theme-elevation-150);
+  --hm-line-2: var(--theme-elevation-200);
+  --hm-ink: var(--theme-text);
+  --hm-ink-2: var(--theme-elevation-700);
+  --hm-muted: var(--theme-elevation-600);
+  --hm-faint: var(--theme-elevation-500);
+
+  /* Semantische statuslaag (de kleuren die Els per kolom kiest) */
+  --hm-groen: #22c55e;
+  --hm-blauw: #3b82f6;
+  --hm-paars: #a855f7;
+  --hm-rood: #ef4444;
+  --hm-oranje: #f97316;
+  --hm-geel: #eab308;
+  --hm-turquoise: #14b8a6;
+  --hm-roze: #ec4899;
+  --hm-grijs: #94978c;
+
+  /* Radius — SaaS-zachtheid op de werk-oppervlakken (merk = 0; hier bewust klein) */
+  --hm-r: 8px;
+  --hm-r-s: 6px;
+  --hm-pill: 999px;
+
+  /* Typografie erft van het merk */
+  --hm-font: var(--font-body, "Archivo", system-ui, sans-serif);
+  --hm-font-head: var(--hm-font-heading, "Archivo Black", sans-serif);
+
+  /* Elevatie */
+  --hm-sh-1: 0 1px 2px rgba(17, 16, 16, 0.06), 0 1px 1px rgba(17, 16, 16, 0.04);
+  --hm-sh-2: 0 3px 10px rgba(17, 16, 16, 0.08), 0 1px 3px rgba(17, 16, 16, 0.05);
+  --hm-sh-3: 0 16px 44px rgba(17, 16, 16, 0.16), 0 4px 12px rgba(17, 16, 16, 0.08);
+}
+
+html[data-theme="dark"] {
+  --hm-sh-1: 0 1px 2px rgba(0, 0, 0, 0.45);
+  --hm-sh-2: 0 3px 12px rgba(0, 0, 0, 0.5);
+  --hm-sh-3: 0 18px 46px rgba(0, 0, 0, 0.62);
+  --hm-grijs: #8b8e82;
+}
+
+/* ── View-omhulsel: kop + toolbar ─────────────────────────────────────── */
+.hm-view {
+  font-family: var(--hm-font);
+}
+.hm-view__head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.hm-view__title {
+  font-family: var(--hm-font-head);
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 1.7rem;
+  margin: 0;
+}
+.hm-view__actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Knoppen ──────────────────────────────────────────────────────────── */
+.hm-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--hm-font);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  padding: 8px 14px;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: filter 0.18s ease, background 0.18s ease, color 0.18s ease;
+}
+.hm-btn--primary {
+  background: var(--hm-brand-blue);
+  color: var(--hm-accent);
+}
+.hm-btn--primary:hover {
+  background: var(--hm-accent);
+  color: var(--hm-accent-ink);
+}
+.hm-btn--ghost {
+  background: var(--hm-surface);
+  color: var(--hm-ink-2);
+  border: 1px solid var(--hm-line-2);
+  text-transform: none;
+  font-weight: 600;
+  letter-spacing: 0;
+  border-radius: var(--hm-r-s);
+}
+.hm-btn--ghost:hover {
+  background: var(--hm-surface-2);
+  color: var(--hm-ink);
+}
+
+/* Segmented control (weergave-wissel) */
+.hm-seg {
+  display: inline-flex;
+  background: var(--hm-surface-2);
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-r-s);
+  padding: 2px;
+  gap: 2px;
+}
+.hm-seg button {
+  font-family: var(--hm-font);
+  font-size: 0.74rem;
+  font-weight: 650;
+  color: var(--hm-muted);
+  background: none;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 11px;
+  cursor: pointer;
+  transition: background 0.14s, color 0.14s;
+}
+.hm-seg button:hover {
+  color: var(--hm-ink);
+}
+.hm-seg button.is-actief {
+  background: var(--hm-surface);
+  color: var(--hm-ink);
+  box-shadow: var(--hm-sh-1);
+}
+
+/* ── Kaart ────────────────────────────────────────────────────────────── */
+.hm-card {
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-r);
+  box-shadow: var(--hm-sh-1);
+}
+.hm-card--hover {
+  transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s;
+}
+.hm-card--hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--hm-sh-2);
+  border-color: var(--hm-line-2);
+}
+
+/* ── Pills, dots, kleurtokens ─────────────────────────────────────────── */
+.hm-kleur--groen { --k: var(--hm-groen); }
+.hm-kleur--blauw { --k: var(--hm-blauw); }
+.hm-kleur--paars { --k: var(--hm-paars); }
+.hm-kleur--rood { --k: var(--hm-rood); }
+.hm-kleur--oranje { --k: var(--hm-oranje); }
+.hm-kleur--geel { --k: var(--hm-geel); }
+.hm-kleur--turquoise { --k: var(--hm-turquoise); }
+.hm-kleur--roze { --k: var(--hm-roze); }
+.hm-kleur--grijs { --k: var(--hm-grijs); }
+
+.hm-kleur {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex: none;
+  display: inline-block;
+  background: var(--k, var(--hm-grijs));
+}
+
+.hm-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 3px 9px;
+  border-radius: var(--hm-pill);
+  white-space: nowrap;
+  color: var(--k, var(--hm-muted));
+  background: color-mix(in srgb, var(--k, var(--hm-grijs)) 15%, transparent);
+}
+.hm-pill .hm-kleur {
+  width: 7px;
+  height: 7px;
+}
+/* Statuskleuren voor pills die geen kleurtoken-class hebben */
+.hm-pill--rose { --k: var(--hm-rood); }
+.hm-pill--amber { --k: var(--hm-oranje); }
+.hm-pill--slate { --k: var(--hm-grijs); }
+.hm-pill--emerald { --k: var(--hm-groen); }
+
+/* ── Avatar ───────────────────────────────────────────────────────────── */
+.hm-av {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.62rem;
+  font-weight: 800;
+  color: #fff;
+  flex: none;
+  letter-spacing: 0.01em;
+}
+.hm-av--sm { width: 20px; height: 20px; font-size: 0.56rem; }
+
+/* ── Meter (kans / voortgang) ─────────────────────────────────────────── */
+.hm-meter {
+  height: 5px;
+  border-radius: var(--hm-pill);
+  background: var(--hm-line);
+  overflow: hidden;
+}
+.hm-meter i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--hm-accent);
+}
+
+/* ── Lege staat ───────────────────────────────────────────────────────── */
+.hm-empty {
+  color: var(--hm-faint);
+  font-size: 0.9rem;
+  padding: 8px 2px;
+}
+
+/* ── Slide-over (detailpaneel) ────────────────────────────────────────── */
+.hm-slideover__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 16, 16, 0.32);
+  z-index: 60;
+  animation: hm-fade 0.16s ease;
+}
+.hm-slideover {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(440px, 92vw);
+  background: var(--hm-surface);
+  border-left: 1px solid var(--hm-line-2);
+  box-shadow: var(--hm-sh-3);
+  z-index: 61;
+  display: flex;
+  flex-direction: column;
+  animation: hm-slide 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hm-slideover__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--hm-line);
+}
+.hm-slideover__head h3 {
+  font-size: 1rem;
+  font-weight: 720;
+  margin: 0;
+}
+.hm-slideover__close {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: var(--hm-muted);
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: var(--hm-r-s);
+}
+.hm-slideover__close:hover { background: var(--hm-surface-2); color: var(--hm-ink); }
+.hm-slideover__body { padding: 18px; overflow-y: auto; }
+
+@keyframes hm-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes hm-slide { from { transform: translateX(100%); } to { transform: translateX(0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .hm-card--hover,
+  .hm-slideover,
+  .hm-slideover__backdrop { transition: none; animation: none; }
+}

@@ -23,8 +23,10 @@ import {
   GEEN_FASE,
   positionBetween,
 } from "@/modules/crm/views/pipeline/lib";
+import { avatarKleur, initialen } from "@/modules/shared/ui";
 import type { Deal, DealStage } from "@/payload-types";
 
+import "@/modules/shared/styles/dashboard.scss";
 import "@/modules/shared/components/board.scss";
 
 type Props = {
@@ -57,21 +59,15 @@ function euro(bedrag?: number | null): string | null {
   }).format(bedrag);
 }
 
-function orgNaam(deal: Deal): string | null {
+function orgInfo(deal: Deal): { naam: string; id: string | number } | null {
   const org = deal.organisatie;
-  if (org && typeof org === "object") return org.naam;
+  if (org && typeof org === "object") return { naam: org.naam, id: org.id };
   return null;
 }
 
-function eigenaarInitialen(deal: Deal): string | null {
-  const eigenaar = deal.eigenaar;
-  if (eigenaar && typeof eigenaar === "object" && eigenaar.name) {
-    return eigenaar.name
-      .split(/\s+/)
-      .map((w) => w[0]?.toUpperCase() ?? "")
-      .slice(0, 2)
-      .join("");
-  }
+function eigenaarInfo(deal: Deal): { naam: string; id: string | number } | null {
+  const e = deal.eigenaar;
+  if (e && typeof e === "object" && e.name) return { naam: e.name, id: e.id };
   return null;
 }
 
@@ -222,39 +218,61 @@ function Board({ initialStages, initialDeals, isBeheerder }: Props) {
                         index={index}
                         key={deal.id}
                       >
-                        {(p, kaartSnapshot) => (
-                          <Link
-                            className={`hm-pipeline__kaart${kaartSnapshot.isDragging ? " is-dragging" : ""}`}
-                            href={`/admin/collections/deals/${deal.id}`}
-                            ref={p.innerRef}
-                            {...p.draggableProps}
-                            {...p.dragHandleProps}
-                          >
-                            <span className="hm-pipeline__kaarttitel">
-                              {deal.titel}
-                            </span>
-                            {orgNaam(deal) && (
-                              <span className="hm-pipeline__kaartorg">
-                                {orgNaam(deal)}
+                        {(p, kaartSnapshot) => {
+                          const org = orgInfo(deal);
+                          const eigenaar = eigenaarInfo(deal);
+                          const bedrag = euro(deal.bedrag);
+                          const kans =
+                            typeof deal.kans === "number" ? deal.kans : null;
+                          return (
+                            <Link
+                              className={`hm-card hm-card--hover hm-deal${kaartSnapshot.isDragging ? " is-dragging" : ""}`}
+                              href={`/admin/collections/deals/${deal.id}`}
+                              ref={p.innerRef}
+                              {...p.draggableProps}
+                              {...p.dragHandleProps}
+                            >
+                              {org && (
+                                <span className="hm-deal__co">
+                                  <span
+                                    className="hm-av hm-av--sm"
+                                    style={{ background: avatarKleur(org.id) }}
+                                  >
+                                    {initialen(org.naam)}
+                                  </span>
+                                  <span className="hm-deal__coname">
+                                    {org.naam}
+                                  </span>
+                                </span>
+                              )}
+                              <span className="hm-deal__title">{deal.titel}</span>
+                              <span className="hm-deal__foot">
+                                {bedrag && (
+                                  <span className="hm-deal__amount">{bedrag}</span>
+                                )}
+                                {eigenaar && (
+                                  <span
+                                    className="hm-av hm-av--sm"
+                                    style={{
+                                      background: avatarKleur(eigenaar.id),
+                                    }}
+                                    title={`Eigenaar: ${eigenaar.naam}`}
+                                  >
+                                    {initialen(eigenaar.naam)}
+                                  </span>
+                                )}
                               </span>
-                            )}
-                            <span className="hm-pipeline__kaartvoet">
-                              {euro(deal.bedrag) && (
-                                <span className="hm-pipeline__bedrag">
-                                  {euro(deal.bedrag)}
-                                </span>
-                              )}
-                              {eigenaarInitialen(deal) && (
+                              {kans !== null && (
                                 <span
-                                  className="hm-pipeline__avatar"
-                                  title="Eigenaar"
+                                  className="hm-meter hm-deal__kans"
+                                  title={`Kans: ${kans}%`}
                                 >
-                                  {eigenaarInitialen(deal)}
+                                  <i style={{ width: `${kans}%` }} />
                                 </span>
                               )}
-                            </span>
-                          </Link>
-                        )}
+                            </Link>
+                          );
+                        }}
                       </Draggable>
                     ))}
                     {provided.placeholder}
