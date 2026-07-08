@@ -54,6 +54,8 @@ export default buildConfig({
   db: postgresAdapter({
     pool: { connectionString: process.env.DATABASE_URI },
     migrationDir: path.resolve(dirname, "migrations"),
+    // Dev/test: schema auto-sync; productie: alleen migraties
+    push: process.env.NODE_ENV !== "production",
   }),
   sharp,
   typescript: { outputFile: path.resolve(dirname, "payload-types.ts") },
