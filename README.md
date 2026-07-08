@@ -14,7 +14,7 @@ De website en het bedrijfsdashboard van [Human Margin](https://humanmargin.eu) (
 
 - **Publieke site** — alle pagina's en blogposts als block-gebaseerde Payload-documenten; header/footer als globals; nieuwsbriefinschrijvingen in een eigen collectie.
 - **Admin voor Els** — volledig Nederlands, in huisstijl (licht + donker), met live draft-preview.
-- **Els-dashboard** *(in aanbouw)* — CRM, projectmanagement, contentkalender en kennisbank als modules in dezelfde app. Designspec: `docs/superpowers/specs/2026-07-08-els-dashboard-design.md` · onderzoek: `docs/research/dashboard/`.
+- **Els-dashboard** — CRM (pipeline-kanban met drag & drop), projecten & taken (board met filters), contentkalender (maand/week/lijst, blog→conceptpagina-automatisering), kennisbank (documentboom) en een home-overzicht — als modules in dezelfde admin, met rollen, prullenbak overal en een gedeelde activiteiten-timeline. Handleiding: `docs/handleiding-els-dashboard.md` · spec: `docs/superpowers/specs/2026-07-08-els-dashboard-design.md` · onderzoek: `docs/research/dashboard/`.
 
 ## Ontwikkelen
 
