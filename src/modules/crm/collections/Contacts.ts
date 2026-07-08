@@ -68,5 +68,13 @@ export const Contacts: CollectionConfig = {
     { name: "bron", label: "Bron", type: "text" },
     tagsField,
     eigenaarField,
+    {
+      name: "timeline",
+      label: "Tijdlijn",
+      type: "ui",
+      admin: {
+        components: { Field: "/components/admin/Timeline#TimelineField" },
+      },
+    },
   ],
 };

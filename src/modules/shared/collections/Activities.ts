@@ -37,6 +37,15 @@ export const Activities: CollectionConfig = {
         { label: "Boeking", value: "boeking" },
       ],
     },
+    {
+      name: "samenvatting",
+      label: "Samenvatting",
+      type: "text",
+      admin: {
+        description:
+          "Korte regel voor de timeline (notities en automatische statuswijzigingen).",
+      },
+    },
     { name: "tekst", label: "Tekst", type: "richText" },
     {
       name: "targets",

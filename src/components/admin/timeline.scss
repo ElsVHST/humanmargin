@@ -1,0 +1,94 @@
+/* Activiteiten-timeline op detailschermen */
+
+.hm-timeline {
+  border-top: 1px solid var(--theme-elevation-150);
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+}
+
+.hm-timeline__titel {
+  margin-bottom: 1rem;
+}
+
+.hm-timeline__invoer {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.hm-timeline__veld {
+  background: var(--theme-input-bg);
+  border: 1px solid var(--theme-elevation-250);
+  border-radius: 4px;
+  color: var(--theme-text);
+  flex: 1;
+  font: inherit;
+  padding: 0.5rem 0.75rem;
+}
+
+.hm-timeline__knop {
+  background: var(--theme-elevation-800);
+  border: none;
+  border-radius: 4px;
+  color: var(--theme-elevation-0);
+  cursor: pointer;
+  font: inherit;
+  padding: 0.5rem 1rem;
+
+  &:disabled {
+    background: var(--theme-elevation-200);
+    cursor: default;
+  }
+}
+
+.hm-timeline__fout {
+  color: var(--theme-error-750);
+  margin-bottom: 0.75rem;
+}
+
+.hm-timeline__leeg {
+  color: var(--theme-elevation-500);
+}
+
+.hm-timeline__lijst {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hm-timeline__item {
+  align-items: baseline;
+  border-left: 2px solid var(--theme-elevation-200);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-left: 0.75rem;
+}
+
+.hm-timeline__type {
+  background: var(--theme-elevation-100);
+  border-radius: 3px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.1rem 0.4rem;
+  text-transform: uppercase;
+
+  &--statuswijziging {
+    background: var(--theme-success-100);
+    color: var(--theme-success-750);
+  }
+}
+
+.hm-timeline__tekst {
+  flex: 1;
+  min-width: 12rem;
+}
+
+.hm-timeline__meta {
+  color: var(--theme-elevation-500);
+  font-size: 0.8125rem;
+}

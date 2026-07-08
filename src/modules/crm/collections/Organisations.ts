@@ -36,5 +36,13 @@ export const Organisations: CollectionConfig = {
     },
     tagsField,
     eigenaarField,
+    {
+      name: "timeline",
+      label: "Tijdlijn",
+      type: "ui",
+      admin: {
+        components: { Field: "/components/admin/Timeline#TimelineField" },
+      },
+    },
   ],
 };

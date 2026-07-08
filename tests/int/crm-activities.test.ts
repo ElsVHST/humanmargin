@@ -125,4 +125,36 @@ describe("crm: activities + statuswijziging-hook", () => {
     log = await activitiesVoorDeal(deal.id);
     expect(log.docs.filter((a) => a.type === "statuswijziging").length).toBe(1);
   });
+
+  it("statuswijziging bevat leesbare fase-namen en een samenvatting", async () => {
+    const faseA = await payload.create({
+      collection: "deal-stages",
+      data: { naam: "Naam A", kleur: "blauw" },
+    });
+    const faseB = await payload.create({
+      collection: "deal-stages",
+      data: { naam: "Naam B", kleur: "groen" },
+    });
+    const deal = await payload.create({
+      collection: "deals",
+      data: { titel: "Labeltest", uitkomst: "open", fase: faseA.id },
+      overrideAccess: false,
+      user: teamlid,
+    });
+    await payload.update({
+      collection: "deals",
+      id: deal.id,
+      data: { fase: faseB.id },
+      overrideAccess: false,
+      user: teamlid,
+    });
+    const log = await activitiesVoorDeal(deal.id);
+    const wijziging = log.docs.find((a) => a.type === "statuswijziging");
+    const props = wijziging?.properties as {
+      fase?: { vanNaam?: string; naarNaam?: string };
+    };
+    expect(props.fase?.vanNaam).toBe("Naam A");
+    expect(props.fase?.naarNaam).toBe("Naam B");
+    expect(wijziging?.samenvatting).toBe("Fase: Naam A → Naam B");
+  });
 });

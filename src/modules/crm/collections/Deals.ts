@@ -103,5 +103,13 @@ export const Deals: CollectionConfig = {
         beforeChange: [({ value }) => (value == null ? Date.now() : value)],
       },
     },
+    {
+      name: "timeline",
+      label: "Tijdlijn",
+      type: "ui",
+      admin: {
+        components: { Field: "/components/admin/Timeline#TimelineField" },
+      },
+    },
   ],
 };

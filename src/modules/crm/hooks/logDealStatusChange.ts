@@ -7,9 +7,16 @@ function relId(value: Deal["fase"]): string | number | null {
   return typeof value === "object" ? value.id : value;
 }
 
+const UITKOMST_LABELS: Record<string, string> = {
+  open: "Open",
+  gewonnen: "Gewonnen",
+  verloren: "Verloren",
+};
+
 /**
  * Logt fase- en uitkomst-wijzigingen als 'statuswijziging'-activiteit met
- * voor/na in properties (spec §6, Twenty-patroon: timeline i.p.v. historietabel).
+ * voor/na (id's + leesbare namen) in properties en een leesbare samenvatting
+ * (spec §6, Twenty-patroon: timeline i.p.v. historietabel).
  * Faalt stil: een logfout mag de opslag nooit blokkeren (spec §8).
  */
 export const logDealStatusChange: CollectionAfterChangeHook<Deal> = async ({
@@ -20,22 +27,38 @@ export const logDealStatusChange: CollectionAfterChangeHook<Deal> = async ({
 }) => {
   if (operation !== "update" || !previousDoc) return doc;
 
-  const wijzigingen: Record<string, { van: unknown; naar: unknown }> = {};
-  const faseVan = relId(previousDoc.fase);
-  const faseNaar = relId(doc.fase);
-  if (String(faseVan) !== String(faseNaar)) {
-    wijzigingen.fase = { van: faseVan, naar: faseNaar };
-  }
-  if (previousDoc.uitkomst !== doc.uitkomst) {
-    wijzigingen.uitkomst = { van: previousDoc.uitkomst, naar: doc.uitkomst };
-  }
-  if (Object.keys(wijzigingen).length === 0) return doc;
-
   try {
+    const wijzigingen: Record<string, unknown> = {};
+    const regels: string[] = [];
+
+    const faseVan = relId(previousDoc.fase);
+    const faseNaar = relId(doc.fase);
+    if (String(faseVan) !== String(faseNaar)) {
+      const naamVan = await faseNaam(req, faseVan);
+      const naamNaar = await faseNaam(req, faseNaar);
+      wijzigingen.fase = {
+        van: faseVan,
+        naar: faseNaar,
+        vanNaam: naamVan,
+        naarNaam: naamNaar,
+      };
+      regels.push(`Fase: ${naamVan} → ${naamNaar}`);
+    }
+
+    if (previousDoc.uitkomst !== doc.uitkomst) {
+      wijzigingen.uitkomst = { van: previousDoc.uitkomst, naar: doc.uitkomst };
+      regels.push(
+        `Uitkomst: ${UITKOMST_LABELS[previousDoc.uitkomst] ?? previousDoc.uitkomst} → ${UITKOMST_LABELS[doc.uitkomst] ?? doc.uitkomst}`,
+      );
+    }
+
+    if (regels.length === 0) return doc;
+
     await req.payload.create({
       collection: "activities",
       data: {
         type: "statuswijziging",
+        samenvatting: regels.join(" · "),
         targets: [{ relationTo: "deals", value: doc.id }],
         auteur: req.user?.id ?? null,
         happensAt: new Date().toISOString(),
@@ -51,3 +74,22 @@ export const logDealStatusChange: CollectionAfterChangeHook<Deal> = async ({
   }
   return doc;
 };
+
+async function faseNaam(
+  req: Parameters<CollectionAfterChangeHook<Deal>>[0]["req"],
+  id: string | number | null,
+): Promise<string> {
+  if (id == null) return "Geen fase";
+  try {
+    const stage = await req.payload.findByID({
+      collection: "deal-stages",
+      id,
+      trash: true,
+      depth: 0,
+      req,
+    });
+    return stage?.naam ?? "Onbekende fase";
+  } catch {
+    return "Onbekende fase";
+  }
+}

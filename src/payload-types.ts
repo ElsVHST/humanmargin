@@ -968,6 +968,10 @@ export interface ContentChannel {
 export interface Activity {
   id: number;
   type: 'notitie' | 'statuswijziging' | 'systeem' | 'email' | 'boeking';
+  /**
+   * Korte regel voor de timeline (notities en automatische statuswijzigingen).
+   */
+  samenvatting?: string | null;
   tekst?: {
     root: {
       type: string;
@@ -1684,6 +1688,7 @@ export interface ContentChannelsSelect<T extends boolean = true> {
  */
 export interface ActivitiesSelect<T extends boolean = true> {
   type?: T;
+  samenvatting?: T;
   tekst?: T;
   targets?: T;
   auteur?: T;
