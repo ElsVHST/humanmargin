@@ -77,6 +77,7 @@ export interface Config {
     'deal-stages': DealStage;
     'task-statuses': TaskStatus;
     'content-channels': ContentChannel;
+    activities: Activity;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -102,6 +103,7 @@ export interface Config {
     'deal-stages': DealStagesSelect<false> | DealStagesSelect<true>;
     'task-statuses': TaskStatusesSelect<false> | TaskStatusesSelect<true>;
     'content-channels': ContentChannelsSelect<false> | ContentChannelsSelect<true>;
+    activities: ActivitiesSelect<false> | ActivitiesSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -961,6 +963,57 @@ export interface ContentChannel {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "activities".
+ */
+export interface Activity {
+  id: number;
+  type: 'notitie' | 'statuswijziging' | 'systeem' | 'email' | 'boeking';
+  tekst?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  targets: (
+    | {
+        relationTo: 'organisations';
+        value: number | Organisation;
+      }
+    | {
+        relationTo: 'contacts';
+        value: number | Contact;
+      }
+    | {
+        relationTo: 'deals';
+        value: number | Deal;
+      }
+  )[];
+  auteur?: (number | null) | User;
+  happensAt: string;
+  properties?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -1022,6 +1075,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'content-channels';
         value: number | ContentChannel;
+      } | null)
+    | ({
+        relationTo: 'activities';
+        value: number | Activity;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -1617,6 +1674,21 @@ export interface ContentChannelsSelect<T extends boolean = true> {
   naam?: T;
   kleur?: T;
   type?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  deletedAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "activities_select".
+ */
+export interface ActivitiesSelect<T extends boolean = true> {
+  type?: T;
+  tekst?: T;
+  targets?: T;
+  auteur?: T;
+  happensAt?: T;
+  properties?: T;
   updatedAt?: T;
   createdAt?: T;
   deletedAt?: T;

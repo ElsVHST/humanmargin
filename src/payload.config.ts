@@ -19,6 +19,7 @@ import { getServerSideURL } from "@/lib/url";
 import { contentCollections } from "@/modules/content";
 import { crmCollections } from "@/modules/crm";
 import { projectsCollections } from "@/modules/projects";
+import { sharedCollections } from "@/modules/shared";
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -59,6 +60,7 @@ export default buildConfig({
     ...crmCollections,
     ...projectsCollections,
     ...contentCollections,
+    ...sharedCollections,
   ],
   globals: [Header, Footer],
   editor: lexicalEditor(),
