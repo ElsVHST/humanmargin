@@ -26,11 +26,11 @@ Bestaand en al werkend (ter context): organisatie-/contactpanelen met inline edi
 
 ### B. Middel — completeren het Pipedrive-gevoel
 7. **Opgeslagen lijsten/views** (naam + filterset bewaren, bv. "Fotografen MKB — nog benaderen") — nu alleen ad-hoc filters.
-8. **Kolommen sorteren/configureren** in de relatie-tabellen.
+8. ~~**Kolommen sorteren/configureren**~~ ✅ **Gebouwd (MKB-plan sprint D):** kolomkiezer + volgorde + sorteren, per gebruiker opgeslagen.
 9. **Deals-lijstweergave + forecast** naast het kanban (segmented control staat al klaar in het ontwerp).
-10. **Laatste-contact-kolom** op basis van de tijdlijn (nu "bijgewerkt") + stilte-signaal zoals op dealkaarten.
+10. ~~**Laatste-contact-kolom**~~ ✅ **Gebouwd (sprint D)** — optionele kolom uit de tijdlijn; stilte-signaal nog niet.
 11. **Dubbel-detectie & samenvoegen** (zelfde e-mail/naam) — belangrijk zodra import (3) er is.
-12. **Telefoons/extra e-mails bewerken** in het contactpaneel (schema heeft de arrays al).
+12. ~~**Telefoons/extra e-mails bewerken**~~ ✅ **Gebouwd (MKB-plan sprint A):** chips-editors in het contactpaneel.
 13. **Relatie-notitieveld vs. tijdlijn opschonen** — organisaties hebben beide; kies één plek (tijdlijn) en migreer.
 
 ### C. Later — al op de routekaart (braindump fases B-H)

@@ -77,17 +77,14 @@ Potlood-icoon op `/admin/relaties` (zelfde plek als kolommenbeheer op de boards)
 Adressen + facturatie op organisations (B2, incl. paneel-secties); org-paneel contacten-blok: nieuw (vooringevuld) / bestaand koppelen / ontkoppelen / gestapeld openen (B1); contactpaneel: chips-editors voor telefoons[] en extraEmails[] (patroon `TagsVeld`); **pipeline-verbinding (B7)**: contactpersoon op de dealkaart + Gekoppeld-blok met doorklik in het DealPanel + org-gefilterde contact-select.
 **Klaar als:** vanuit een organisatie een contact aanmaken → staat direct in het blok én de contactenlijst-tab; koppelen/ontkoppelen werkt; adres- en factuurvelden autosaven; dealkaart toont org + contact en het DealPanel toont hun echte gegevens met doorklik; check + tests groen.
 
-### Sprint B — Beheerbare lijsten (±1 dag)
-`sectoren` + `functies` collecties + migratiescript; combobox create-on-type in beide panelen; sector-filter in de lijst; CRM-instellingen-slideover met tabs Sectoren/Functies (B3, B6-basis).
-**Klaar als:** Els een sector/functie kan aanmaken, hernoemen en verwijderen zonder Payload-editor; bestaande data gemigreerd; oude vrije-tekstwaarden nergens meer.
+### Sprint B — Beheerbare lijsten ✅ AFGEROND 2026-07-09
+`sectoren` + `functies` collecties (create door teamleden, beheer door beheerder) + export/import-migratiescripts (`scripts/migrate/`); `LijstKeuze`-combobox met create-on-type in beide panelen; sector-filter in de lijst; CRM-instellingen-slideover met tabs Sectoren/Functies via herbruikbare `KolommenBeheer`.
 
-### Sprint C — Custom velden (±1–1,5 dag)
-`crm-velden`-collectie + `extraVelden` json (B4); dynamische "Extra velden"-sectie in beide panelen; kolommen + filters in de lijst; Velden-tab in het instellingen-paneel (aanmaken/hernoemen/opties/volgorde/archiveren).
-**Klaar als:** Els een veld "Aantal medewerkers" (getal) en "Bron-campagne" (select) kan aanmaken en die direct als paneelveld én lijstkolom ziet, kan verslepen en archiveren zonder dataverlies.
+### Sprint C — Custom velden ✅ AFGEROND 2026-07-09
+`crm-velden`-collectie (label→stabiele sleutel, 8 typen, opties, geldt-voor, orderable, archiveren = trash) + `extraVelden` json; dynamische "Extra velden"-sectie met autosave in beide panelen; Velden-tab in het instellingenpaneel (aanmaken/hernoemen/opties/volgorde slepen/archiveren); custom velden verschijnen als lijstkolommen via de kolomkiezer (sprint D). *Filters op custom select-velden bewust nog niet — de filterbalk zit vol; komt mee met opgeslagen lijsten (gap-punt 7).*
 
-### Sprint D — Lijst op maat (±0,5–1 dag)
-Kolom-kiezer + volgorde + sorteren, opgeslagen per gebruiker (B5); meteen meenemen: laatste-contact-kolom uit de tijdlijn (gap-punt 10).
-**Klaar als:** kolomkeuze/sortering na herladen en op een ander apparaat voor dezelfde gebruiker bewaard blijft.
+### Sprint D — Lijst op maat ✅ AFGEROND 2026-07-09
+Kolomkiezer per tab (aan/uit + volgorde via ↑/↓, aanbod = vaste velden + custom velden + risicoklasse/telefoon/laatste contact), sorteren op elke kolomkop, opgeslagen per gebruiker in `users.lijstVoorkeuren` (debounced PATCH, self-update); laatste-contact-kolom uit de activities-tijdlijn (gap-punt 10).
 
 **Daarna:** CSV-import + dubbel-detectie (gap-index sprint 2) op het complete datamodel; dan bulk-acties + opgeslagen lijsten (sprint 3).
 
