@@ -200,6 +200,32 @@
   gap: 10px;
 }
 
+/* Smal scherm: titel + acties op rij 1, zoekpil volle breedte op rij 2 */
+@media (max-width: 760px) {
+  .hm-topbar {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    height: auto;
+    padding: 8px 12px;
+    row-gap: 8px;
+  }
+  .hm-topbar__titel {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .hm-topbar__rechts {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .hm-topbar__search {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .hm-topbar__usernaam {
+    display: none;
+  }
+}
+
 /* Ronde quick-add-knop */
 .hm-topbar__plus {
   display: flex;

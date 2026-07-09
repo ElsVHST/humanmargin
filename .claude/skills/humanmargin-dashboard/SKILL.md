@@ -69,6 +69,18 @@ Alle hooks zijn idempotent en falen stil (opslag blijft intact; fout in payload-
 
 E-mailsync, support-inbox, social auto-publish (schema is er klaar voor: channels krijgen token-velden + cron-poller), Cal.com-boekingen, klant-deellinks, publieke kennisbank-rendering, kolom-slepen óp het board (volgorde nu via de lijstweergave). Spec: `docs/superpowers/specs/2026-07-08-els-dashboard-design.md`.
 
+## UI-overhaul naar Pipedrive-patroon (2026-07-09, PRD-fases 1-3)
+
+PRD: `docs/superpowers/specs/2026-07-09-dashboard-ui-overhaul-prd.md` (§2.1 = bindende designtaal). Gebouwd: app-shell, pipeline 2.0, deal-slideover, kolommenbeheer-sidepanel. Fases 4-6 (taken/kalender/kennisbank-verfijning, home 2.0, taal/polish) staan nog open.
+
+- **App-shell:** `src/components/admin/shell/` — `Rail.tsx` vervangt Payload's nav via `admin.components.Nav` (off-black icon-rail, geel actief vierkant; beheer-zone alleen voor rol beheerder). `Topbar.tsx` (per custom view gerenderd, prop `titel` + optioneel `acties`): pil-zoekveld ⌘K → `GlobalSearch.tsx` (REST-zoek over 7 collecties), quick-add "+", user-chip. `shell.scss` forceert `--nav-width: 64px` en verbergt Payload's app-header op shell-views via `.template-default__wrap:has(.hm-topbar)`.
+- **Pipeline 2.0** (`PipelineBoard.tsx`): board-toolbar (+ Deal → paneel, totaal + gewogen Σ bedrag·kans, live zoek, eigenaar-filter, potlood → kolommenpanel); trechter-kolomkoppen (`ColumnHeader` met `meta`-prop, chevron via clip-path in `board.scss`; géén trash-knop meer); kaart-anatomie §2.1 (org-tag-strips, status-stip: rood "Xd" = sluitdatum verstreken, oranje = >14 dagen stil op `updatedAt`, groen = sluitdatum gepland, grijs = niets; lichtrode kaarttint bij te laat); sleep-actiebalk VERWIJDEREN/VERLOREN/GEWONNEN.
+- **LET OP dnd:** de actiebalk-Droppables zijn **altijd gemonteerd** (verborgen via opacity/pointer-events, klasse `is-actief`) — droppables (un)mounten tijdens een drag geeft hello-pangea invariant-errors. Nested DragDropContexts mogen niet; ColumnsPanel rendert daarom buiten de board-context.
+- **DealPanel** (`DealPanel.tsx`): opent via `?deal=<id>` (deelbaar) of `?deal=nieuw(&fase=<id>)`; inline autosave op blur/select (PATCH), tijdlijn + notitie, Gewonnen/Verloren/Heropenen (verloren vraagt reden via `VerliesDialoog`), "Openen in volledige editor" als fallback. GlobalSearch en quick-add linken hierheen.
+- **ColumnsPanel** (`shared/components/ColumnsPanel.tsx`, generiek voor `deal-stages`/`task-statuses`, op beide boards achter het potlood-icoon): slepen = `POST /api/reorder` met `{collectionSlug, docsToMove:[id], newKeyWillBe:'less'|'greater', orderableFieldName:'_order', target:{id,key}}` (Payload orderable-endpoint); hernoemen/kleur = PATCH; verwijderen = soft-delete met eigen dialoog (`.hm-dialoog`, géén window.confirm meer).
+- **API-laag:** `crmApi` uitgebreid met `getDeal/createDeal/trashDeal/listDealActiviteiten/createDealNotitie`. `euro()` verhuisd naar `shared/ui.ts`.
+- **Datum in views:** client-side `Date.now()` in componentbody triggert `react-hooks/purity` — servertijd als `nu`-prop doorgeven (zie `PipelineView`).
+
 ## Designsysteem (SaaS-redesign, 2026-07-08)
 
 Het dashboard heeft een eigen SaaS-designlaag bovenop de Payload-admin, gegrond in het merk (electric yellow #edff00, Archivo, merk-blauw #002ccf). Referenties: goedgekeurde analyse-artifact + manakuro/asana-clone-app (boards) en subnub/myDrive (kennisbank), herbouwd op onze stack (géén Mongo/Go/Recoil).
