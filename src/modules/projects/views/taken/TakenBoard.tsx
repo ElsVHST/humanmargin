@@ -13,8 +13,9 @@ import {
   useQuery,
   useQueryClient,
 } from "@tanstack/react-query";
+import { Pencil } from "lucide-react";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   buildTaskColumns,
@@ -23,6 +24,7 @@ import {
 } from "@/modules/crm/views/pipeline/lib";
 import { projectsApi } from "@/modules/projects/api";
 import { ColumnHeader } from "@/modules/shared/components/ColumnHeader";
+import { ColumnsPanel } from "@/modules/shared/components/ColumnsPanel";
 import { avatarKleur, initialen } from "@/modules/shared/ui";
 import type { Project, Task, TaskStatus } from "@/payload-types";
 
@@ -79,6 +81,14 @@ function Board({ initialStatussen, initialTaken, projecten, isBeheerder }: Props
   const qc = useQueryClient();
   const [projectFilter, setProjectFilter] = useState<string>("");
   const [persoonFilter, setPersoonFilter] = useState<string>("");
+  const [kolommenOpen, setKolommenOpen] = useState(false);
+  const [fout, setFout] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!fout) return;
+    const timer = setTimeout(() => setFout(null), 4000);
+    return () => clearTimeout(timer);
+  }, [fout]);
 
   const statussenQuery = useQuery({
     queryKey: ["taken", "statussen"],
@@ -128,12 +138,6 @@ function Board({ initialStatussen, initialTaken, projecten, isBeheerder }: Props
 
   const statusInvalidate = () =>
     qc.invalidateQueries({ queryKey: ["taken", "statussen"] });
-
-  const createStatus = useMutation({
-    mutationFn: () =>
-      projectsApi.createStatus({ naam: "Nieuwe status", kleur: "grijs" }),
-    onSettled: statusInvalidate,
-  });
 
   const renameStatus = useMutation({
     mutationFn: (input: { id: number; naam: string }) =>
@@ -219,6 +223,15 @@ function Board({ initialStatussen, initialTaken, projecten, isBeheerder }: Props
             </option>
           ))}
         </select>
+        <button
+          aria-label="Kolommen beheren"
+          className="hm-board__icoonknop"
+          onClick={() => setKolommenOpen(true)}
+          title="Kolommen beheren"
+          type="button"
+        >
+          <Pencil size={15} strokeWidth={2} />
+        </button>
       </div>
       {moveTask.isError && (
         <p className="hm-pipeline__fout" role="alert">
@@ -317,18 +330,42 @@ function Board({ initialStatussen, initialTaken, projecten, isBeheerder }: Props
               )}
             </Droppable>
           ))}
-          {isBeheerder && (
-            <button
-              className="hm-pipeline__nieuwekolom"
-              disabled={createStatus.isPending}
-              onClick={() => createStatus.mutate()}
-              type="button"
-            >
-              + Status
-            </button>
-          )}
         </div>
       </DragDropContext>
+
+      {kolommenOpen && (
+        <ColumnsPanel
+          aantalPerKolom={(id) =>
+            alleTaken.filter((t) => {
+              const ref = t.status;
+              const statusId = ref && typeof ref === "object" ? ref.id : ref;
+              return String(statusId ?? "") === String(id);
+            }).length
+          }
+          collectionSlug="task-statuses"
+          isBeheerder={isBeheerder}
+          itemNaam="status"
+          kaartNaam="taak"
+          kolommen={(statussenQuery.data ?? []).map((s) => ({
+            id: s.id,
+            naam: s.naam,
+            kleur: s.kleur,
+            _order: s._order,
+          }))}
+          onClose={() => setKolommenOpen(false)}
+          onFout={setFout}
+          onGewijzigd={() => {
+            statusInvalidate();
+            qc.invalidateQueries({ queryKey: ["taken", "taken"] });
+          }}
+        />
+      )}
+
+      {fout && (
+        <div className="hm-toast hm-toast--fout" role="status">
+          {fout}
+        </div>
+      )}
     </div>
   );
 }

@@ -13,7 +13,7 @@ import {
   useQuery,
   useQueryClient,
 } from "@tanstack/react-query";
-import { ChevronRight, Trash2, TriangleAlert } from "lucide-react";
+import { ChevronRight, Pencil, Trash2, TriangleAlert } from "lucide-react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -27,6 +27,7 @@ import {
   positionBetween,
 } from "@/modules/crm/views/pipeline/lib";
 import { ColumnHeader } from "@/modules/shared/components/ColumnHeader";
+import { ColumnsPanel } from "@/modules/shared/components/ColumnsPanel";
 import { avatarKleur, euro, initialen } from "@/modules/shared/ui";
 import type { Deal, DealStage } from "@/payload-types";
 
@@ -151,6 +152,7 @@ function Board({ initialStages, initialDeals, isBeheerder, nu }: Props) {
   const [eigenaarFilter, setEigenaarFilter] = useState("alle");
   const [sleept, setSleept] = useState(false);
   const [verliesDeal, setVerliesDeal] = useState<Deal | null>(null);
+  const [kolommenOpen, setKolommenOpen] = useState(false);
   const [toast, setToast] = useState<Toast | null>(null);
 
   useEffect(() => {
@@ -371,6 +373,15 @@ function Board({ initialStages, initialDeals, isBeheerder, nu }: Props) {
               </option>
             ))}
           </select>
+          <button
+            aria-label="Kolommen beheren"
+            className="hm-board__icoonknop"
+            onClick={() => setKolommenOpen(true)}
+            title="Kolommen beheren"
+            type="button"
+          >
+            <Pencil size={15} strokeWidth={2} />
+          </button>
         </div>
       </div>
 
@@ -542,6 +553,34 @@ function Board({ initialStages, initialDeals, isBeheerder, nu }: Props) {
             </Droppable>
         </div>
       </DragDropContext>
+
+      {kolommenOpen && (
+        <ColumnsPanel
+          aantalPerKolom={(id) =>
+            alleDeals.filter((d) => {
+              const ref = d.fase;
+              const faseId = ref && typeof ref === "object" ? ref.id : ref;
+              return String(faseId ?? "") === String(id);
+            }).length
+          }
+          collectionSlug="deal-stages"
+          isBeheerder={isBeheerder}
+          itemNaam="fase"
+          kaartNaam="deal"
+          kolommen={(stagesQuery.data ?? []).map((s) => ({
+            id: s.id,
+            naam: s.naam,
+            kleur: s.kleur,
+            _order: s._order,
+          }))}
+          onClose={() => setKolommenOpen(false)}
+          onFout={(melding) => setToast({ tekst: melding, soort: "fout" })}
+          onGewijzigd={() => {
+            qc.invalidateQueries({ queryKey: ["pipeline", "stages"] });
+            qc.invalidateQueries({ queryKey: ["pipeline", "deals"] });
+          }}
+        />
+      )}
 
       {verliesDeal && (
         <VerliesDialoog

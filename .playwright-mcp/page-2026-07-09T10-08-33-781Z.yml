@@ -1,0 +1,199 @@
+- generic [ref=f18e1]:
+  - generic [ref=f18e3]:
+    - navigation "Hoofdnavigatie" [ref=f18e4]:
+      - link "Naar home" [ref=f18e5] [cursor=pointer]:
+        - /url: /admin
+      - generic [ref=f18e6]:
+        - link "Home" [ref=f18e7] [cursor=pointer]:
+          - /url: /admin
+          - img [ref=f18e8]
+          - generic: Home
+        - link "Pipeline" [ref=f18e11] [cursor=pointer]:
+          - /url: /admin/pipeline
+          - img [ref=f18e12]
+          - generic: Pipeline
+        - link "Taken" [ref=f18e14] [cursor=pointer]:
+          - /url: /admin/taken
+          - img [ref=f18e15]
+          - generic: Taken
+        - link "Kalender" [ref=f18e18] [cursor=pointer]:
+          - /url: /admin/kalender
+          - img [ref=f18e19]
+          - generic: Kalender
+        - link "Kennisbank" [ref=f18e21] [cursor=pointer]:
+          - /url: /admin/kennisbank
+          - img [ref=f18e22]
+          - generic: Kennisbank
+      - generic [ref=f18e25]:
+        - link "Pagina's" [ref=f18e26] [cursor=pointer]:
+          - /url: /admin/collections/pages
+          - img [ref=f18e27]
+          - generic: Pagina's
+        - link "Media" [ref=f18e30] [cursor=pointer]:
+          - /url: /admin/collections/media
+          - img [ref=f18e31]
+          - generic: Media
+        - link "Header / navigatie" [ref=f18e35] [cursor=pointer]:
+          - /url: /admin/globals/header
+          - img [ref=f18e36]
+          - generic: Header / navigatie
+        - link "Footer" [ref=f18e38] [cursor=pointer]:
+          - /url: /admin/globals/footer
+          - img [ref=f18e39]
+          - generic: Footer
+        - link "Gebruikers" [ref=f18e41] [cursor=pointer]:
+          - /url: /admin/collections/users
+          - img [ref=f18e42]
+          - generic: Gebruikers
+        - link "Abonnees" [ref=f18e46] [cursor=pointer]:
+          - /url: /admin/collections/subscribers
+          - img [ref=f18e47]
+          - generic: Abonnees
+      - link "Uitloggen" [ref=f18e51] [cursor=pointer]:
+        - /url: /admin/logout
+        - img [ref=f18e52]
+        - generic: Uitloggen
+    - generic [ref=f18e55]:
+      - banner [ref=f18e56]:
+        - heading "Pipeline" [level=1] [ref=f18e57]
+        - button "Zoeken… ⌘K" [ref=f18e58] [cursor=pointer]:
+          - img [ref=f18e59]
+          - generic [ref=f18e62]: Zoeken…
+          - generic [ref=f18e63]: ⌘K
+        - generic [ref=f18e64]:
+          - button "Toevoegen" [ref=f18e66] [cursor=pointer]:
+            - img [ref=f18e67]
+          - button "E Els Human Margin" [ref=f18e69] [cursor=pointer]:
+            - generic [ref=f18e70]: E
+            - generic [ref=f18e71]:
+              - generic [ref=f18e72]: Els
+              - generic [ref=f18e73]: Human Margin
+      - generic [ref=f18e75]:
+        - generic [ref=f18e76]:
+          - button "+ Deal" [ref=f18e77] [cursor=pointer]
+          - generic [ref=f18e78]:
+            - text: € 17.850 · 4 deals
+            - 'generic "Gewogen pipeline: som van bedrag × kans" [ref=f18e79]': gewogen € 5.340
+          - generic [ref=f18e80]:
+            - searchbox "Zoek op deal of organisatie…" [ref=f18e81]
+            - combobox "Filter op eigenaar" [ref=f18e82] [cursor=pointer]:
+              - option "Iedereen" [selected]
+            - button "Kolommen beheren" [active] [ref=f18e83] [cursor=pointer]:
+              - img [ref=f18e84]
+        - generic [ref=f18e87]:
+          - generic [ref=f18e88]:
+            - generic [ref=f18e89]:
+              - generic [ref=f18e90]:
+                - button "Geen fase" [disabled] [ref=f18e92]
+                - generic [ref=f18e93]: "1"
+              - generic [ref=f18e94]: € 950 · 1 deal
+            - button "Geen sluitdatum gepland Losse workshop (nog geen fase) € 950" [ref=f18e96]:
+              - generic "Geen sluitdatum gepland" [ref=f18e98]
+              - generic [ref=f18e99]: Losse workshop (nog geen fase)
+              - generic [ref=f18e101]: € 950
+            - link "+ Deal" [ref=f18e102] [cursor=pointer]:
+              - /url: /admin/pipeline?deal=nieuw
+          - generic [ref=f18e103]:
+            - generic [ref=f18e104]:
+              - generic [ref=f18e105]:
+                - button "Lead" [ref=f18e107] [cursor=pointer]
+                - generic [ref=f18e108]: "1"
+              - generic [ref=f18e109]: € 8.900 · 1 deal
+            - button "Geen sluitdatum gepland Hoog risico-traject Demo Consultancy BV € 8.900" [ref=f18e111]:
+              - generic "Geen sluitdatum gepland" [ref=f18e113]
+              - generic [ref=f18e114]: Hoog risico-traject
+              - generic [ref=f18e115]: Demo Consultancy BV
+              - generic [ref=f18e117]: € 8.900
+              - 'generic "Kans: 60%" [ref=f18e118]'
+            - link "+ Deal" [ref=f18e120] [cursor=pointer]:
+              - /url: /admin/pipeline?deal=nieuw&fase=1
+          - generic [ref=f18e121]:
+            - generic [ref=f18e122]:
+              - generic [ref=f18e123]:
+                - button "Gesprek" [ref=f18e125] [cursor=pointer]
+                - generic [ref=f18e126]: "2"
+              - generic [ref=f18e127]: € 8.000 · 2 deals
+            - generic [ref=f18e128]:
+              - button "Geen sluitdatum gepland TEAM op maat — verkenning Demo Consultancy BV € 3.500" [ref=f18e129]:
+                - generic "Geen sluitdatum gepland" [ref=f18e131]
+                - generic [ref=f18e132]: TEAM op maat — verkenning
+                - generic [ref=f18e133]: Demo Consultancy BV
+                - generic [ref=f18e135]: € 3.500
+              - button "Geen sluitdatum gepland AICK Sprint najaar Demo Consultancy BV € 4.500" [ref=f18e136]:
+                - generic "Geen sluitdatum gepland" [ref=f18e138]
+                - generic [ref=f18e139]: AICK Sprint najaar
+                - generic [ref=f18e140]: Demo Consultancy BV
+                - generic [ref=f18e142]: € 4.500
+            - link "+ Deal" [ref=f18e143] [cursor=pointer]:
+              - /url: /admin/pipeline?deal=nieuw&fase=2
+          - generic [ref=f18e144]:
+            - generic [ref=f18e145]:
+              - generic [ref=f18e146]:
+                - button "Offerte" [ref=f18e148] [cursor=pointer]
+                - generic [ref=f18e149]: "0"
+              - generic [ref=f18e150]: € 0 · 0 deals
+            - paragraph [ref=f18e152]: Sleep een deal hierheen of maak er één.
+            - link "+ Deal" [ref=f18e153] [cursor=pointer]:
+              - /url: /admin/pipeline?deal=nieuw&fase=3
+          - generic [ref=f18e154]:
+            - generic [ref=f18e155]:
+              - generic [ref=f18e156]:
+                - button "Klant" [ref=f18e158] [cursor=pointer]
+                - generic [ref=f18e159]: "0"
+              - generic [ref=f18e160]: € 0 · 0 deals
+            - paragraph [ref=f18e162]: Sleep een deal hierheen of maak er één.
+            - link "+ Deal" [ref=f18e163] [cursor=pointer]:
+              - /url: /admin/pipeline?deal=nieuw&fase=4
+        - generic:
+          - generic:
+            - img
+            - text: Verwijderen
+          - generic: Verloren
+          - generic: Gewonnen
+        - dialog "Kolommen beheren" [ref=f18e174]:
+          - generic [ref=f18e175]:
+            - heading "Kolommen" [level=3] [ref=f18e176]
+            - button "Sluiten" [ref=f18e177] [cursor=pointer]:
+              - img [ref=f18e178]
+          - generic [ref=f18e181]:
+            - generic [ref=f18e182]:
+              - button "Kleur van Lead wijzigen Lead 1 Lead verwijderen" [ref=f18e273]:
+                - generic [ref=f18e184]:
+                  - img [ref=f18e186]
+                  - button "Kleur van Lead wijzigen" [ref=f18e194] [cursor=pointer]
+                  - textbox [ref=f18e195]: Lead
+                  - generic [ref=f18e196]: "1"
+                  - button "Lead verwijderen" [ref=f18e197] [cursor=pointer]:
+                    - img [ref=f18e198]
+              - button "Kleur van Gesprek wijzigen Gesprek 2 Gesprek verwijderen" [ref=f18e201]:
+                - generic [ref=f18e202]:
+                  - img [ref=f18e204]
+                  - button "Kleur van Gesprek wijzigen" [ref=f18e212] [cursor=pointer]
+                  - textbox [ref=f18e213]: Gesprek
+                  - generic [ref=f18e214]: "2"
+                  - button "Gesprek verwijderen" [ref=f18e215] [cursor=pointer]:
+                    - img [ref=f18e216]
+              - button "Kleur van Offerte wijzigen Offerte 0 Offerte verwijderen" [ref=f18e219]:
+                - generic [ref=f18e220]:
+                  - img [ref=f18e222]
+                  - button "Kleur van Offerte wijzigen" [ref=f18e230] [cursor=pointer]
+                  - textbox [ref=f18e231]: Offerte
+                  - generic [ref=f18e232]: "0"
+                  - button "Offerte verwijderen" [ref=f18e233] [cursor=pointer]:
+                    - img [ref=f18e234]
+              - button "Kleur van Klant wijzigen Klant 0 Klant verwijderen" [ref=f18e237]:
+                - generic [ref=f18e238]:
+                  - img [ref=f18e240]
+                  - button "Kleur van Klant wijzigen" [ref=f18e248] [cursor=pointer]
+                  - textbox [ref=f18e249]: Klant
+                  - generic [ref=f18e250]: "0"
+                  - button "Klant verwijderen" [ref=f18e251] [cursor=pointer]:
+                    - img [ref=f18e252]
+            - button "Kolom toevoegen" [ref=f18e255] [cursor=pointer]:
+              - img [ref=f18e256]
+              - text: Kolom toevoegen
+  - status [ref=f18e257]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f18e169] [cursor=pointer]:
+    - img [ref=f18e170]
+  - alert [ref=f18e259]

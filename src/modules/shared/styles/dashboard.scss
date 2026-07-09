@@ -509,6 +509,169 @@ html[data-theme="dark"] {
 .hm-dealpanel__type--email { --k: var(--hm-paars); }
 .hm-dealpanel__type--boeking { --k: var(--hm-turquoise); }
 
+/* ── Kolommenbeheer-sidepanel (PRD Epic D) ────────────────────────────── */
+.hm-kolompanel__hint {
+  background: var(--hm-surface-2);
+  border-radius: var(--hm-r-s);
+  color: var(--hm-muted);
+  font-size: 0.78rem;
+  margin: 0 0 12px;
+  padding: 8px 10px;
+}
+
+.hm-kolompanel__lijst {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .is-dragging .hm-kolompanel__rij {
+    background: var(--hm-surface);
+    box-shadow: var(--hm-sh-3);
+  }
+}
+
+.hm-kolompanel__rij {
+  align-items: center;
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-r-s);
+  background: var(--hm-bg);
+  display: flex;
+  gap: 8px;
+  padding: 7px 8px;
+}
+
+.hm-kolompanel__grip {
+  color: var(--hm-faint);
+  cursor: grab;
+  display: inline-flex;
+
+  &.is-uit {
+    opacity: 0.35;
+    cursor: default;
+  }
+}
+
+.hm-kolompanel__kleurwrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.hm-kolompanel__kleurknop {
+  border: none;
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+  padding: 0;
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.hm-kolompanel__kiezer {
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line-2);
+  border-radius: var(--hm-r-s);
+  box-shadow: var(--hm-sh-3);
+  display: flex;
+  gap: 7px;
+  left: -4px;
+  padding: 9px 10px;
+  position: absolute;
+  top: calc(100% + 6px);
+  z-index: 75;
+}
+
+.hm-kolompanel__swatch {
+  border: none;
+  cursor: pointer;
+  height: 15px;
+  padding: 0;
+  width: 15px;
+  transition: transform 0.1s ease;
+
+  &:hover {
+    transform: scale(1.25);
+  }
+
+  &.is-actief {
+    outline: 2px solid var(--hm-ink);
+    outline-offset: 2px;
+  }
+}
+
+.hm-kolompanel__naam {
+  background: none;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--hm-ink);
+  flex: 1;
+  font-family: var(--hm-font);
+  font-size: 0.85rem;
+  font-weight: 650;
+  min-width: 0;
+  padding: 3px 5px;
+
+  &:focus {
+    background: var(--hm-surface);
+    border-radius: 4px !important;
+    outline: 2px solid var(--hm-accent);
+  }
+
+  &:disabled {
+    color: var(--hm-ink);
+    opacity: 1;
+  }
+}
+
+.hm-kolompanel__aantal {
+  color: var(--hm-faint);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.hm-kolompanel__verwijder {
+  align-items: center;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  color: var(--hm-faint);
+  cursor: pointer;
+  display: inline-flex;
+  padding: 4px;
+
+  &:hover {
+    background: color-mix(in srgb, var(--hm-rood) 14%, transparent);
+    color: var(--hm-rood);
+  }
+}
+
+.hm-kolompanel__nieuw {
+  align-items: center;
+  background: none;
+  border: 1.5px dashed var(--hm-line-2);
+  border-radius: var(--hm-r-s);
+  color: var(--hm-muted);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--hm-font);
+  font-size: 0.82rem;
+  font-weight: 650;
+  gap: 7px;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 9px;
+  width: 100%;
+  transition: border-color 0.14s, color 0.14s, background 0.14s;
+
+  &:hover {
+    background: var(--hm-surface-2);
+    border-color: var(--hm-accent);
+    color: var(--hm-ink);
+  }
+}
+
 /* ── Bevestigingsdialoog (vervangt window.confirm) ────────────────────── */
 .hm-dialoog__backdrop {
   background: rgba(17, 16, 16, 0.4);
