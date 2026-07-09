@@ -129,6 +129,80 @@
   }
 }
 
+/* Taak-deadline op de kalender: vinkje + gedempt uiterlijk */
+.hm-kalender__item--taak {
+  border-style: dashed;
+  opacity: 0.85;
+}
+
+.hm-kalender__taakvink {
+  color: var(--hm-groen);
+  flex: none;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+/* ── Dagpaneel ────────────────────────────────────────────────────────── */
+.hm-dagpanel__acties {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+
+  .hm-btn {
+    align-items: center;
+    display: inline-flex;
+    gap: 6px;
+  }
+}
+
+.hm-dagpanel__kop {
+  align-items: center;
+  color: var(--hm-muted);
+  display: flex;
+  font-size: 0.72rem;
+  font-weight: 800;
+  gap: 7px;
+  letter-spacing: 0.05em;
+  margin: 14px 0 8px;
+  text-transform: uppercase;
+}
+
+.hm-dagpanel__lijst {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    background: var(--hm-bg);
+    border: 1px solid var(--hm-line);
+    border-radius: var(--hm-r-s);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 11px;
+    text-decoration: none;
+
+    &:hover {
+      background: var(--hm-surface-2);
+      border-color: var(--hm-line-2);
+    }
+  }
+}
+
+.hm-dagpanel__titel {
+  color: var(--hm-ink);
+  font-size: 0.84rem;
+  font-weight: 650;
+}
+
+.hm-dagpanel__meta {
+  color: var(--hm-faint);
+  font-size: 0.72rem;
+}
+
 .hm-kalender__item {
   align-items: center;
   background: var(--hm-surface);

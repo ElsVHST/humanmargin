@@ -22,26 +22,33 @@ import {
   ContentPanel,
   type PanelToast,
 } from "@/modules/content/views/kalender/ContentPanel";
+import { DagPanel } from "@/modules/content/views/kalender/DagPanel";
+import { TaakPanel } from "@/modules/projects/views/taken/TaakPanel";
 import {
   dagSleutel,
   itemsPerDag,
   maandGrid,
   weekDagen,
 } from "@/modules/content/views/kalender/lib";
-import type { ContentItem } from "@/payload-types";
+import type { ContentItem, Project, Task, TaskStatus } from "@/payload-types";
 
 import "@/modules/shared/styles/dashboard.scss";
 import "./kalender.scss";
 
 type Weergave = "maand" | "week" | "lijst";
 
-type Props = { initialItems: ContentItem[] };
+type Props = {
+  initialItems: ContentItem[];
+  initialTaken: Task[];
+  projecten: Project[];
+  statussen: TaskStatus[];
+};
 
-export function Kalender({ initialItems }: Props) {
+export function Kalender(props: Props) {
   const [client] = useState(() => new QueryClient());
   return (
     <QueryClientProvider client={client}>
-      <KalenderInner initialItems={initialItems} />
+      <KalenderInner {...props} />
     </QueryClientProvider>
   );
 }
@@ -61,11 +68,13 @@ function kanaalInfo(item: ContentItem): { naam: string; kleur: string } | null {
   return null;
 }
 
-function KalenderInner({ initialItems }: Props) {
+function KalenderInner({ initialItems, initialTaken, projecten, statussen }: Props) {
   const qc = useQueryClient();
   const router = useRouter();
   const searchParams = useSearchParams();
   const itemParam = searchParams.get("item");
+  const taakParam = searchParams.get("taak");
+  const dagParam = searchParams.get("dag");
   const [weergave, setWeergave] = useState<Weergave>("maand");
   const [anker, setAnker] = useState(() => new Date());
   const [toast, setToast] = useState<PanelToast | null>(null);
@@ -109,6 +118,26 @@ function KalenderInner({ initialItems }: Props) {
     },
     onSettled: () => qc.invalidateQueries({ queryKey: ["kalender", "items"] }),
   });
+
+  const takenQuery = useQuery({
+    queryKey: ["kalender", "taken"],
+    queryFn: async () => {
+      const res = await fetch(
+        "/api/tasks?where[deadline][exists]=true&sort=deadline&limit=500&depth=1",
+        { credentials: "include" },
+      );
+      if (!res.ok) throw new Error(`GET tasks → ${res.status}`);
+      return ((await res.json()) as { docs: Task[] }).docs;
+    },
+    initialData: initialTaken,
+  });
+
+  const takenPerDag = new Map<string, Task[]>();
+  for (const taak of takenQuery.data ?? []) {
+    if (!taak.deadline) continue;
+    const sleutel = dagSleutel(new Date(taak.deadline));
+    takenPerDag.set(sleutel, [...(takenPerDag.get(sleutel) ?? []), taak]);
+  }
 
   const alle = itemsQuery.data ?? [];
   const perDag = itemsPerDag(alle);
@@ -248,7 +277,7 @@ function KalenderInner({ initialItems }: Props) {
                         aria-label={`Nieuw item op ${sleutel}`}
                         className="hm-kalender__dagnummer"
                         onClick={() =>
-                          router.push(`/admin/kalender?item=nieuw&datum=${sleutel}`)
+                          router.push(`/admin/kalender?dag=${sleutel}`)
                         }
                         title="Klik om hier content te plannen"
                         type="button"
@@ -272,6 +301,19 @@ function KalenderInner({ initialItems }: Props) {
                           )}
                         </Draggable>
                       ))}
+                      {(takenPerDag.get(sleutel) ?? []).map((taak) => (
+                        <Link
+                          className="hm-kalender__item hm-kalender__item--taak"
+                          href={`/admin/kalender?taak=${taak.id}`}
+                          key={`taak-${taak.id}`}
+                          prefetch={false}
+                        >
+                          <span className="hm-kalender__taakvink">✓</span>
+                          <span className="hm-kalender__itemtitel">
+                            {taak.titel}
+                          </span>
+                        </Link>
+                      ))}
                       {provided.placeholder}
                     </div>
                   )}
@@ -284,6 +326,28 @@ function KalenderInner({ initialItems }: Props) {
       <p className="hm-kalender__voet">
         <Link href="/admin/kalender?item=nieuw">+ Nieuw content-item</Link>
       </p>
+
+      {dagParam && !itemParam && !taakParam && (
+        <DagPanel
+          content={(perDag.get(dagParam) ?? [])}
+          dag={dagParam}
+          onClose={() => router.push("/admin/kalender")}
+          taken={takenPerDag.get(dagParam) ?? []}
+        />
+      )}
+
+      {taakParam && (
+        <TaakPanel
+          datumParam={searchParams.get("datum")}
+          key={taakParam}
+          onClose={() => router.push("/admin/kalender")}
+          onToast={setToast}
+          projecten={projecten}
+          statusParam={null}
+          statussen={statussen}
+          taakId={taakParam}
+        />
+      )}
 
       {itemParam && (
         <ContentPanel

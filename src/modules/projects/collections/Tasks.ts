@@ -1,6 +1,7 @@
 import type { CollectionConfig } from "payload";
 
 import { dashboardCollectionAccess } from "@/modules/shared/access";
+import { referentiesField } from "@/modules/shared/fields";
 
 export const Tasks: CollectionConfig = {
   slug: "tasks",
@@ -33,6 +34,16 @@ export const Tasks: CollectionConfig = {
         description: "Leeg laten voor een losse taak.",
       },
     },
+    {
+      name: "organisatie",
+      label: "Organisatie / klant",
+      type: "relationship",
+      relationTo: "organisations",
+      admin: {
+        description: "De klant waar deze taak bij hoort (uit het CRM).",
+      },
+    },
+    referentiesField,
     {
       name: "toegewezen",
       label: "Toegewezen aan",
@@ -70,6 +81,25 @@ export const Tasks: CollectionConfig = {
       ],
     },
     { name: "omschrijving", label: "Omschrijving", type: "textarea" },
+    {
+      // In-the-loop OS (OP1): context die de opdrachtgever al weet — de agent
+      // leest dit vóór hij begint en gokt nooit
+      name: "contextVooraf",
+      label: "Context die ik al weet",
+      type: "textarea",
+      admin: {
+        description:
+          "Alles wat de uitvoerder (mens of agent) moet weten voordat het werk start.",
+      },
+    },
+    {
+      name: "definitionOfDone",
+      label: "Definition of done",
+      type: "textarea",
+      admin: {
+        description: "Wanneer is deze taak écht af?",
+      },
+    },
     {
       // Kaartvolgorde binnen een kolom (zelfde patroon als deals.position)
       name: "position",

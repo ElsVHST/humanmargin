@@ -931,6 +931,10 @@ export interface Deal {
   kans?: number | null;
   organisatie?: (number | null) | Organisation;
   contactpersoon?: (number | null) | Contact;
+  /**
+   * Documenten of bestanden uit de kennisbank die context geven.
+   */
+  referenties?: (number | KnowledgeDoc)[] | null;
   eigenaar?: (number | null) | User;
   position?: number | null;
   updatedAt: string;
@@ -946,128 +950,6 @@ export interface DealStage {
   _order?: string | null;
   naam: string;
   kleur: 'groen' | 'blauw' | 'paars' | 'rood' | 'oranje' | 'geel' | 'turquoise' | 'roze' | 'grijs';
-  updatedAt: string;
-  createdAt: string;
-  deletedAt?: string | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "projects".
- */
-export interface Project {
-  id: number;
-  naam: string;
-  status: 'actief' | 'gepauzeerd' | 'afgerond';
-  /**
-   * Leeg laten voor interne projecten.
-   */
-  organisatie?: (number | null) | Organisation;
-  deal?: (number | null) | Deal;
-  teamleden?: (number | User)[] | null;
-  startdatum?: string | null;
-  deadline?: string | null;
-  omschrijving?: string | null;
-  taken?: {
-    docs?: (number | Task)[];
-    hasNextPage?: boolean;
-    totalDocs?: number;
-  };
-  tags?: string[] | null;
-  eigenaar?: (number | null) | User;
-  updatedAt: string;
-  createdAt: string;
-  deletedAt?: string | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "tasks".
- */
-export interface Task {
-  id: number;
-  titel: string;
-  /**
-   * Kolom op het taken-board. Leeg of verwijderde status = kolom 'Geen status'.
-   */
-  status?: (number | null) | TaskStatus;
-  /**
-   * Leeg laten voor een losse taak.
-   */
-  project?: (number | null) | Project;
-  toegewezen?: (number | null) | User;
-  deadline?: string | null;
-  prioriteit: 'laag' | 'normaal' | 'hoog';
-  checklist?:
-    | {
-        tekst: string;
-        klaar?: boolean | null;
-        id?: string | null;
-      }[]
-    | null;
-  omschrijving?: string | null;
-  position?: number | null;
-  updatedAt: string;
-  createdAt: string;
-  deletedAt?: string | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "task-statuses".
- */
-export interface TaskStatus {
-  id: number;
-  _order?: string | null;
-  naam: string;
-  kleur: 'groen' | 'blauw' | 'paars' | 'rood' | 'oranje' | 'geel' | 'turquoise' | 'roze' | 'grijs';
-  updatedAt: string;
-  createdAt: string;
-  deletedAt?: string | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "content-items".
- */
-export interface ContentItem {
-  id: number;
-  titel: string;
-  /**
-   * Waar dit verschijnt. Een blog-kanaal maakt bij status 'Gepland' automatisch een conceptpagina op de site.
-   */
-  kanaal?: (number | null) | ContentChannel;
-  status: 'idee' | 'concept' | 'gepland' | 'gepubliceerd';
-  /**
-   * Zonder datum verschijnt dit item alleen in de lijstweergave.
-   */
-  publishDate?: string | null;
-  /**
-   * Korte werkomschrijving — de echte content leeft in de gekoppelde pagina of het kanaal zelf.
-   */
-  brief?: string | null;
-  /**
-   * De sitepagina waar deze content leeft (blogposts).
-   */
-  gekoppeldePagina?: (number | null) | Page;
-  organisatie?: (number | null) | Organisation;
-  project?: (number | null) | Project;
-  toegewezen?: (number | null) | User;
-  publicatielink?: string | null;
-  groupId?: string | null;
-  updatedAt: string;
-  createdAt: string;
-  deletedAt?: string | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "content-channels".
- */
-export interface ContentChannel {
-  id: number;
-  _order?: string | null;
-  naam: string;
-  kleur: 'groen' | 'blauw' | 'paars' | 'rood' | 'oranje' | 'geel' | 'turquoise' | 'roze' | 'grijs';
-  /**
-   * Vast type dat gedrag bepaalt (blog-kanaal koppelt aan sitepagina's). De naam hierboven is vrij te kiezen.
-   */
-  type: 'blog' | 'nieuwsbrief' | 'linkedin' | 'instagram' | 'overig';
   updatedAt: string;
   createdAt: string;
   deletedAt?: string | null;
@@ -1145,11 +1027,157 @@ export interface KnowledgeFile {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "projects".
+ */
+export interface Project {
+  id: number;
+  naam: string;
+  status: 'actief' | 'gepauzeerd' | 'afgerond';
+  /**
+   * Leeg laten voor interne projecten.
+   */
+  organisatie?: (number | null) | Organisation;
+  deal?: (number | null) | Deal;
+  teamleden?: (number | User)[] | null;
+  startdatum?: string | null;
+  deadline?: string | null;
+  omschrijving?: string | null;
+  taken?: {
+    docs?: (number | Task)[];
+    hasNextPage?: boolean;
+    totalDocs?: number;
+  };
+  /**
+   * Documenten of bestanden uit de kennisbank die context geven.
+   */
+  referenties?: (number | KnowledgeDoc)[] | null;
+  tags?: string[] | null;
+  eigenaar?: (number | null) | User;
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "tasks".
+ */
+export interface Task {
+  id: number;
+  titel: string;
+  /**
+   * Kolom op het taken-board. Leeg of verwijderde status = kolom 'Geen status'.
+   */
+  status?: (number | null) | TaskStatus;
+  /**
+   * Leeg laten voor een losse taak.
+   */
+  project?: (number | null) | Project;
+  /**
+   * De klant waar deze taak bij hoort (uit het CRM).
+   */
+  organisatie?: (number | null) | Organisation;
+  /**
+   * Documenten of bestanden uit de kennisbank die context geven.
+   */
+  referenties?: (number | KnowledgeDoc)[] | null;
+  toegewezen?: (number | null) | User;
+  deadline?: string | null;
+  prioriteit: 'laag' | 'normaal' | 'hoog';
+  checklist?:
+    | {
+        tekst: string;
+        klaar?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
+  omschrijving?: string | null;
+  /**
+   * Alles wat de uitvoerder (mens of agent) moet weten voordat het werk start.
+   */
+  contextVooraf?: string | null;
+  /**
+   * Wanneer is deze taak écht af?
+   */
+  definitionOfDone?: string | null;
+  position?: number | null;
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "task-statuses".
+ */
+export interface TaskStatus {
+  id: number;
+  _order?: string | null;
+  naam: string;
+  kleur: 'groen' | 'blauw' | 'paars' | 'rood' | 'oranje' | 'geel' | 'turquoise' | 'roze' | 'grijs';
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "content-items".
+ */
+export interface ContentItem {
+  id: number;
+  titel: string;
+  /**
+   * Waar dit verschijnt. Een blog-kanaal maakt bij status 'Gepland' automatisch een conceptpagina op de site.
+   */
+  kanaal?: (number | null) | ContentChannel;
+  status: 'idee' | 'concept' | 'gepland' | 'gepubliceerd';
+  /**
+   * Zonder datum verschijnt dit item alleen in de lijstweergave.
+   */
+  publishDate?: string | null;
+  /**
+   * Korte werkomschrijving — de echte content leeft in de gekoppelde pagina of het kanaal zelf.
+   */
+  brief?: string | null;
+  /**
+   * De sitepagina waar deze content leeft (blogposts).
+   */
+  gekoppeldePagina?: (number | null) | Page;
+  organisatie?: (number | null) | Organisation;
+  project?: (number | null) | Project;
+  toegewezen?: (number | null) | User;
+  publicatielink?: string | null;
+  /**
+   * Documenten of bestanden uit de kennisbank die context geven.
+   */
+  referenties?: (number | KnowledgeDoc)[] | null;
+  groupId?: string | null;
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "content-channels".
+ */
+export interface ContentChannel {
+  id: number;
+  _order?: string | null;
+  naam: string;
+  kleur: 'groen' | 'blauw' | 'paars' | 'rood' | 'oranje' | 'geel' | 'turquoise' | 'roze' | 'grijs';
+  /**
+   * Vast type dat gedrag bepaalt (blog-kanaal koppelt aan sitepagina's). De naam hierboven is vrij te kiezen.
+   */
+  type: 'blog' | 'nieuwsbrief' | 'linkedin' | 'instagram' | 'overig';
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "activities".
  */
 export interface Activity {
   id: number;
-  type: 'notitie' | 'statuswijziging' | 'systeem' | 'email' | 'boeking';
+  type: 'notitie' | 'statuswijziging' | 'systeem' | 'email' | 'boeking' | 'vraag' | 'log';
   /**
    * Korte regel voor de timeline (notities en automatische statuswijzigingen).
    */
@@ -1185,6 +1213,18 @@ export interface Activity {
     | {
         relationTo: 'projects';
         value: number | Project;
+      }
+    | {
+        relationTo: 'tasks';
+        value: number | Task;
+      }
+    | {
+        relationTo: 'content-items';
+        value: number | ContentItem;
+      }
+    | {
+        relationTo: 'knowledge-docs';
+        value: number | KnowledgeDoc;
       }
   )[];
   auteur?: (number | null) | User;
@@ -1846,6 +1886,7 @@ export interface DealsSelect<T extends boolean = true> {
   kans?: T;
   organisatie?: T;
   contactpersoon?: T;
+  referenties?: T;
   eigenaar?: T;
   position?: T;
   updatedAt?: T;
@@ -1878,6 +1919,7 @@ export interface ProjectsSelect<T extends boolean = true> {
   deadline?: T;
   omschrijving?: T;
   taken?: T;
+  referenties?: T;
   tags?: T;
   eigenaar?: T;
   updatedAt?: T;
@@ -1892,6 +1934,8 @@ export interface TasksSelect<T extends boolean = true> {
   titel?: T;
   status?: T;
   project?: T;
+  organisatie?: T;
+  referenties?: T;
   toegewezen?: T;
   deadline?: T;
   prioriteit?: T;
@@ -1903,6 +1947,8 @@ export interface TasksSelect<T extends boolean = true> {
         id?: T;
       };
   omschrijving?: T;
+  contextVooraf?: T;
+  definitionOfDone?: T;
   position?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -1935,6 +1981,7 @@ export interface ContentItemsSelect<T extends boolean = true> {
   project?: T;
   toegewezen?: T;
   publicatielink?: T;
+  referenties?: T;
   groupId?: T;
   updatedAt?: T;
   createdAt?: T;

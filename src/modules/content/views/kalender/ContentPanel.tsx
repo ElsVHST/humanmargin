@@ -7,6 +7,8 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 import { contentApi } from "@/modules/content/api";
+import { RecordTijdlijn } from "@/modules/shared/components/RecordTijdlijn";
+import { ReferentiesVeld } from "@/modules/shared/components/ReferentiesVeld";
 import type {
   ContentChannel,
   ContentItem,
@@ -441,6 +443,18 @@ function ItemDetail({ itemId, onClose, onToast }: Omit<Props, "datumParam">) {
               placeholder="Invalshoek, kernboodschap, call-to-action…"
               rows={9}
             />
+            <ReferentiesVeld
+              onWijzig={(ids) => opslaan.mutate({ referenties: ids })}
+              waarde={item.referenties}
+            />
+
+            <RecordTijdlijn
+              onFout={(m) => onToast({ tekst: m, soort: "fout" })}
+              recordId={itemId}
+              relationTo="content-items"
+              titel="Comments & log"
+            />
+
             {pagina && (
               <p className="hm-contentpanel__pagina">
                 Gekoppelde pagina:{" "}

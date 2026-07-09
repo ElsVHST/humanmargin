@@ -17,3 +17,16 @@ export const tagsField: Field = {
   type: "text",
   hasMany: true,
 };
+
+/** Kennisbank-documenten als referentie — op deals, taken, content en projecten,
+    zodat context overal meereist (Asana attachments / Pipedrive files-patroon). */
+export const referentiesField: Field = {
+  name: "referenties",
+  label: "Referenties (kennisbank)",
+  type: "relationship",
+  relationTo: "knowledge-docs",
+  hasMany: true,
+  admin: {
+    description: "Documenten of bestanden uit de kennisbank die context geven.",
+  },
+};

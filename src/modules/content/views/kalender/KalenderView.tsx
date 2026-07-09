@@ -14,12 +14,34 @@ export async function KalenderView({
   const { locale, permissions, req, visibleEntities } = initPageResult;
   const { i18n, payload, user } = req;
 
-  const items = await payload.find({
-    collection: "content-items",
-    sort: "publishDate",
-    limit: 500,
-    depth: 1,
-  });
+  const [items, taken, statussen, projecten] = await Promise.all([
+    payload.find({
+      collection: "content-items",
+      sort: "publishDate",
+      limit: 500,
+      depth: 1,
+    }),
+    payload.find({
+      collection: "tasks",
+      where: { deadline: { exists: true } },
+      sort: "deadline",
+      limit: 500,
+      depth: 1,
+    }),
+    payload.find({
+      collection: "task-statuses",
+      sort: "_order",
+      limit: 100,
+      depth: 0,
+    }),
+    payload.find({
+      collection: "projects",
+      where: { status: { not_equals: "afgerond" } },
+      sort: "naam",
+      limit: 200,
+      depth: 0,
+    }),
+  ]);
 
   return (
     <DefaultTemplate
@@ -34,7 +56,12 @@ export async function KalenderView({
     >
       <Topbar titel="Contentkalender" />
       <Gutter>
-        <Kalender initialItems={items.docs} />
+        <Kalender
+          initialItems={items.docs}
+          initialTaken={taken.docs}
+          projecten={projecten.docs}
+          statussen={statussen.docs}
+        />
       </Gutter>
     </DefaultTemplate>
   );

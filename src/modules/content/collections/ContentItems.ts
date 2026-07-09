@@ -2,6 +2,7 @@ import type { CollectionConfig } from "payload";
 
 import { createPageOnPlan } from "@/modules/content/hooks/createPageOnPlan";
 import { dashboardCollectionAccess } from "@/modules/shared/access";
+import { referentiesField } from "@/modules/shared/fields";
 
 export const ContentItems: CollectionConfig = {
   slug: "content-items",
@@ -87,6 +88,7 @@ export const ContentItems: CollectionConfig = {
       admin: { position: "sidebar" },
     },
     { name: "publicatielink", label: "Publicatielink", type: "text" },
+    referentiesField,
     {
       // Gereserveerd voor multi-kanaal/threads later (Postiz-model)
       name: "groupId",

@@ -9,9 +9,10 @@ import React, { useEffect, useState } from "react";
 import { crmApi } from "@/modules/crm/api";
 import type { Toast } from "@/modules/crm/views/pipeline/PipelineBoard";
 import { VerliesDialoog } from "@/modules/crm/views/pipeline/VerliesDialoog";
+import { RecordTijdlijn } from "@/modules/shared/components/RecordTijdlijn";
+import { ReferentiesVeld } from "@/modules/shared/components/ReferentiesVeld";
 import { avatarKleur, euro, initialen } from "@/modules/shared/ui";
 import type {
-  Activity,
   Contact,
   Deal,
   DealStage,
@@ -55,99 +56,6 @@ function relId(value: unknown): string {
     return String((value as { id: string | number }).id);
   }
   return String(value);
-}
-
-function datumTijd(iso?: string | null): string | null {
-  if (!iso) return null;
-  return new Intl.DateTimeFormat("nl-NL", {
-    day: "numeric",
-    month: "short",
-    hour: "2-digit",
-    minute: "2-digit",
-  }).format(new Date(iso));
-}
-
-const TYPE_LABEL: Record<Activity["type"], string> = {
-  notitie: "Notitie",
-  statuswijziging: "Status",
-  systeem: "Systeem",
-  email: "E-mail",
-  boeking: "Boeking",
-};
-
-function activiteitAuteur(a: Activity): string | null {
-  if (a.auteur && typeof a.auteur === "object") return a.auteur.name;
-  return null;
-}
-
-/* ── Tijdlijn (rechterkolom) ─────────────────────────────────────────── */
-
-function Tijdlijn({ dealId, onToast }: { dealId: string; onToast: Props["onToast"] }) {
-  const qc = useQueryClient();
-  const [notitie, setNotitie] = useState("");
-
-  const activiteiten = useQuery({
-    queryKey: ["deal-activiteiten", dealId],
-    queryFn: () => crmApi.listDealActiviteiten(dealId).then((r) => r.docs),
-  });
-
-  const plaatsNotitie = useMutation({
-    mutationFn: (tekst: string) => crmApi.createDealNotitie(Number(dealId), tekst),
-    onSuccess: () => {
-      setNotitie("");
-      qc.invalidateQueries({ queryKey: ["deal-activiteiten", dealId] });
-    },
-    onError: () =>
-      onToast({ tekst: "Notitie plaatsen mislukt.", soort: "fout" }),
-  });
-
-  return (
-    <div className="hm-dealpanel__tijdlijn">
-      <h4>Tijdlijn</h4>
-      <form
-        className="hm-dealpanel__notitie"
-        onSubmit={(e) => {
-          e.preventDefault();
-          const tekst = notitie.trim();
-          if (tekst) plaatsNotitie.mutate(tekst);
-        }}
-      >
-        <textarea
-          onChange={(e) => setNotitie(e.target.value)}
-          placeholder="Notitie toevoegen…"
-          rows={2}
-          value={notitie}
-        />
-        <button
-          className="hm-btn hm-btn--ghost"
-          disabled={!notitie.trim() || plaatsNotitie.isPending}
-          type="submit"
-        >
-          Toevoegen
-        </button>
-      </form>
-      {activiteiten.isLoading && <p className="hm-empty">Laden…</p>}
-      {activiteiten.data?.length === 0 && (
-        <p className="hm-empty">Nog geen activiteit op deze deal.</p>
-      )}
-      <ul className="hm-dealpanel__feed">
-        {(activiteiten.data ?? []).map((a) => (
-          <li key={a.id}>
-            <span className={`hm-pill hm-dealpanel__type--${a.type}`}>
-              {TYPE_LABEL[a.type]}
-            </span>
-            <div>
-              <p>{a.samenvatting ?? "—"}</p>
-              <small>
-                {activiteitAuteur(a) ? `${activiteitAuteur(a)} · ` : ""}
-                {datumTijd(a.happensAt)}
-              </small>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
 }
 
 /* ── Create-variant ──────────────────────────────────────────────────── */
@@ -587,6 +495,11 @@ function DealDetail({
               </p>
             )}
 
+            <ReferentiesVeld
+              onWijzig={(ids) => opslaan.mutate({ referenties: ids })}
+              waarde={deal.referenties}
+            />
+
             <Link
               className="hm-dealpanel__editorlink"
               href={`/admin/collections/deals/${deal.id}`}
@@ -596,7 +509,11 @@ function DealDetail({
             </Link>
           </div>
 
-          <Tijdlijn dealId={dealId} onToast={onToast} />
+          <RecordTijdlijn
+            onFout={(m) => onToast({ tekst: m, soort: "fout" })}
+            recordId={dealId}
+            relationTo="deals"
+          />
         </div>
       </aside>
 

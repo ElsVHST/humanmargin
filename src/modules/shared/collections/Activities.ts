@@ -35,6 +35,9 @@ export const Activities: CollectionConfig = {
         { label: "Systeem", value: "systeem" },
         { label: "E-mail", value: "email" },
         { label: "Boeking", value: "boeking" },
+        // In-the-loop OS: agent stelt vragen vóór hij handelt; LOG sluit taken af
+        { label: "Vraag (agent)", value: "vraag" },
+        { label: "LOG (beslissing)", value: "log" },
       ],
     },
     {
@@ -51,7 +54,15 @@ export const Activities: CollectionConfig = {
       name: "targets",
       label: "Gekoppeld aan",
       type: "relationship",
-      relationTo: ["organisations", "contacts", "deals", "projects"],
+      relationTo: [
+        "organisations",
+        "contacts",
+        "deals",
+        "projects",
+        "tasks",
+        "content-items",
+        "knowledge-docs",
+      ],
       hasMany: true,
       required: true,
     },

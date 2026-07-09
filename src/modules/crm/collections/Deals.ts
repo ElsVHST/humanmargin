@@ -3,7 +3,7 @@ import type { CollectionConfig } from "payload";
 import { createProjectOnWin } from "@/modules/crm/hooks/createProjectOnWin";
 import { logDealStatusChange } from "@/modules/crm/hooks/logDealStatusChange";
 import { dashboardCollectionAccess } from "@/modules/shared/access";
-import { eigenaarField } from "@/modules/shared/fields";
+import { eigenaarField, referentiesField } from "@/modules/shared/fields";
 
 export const Deals: CollectionConfig = {
   slug: "deals",
@@ -92,6 +92,7 @@ export const Deals: CollectionConfig = {
       type: "relationship",
       relationTo: "contacts",
     },
+    referentiesField,
     eigenaarField,
     {
       // Kaartvolgorde binnen een kolom (Twenty-patroon: numeriek, drop = fase+position in één update)

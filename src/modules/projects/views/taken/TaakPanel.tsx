@@ -7,7 +7,9 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 import { projectsApi } from "@/modules/projects/api";
-import type { Project, Task, TaskStatus, User } from "@/payload-types";
+import { RecordTijdlijn } from "@/modules/shared/components/RecordTijdlijn";
+import { ReferentiesVeld } from "@/modules/shared/components/ReferentiesVeld";
+import type { Organisation, Project, Task, TaskStatus, User } from "@/payload-types";
 
 import "@/modules/shared/styles/dashboard.scss";
 
@@ -17,6 +19,8 @@ type Props = {
   /** Taak-id of "nieuw" (create-variant). */
   taakId: string;
   statusParam: string | null;
+  /** Deadline-prefill (YYYY-MM-DD) voor de create-variant, bv. vanuit de kalender. */
+  datumParam?: string | null;
   onClose: () => void;
   onToast: (toast: PanelToast) => void;
   projecten: Project[];
@@ -58,6 +62,7 @@ function useEscape(onClose: () => void) {
 /* ── Create-variant ──────────────────────────────────────────────────── */
 
 function NieuweTaak({
+  datumParam,
   onClose,
   onToast,
   projecten,
@@ -83,6 +88,9 @@ function NieuweTaak({
           prioriteit,
           status: status ? Number(status) : null,
           project: project ? Number(project) : null,
+          deadline: datumParam
+            ? new Date(`${datumParam}T12:00:00`).toISOString()
+            : null,
         }),
       });
       if (!res.ok) throw new Error(`POST tasks → ${res.status}`);
@@ -90,8 +98,9 @@ function NieuweTaak({
     },
     onSuccess: (doc) => {
       qc.invalidateQueries({ queryKey: ["taken", "taken"] });
+      qc.invalidateQueries({ queryKey: ["kalender", "taken"] });
       onToast({ tekst: `Taak '${doc.titel}' aangemaakt.`, soort: "ok" });
-      router.replace(`/admin/taken?taak=${doc.id}`);
+      router.replace(`${window.location.pathname}?taak=${doc.id}`);
     },
     onError: () =>
       onToast({ tekst: "Aanmaken mislukt — is de titel ingevuld?", soort: "fout" }),
@@ -210,12 +219,19 @@ function TaakDetail({
     queryFn: () => fetchDocs<User>("/api/users?limit=100&depth=0"),
   });
 
+  const organisaties = useQuery({
+    queryKey: ["panel", "orgs"],
+    queryFn: () =>
+      fetchDocs<Organisation>("/api/organisations?limit=200&sort=naam&depth=0"),
+  });
+
   const opslaan = useMutation({
     mutationFn: (data: Partial<Task>) =>
       projectsApi.updateTask(Number(taakId), data),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ["taak", taakId] });
       qc.invalidateQueries({ queryKey: ["taken", "taken"] });
+      qc.invalidateQueries({ queryKey: ["kalender", "taken"] });
     },
     onError: () =>
       onToast({ tekst: "Opslaan mislukt — probeer het opnieuw.", soort: "fout" }),
@@ -375,6 +391,24 @@ function TaakDetail({
               </select>
             </label>
             <label>
+              Organisatie / klant
+              <select
+                onChange={(e) =>
+                  opslaan.mutate({
+                    organisatie: e.target.value ? Number(e.target.value) : null,
+                  })
+                }
+                value={relId(taak.organisatie)}
+              >
+                <option value="">—</option>
+                {(organisaties.data ?? []).map((o) => (
+                  <option key={o.id} value={String(o.id)}>
+                    {o.naam}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
               Omschrijving
               <textarea
                 defaultValue={taak.omschrijving ?? ""}
@@ -388,6 +422,41 @@ function TaakDetail({
                 rows={4}
               />
             </label>
+            <label>
+              Context die ik al weet
+              <textarea
+                defaultValue={taak.contextVooraf ?? ""}
+                key={`context-${taak.updatedAt}`}
+                onBlur={(e) => {
+                  const nieuw = e.target.value.trim() || null;
+                  if (nieuw !== (taak.contextVooraf ?? null)) {
+                    opslaan.mutate({ contextVooraf: nieuw });
+                  }
+                }}
+                placeholder="Wat moet de uitvoerder (mens of agent) vooraf weten?"
+                rows={3}
+              />
+            </label>
+            <label>
+              Definition of done
+              <textarea
+                defaultValue={taak.definitionOfDone ?? ""}
+                key={`dod-${taak.updatedAt}`}
+                onBlur={(e) => {
+                  const nieuw = e.target.value.trim() || null;
+                  if (nieuw !== (taak.definitionOfDone ?? null)) {
+                    opslaan.mutate({ definitionOfDone: nieuw });
+                  }
+                }}
+                placeholder="Wanneer is deze taak écht af?"
+                rows={2}
+              />
+            </label>
+
+            <ReferentiesVeld
+              onWijzig={(ids) => opslaan.mutate({ referenties: ids })}
+              waarde={taak.referenties}
+            />
 
             <Link
               className="hm-dealpanel__editorlink"
@@ -471,6 +540,13 @@ function TaakDetail({
                 <Plus size={14} />
               </button>
             </form>
+
+            <RecordTijdlijn
+              onFout={(m) => onToast({ tekst: m, soort: "fout" })}
+              recordId={taakId}
+              relationTo="tasks"
+              titel="Comments & log"
+            />
           </div>
         </div>
       </aside>
@@ -483,6 +559,7 @@ export function TaakPanel(props: Props) {
   if (props.taakId === "nieuw") {
     return (
       <NieuweTaak
+        datumParam={props.datumParam}
         onClose={props.onClose}
         onToast={props.onToast}
         projecten={props.projecten}

@@ -503,11 +503,105 @@ html[data-theme="dark"] {
   }
 }
 
-.hm-dealpanel__type--notitie { --k: var(--hm-geel); }
-.hm-dealpanel__type--statuswijziging { --k: var(--hm-blauw); }
-.hm-dealpanel__type--systeem { --k: var(--hm-grijs); }
-.hm-dealpanel__type--email { --k: var(--hm-paars); }
-.hm-dealpanel__type--boeking { --k: var(--hm-turquoise); }
+.hm-dealpanel__type--notitie,
+.hm-tijdlijn__type--notitie { --k: var(--hm-geel); }
+.hm-dealpanel__type--statuswijziging,
+.hm-tijdlijn__type--statuswijziging { --k: var(--hm-blauw); }
+.hm-dealpanel__type--systeem,
+.hm-tijdlijn__type--systeem { --k: var(--hm-grijs); }
+.hm-dealpanel__type--email,
+.hm-tijdlijn__type--email { --k: var(--hm-paars); }
+.hm-dealpanel__type--boeking,
+.hm-tijdlijn__type--boeking { --k: var(--hm-turquoise); }
+.hm-tijdlijn__type--vraag { --k: var(--hm-oranje); }
+.hm-tijdlijn__type--log { --k: var(--hm-groen); }
+
+/* ── Referenties-chips (kennisbank-koppelingen op records) ────────────── */
+.hm-refs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hm-refs__label {
+  color: var(--hm-muted);
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hm-refs__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.hm-refs__chip {
+  align-items: center;
+  background: var(--hm-surface-2);
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-pill);
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px 4px 2px 2px;
+
+  > button:first-child {
+    align-items: center;
+    background: none;
+    border: none;
+    border-radius: var(--hm-pill);
+    color: var(--hm-ink-2);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: var(--hm-font);
+    font-size: 0.74rem;
+    font-weight: 650;
+    gap: 5px;
+    max-width: 220px;
+    overflow: hidden;
+    padding: 3px 4px 3px 7px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:hover {
+      color: var(--hm-brand-blue);
+    }
+  }
+}
+
+.hm-refs__weg {
+  align-items: center;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  color: var(--hm-faint);
+  cursor: pointer;
+  display: inline-flex;
+  padding: 3px;
+
+  &:hover {
+    background: color-mix(in srgb, var(--hm-rood) 14%, transparent);
+    color: var(--hm-rood);
+  }
+}
+
+.hm-refs__leeg {
+  color: var(--hm-faint);
+  font-size: 0.76rem;
+}
+
+.hm-refs__select {
+  background: var(--hm-bg);
+  border: 1px solid var(--hm-line-2);
+  border-radius: var(--hm-r-s) !important;
+  color: var(--hm-muted);
+  cursor: pointer;
+  font-family: var(--hm-font);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 6px 9px;
+}
 
 /* ── Contentpaneel: status-stappen + brief ────────────────────────────── */
 .hm-contentpanel__stap {

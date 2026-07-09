@@ -1,7 +1,7 @@
 import type { CollectionConfig } from "payload";
 
 import { dashboardCollectionAccess } from "@/modules/shared/access";
-import { eigenaarField, tagsField } from "@/modules/shared/fields";
+import { eigenaarField, referentiesField, tagsField } from "@/modules/shared/fields";
 
 export const Projects: CollectionConfig = {
   slug: "projects",
@@ -66,6 +66,7 @@ export const Projects: CollectionConfig = {
       collection: "tasks",
       on: "project",
     },
+    referentiesField,
     tagsField,
     eigenaarField,
     {
