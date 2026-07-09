@@ -1347,3 +1347,24 @@ html[data-theme="dark"] {
   font-size: 0.6rem;
   margin-left: 4px;
 }
+
+/* ── Projecten (ERP-laag) ────────────────────────────────────────────── */
+.hm-project__voortgangtekst {
+  color: var(--hm-faint);
+  font-weight: 600;
+  text-transform: none;
+}
+
+.hm-project__meter {
+  margin-bottom: 4px;
+}
+
+.hm-project__avatars {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.hm-project__archiveer {
+  align-self: flex-start;
+  color: var(--hm-rood, #c0392b);
+}

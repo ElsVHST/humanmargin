@@ -21,6 +21,8 @@ type Props = {
   statusParam: string | null;
   /** Deadline-prefill (YYYY-MM-DD) voor de create-variant, bv. vanuit de kalender. */
   datumParam?: string | null;
+  /** Project-prefill voor de create-variant, bv. vanuit het ProjectPanel. */
+  projectParam?: string | null;
   onClose: () => void;
   onToast: (toast: PanelToast) => void;
   projecten: Project[];
@@ -65,6 +67,7 @@ function NieuweTaak({
   datumParam,
   onClose,
   onToast,
+  projectParam,
   projecten,
   statusParam,
   statussen,
@@ -73,7 +76,7 @@ function NieuweTaak({
   const router = useRouter();
   const [titel, setTitel] = useState("");
   const [status, setStatus] = useState(statusParam ?? "");
-  const [project, setProject] = useState("");
+  const [project, setProject] = useState(projectParam ?? "");
   const [prioriteit, setPrioriteit] = useState<Task["prioriteit"]>("normaal");
   useEscape(onClose);
 
@@ -99,8 +102,13 @@ function NieuweTaak({
     onSuccess: (doc) => {
       qc.invalidateQueries({ queryKey: ["taken", "taken"] });
       qc.invalidateQueries({ queryKey: ["kalender", "taken"] });
+      qc.invalidateQueries({ queryKey: ["projecten", "taken"] });
+      qc.invalidateQueries({ queryKey: ["project"] });
       onToast({ tekst: `Taak '${doc.titel}' aangemaakt.`, soort: "ok" });
-      router.replace(`${window.location.pathname}?taak=${doc.id}`);
+      // Behoud bestaande params (project) zodat de taak gestapeld opent
+      const p = new URLSearchParams(window.location.search);
+      p.set("taak", String(doc.id));
+      router.replace(`${window.location.pathname}?${p.toString()}`);
     },
     onError: () =>
       onToast({ tekst: "Aanmaken mislukt — is de titel ingevuld?", soort: "fout" }),
@@ -232,6 +240,8 @@ function TaakDetail({
       qc.invalidateQueries({ queryKey: ["taak", taakId] });
       qc.invalidateQueries({ queryKey: ["taken", "taken"] });
       qc.invalidateQueries({ queryKey: ["kalender", "taken"] });
+      qc.invalidateQueries({ queryKey: ["projecten", "taken"] });
+      qc.invalidateQueries({ queryKey: ["project"] });
     },
     onError: () =>
       onToast({ tekst: "Opslaan mislukt — probeer het opnieuw.", soort: "fout" }),
@@ -562,6 +572,7 @@ export function TaakPanel(props: Props) {
         datumParam={props.datumParam}
         onClose={props.onClose}
         onToast={props.onToast}
+        projectParam={props.projectParam}
         projecten={props.projecten}
         statusParam={props.statusParam}
         statussen={props.statussen}

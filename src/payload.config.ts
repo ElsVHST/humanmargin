@@ -60,6 +60,11 @@ export default buildConfig({
           Component: "/modules/crm/views/relaties/RelatiesView#RelatiesView",
           path: "/relaties",
         },
+        projecten: {
+          Component:
+            "/modules/projects/views/projecten/ProjectenView#ProjectenView",
+          path: "/projecten",
+        },
         taken: {
           Component: "/modules/projects/views/taken/TakenView#TakenView",
           path: "/taken",

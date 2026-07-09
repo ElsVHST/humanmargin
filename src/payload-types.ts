@@ -81,6 +81,7 @@ export interface Config {
     projects: Project;
     tasks: Task;
     'task-statuses': TaskStatus;
+    'project-fases': ProjectFase;
     'content-items': ContentItem;
     'content-channels': ContentChannel;
     'knowledge-docs': KnowledgeDoc;
@@ -119,6 +120,7 @@ export interface Config {
     projects: ProjectsSelect<false> | ProjectsSelect<true>;
     tasks: TasksSelect<false> | TasksSelect<true>;
     'task-statuses': TaskStatusesSelect<false> | TaskStatusesSelect<true>;
+    'project-fases': ProjectFasesSelect<false> | ProjectFasesSelect<true>;
     'content-items': ContentItemsSelect<false> | ContentItemsSelect<true>;
     'content-channels': ContentChannelsSelect<false> | ContentChannelsSelect<true>;
     'knowledge-docs': KnowledgeDocsSelect<false> | KnowledgeDocsSelect<true>;
@@ -1130,6 +1132,8 @@ export interface KnowledgeFile {
 export interface Project {
   id: number;
   naam: string;
+  fase?: (number | null) | ProjectFase;
+  position?: number | null;
   status: 'actief' | 'gepauzeerd' | 'afgerond';
   /**
    * Leeg laten voor interne projecten.
@@ -1151,6 +1155,19 @@ export interface Project {
   referenties?: (number | KnowledgeDoc)[] | null;
   tags?: string[] | null;
   eigenaar?: (number | null) | User;
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "project-fases".
+ */
+export interface ProjectFase {
+  id: number;
+  _order?: string | null;
+  naam: string;
+  kleur: 'groen' | 'blauw' | 'paars' | 'rood' | 'oranje' | 'geel' | 'turquoise' | 'roze' | 'grijs';
   updatedAt: string;
   createdAt: string;
   deletedAt?: string | null;
@@ -1441,6 +1458,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'task-statuses';
         value: number | TaskStatus;
+      } | null)
+    | ({
+        relationTo: 'project-fases';
+        value: number | ProjectFase;
       } | null)
     | ({
         relationTo: 'content-items';
@@ -2132,6 +2153,8 @@ export interface CrmVeldenSelect<T extends boolean = true> {
  */
 export interface ProjectsSelect<T extends boolean = true> {
   naam?: T;
+  fase?: T;
+  position?: T;
   status?: T;
   organisatie?: T;
   deal?: T;
@@ -2180,6 +2203,18 @@ export interface TasksSelect<T extends boolean = true> {
  * via the `definition` "task-statuses_select".
  */
 export interface TaskStatusesSelect<T extends boolean = true> {
+  _order?: T;
+  naam?: T;
+  kleur?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  deletedAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "project-fases_select".
+ */
+export interface ProjectFasesSelect<T extends boolean = true> {
   _order?: T;
   naam?: T;
   kleur?: T;

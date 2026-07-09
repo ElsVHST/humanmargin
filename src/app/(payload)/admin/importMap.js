@@ -34,6 +34,7 @@ import { Logo as Logo_91a09b539d3c86b0aebf520e7564ce08 } from '../../../componen
 import { HomeView as HomeView_0ff1cdb8ae1b9a3ca44a9d7c3acd510a } from '../../../modules/shared/views/home/HomeView'
 import { PipelineView as PipelineView_c2d7079cb045a404329cfb047e31eb9a } from '../../../modules/crm/views/pipeline/PipelineView'
 import { RelatiesView as RelatiesView_d33ae4da37b34de50cdf0fe87bb9c182 } from '../../../modules/crm/views/relaties/RelatiesView'
+import { ProjectenView as ProjectenView_4c0794290fca9793cd96bad9ef80109b } from '../../../modules/projects/views/projecten/ProjectenView'
 import { TakenView as TakenView_b658dd106fd11b3e14cedee19664119f } from '../../../modules/projects/views/taken/TakenView'
 import { KalenderView as KalenderView_3b7a9f2c3f256b8966c2ab6081d93acc } from '../../../modules/content/views/kalender/KalenderView'
 import { KennisbankView as KennisbankView_2adc95dfc683e2bcdb9f48ca67f155ea } from '../../../modules/knowledge/views/kennisbank/KennisbankView'
@@ -77,6 +78,7 @@ export const importMap = {
   "/modules/shared/views/home/HomeView#HomeView": HomeView_0ff1cdb8ae1b9a3ca44a9d7c3acd510a,
   "/modules/crm/views/pipeline/PipelineView#PipelineView": PipelineView_c2d7079cb045a404329cfb047e31eb9a,
   "/modules/crm/views/relaties/RelatiesView#RelatiesView": RelatiesView_d33ae4da37b34de50cdf0fe87bb9c182,
+  "/modules/projects/views/projecten/ProjectenView#ProjectenView": ProjectenView_4c0794290fca9793cd96bad9ef80109b,
   "/modules/projects/views/taken/TakenView#TakenView": TakenView_b658dd106fd11b3e14cedee19664119f,
   "/modules/content/views/kalender/KalenderView#KalenderView": KalenderView_3b7a9f2c3f256b8966c2ab6081d93acc,
   "/modules/knowledge/views/kennisbank/KennisbankView#KennisbankView": KennisbankView_2adc95dfc683e2bcdb9f48ca67f155ea,

@@ -17,6 +17,7 @@ import {
 } from "@/modules/crm/views/pipeline/RelatiePanelen";
 import { CrmInstellingen } from "@/modules/crm/views/relaties/CrmInstellingen";
 import { useCrmVelden } from "@/modules/crm/views/pipeline/ExtraVelden";
+import { ProjectPanel } from "@/modules/projects/views/projecten/ProjectPanel";
 import { avatarKleur, initialen, naamVan } from "@/modules/shared/ui";
 import type {
   Contact,
@@ -288,6 +289,7 @@ function Lijst({
   const searchParams = useSearchParams();
   const organisatieParam = searchParams.get("organisatie");
   const contactParam = searchParams.get("contact");
+  const projectParam = searchParams.get("project");
   const tabParam = searchParams.get("tab");
 
   const [tab, setTab] = useState<"organisaties" | "contacten">(
@@ -900,6 +902,23 @@ function Lijst({
           onClose={() => router.push(`/admin/relaties?tab=${tab}`)}
           onToast={setToast}
           organisatieId={organisatieParam}
+        />
+      )}
+
+      {/* Project stapelt bovenop het organisatiepaneel (projecten-ERP-plan P3) */}
+      {projectParam && (
+        <ProjectPanel
+          key={`project-${projectParam}`}
+          onClose={() =>
+            router.push(
+              organisatieParam
+                ? `/admin/relaties?tab=${tab}&organisatie=${organisatieParam}`
+                : `/admin/relaties?tab=${tab}`,
+            )
+          }
+          onToast={setToast}
+          projectId={projectParam}
+          standaardOrganisatie={organisatieParam ?? undefined}
         />
       )}
 

@@ -16,6 +16,23 @@ export const Projects: CollectionConfig = {
   fields: [
     { name: "naam", label: "Naam", type: "text", required: true },
     {
+      // Kanban-kolom op /admin/projecten (projecten-ERP-plan P1);
+      // leeg = fallback-kolom "Geen fase"
+      name: "fase",
+      label: "Fase",
+      type: "relationship",
+      relationTo: "project-fases",
+      admin: { position: "sidebar" },
+    },
+    {
+      // Volgorde binnen de kanban-kolom (fractional ordering, zie lib.ts)
+      name: "position",
+      label: "Positie",
+      type: "number",
+      defaultValue: 0,
+      admin: { hidden: true },
+    },
+    {
       name: "status",
       label: "Status",
       type: "select",

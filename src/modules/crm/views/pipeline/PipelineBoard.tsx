@@ -25,6 +25,7 @@ import {
   OrganisatiePanel,
 } from "@/modules/crm/views/pipeline/RelatiePanelen";
 import { VerliesDialoog } from "@/modules/crm/views/pipeline/VerliesDialoog";
+import { ProjectPanel } from "@/modules/projects/views/projecten/ProjectPanel";
 import {
   buildColumns,
   GEEN_FASE,
@@ -159,6 +160,7 @@ function Board({ initialStages, initialDeals, isBeheerder, nu }: Props) {
   const dealParam = searchParams.get("deal");
   const organisatieParam = searchParams.get("organisatie");
   const contactParam = searchParams.get("contact");
+  const projectParam = searchParams.get("project");
 
   const [zoek, setZoek] = useState("");
   const [eigenaarFilter, setEigenaarFilter] = useState("alle");
@@ -646,6 +648,23 @@ function Board({ initialStages, initialDeals, isBeheerder, nu }: Props) {
           }
           onToast={setToast}
           organisatieId={organisatieParam}
+        />
+      )}
+
+      {/* Project stapelt bovenop deal/organisatie (projecten-ERP-plan P3) */}
+      {projectParam && (
+        <ProjectPanel
+          key={`project-${projectParam}`}
+          onClose={() => {
+            const p = new URLSearchParams();
+            if (dealParam) p.set("deal", dealParam);
+            if (organisatieParam) p.set("organisatie", organisatieParam);
+            const qs = p.toString();
+            router.push(qs ? `/admin/pipeline?${qs}` : "/admin/pipeline");
+          }}
+          onToast={setToast}
+          projectId={projectParam}
+          standaardOrganisatie={organisatieParam ?? undefined}
         />
       )}
 

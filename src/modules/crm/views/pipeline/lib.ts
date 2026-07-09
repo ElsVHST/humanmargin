@@ -17,7 +17,7 @@ export type BoardColumn = GenericColumn<Deal>;
 export type TaskColumn = GenericColumn<Task>;
 
 export function relationId(
-  value: Deal["fase"] | Task["status"],
+  value: number | { id: number | string } | null | undefined,
 ): string | null {
   if (value == null) return null;
   return String(typeof value === "object" ? value.id : value);

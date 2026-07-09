@@ -18,6 +18,7 @@ import type {
   Deal,
   DealStage,
   Organisation,
+  Project,
   User,
 } from "@/payload-types";
 
@@ -219,6 +220,13 @@ function DealDetail({
   const gebruikers = useQuery({
     queryKey: ["panel", "gebruikers"],
     queryFn: () => fetchDocs<User>("/api/users?limit=100&depth=0"),
+  });
+  const dealProjecten = useQuery({
+    queryKey: ["deal", dealId, "projecten"],
+    queryFn: () =>
+      fetchDocs<Project>(
+        `/api/projects?where[deal][equals]=${dealId}&limit=5&depth=1`,
+      ),
   });
   const metParams = useMetParams();
 
@@ -508,9 +516,22 @@ function DealDetail({
 
             {((deal.organisatie && typeof deal.organisatie === "object") ||
               (deal.contactpersoon &&
-                typeof deal.contactpersoon === "object")) && (
+                typeof deal.contactpersoon === "object") ||
+              (dealProjecten.data ?? []).length > 0) && (
               <div className="hm-relatie__blok">
                 <h4>Gekoppeld</h4>
+                {(dealProjecten.data ?? []).map((p) => (
+                  <Link
+                    href={metParams({ project: String(p.id) })}
+                    key={p.id}
+                    replace
+                  >
+                    {p.naam}
+                    <span>
+                      project{naamVan(p.fase) ? ` · ${naamVan(p.fase)}` : ""}
+                    </span>
+                  </Link>
+                ))}
                 {deal.organisatie && typeof deal.organisatie === "object" && (
                   <Link
                     href={metParams({

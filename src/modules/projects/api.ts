@@ -1,4 +1,4 @@
-import type { Task, TaskStatus } from "@/payload-types";
+import type { Project, Task, TaskStatus } from "@/payload-types";
 
 async function req<T>(url: string, method: string, body?: unknown): Promise<T> {
   const res = await fetch(url, {
@@ -18,6 +18,10 @@ async function req<T>(url: string, method: string, body?: unknown): Promise<T> {
 export const projectsApi = {
   updateTask: (id: Task["id"], data: Partial<Task>) =>
     req<{ doc: Task }>(`/api/tasks/${id}`, "PATCH", data),
+  createProject: (data: Partial<Project> & { naam: string }) =>
+    req<{ doc: Project }>(`/api/projects`, "POST", data),
+  updateProject: (id: Project["id"] | string, data: Partial<Project>) =>
+    req<{ doc: Project }>(`/api/projects/${id}`, "PATCH", data),
   createStatus: (data: Pick<TaskStatus, "naam" | "kleur">) =>
     req<{ doc: TaskStatus }>(`/api/task-statuses`, "POST", data),
   updateStatus: (id: TaskStatus["id"], data: Partial<TaskStatus>) =>

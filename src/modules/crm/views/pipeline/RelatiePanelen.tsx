@@ -16,6 +16,7 @@ import type {
   Deal,
   Functie,
   Organisation,
+  Project,
   Sector,
   User,
 } from "@/payload-types";
@@ -313,6 +314,14 @@ function OrganisatieDetail({ onClose, onToast, organisatieId }: OrgProps) {
     queryKey: ["panel", "contacten"],
     queryFn: () =>
       fetchDocs<Contact>("/api/contacts?limit=300&sort=naam&depth=0"),
+  });
+
+  const projectenQuery = useQuery({
+    queryKey: ["organisatie", organisatieId, "projecten"],
+    queryFn: () =>
+      fetchDocs<Project>(
+        `/api/projects?where[organisatie][equals]=${organisatieId}&limit=50&depth=1&sort=-updatedAt`,
+      ),
   });
 
   const invalideerContacten = () => {
@@ -716,6 +725,37 @@ function OrganisatieDetail({ onClose, onToast, organisatieId }: OrgProps) {
                 {maakDeal.isPending
                   ? "Deal aanmaken…"
                   : "+ Maak deal van deze relatie"}
+              </button>
+            </div>
+
+            <div className="hm-relatie__blok">
+              <h4>Projecten ({(projectenQuery.data ?? []).length})</h4>
+              {(projectenQuery.data ?? []).map((p) => (
+                <Link
+                  href={metParams({
+                    organisatie: organisatieId,
+                    project: String(p.id),
+                  })}
+                  key={p.id}
+                  replace
+                >
+                  {p.naam}
+                  <span>
+                    {naamVan(p.fase) ??
+                      (p.status === "afgerond" ? "afgerond" : p.status)}
+                  </span>
+                </Link>
+              ))}
+              <button
+                className="hm-btn"
+                onClick={() =>
+                  router.replace(
+                    metParams({ organisatie: organisatieId, project: "nieuw" }),
+                  )
+                }
+                type="button"
+              >
+                + Nieuw project
               </button>
             </div>
 
