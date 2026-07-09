@@ -1,0 +1,400 @@
+/* =========================================================================
+   Human Margin — app-shell (icon-rail + topbar), Pipedrive-patroon (PRD §2.1)
+   Rail: off-black, actief item = geel vierkant met zwart icoon.
+   Topbar: wit, pil-zoekveld gecentreerd, quick-add + user-chip rechts.
+   ========================================================================= */
+
+/* ── Payload-template overrides: rail altijd zichtbaar op 64px ────────── */
+:root {
+  --nav-width: 64px;
+  --hm-rail-w: 64px;
+}
+
+.template-default,
+.template-default--nav-hydrated,
+.template-default--nav-open,
+.template-default--nav-hydrated.template-default--nav-open {
+  grid-template-columns: var(--hm-rail-w) auto !important;
+}
+
+.template-default__nav-toggler-wrapper {
+  display: none !important;
+}
+
+/* Op shell-views vervangt de eigen topbar de Payload app-header */
+.template-default__wrap:has(.hm-topbar) .app-header {
+  display: none;
+}
+
+/* ── Icon-rail ────────────────────────────────────────────────────────── */
+.hm-rail {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: var(--hm-rail-w);
+  background: #111010;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0 12px;
+  gap: 4px;
+  font-family: var(--hm-font, "Archivo", system-ui, sans-serif);
+  z-index: 40;
+}
+
+.hm-rail__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  flex: none;
+}
+.hm-rail__logo img {
+  width: 28px;
+  height: 28px;
+}
+
+.hm-rail__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+}
+
+.hm-rail__sep {
+  width: 28px;
+  height: 1px;
+  background: rgba(244, 244, 241, 0.16);
+  margin: 10px 0;
+  flex: none;
+}
+
+.hm-rail__foot {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.hm-rail__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--hm-r-s, 6px);
+  color: rgba(244, 244, 241, 0.72);
+  transition: background 0.14s ease, color 0.14s ease;
+  flex: none;
+}
+.hm-rail__item:hover {
+  background: rgba(244, 244, 241, 0.1);
+  color: #f4f4f1;
+}
+.hm-rail__item.is-actief {
+  background: var(--hm-accent, #edff00);
+  color: #111010;
+}
+.hm-rail__item.is-actief:hover {
+  background: var(--hm-accent, #edff00);
+  color: #111010;
+}
+
+/* Tooltip rechts van de rail */
+.hm-rail__tip {
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: #111010;
+  color: #f4f4f1;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 5px 9px;
+  border-radius: var(--hm-r-s, 6px);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.12s ease;
+  box-shadow: var(--hm-sh-2);
+  z-index: 70;
+}
+.hm-rail__item:hover .hm-rail__tip,
+.hm-rail__item:focus-visible .hm-rail__tip {
+  opacity: 1;
+}
+
+/* ── Topbar ───────────────────────────────────────────────────────────── */
+.hm-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: 1fr minmax(240px, 520px) 1fr;
+  align-items: center;
+  gap: 16px;
+  height: 60px;
+  padding: 0 20px;
+  background: var(--hm-surface);
+  border-bottom: 1px solid var(--hm-line);
+  font-family: var(--hm-font);
+}
+
+.hm-topbar__titel {
+  font-family: var(--hm-font-head);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.05rem;
+  letter-spacing: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Pil-zoekveld — bewust het rondste element van het scherm (§2.1) */
+.hm-topbar__search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: var(--hm-pill, 999px);
+  border: 1px solid var(--hm-line-2);
+  background: var(--hm-bg);
+  color: var(--hm-muted);
+  font-family: inherit;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: border-color 0.14s ease, box-shadow 0.14s ease;
+  width: 100%;
+}
+.hm-topbar__search:hover {
+  border-color: var(--hm-faint);
+  box-shadow: var(--hm-sh-1);
+}
+.hm-topbar__search span {
+  flex: 1;
+  text-align: left;
+}
+.hm-topbar__search kbd {
+  font-family: inherit;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--hm-faint);
+  border: 1px solid var(--hm-line-2);
+  border-radius: 4px;
+  padding: 1px 5px;
+  background: var(--hm-surface);
+}
+
+.hm-topbar__rechts {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Ronde quick-add-knop */
+.hm-topbar__plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--hm-line-2);
+  background: var(--hm-surface);
+  color: var(--hm-ink-2);
+  cursor: pointer;
+  transition: background 0.14s ease, color 0.14s ease, border-color 0.14s;
+  flex: none;
+}
+.hm-topbar__plus:hover {
+  background: var(--hm-accent);
+  border-color: var(--hm-accent);
+  color: var(--hm-accent-ink);
+}
+
+/* User-chip: avatar + naam + org in twee regels */
+.hm-topbar__user {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 4px 8px 4px 4px;
+  border: none;
+  background: none;
+  border-radius: var(--hm-r-s);
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+}
+.hm-topbar__user:hover {
+  background: var(--hm-surface-2);
+}
+.hm-topbar__usernaam {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+.hm-topbar__usernaam b {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--hm-ink);
+}
+.hm-topbar__usernaam i {
+  font-style: normal;
+  font-size: 0.68rem;
+  color: var(--hm-muted);
+}
+
+/* ── Popup-menu (quick-add & user) ────────────────────────────────────── */
+.hm-menu__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 49;
+}
+.hm-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 210px;
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line-2);
+  border-radius: var(--hm-r);
+  box-shadow: var(--hm-sh-3);
+  padding: 6px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+}
+.hm-menu__wrap {
+  position: relative;
+}
+.hm-menu a,
+.hm-menu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  font-family: var(--hm-font);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--hm-ink-2);
+  background: none;
+  border: none;
+  border-radius: var(--hm-r-s);
+  cursor: pointer;
+  text-decoration: none;
+  text-align: left;
+}
+.hm-menu a:hover,
+.hm-menu button:hover {
+  background: var(--hm-surface-2);
+  color: var(--hm-ink);
+}
+.hm-menu__kop {
+  font-size: 0.66rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--hm-faint);
+  padding: 6px 10px 3px;
+}
+
+/* ── Globale zoekdialoog (⌘K) ─────────────────────────────────────────── */
+.hm-zoek__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 16, 16, 0.4);
+  z-index: 80;
+  animation: hm-fade 0.14s ease;
+}
+.hm-zoek {
+  position: fixed;
+  top: 14vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(620px, 92vw);
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line-2);
+  border-radius: var(--hm-r);
+  box-shadow: var(--hm-sh-3);
+  z-index: 81;
+  overflow: hidden;
+  font-family: var(--hm-font);
+}
+.hm-zoek__input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--hm-line);
+  color: var(--hm-muted);
+}
+.hm-zoek__input input {
+  flex: 1;
+  border: none !important;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--hm-ink);
+  box-shadow: none !important;
+}
+.hm-zoek__lijst {
+  max-height: 46vh;
+  overflow-y: auto;
+  padding: 6px;
+}
+.hm-zoek__groep {
+  font-size: 0.66rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--hm-faint);
+  padding: 8px 10px 3px;
+}
+.hm-zoek__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  background: none;
+  border-radius: var(--hm-r-s);
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--hm-ink-2);
+  cursor: pointer;
+  text-align: left;
+}
+.hm-zoek__item small {
+  margin-left: auto;
+  font-size: 0.7rem;
+  color: var(--hm-faint);
+  font-weight: 500;
+}
+.hm-zoek__item.is-actief,
+.hm-zoek__item:hover {
+  background: var(--hm-surface-2);
+  color: var(--hm-ink);
+}
+.hm-zoek__leeg {
+  padding: 18px 16px;
+  color: var(--hm-faint);
+  font-size: 0.86rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hm-zoek__backdrop {
+    animation: none;
+  }
+}

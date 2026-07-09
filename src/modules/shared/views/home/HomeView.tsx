@@ -3,6 +3,7 @@ import type { AdminViewServerProps } from "payload";
 import Link from "next/link";
 import React from "react";
 
+import { Topbar } from "@/components/admin/shell/Topbar";
 import { relationId } from "@/modules/crm/views/pipeline/lib";
 import type { Activity, ContentItem, Task } from "@/payload-types";
 
@@ -116,7 +117,9 @@ export async function HomeView({ initPageResult }: AdminViewServerProps) {
 
   // Geen DefaultTemplate: Payload wikkelt de dashboard-route zelf al in het admin-template
   return (
-    <Gutter>
+    <>
+      <Topbar titel="Home" />
+      <Gutter>
         <div className="hm-home__kop">
           <h1>{begroeting(user?.name)}</h1>
           <p className="hm-home__datum">
@@ -322,6 +325,7 @@ export async function HomeView({ initPageResult }: AdminViewServerProps) {
             )}
           </section>
         </div>
-    </Gutter>
+      </Gutter>
+    </>
   );
 }

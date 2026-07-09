@@ -3,6 +3,7 @@ import { Gutter } from "@payloadcms/ui";
 import type { AdminViewServerProps } from "payload";
 import React from "react";
 
+import { Topbar } from "@/components/admin/shell/Topbar";
 import { TakenBoard } from "@/modules/projects/views/taken/TakenBoard";
 
 export async function TakenView({
@@ -46,8 +47,8 @@ export async function TakenView({
       user={user ?? undefined}
       visibleEntities={visibleEntities}
     >
+      <Topbar titel="Taken" />
       <Gutter>
-        <h1 className="hm-pipeline__titel">Taken</h1>
         <TakenBoard
           initialStatussen={statussen.docs}
           initialTaken={taken.docs}

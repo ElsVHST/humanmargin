@@ -3,6 +3,7 @@ import { Gutter } from "@payloadcms/ui";
 import type { AdminViewServerProps } from "payload";
 import React from "react";
 
+import { Topbar } from "@/components/admin/shell/Topbar";
 import { Kalender } from "@/modules/content/views/kalender/Kalender";
 
 export async function KalenderView({
@@ -31,8 +32,8 @@ export async function KalenderView({
       user={user ?? undefined}
       visibleEntities={visibleEntities}
     >
+      <Topbar titel="Contentkalender" />
       <Gutter>
-        <h1 className="hm-pipeline__titel">Contentkalender</h1>
         <Kalender initialItems={items.docs} />
       </Gutter>
     </DefaultTemplate>

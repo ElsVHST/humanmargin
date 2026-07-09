@@ -1,0 +1,188 @@
+- generic [ref=f12e1]:
+  - generic [ref=f12e3]:
+    - navigation "Hoofdnavigatie" [ref=f12e4]:
+      - link "Naar home" [ref=f12e5] [cursor=pointer]:
+        - /url: /admin
+      - generic [ref=f12e6]:
+        - link "Home" [ref=f12e7] [cursor=pointer]:
+          - /url: /admin
+          - img [ref=f12e8]
+          - generic: Home
+        - link "Pipeline" [ref=f12e11] [cursor=pointer]:
+          - /url: /admin/pipeline
+          - img [ref=f12e12]
+          - generic: Pipeline
+        - link "Taken" [ref=f12e14] [cursor=pointer]:
+          - /url: /admin/taken
+          - img [ref=f12e15]
+          - generic: Taken
+        - link "Kalender" [ref=f12e18] [cursor=pointer]:
+          - /url: /admin/kalender
+          - img [ref=f12e19]
+          - generic: Kalender
+        - link "Kennisbank" [ref=f12e21] [cursor=pointer]:
+          - /url: /admin/kennisbank
+          - img [ref=f12e22]
+          - generic: Kennisbank
+      - generic [ref=f12e25]:
+        - link "Pagina's" [ref=f12e26] [cursor=pointer]:
+          - /url: /admin/collections/pages
+          - img [ref=f12e27]
+          - generic: Pagina's
+        - link "Media" [ref=f12e30] [cursor=pointer]:
+          - /url: /admin/collections/media
+          - img [ref=f12e31]
+          - generic: Media
+        - link "Header / navigatie" [ref=f12e35] [cursor=pointer]:
+          - /url: /admin/globals/header
+          - img [ref=f12e36]
+          - generic: Header / navigatie
+        - link "Footer" [ref=f12e38] [cursor=pointer]:
+          - /url: /admin/globals/footer
+          - img [ref=f12e39]
+          - generic: Footer
+        - link "Gebruikers" [ref=f12e41] [cursor=pointer]:
+          - /url: /admin/collections/users
+          - img [ref=f12e42]
+          - generic: Gebruikers
+        - link "Abonnees" [ref=f12e46] [cursor=pointer]:
+          - /url: /admin/collections/subscribers
+          - img [ref=f12e47]
+          - generic: Abonnees
+      - link "Uitloggen" [ref=f12e51] [cursor=pointer]:
+        - /url: /admin/logout
+        - img [ref=f12e52]
+        - generic: Uitloggen
+    - generic [ref=f12e55]:
+      - banner [ref=f12e56]:
+        - heading "Home" [level=1] [ref=f12e57]
+        - button "Zoeken… ⌘K" [ref=f12e58] [cursor=pointer]:
+          - img [ref=f12e59]
+          - generic [ref=f12e62]: Zoeken…
+          - generic [ref=f12e63]: ⌘K
+        - generic [ref=f12e64]:
+          - button "Toevoegen" [ref=f12e66] [cursor=pointer]:
+            - img [ref=f12e67]
+          - button "E Els Human Margin" [ref=f12e69] [cursor=pointer]:
+            - generic [ref=f12e70]: E
+            - generic [ref=f12e71]:
+              - generic [ref=f12e72]: Els
+              - generic [ref=f12e73]: Human Margin
+        - dialog "Zoeken" [ref=f12e182]:
+          - generic [ref=f12e183]:
+            - img [ref=f12e184]
+            - textbox "Zoek deals, organisaties, taken, content…" [active] [ref=f12e187]: demo
+          - generic [ref=f12e188]:
+            - paragraph [ref=f12e189]: Organisaties
+            - button "Demo Consultancy BV Organisaties" [ref=f12e190] [cursor=pointer]:
+              - text: Demo Consultancy BV
+              - generic [ref=f12e191]: Organisaties
+            - paragraph [ref=f12e192]: Content
+            - 'button "LinkedIn: klantcase Demo BV Content" [ref=f12e193] [cursor=pointer]':
+              - text: "LinkedIn: klantcase Demo BV"
+              - generic [ref=f12e194]: Content
+      - generic [ref=f12e74]:
+        - generic [ref=f12e75]:
+          - heading "Goedemorgen, Els!" [level=1] [ref=f12e76]
+          - paragraph [ref=f12e77]: donderdag 9 juli 2026
+        - generic [ref=f12e78]:
+          - link "+ Deal" [ref=f12e79] [cursor=pointer]:
+            - /url: /admin/collections/deals/create
+          - link "+ Taak" [ref=f12e80] [cursor=pointer]:
+            - /url: /admin/collections/tasks/create
+          - link "+ Content" [ref=f12e81] [cursor=pointer]:
+            - /url: /admin/collections/content-items/create
+          - link "+ Organisatie" [ref=f12e82] [cursor=pointer]:
+            - /url: /admin/collections/organisations/create
+          - link "+ Kennisdocument" [ref=f12e83] [cursor=pointer]:
+            - /url: /admin/collections/knowledge-docs/create
+        - generic [ref=f12e84]:
+          - generic [ref=f12e85]:
+            - generic [ref=f12e86]: Open pipeline
+            - generic [ref=f12e87]: € 17.850 · 4 deals
+            - generic [ref=f12e88]:
+              - 'generic "Lead: 1" [ref=f12e89]'
+              - 'generic "Gesprek: 2" [ref=f12e90]'
+          - generic [ref=f12e91]:
+            - generic [ref=f12e92]: Mijn taken
+            - generic [ref=f12e93]: "0"
+            - generic [ref=f12e95]: Niets over de datum
+          - generic [ref=f12e96]:
+            - generic [ref=f12e97]: Content deze week
+            - generic [ref=f12e98]: "3"
+        - generic [ref=f12e103]:
+          - generic [ref=f12e104]:
+            - generic [ref=f12e105]:
+              - heading "Pipeline" [level=2] [ref=f12e106]
+              - link "Naar het board →" [ref=f12e107] [cursor=pointer]:
+                - /url: /admin/pipeline
+            - paragraph [ref=f12e108]:
+              - text: "4"
+              - generic [ref=f12e109]: open deals
+              - generic [ref=f12e110]: · € 17.850
+            - list [ref=f12e111]:
+              - listitem [ref=f12e112]:
+                - generic [ref=f12e114]: Lead
+                - generic [ref=f12e115]: "1"
+              - listitem [ref=f12e116]:
+                - generic [ref=f12e118]: Gesprek
+                - generic [ref=f12e119]: "2"
+              - listitem [ref=f12e120]:
+                - generic [ref=f12e122]: Offerte
+                - generic [ref=f12e123]: "0"
+              - listitem [ref=f12e124]:
+                - generic [ref=f12e126]: Klant
+                - generic [ref=f12e127]: "0"
+          - generic [ref=f12e128]:
+            - generic [ref=f12e129]:
+              - heading "Mijn taken" [level=2] [ref=f12e130]
+              - link "Naar het board →" [ref=f12e131] [cursor=pointer]:
+                - /url: /admin/taken
+            - paragraph [ref=f12e132]: Geen taken aan jou toegewezen. Lekker bezig!
+          - generic [ref=f12e133]:
+            - generic [ref=f12e134]:
+              - heading "Content deze week" [level=2] [ref=f12e135]
+              - link "Naar de kalender →" [ref=f12e136] [cursor=pointer]:
+                - /url: /admin/kalender
+            - list [ref=f12e137]:
+              - listitem [ref=f12e138]:
+                - 'link "LinkedIn: klantcase Demo BV" [ref=f12e139] [cursor=pointer]':
+                  - /url: /admin/collections/content-items/3
+                - generic [ref=f12e140]: LinkedIn
+                - generic [ref=f12e141]: 9 jul
+              - listitem [ref=f12e142]:
+                - link "Nieuwsbrief juli" [ref=f12e143] [cursor=pointer]:
+                  - /url: /admin/collections/content-items/2
+                - generic [ref=f12e144]: Nieuwsbrief
+                - generic [ref=f12e145]: 12 jul
+              - listitem [ref=f12e146]:
+                - 'link "Blog: AI-geletterdheid in de praktijk" [ref=f12e147] [cursor=pointer]':
+                  - /url: /admin/collections/content-items/1
+                - generic [ref=f12e148]: Blog
+                - generic [ref=f12e149]: 15 jul
+          - generic [ref=f12e150]:
+            - generic [ref=f12e151]:
+              - heading "Recente activiteit" [level=2] [ref=f12e152]
+              - link "Alles →" [ref=f12e153] [cursor=pointer]:
+                - /url: /admin/collections/activities
+            - list [ref=f12e154]:
+              - listitem [ref=f12e155]:
+                - generic [ref=f12e156]: "Fase: Offerte → Lead"
+                - generic [ref=f12e157]: Els · 8 jul
+              - listitem [ref=f12e158]:
+                - generic [ref=f12e159]: "Fase: Lead → Gesprek"
+                - generic [ref=f12e160]: Els · 8 jul
+              - listitem [ref=f12e161]:
+                - generic [ref=f12e162]: "Fase: Gesprek → Lead"
+                - generic [ref=f12e163]: Els · 8 jul
+              - listitem [ref=f12e164]:
+                - generic [ref=f12e165]: "Fase: Lead → Gesprek"
+                - generic [ref=f12e166]: Els · 8 jul
+              - listitem [ref=f12e167]:
+                - generic [ref=f12e168]: Gebeld met Els over het vervolgtraject
+                - generic [ref=f12e169]: Els · 8 jul
+  - status [ref=f12e170]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f12e176] [cursor=pointer]:
+    - img [ref=f12e177]
+  - alert [ref=f12e180]

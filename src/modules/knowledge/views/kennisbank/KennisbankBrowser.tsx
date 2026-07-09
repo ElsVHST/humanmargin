@@ -219,7 +219,6 @@ function Browser({ initialDocs }: Props) {
   return (
     <div className="hm-view hm-kb">
       <div className="hm-view__head">
-        <h1 className="hm-view__title">Kennisbank</h1>
         <div className="hm-view__actions">
           <input
             className="hm-kb__zoek"

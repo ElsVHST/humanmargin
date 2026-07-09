@@ -1,0 +1,255 @@
+- generic [active] [ref=f7e1]:
+  - generic [ref=f7e303]:
+    - button "Open Menu" [ref=f7e305] [cursor=pointer]:
+      - generic "Open" [ref=f7e307]:
+        - img [ref=f7e308]
+    - generic [ref=f7e310]:
+      - complementary [ref=f7e311]:
+        - navigation [ref=f7e313]:
+          - button "Content" [ref=f7e315] [cursor=pointer]:
+            - generic [ref=f7e316]: Content
+            - img [ref=f7e318]
+          - button "Beheer" [ref=f7e321] [cursor=pointer]:
+            - generic [ref=f7e322]: Beheer
+            - img [ref=f7e324]
+          - generic [ref=f7e326]:
+            - button "CRM" [ref=f7e327] [cursor=pointer]:
+              - generic [ref=f7e328]: CRM
+              - img [ref=f7e330]
+            - generic [ref=f7e334]:
+              - link "Organisaties" [ref=f7e335] [cursor=pointer]:
+                - /url: /admin/collections/organisations
+                - generic [ref=f7e336]: Organisaties
+              - link "Contactpersonen" [ref=f7e337] [cursor=pointer]:
+                - /url: /admin/collections/contacts
+                - generic [ref=f7e338]: Contactpersonen
+              - link "Deals" [ref=f7e339] [cursor=pointer]:
+                - /url: /admin/collections/deals
+                - generic [ref=f7e341]: Deals
+              - link "Pipeline-fases" [ref=f7e342] [cursor=pointer]:
+                - /url: /admin/collections/deal-stages
+                - generic [ref=f7e343]: Pipeline-fases
+              - link "Activiteiten" [ref=f7e344] [cursor=pointer]:
+                - /url: /admin/collections/activities
+                - generic [ref=f7e345]: Activiteiten
+          - generic [ref=f7e346]:
+            - button "Projecten" [ref=f7e347] [cursor=pointer]:
+              - generic [ref=f7e348]: Projecten
+              - img [ref=f7e350]
+            - generic [ref=f7e354]:
+              - link "Projecten" [ref=f7e355] [cursor=pointer]:
+                - /url: /admin/collections/projects
+                - generic [ref=f7e356]: Projecten
+              - link "Taken" [ref=f7e357] [cursor=pointer]:
+                - /url: /admin/collections/tasks
+                - generic [ref=f7e358]: Taken
+              - link "Taakstatussen" [ref=f7e359] [cursor=pointer]:
+                - /url: /admin/collections/task-statuses
+                - generic [ref=f7e360]: Taakstatussen
+          - generic [ref=f7e361]:
+            - button "Kennisbank" [ref=f7e362] [cursor=pointer]:
+              - generic [ref=f7e363]: Kennisbank
+              - img [ref=f7e365]
+            - link "Kennisdocumenten" [ref=f7e370] [cursor=pointer]:
+              - /url: /admin/collections/knowledge-docs
+              - generic [ref=f7e371]: Kennisdocumenten
+          - generic [ref=f7e372]:
+            - button "Site" [ref=f7e373] [cursor=pointer]:
+              - generic [ref=f7e374]: Site
+              - img [ref=f7e376]
+            - generic [ref=f7e380]:
+              - link "Header / Navigatie" [ref=f7e381] [cursor=pointer]:
+                - /url: /admin/globals/header
+                - generic [ref=f7e382]: Header / Navigatie
+              - link "Footer" [ref=f7e383] [cursor=pointer]:
+                - /url: /admin/globals/footer
+                - generic [ref=f7e384]: Footer
+          - generic [ref=f7e385]:
+            - link "Pipeline" [ref=f7e386] [cursor=pointer]:
+              - /url: /admin/pipeline
+            - link "Taken" [ref=f7e387] [cursor=pointer]:
+              - /url: /admin/taken
+            - link "Kalender" [ref=f7e388] [cursor=pointer]:
+              - /url: /admin/kalender
+            - link "Kennisbank" [ref=f7e389] [cursor=pointer]:
+              - /url: /admin/kennisbank
+          - link "Log out" [ref=f7e391] [cursor=pointer]:
+            - /url: /admin/logout
+            - img [ref=f7e392]
+      - generic [ref=f7e396]:
+        - banner [ref=f7e397]:
+          - generic [ref=f7e400]:
+            - navigation [ref=f7e402]:
+              - link "Human Margin" [ref=f7e403] [cursor=pointer]:
+                - /url: /admin
+                - generic "Dashboard" [ref=f7e404]:
+                  - img "Human Margin" [ref=f7e405]
+              - generic [ref=f7e406]: /
+              - link "Deals" [ref=f7e407] [cursor=pointer]:
+                - /url: /admin/collections/deals
+                - generic [ref=f7e408]: Deals
+              - generic [ref=f7e409]: /
+              - generic [ref=f7e410]: Hoog risico-traject
+            - link "Account" [ref=f7e411] [cursor=pointer]:
+              - /url: /admin/account
+              - img "yas" [ref=f7e412]
+        - generic [ref=f7e414]:
+          - heading "Hoog risico-traject" [level=1] [ref=f7e415]
+          - list [ref=f7e418]:
+            - generic "Edit" [ref=f7e419]:
+              - generic:
+                - generic:
+                  - generic: Edit
+            - link "API" [ref=f7e420] [cursor=pointer]:
+              - /url: /admin/collections/deals/3/api
+              - generic:
+                - generic:
+                  - generic: API
+        - main [ref=f7e421]:
+          - generic [ref=f7e422]:
+            - generic [ref=f7e424]:
+              - list [ref=f7e426]:
+                - listitem "July 8th 2026, 10:25 AM" [ref=f7e427]:
+                  - paragraph [ref=f7e428]: "Last Modified:"
+                  - paragraph [ref=f7e429]: July 8th 2026, 10:25 AM
+                - listitem "July 8th 2026, 2:48 AM" [ref=f7e430]:
+                  - paragraph [ref=f7e431]: "Created:"
+                  - paragraph [ref=f7e432]: July 8th 2026, 2:48 AM
+              - generic [ref=f7e433]:
+                - button "Save" [disabled] [ref=f7e436]:
+                  - generic:
+                    - generic: Save
+                - button [ref=f7e439] [cursor=pointer]
+            - generic [ref=f7e447]:
+              - generic [ref=f7e450]:
+                - generic [ref=f7e451]:
+                  - generic [ref=f7e452]:
+                    - text: Titel
+                    - generic [ref=f7e453]: "*"
+                  - textbox "Titel *" [ref=f7e455]: Hoog risico-traject
+                - generic [ref=f7e457]:
+                  - generic [ref=f7e458]:
+                    - generic [ref=f7e459]: Bedrag
+                    - spinbutton "Bedrag" [ref=f7e462]: "8900"
+                  - generic [ref=f7e463]:
+                    - generic [ref=f7e464]: Valuta
+                    - generic [ref=f7e466]:
+                      - log [ref=f7e468]
+                      - generic [ref=f7e469]:
+                        - generic "€ EUR" [ref=f7e470]:
+                          - generic [ref=f7e471]:
+                            - generic [ref=f7e472]: € EUR
+                            - combobox [ref=f7e474]
+                        - generic [ref=f7e475]:
+                          - button [ref=f7e476] [cursor=pointer]:
+                            - img [ref=f7e477]
+                          - button [ref=f7e479] [cursor=pointer]:
+                            - img [ref=f7e480]
+                - generic [ref=f7e482]:
+                  - generic [ref=f7e483]: Fase
+                  - generic [ref=f7e484]:
+                    - generic [ref=f7e485]:
+                      - generic [ref=f7e486]:
+                        - log [ref=f7e488]
+                        - generic [ref=f7e489]:
+                          - generic "Lead" [ref=f7e490]:
+                            - generic [ref=f7e491]:
+                              - generic "Lead" [ref=f7e493]:
+                                - generic [ref=f7e494]:
+                                  - generic [ref=f7e495]: Lead
+                                  - button "Edit Lead" [ref=f7e496] [cursor=pointer]:
+                                    - img [ref=f7e497]
+                              - combobox [ref=f7e500]
+                          - generic [ref=f7e501]:
+                            - button [ref=f7e502] [cursor=pointer]:
+                              - img [ref=f7e503]
+                            - button [ref=f7e505] [cursor=pointer]:
+                              - img [ref=f7e506]
+                      - button "Add new Pipeline-fase" [ref=f7e509] [cursor=pointer]:
+                        - img [ref=f7e510]
+                    - generic [ref=f7e512]: Kolom op het pipeline-board. Leeg of verwijderde fase = kolom 'Geen fase'.
+                - generic [ref=f7e513]:
+                  - generic [ref=f7e514]: Organisatie
+                  - generic [ref=f7e516]:
+                    - generic [ref=f7e517]:
+                      - log [ref=f7e519]
+                      - generic [ref=f7e520]:
+                        - generic "Demo Consultancy BV" [ref=f7e521]:
+                          - generic [ref=f7e522]:
+                            - generic "Demo Consultancy BV" [ref=f7e524]:
+                              - generic [ref=f7e525]:
+                                - generic [ref=f7e526]: Demo Consultancy BV
+                                - button "Edit Demo Consultancy BV" [ref=f7e527] [cursor=pointer]:
+                                  - img [ref=f7e528]
+                            - combobox [ref=f7e531]
+                        - generic [ref=f7e532]:
+                          - button [ref=f7e533] [cursor=pointer]:
+                            - img [ref=f7e534]
+                          - button [ref=f7e536] [cursor=pointer]:
+                            - img [ref=f7e537]
+                    - button "Add new Organisatie" [ref=f7e540] [cursor=pointer]:
+                      - img [ref=f7e541]
+                - generic [ref=f7e543]:
+                  - generic [ref=f7e544]: Contactpersoon
+                  - generic [ref=f7e546]:
+                    - generic [ref=f7e547]:
+                      - log [ref=f7e549]
+                      - generic [ref=f7e550]:
+                        - generic [ref=f7e552]:
+                          - generic [ref=f7e553]: Select a value
+                          - combobox [ref=f7e555]
+                        - button [ref=f7e557] [cursor=pointer]:
+                          - img [ref=f7e558]
+                    - button "Add new Contactpersoon" [ref=f7e561] [cursor=pointer]:
+                      - img [ref=f7e562]
+                - generic [ref=f7e564]:
+                  - heading "Tijdlijn" [level=3] [ref=f7e565]
+                  - generic [ref=f7e566]:
+                    - textbox "Notitie toevoegen…" [ref=f7e567]
+                    - button "Toevoegen" [disabled] [ref=f7e568]
+                  - paragraph [ref=f7e569]: Laden…
+              - generic [ref=f7e573]:
+                - generic [ref=f7e574]:
+                  - generic [ref=f7e575]:
+                    - text: Uitkomst
+                    - generic [ref=f7e576]: "*"
+                  - generic [ref=f7e578]:
+                    - log [ref=f7e580]
+                    - generic [ref=f7e581]:
+                      - generic "Open" [ref=f7e582]:
+                        - generic [ref=f7e583]:
+                          - generic [ref=f7e584]: Open
+                          - combobox [ref=f7e586]
+                      - generic [ref=f7e587]:
+                        - button [ref=f7e588] [cursor=pointer]:
+                          - img [ref=f7e589]
+                        - button [ref=f7e591] [cursor=pointer]:
+                          - img [ref=f7e592]
+                - generic [ref=f7e594]:
+                  - generic [ref=f7e595]: Verwachte sluitdatum
+                  - generic [ref=f7e597]:
+                    - generic:
+                      - img
+                    - textbox [ref=f7e601]
+                - generic [ref=f7e602]:
+                  - generic [ref=f7e603]: Kans (%)
+                  - spinbutton "Kans (%)" [ref=f7e606]
+                - generic [ref=f7e607]:
+                  - generic [ref=f7e608]: Eigenaar
+                  - generic [ref=f7e610]:
+                    - generic [ref=f7e611]:
+                      - log [ref=f7e613]
+                      - generic [ref=f7e614]:
+                        - generic [ref=f7e616]:
+                          - generic [ref=f7e617]: Select a value
+                          - combobox [ref=f7e619]
+                        - button [ref=f7e621] [cursor=pointer]:
+                          - img [ref=f7e622]
+                    - button "Add new Gebruiker" [ref=f7e625] [cursor=pointer]:
+                      - img [ref=f7e626]
+        - status [ref=f7e628]
+  - status [ref=f7e301]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f7e193] [cursor=pointer]:
+    - img [ref=f7e194]
+  - alert [ref=f7e302]: Editing - Deal — Human Margin CMS

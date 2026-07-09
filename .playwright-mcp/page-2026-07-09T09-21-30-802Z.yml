@@ -1,0 +1,150 @@
+- generic [active] [ref=f7e1]:
+  - generic [ref=f7e2]:
+    - button "Close Menu" [ref=f7e4] [cursor=pointer]:
+      - generic "Collapse" [ref=f7e6]:
+        - img [ref=f7e7]
+    - generic [ref=f7e10]:
+      - banner [ref=f7e11]:
+        - generic [ref=f7e14]:
+          - generic "Dashboard" [ref=f7e18]:
+            - img "Human Margin" [ref=f7e19]
+          - link "Account" [ref=f7e20] [cursor=pointer]:
+            - /url: /admin/account
+            - img "yas" [ref=f7e21]
+      - generic [ref=f7e23]:
+        - banner [ref=f7e24]:
+          - generic [ref=f7e25]:
+            - generic [ref=f7e26]:
+              - heading "Deals" [level=1] [ref=f7e27]
+              - link "Create new Deal" [ref=f7e29] [cursor=pointer]:
+                - /url: /admin/collections/deals/create
+                - generic:
+                  - generic: Create New
+            - generic [ref=f7e31]:
+              - button "All Deals" [disabled] [ref=f7e32]:
+                - generic:
+                  - generic: All Deals
+              - button "Trash" [ref=f7e33] [cursor=pointer]:
+                - generic:
+                  - generic: Trash
+        - generic [ref=f7e35]:
+          - img
+          - textbox "Search by Titel" [ref=f7e37]
+          - generic [ref=f7e38]:
+            - button "Columns" [disabled] [ref=f7e39] [cursor=pointer]:
+              - generic [ref=f7e40]: Columns
+              - img [ref=f7e42]
+            - button "Filters" [disabled] [ref=f7e44] [cursor=pointer]:
+              - generic [ref=f7e45]: Filters
+              - img [ref=f7e47]
+        - table [ref=f7e52]:
+          - rowgroup [ref=f7e53]:
+            - row "select-all Titel Sort by Titel Ascending Sort by Titel Descending Organisatie Sort by Organisatie Ascending Sort by Organisatie Descending Fase Sort by Fase Ascending Sort by Fase Descending Uitkomst Sort by Uitkomst Ascending Sort by Uitkomst Descending Bedrag Sort by Bedrag Ascending Sort by Bedrag Descending" [ref=f7e54]:
+              - columnheader "select-all" [ref=f7e55]:
+                - checkbox "select-all" [disabled] [ref=f7e58]
+              - columnheader "Titel Sort by Titel Ascending Sort by Titel Descending" [ref=f7e59]:
+                - generic [ref=f7e60]:
+                  - generic [ref=f7e61]: Titel
+                  - generic [ref=f7e62]:
+                    - button "Sort by Titel Ascending" [ref=f7e63] [cursor=pointer]:
+                      - img [ref=f7e64]
+                    - button "Sort by Titel Descending" [ref=f7e66] [cursor=pointer]:
+                      - img [ref=f7e67]
+              - columnheader "Organisatie Sort by Organisatie Ascending Sort by Organisatie Descending" [ref=f7e69]:
+                - generic [ref=f7e70]:
+                  - generic [ref=f7e71]: Organisatie
+                  - generic [ref=f7e72]:
+                    - button "Sort by Organisatie Ascending" [ref=f7e73] [cursor=pointer]:
+                      - img [ref=f7e74]
+                    - button "Sort by Organisatie Descending" [ref=f7e76] [cursor=pointer]:
+                      - img [ref=f7e77]
+              - columnheader "Fase Sort by Fase Ascending Sort by Fase Descending" [ref=f7e79]:
+                - generic [ref=f7e80]:
+                  - generic [ref=f7e81]: Fase
+                  - generic [ref=f7e82]:
+                    - button "Sort by Fase Ascending" [ref=f7e83] [cursor=pointer]:
+                      - img [ref=f7e84]
+                    - button "Sort by Fase Descending" [ref=f7e86] [cursor=pointer]:
+                      - img [ref=f7e87]
+              - columnheader "Uitkomst Sort by Uitkomst Ascending Sort by Uitkomst Descending" [ref=f7e89]:
+                - generic [ref=f7e90]:
+                  - generic [ref=f7e91]: Uitkomst
+                  - generic [ref=f7e92]:
+                    - button "Sort by Uitkomst Ascending" [ref=f7e93] [cursor=pointer]:
+                      - img [ref=f7e94]
+                    - button "Sort by Uitkomst Descending" [ref=f7e96] [cursor=pointer]:
+                      - img [ref=f7e97]
+              - columnheader "Bedrag Sort by Bedrag Ascending Sort by Bedrag Descending" [ref=f7e99]:
+                - generic [ref=f7e100]:
+                  - generic [ref=f7e101]: Bedrag
+                  - generic [ref=f7e102]:
+                    - button "Sort by Bedrag Ascending" [ref=f7e103] [cursor=pointer]:
+                      - img [ref=f7e104]
+                    - button "Sort by Bedrag Descending" [ref=f7e106] [cursor=pointer]:
+                      - img [ref=f7e107]
+          - rowgroup [ref=f7e109]:
+            - row "Losse workshop (nog geen fase) <No Organisatie> <No Fase> Open 950" [ref=f7e110]:
+              - cell [ref=f7e111]:
+                - checkbox [disabled] [ref=f7e114]
+              - cell "Losse workshop (nog geen fase)" [ref=f7e115]:
+                - link "Losse workshop (nog geen fase)" [ref=f7e116] [cursor=pointer]:
+                  - /url: /admin/collections/deals/4
+              - cell "<No Organisatie>" [ref=f7e117]:
+                - generic [ref=f7e119]: <No Organisatie>
+              - cell "<No Fase>" [ref=f7e120]:
+                - generic [ref=f7e122]: <No Fase>
+              - cell "Open" [ref=f7e123]:
+                - generic [ref=f7e124]: Open
+              - cell "950" [ref=f7e125]:
+                - generic [ref=f7e126]: "950"
+            - row "Hoog risico-traject <No Organisatie> <No Fase> Open 8900" [ref=f7e127]:
+              - cell [ref=f7e128]:
+                - checkbox [disabled] [ref=f7e131]
+              - cell "Hoog risico-traject" [ref=f7e132]:
+                - link "Hoog risico-traject" [ref=f7e133] [cursor=pointer]:
+                  - /url: /admin/collections/deals/3
+              - cell "<No Organisatie>" [ref=f7e134]:
+                - generic [ref=f7e136]: <No Organisatie>
+              - cell "<No Fase>" [ref=f7e137]:
+                - generic [ref=f7e139]: <No Fase>
+              - cell "Open" [ref=f7e140]:
+                - generic [ref=f7e141]: Open
+              - cell "8900" [ref=f7e142]:
+                - generic [ref=f7e143]: "8900"
+            - row "AICK Sprint najaar <No Organisatie> <No Fase> Open 4500" [ref=f7e144]:
+              - cell [ref=f7e145]:
+                - checkbox [disabled] [ref=f7e148]
+              - cell "AICK Sprint najaar" [ref=f7e149]:
+                - link "AICK Sprint najaar" [ref=f7e150] [cursor=pointer]:
+                  - /url: /admin/collections/deals/2
+              - cell "<No Organisatie>" [ref=f7e151]:
+                - generic [ref=f7e153]: <No Organisatie>
+              - cell "<No Fase>" [ref=f7e154]:
+                - generic [ref=f7e156]: <No Fase>
+              - cell "Open" [ref=f7e157]:
+                - generic [ref=f7e158]: Open
+              - cell "4500" [ref=f7e159]:
+                - generic [ref=f7e160]: "4500"
+            - row "TEAM op maat — verkenning <No Organisatie> <No Fase> Open 3500" [ref=f7e161]:
+              - cell [ref=f7e162]:
+                - checkbox [disabled] [ref=f7e165]
+              - cell "TEAM op maat — verkenning" [ref=f7e166]:
+                - link "TEAM op maat — verkenning" [ref=f7e167] [cursor=pointer]:
+                  - /url: /admin/collections/deals/1
+              - cell "<No Organisatie>" [ref=f7e168]:
+                - generic [ref=f7e170]: <No Organisatie>
+              - cell "<No Fase>" [ref=f7e171]:
+                - generic [ref=f7e173]: <No Fase>
+              - cell "Open" [ref=f7e174]:
+                - generic [ref=f7e175]: Open
+              - cell "3500" [ref=f7e176]:
+                - generic [ref=f7e177]: "3500"
+        - generic [ref=f7e178]:
+          - generic [ref=f7e179]: 1-4 of 4
+          - 'button "Per Page: 10" [ref=f7e183] [cursor=pointer]':
+            - generic [ref=f7e184]:
+              - generic [ref=f7e185]: "Per Page: 10"
+              - img [ref=f7e186]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f7e193] [cursor=pointer]:
+    - img [ref=f7e194]

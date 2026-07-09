@@ -28,9 +28,9 @@ import { MetaImageComponent as MetaImageComponent_a8a977ebc872c5d5ea7ee689724c08
 import { PreviewComponent as PreviewComponent_a8a977ebc872c5d5ea7ee689724c0860 } from '@payloadcms/plugin-seo/client'
 import { TimelineField as TimelineField_ddadcaa27f5ac1c323b1bd7501bcec73 } from '../../../components/admin/Timeline'
 import { NieuwsbriefStatusField as NieuwsbriefStatusField_1ad3c41e669439371709c47c6eb8f2fa } from '../../../components/admin/NieuwsbriefStatus'
+import { Rail as Rail_09fc4ff3d27039efcc770a38e8ee3394 } from '../../../components/admin/shell/Rail'
 import { Icon as Icon_dfe4008080d895d460898c3a6155e9ba } from '../../../components/admin/Icon'
 import { Logo as Logo_91a09b539d3c86b0aebf520e7564ce08 } from '../../../components/admin/Logo'
-import { DashboardNavLinks as DashboardNavLinks_f6287bcb61e11205475b555cb042f203 } from '../../../components/admin/DashboardNavLinks'
 import { HomeView as HomeView_0ff1cdb8ae1b9a3ca44a9d7c3acd510a } from '../../../modules/shared/views/home/HomeView'
 import { PipelineView as PipelineView_c2d7079cb045a404329cfb047e31eb9a } from '../../../modules/crm/views/pipeline/PipelineView'
 import { TakenView as TakenView_b658dd106fd11b3e14cedee19664119f } from '../../../modules/projects/views/taken/TakenView'
@@ -70,9 +70,9 @@ export const importMap = {
   "@payloadcms/plugin-seo/client#PreviewComponent": PreviewComponent_a8a977ebc872c5d5ea7ee689724c0860,
   "/components/admin/Timeline#TimelineField": TimelineField_ddadcaa27f5ac1c323b1bd7501bcec73,
   "/components/admin/NieuwsbriefStatus#NieuwsbriefStatusField": NieuwsbriefStatusField_1ad3c41e669439371709c47c6eb8f2fa,
+  "/components/admin/shell/Rail#Rail": Rail_09fc4ff3d27039efcc770a38e8ee3394,
   "/components/admin/Icon#Icon": Icon_dfe4008080d895d460898c3a6155e9ba,
   "/components/admin/Logo#Logo": Logo_91a09b539d3c86b0aebf520e7564ce08,
-  "/components/admin/DashboardNavLinks#DashboardNavLinks": DashboardNavLinks_f6287bcb61e11205475b555cb042f203,
   "/modules/shared/views/home/HomeView#HomeView": HomeView_0ff1cdb8ae1b9a3ca44a9d7c3acd510a,
   "/modules/crm/views/pipeline/PipelineView#PipelineView": PipelineView_c2d7079cb045a404329cfb047e31eb9a,
   "/modules/projects/views/taken/TakenView#TakenView": TakenView_b658dd106fd11b3e14cedee19664119f,

@@ -1,0 +1,77 @@
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - button "Close Menu" [ref=f4e4] [cursor=pointer]:
+      - generic "Collapse" [ref=f4e6]:
+        - img [ref=f4e7]
+    - generic [ref=f4e10]:
+      - banner [ref=f4e11]:
+        - generic [ref=f4e14]:
+          - generic "Dashboard" [ref=f4e18]:
+            - img "Human Margin" [ref=f4e19]
+          - link "Account" [ref=f4e20] [cursor=pointer]:
+            - /url: /admin/account
+            - img "yas" [ref=f4e21]
+      - generic [ref=f4e22]:
+        - heading "Taken" [level=1] [ref=f4e23]
+        - generic [ref=f4e24]:
+          - generic [ref=f4e25]:
+            - combobox [ref=f4e26] [cursor=pointer]:
+              - option "Alle projecten" [selected]
+              - option "Website-lancering Els"
+            - combobox [ref=f4e27] [cursor=pointer]:
+              - option "Iedereen" [selected]
+          - generic [ref=f4e28]:
+            - generic [ref=f4e29]:
+              - generic [ref=f4e30]:
+                - button "Geen status" [disabled] [ref=f4e32]
+                - generic [ref=f4e33]: "1"
+              - button "Losse taak zonder project Laag" [ref=f4e35]:
+                - generic [ref=f4e36]: Losse taak zonder project
+                - generic [ref=f4e39]: Laag
+              - link "+ Taak" [ref=f4e40] [cursor=pointer]:
+                - /url: /admin/collections/tasks/create
+            - generic [ref=f4e41]:
+              - generic [ref=f4e42]:
+                - button "To-do" [ref=f4e44] [cursor=pointer]
+                - generic [ref=f4e45]: "2"
+                - button "Kolom To-do verwijderen" [ref=f4e46] [cursor=pointer]: ×
+              - generic [ref=f4e47]:
+                - button "Website-lancering Els Teksten reviewen Hoog 7 jul" [ref=f4e48]:
+                  - generic [ref=f4e50]: Website-lancering Els
+                  - generic [ref=f4e51]: Teksten reviewen
+                  - generic [ref=f4e53]:
+                    - generic [ref=f4e54]: Hoog
+                    - generic [ref=f4e55]: 7 jul
+                - button "Website-lancering Els DNS omzetten" [ref=f4e56]:
+                  - generic [ref=f4e58]: Website-lancering Els
+                  - generic [ref=f4e59]: DNS omzetten
+              - link "+ Taak" [ref=f4e60] [cursor=pointer]:
+                - /url: /admin/collections/tasks/create
+            - generic [ref=f4e61]:
+              - generic [ref=f4e62]:
+                - button "Bezig" [ref=f4e64] [cursor=pointer]
+                - generic [ref=f4e65]: "1"
+                - button "Kolom Bezig verwijderen" [ref=f4e66] [cursor=pointer]: ×
+              - button "Website-lancering Els Nieuwsbrief aankondiging schrijven" [ref=f4e68]:
+                - generic [ref=f4e70]: Website-lancering Els
+                - generic [ref=f4e71]: Nieuwsbrief aankondiging schrijven
+              - link "+ Taak" [ref=f4e72] [cursor=pointer]:
+                - /url: /admin/collections/tasks/create
+            - generic [ref=f4e73]:
+              - generic [ref=f4e74]:
+                - button "Review" [ref=f4e76] [cursor=pointer]
+                - generic [ref=f4e77]: "0"
+                - button "Kolom Review verwijderen" [ref=f4e78] [cursor=pointer]: ×
+              - link "+ Taak" [ref=f4e80] [cursor=pointer]:
+                - /url: /admin/collections/tasks/create
+            - generic [ref=f4e81]:
+              - generic [ref=f4e82]:
+                - button "Klaar" [ref=f4e84] [cursor=pointer]
+                - generic [ref=f4e85]: "0"
+                - button "Kolom Klaar verwijderen" [ref=f4e86] [cursor=pointer]: ×
+              - link "+ Taak" [ref=f4e88] [cursor=pointer]:
+                - /url: /admin/collections/tasks/create
+            - button "+ Status" [ref=f4e89] [cursor=pointer]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f4e95] [cursor=pointer]:
+    - img [ref=f4e96]

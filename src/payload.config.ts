@@ -48,7 +48,7 @@ export default buildConfig({
         Logo: "/components/admin/Logo#Logo",
         Icon: "/components/admin/Icon#Icon",
       },
-      afterNavLinks: ["/components/admin/DashboardNavLinks#DashboardNavLinks"],
+      Nav: "/components/admin/shell/Rail#Rail",
       views: {
         dashboard: {
           Component: "/modules/shared/views/home/HomeView#HomeView",

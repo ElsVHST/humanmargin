@@ -3,6 +3,7 @@ import { Gutter } from "@payloadcms/ui";
 import type { AdminViewServerProps } from "payload";
 import React from "react";
 
+import { Topbar } from "@/components/admin/shell/Topbar";
 import { KennisbankBrowser } from "@/modules/knowledge/views/kennisbank/KennisbankBrowser";
 
 export async function KennisbankView({
@@ -31,6 +32,7 @@ export async function KennisbankView({
       user={user ?? undefined}
       visibleEntities={visibleEntities}
     >
+      <Topbar titel="Kennisbank" />
       <Gutter>
         <KennisbankBrowser initialDocs={docs.docs} />
       </Gutter>

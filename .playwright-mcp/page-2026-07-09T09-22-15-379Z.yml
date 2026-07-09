@@ -1,0 +1,97 @@
+- generic [active] [ref=f8e1]:
+  - generic [ref=f8e2]:
+    - button "Close Menu" [ref=f8e4] [cursor=pointer]:
+      - generic "Collapse" [ref=f8e6]:
+        - img [ref=f8e7]
+    - generic [ref=f8e10]:
+      - banner [ref=f8e11]:
+        - generic [ref=f8e14]:
+          - generic "Dashboard" [ref=f8e18]:
+            - img "Human Margin" [ref=f8e19]
+          - link "Account" [ref=f8e20] [cursor=pointer]:
+            - /url: /admin/account
+            - img "yas" [ref=f8e21]
+      - generic [ref=f8e23]:
+        - banner [ref=f8e24]:
+          - generic [ref=f8e25]:
+            - generic [ref=f8e26]:
+              - heading "Pipeline-fases" [level=1] [ref=f8e27]
+              - link "Create new Pipeline-fase" [ref=f8e29] [cursor=pointer]:
+                - /url: /admin/collections/deal-stages/create
+                - generic:
+                  - generic: Create New
+            - generic [ref=f8e31]:
+              - button "All Pipeline-fases" [disabled] [ref=f8e32]:
+                - generic:
+                  - generic: All Pipeline-fases
+              - button "Trash" [ref=f8e33] [cursor=pointer]:
+                - generic:
+                  - generic: Trash
+        - generic [ref=f8e35]:
+          - img
+          - textbox "Search by Naam" [ref=f8e37]
+          - generic [ref=f8e38]:
+            - button "Columns" [disabled] [ref=f8e39] [cursor=pointer]:
+              - generic [ref=f8e40]: Columns
+              - img [ref=f8e42]
+            - button "Filters" [disabled] [ref=f8e44] [cursor=pointer]:
+              - generic [ref=f8e45]: Filters
+              - img [ref=f8e47]
+        - table [ref=f8e53]:
+          - rowgroup [ref=f8e54]:
+            - row "Sort by Order Ascending select-all Naam Sort by Naam Ascending Sort by Naam Descending Kleur Sort by Kleur Ascending Sort by Kleur Descending" [ref=f8e55]:
+              - columnheader "Sort by Order Ascending" [ref=f8e56]:
+                - button "Sort by Order Ascending" [ref=f8e59] [cursor=pointer]:
+                  - img [ref=f8e60]
+              - columnheader "select-all" [ref=f8e62]:
+                - checkbox "select-all" [disabled] [ref=f8e65]
+              - columnheader "Naam Sort by Naam Ascending Sort by Naam Descending" [ref=f8e66]:
+                - generic [ref=f8e67]:
+                  - generic [ref=f8e68]: Naam
+                  - generic [ref=f8e69]:
+                    - button "Sort by Naam Ascending" [ref=f8e70] [cursor=pointer]:
+                      - img [ref=f8e71]
+                    - button "Sort by Naam Descending" [ref=f8e73] [cursor=pointer]:
+                      - img [ref=f8e74]
+              - columnheader "Kleur Sort by Kleur Ascending Sort by Kleur Descending" [ref=f8e76]:
+                - generic [ref=f8e77]:
+                  - generic [ref=f8e78]: Kleur
+                  - generic [ref=f8e79]:
+                    - button "Sort by Kleur Ascending" [ref=f8e80] [cursor=pointer]:
+                      - img [ref=f8e81]
+                    - button "Sort by Kleur Descending" [ref=f8e83] [cursor=pointer]:
+                      - img [ref=f8e84]
+          - rowgroup [ref=f8e86]:
+            - row [ref=f8e87]:
+              - cell [ref=f8e88]:
+                - button
+              - cell [ref=f8e89]
+              - cell [ref=f8e90]
+              - cell [ref=f8e91]
+            - row [ref=f8e92]:
+              - cell [ref=f8e93]:
+                - button
+              - cell [ref=f8e94]
+              - cell [ref=f8e95]
+              - cell [ref=f8e96]
+            - row [ref=f8e97]:
+              - cell [ref=f8e98]:
+                - button
+              - cell [ref=f8e99]
+              - cell [ref=f8e100]
+              - cell [ref=f8e101]
+            - row [ref=f8e102]:
+              - cell [ref=f8e103]:
+                - button
+              - cell [ref=f8e104]
+              - cell [ref=f8e105]
+              - cell [ref=f8e106]
+        - generic [ref=f8e107]:
+          - generic [ref=f8e108]: 1-4 of 4
+          - 'button "Per Page: 10" [ref=f8e112] [cursor=pointer]':
+            - generic [ref=f8e113]:
+              - generic [ref=f8e114]: "Per Page: 10"
+              - img [ref=f8e115]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f8e122] [cursor=pointer]:
+    - img [ref=f8e123]

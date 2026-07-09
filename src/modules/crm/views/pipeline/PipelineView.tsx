@@ -3,6 +3,7 @@ import { Gutter } from "@payloadcms/ui";
 import type { AdminViewServerProps } from "payload";
 import React from "react";
 
+import { Topbar } from "@/components/admin/shell/Topbar";
 import { PipelineBoard } from "@/modules/crm/views/pipeline/PipelineBoard";
 
 export async function PipelineView({
@@ -40,8 +41,8 @@ export async function PipelineView({
       user={user ?? undefined}
       visibleEntities={visibleEntities}
     >
+      <Topbar titel="Pipeline" />
       <Gutter>
-        <h1 className="hm-pipeline__titel">Pipeline</h1>
         <PipelineBoard
           initialStages={stages.docs}
           initialDeals={deals.docs}
