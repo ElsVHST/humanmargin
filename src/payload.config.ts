@@ -71,7 +71,8 @@ export default buildConfig({
         },
       },
     },
-    theme: "light",
+    // Licht én donker: volgt OS-voorkeur; wisselen kan in het account-menu
+    theme: "all",
   },
   // Alleen Nederlands: geen taalmix meer, ongeacht gebruikersvoorkeur
   i18n: { supportedLanguages: { nl }, fallbackLanguage: "nl" },

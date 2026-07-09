@@ -553,3 +553,49 @@
     transition: none;
   }
 }
+
+/* ── Dark mode: toast leest beter geïnverteerd ────────────────────────── */
+html[data-theme="dark"] .hm-toast {
+  background: #f4f4f1;
+  color: #111010;
+
+  &.hm-toast--fout {
+    background: var(--hm-rood);
+    color: #fff;
+  }
+}
+
+/* ── Mobiel: kolom-snap + offsets boven de tab-bar ───────────────────── */
+@media (max-width: 760px) {
+  .hm-pipeline__board {
+    scroll-snap-type: x proximity;
+  }
+
+  .hm-pipeline__kolom {
+    scroll-snap-align: start;
+    width: min(282px, 82vw);
+  }
+
+  .hm-dragbar {
+    bottom: 60px;
+    left: 0;
+  }
+
+  .hm-toast {
+    bottom: 76px;
+    left: 12px;
+    right: 12px;
+  }
+}
+
+/* Mobiel: toolbar compact — knop niet breken, samenvatting op eigen regel */
+@media (max-width: 760px) {
+  .hm-board__bar .hm-btn {
+    white-space: nowrap;
+  }
+
+  .hm-board__samenvatting {
+    flex-basis: 100%;
+    order: 3;
+  }
+}

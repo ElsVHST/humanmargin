@@ -805,3 +805,17 @@
   padding: 9px 11px;
   width: 100%;
 }
+
+/* ── Mobiel: tabel scrollt, multibalk boven de tab-bar ────────────────── */
+@media (max-width: 760px) {
+  .hm-kb__tabel {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .hm-kb__multibalk {
+    bottom: 76px;
+    max-width: calc(100vw - 24px);
+  }
+}

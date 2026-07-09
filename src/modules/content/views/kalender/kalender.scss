@@ -302,3 +302,15 @@ h1.hm-pipeline__titel {
   font-size: 1.7rem;
   margin: 0 0 1.25rem;
 }
+
+/* ── Mobiel: maandgrid behoudt leesbare dagcellen en scrolt horizontaal ── */
+@media (max-width: 760px) {
+  .hm-kalender__grid {
+    grid-template-columns: repeat(7, minmax(92px, 1fr));
+    min-width: 660px;
+  }
+
+  .hm-kalender {
+    overflow-x: auto;
+  }
+}

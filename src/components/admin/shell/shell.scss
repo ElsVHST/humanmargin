@@ -226,6 +226,58 @@
   }
 }
 
+/* ── Mobiel: rail wordt een bottom-tab-bar (app-gevoel) ───────────────── */
+@media (max-width: 760px) {
+  .template-default,
+  .template-default--nav-hydrated,
+  .template-default--nav-open,
+  .template-default--nav-hydrated.template-default--nav-open {
+    grid-template-columns: 0 auto !important;
+  }
+
+  /* Rail is fixed (uit de grid-flow) → wrap moet zelf de volle breedte pakken */
+  .template-default__wrap {
+    grid-column: 1 / -1;
+    padding-bottom: 64px;
+  }
+
+  .hm-rail {
+    align-items: center;
+    border-top: 1px solid rgba(244, 244, 241, 0.14);
+    bottom: 0;
+    flex-direction: row;
+    gap: 0;
+    height: 60px;
+    justify-content: space-around;
+    left: 0;
+    padding: 0 6px;
+    position: fixed;
+    right: 0;
+    top: auto;
+    width: 100%;
+    z-index: 65;
+  }
+
+  .hm-rail__logo,
+  .hm-rail__sep,
+  .hm-rail__foot,
+  .hm-rail__sep + .hm-rail__group, /* beheer-zone → via topbar/menu op mobiel */
+  .hm-rail__tip {
+    display: none;
+  }
+
+  .hm-rail__group {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .hm-rail__item {
+    height: 44px;
+    width: 44px;
+  }
+}
+
 /* Ronde quick-add-knop */
 .hm-topbar__plus {
   display: flex;
@@ -423,4 +475,9 @@
   .hm-zoek__backdrop {
     animation: none;
   }
+}
+
+/* Dark mode: tooltip en menu's licht randje voor contrast op donker vlak */
+html[data-theme="dark"] .hm-rail__tip {
+  border: 1px solid rgba(244, 244, 241, 0.22);
 }
