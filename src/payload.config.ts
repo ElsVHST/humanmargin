@@ -56,6 +56,10 @@ export default buildConfig({
           Component: "/modules/crm/views/pipeline/PipelineView#PipelineView",
           path: "/pipeline",
         },
+        relaties: {
+          Component: "/modules/crm/views/relaties/RelatiesView#RelatiesView",
+          path: "/relaties",
+        },
         taken: {
           Component: "/modules/projects/views/taken/TakenView#TakenView",
           path: "/taken",

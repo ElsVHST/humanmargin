@@ -875,6 +875,8 @@ export interface Organisation {
     hasNextPage?: boolean;
     totalDocs?: number;
   };
+  relatietype?: ('prospect' | 'lead' | 'klant' | 'partner' | 'overig') | null;
+  doelgroep?: ('zzp' | 'mkb' | 'aanbieder' | 'overig') | null;
   tags?: string[] | null;
   eigenaar?: (number | null) | User;
   updatedAt: string;
@@ -906,6 +908,8 @@ export interface Contact {
     totalDocs?: number;
   };
   bron?: string | null;
+  relatietype?: ('prospect' | 'lead' | 'klant' | 'partner' | 'overig') | null;
+  doelgroep?: ('zzp' | 'mkb' | 'aanbieder' | 'overig') | null;
   tags?: string[] | null;
   eigenaar?: (number | null) | User;
   updatedAt: string;
@@ -1842,6 +1846,8 @@ export interface OrganisationsSelect<T extends boolean = true> {
   contacten?: T;
   deals?: T;
   projecten?: T;
+  relatietype?: T;
+  doelgroep?: T;
   tags?: T;
   eigenaar?: T;
   updatedAt?: T;
@@ -1865,6 +1871,8 @@ export interface ContactsSelect<T extends boolean = true> {
   organisatie?: T;
   deals?: T;
   bron?: T;
+  relatietype?: T;
+  doelgroep?: T;
   tags?: T;
   eigenaar?: T;
   updatedAt?: T;

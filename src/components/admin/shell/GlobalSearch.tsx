@@ -22,13 +22,13 @@ const BRONNEN: Bron[] = [
     slug: "organisations",
     label: "Organisaties",
     veld: "naam",
-    href: (id) => `/admin/pipeline?organisatie=${id}`,
+    href: (id) => `/admin/relaties?organisatie=${id}`,
   },
   {
     slug: "contacts",
     label: "Contactpersonen",
     veld: "naam",
-    href: (id) => `/admin/pipeline?contact=${id}`,
+    href: (id) => `/admin/relaties?contact=${id}`,
   },
   {
     slug: "projects",

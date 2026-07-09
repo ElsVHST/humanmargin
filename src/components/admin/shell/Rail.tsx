@@ -5,6 +5,7 @@ import type { LucideIcon } from "lucide-react";
 import {
   BookOpen,
   CalendarDays,
+  Contact,
   FileText,
   House,
   Image as ImageIcon,
@@ -35,6 +36,7 @@ type RailLink = {
 const WERKEN: RailLink[] = [
   { href: "/admin", label: "Home", Icoon: House, exact: true },
   { href: "/admin/pipeline", label: "Pipeline", Icoon: SquareKanban },
+  { href: "/admin/relaties", label: "Relaties", Icoon: Contact },
   { href: "/admin/taken", label: "Taken", Icoon: SquareCheck },
   { href: "/admin/kalender", label: "Kalender", Icoon: CalendarDays },
   { href: "/admin/kennisbank", label: "Kennisbank", Icoon: BookOpen },

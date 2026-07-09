@@ -17,8 +17,8 @@ const QUICK_ADD: { label: string; href: string }[] = [
   { label: "Deal", href: "/admin/pipeline?deal=nieuw" },
   { label: "Taak", href: "/admin/taken?taak=nieuw" },
   { label: "Content", href: "/admin/kalender?item=nieuw" },
-  { label: "Organisatie", href: "/admin/pipeline?organisatie=nieuw" },
-  { label: "Contactpersoon", href: "/admin/pipeline?contact=nieuw" },
+  { label: "Organisatie", href: "/admin/relaties?organisatie=nieuw" },
+  { label: "Contactpersoon", href: "/admin/relaties?contact=nieuw" },
   { label: "Kennisdocument", href: "/admin/kennisbank" },
 ];
 

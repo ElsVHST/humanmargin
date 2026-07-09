@@ -41,6 +41,33 @@ export const Organisations: CollectionConfig = {
       collection: "projects",
       on: "organisatie",
     },
+    {
+      // Leadlijst-basis (Pipedrive-labels): waar staat deze relatie?
+      name: "relatietype",
+      label: "Relatietype",
+      type: "select",
+      defaultValue: "prospect",
+      options: [
+        { label: "Prospect", value: "prospect" },
+        { label: "Lead", value: "lead" },
+        { label: "Klant", value: "klant" },
+        { label: "Partner", value: "partner" },
+        { label: "Overig", value: "overig" },
+      ],
+      admin: { position: "sidebar" },
+    },
+    {
+      name: "doelgroep",
+      label: "Doelgroep",
+      type: "select",
+      options: [
+        { label: "ZZP", value: "zzp" },
+        { label: "MKB", value: "mkb" },
+        { label: "Aanbieder", value: "aanbieder" },
+        { label: "Overig", value: "overig" },
+      ],
+      admin: { position: "sidebar" },
+    },
     tagsField,
     eigenaarField,
     {

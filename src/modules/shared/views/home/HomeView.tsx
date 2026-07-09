@@ -69,9 +69,9 @@ function activiteitHref(a: Activity): string | null {
     case "deals":
       return `/admin/pipeline?deal=${id}`;
     case "organisations":
-      return `/admin/pipeline?organisatie=${id}`;
+      return `/admin/relaties?organisatie=${id}`;
     case "contacts":
-      return `/admin/pipeline?contact=${id}`;
+      return `/admin/relaties?contact=${id}`;
     case "tasks":
       return `/admin/taken?taak=${id}`;
     case "content-items":
@@ -187,7 +187,7 @@ export async function HomeView({ initPageResult }: AdminViewServerProps) {
           <Link href="/admin/pipeline?deal=nieuw">+ Deal</Link>
           <Link href="/admin/taken?taak=nieuw">+ Taak</Link>
           <Link href="/admin/kalender?item=nieuw">+ Content</Link>
-          <Link href="/admin/pipeline?organisatie=nieuw">
+          <Link href="/admin/relaties?organisatie=nieuw">
             + Organisatie
           </Link>
           <Link href="/admin/collections/knowledge-docs/create">

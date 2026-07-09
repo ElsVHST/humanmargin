@@ -101,8 +101,9 @@ function NieuweOrganisatie({ onClose, onToast }: Omit<OrgProps, "organisatieId">
     },
     onSuccess: (doc) => {
       qc.invalidateQueries({ queryKey: ["panel", "orgs"] });
+      qc.invalidateQueries({ queryKey: ["relaties", "organisaties"] });
       onToast({ tekst: `Organisatie '${doc.naam}' aangemaakt.`, soort: "ok" });
-      router.replace(`/admin/pipeline?organisatie=${doc.id}`);
+      router.replace(`${window.location.pathname}?organisatie=${doc.id}`);
     },
     onError: () =>
       onToast({ tekst: "Aanmaken mislukt — is de naam ingevuld?", soort: "fout" }),
@@ -204,6 +205,7 @@ function OrganisatieDetail({ onClose, onToast, organisatieId }: OrgProps) {
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ["organisatie", organisatieId] });
       qc.invalidateQueries({ queryKey: ["panel", "orgs"] });
+      qc.invalidateQueries({ queryKey: ["relaties", "organisaties"] });
       qc.invalidateQueries({ queryKey: ["pipeline", "deals"] });
     },
     onError: () =>
@@ -269,6 +271,34 @@ function OrganisatieDetail({ onClose, onToast, organisatieId }: OrgProps) {
 
         <div className="hm-slideover__body hm-dealpanel__body">
           <div className="hm-dealpanel__velden">
+            <label>
+              Relatietype
+              <select
+                onChange={(e) => opslaan.mutate({ relatietype: e.target.value })}
+                value={org.relatietype ?? "prospect"}
+              >
+                <option value="prospect">Prospect</option>
+                <option value="lead">Lead</option>
+                <option value="klant">Klant</option>
+                <option value="partner">Partner</option>
+                <option value="overig">Overig</option>
+              </select>
+            </label>
+            <label>
+              Doelgroep
+              <select
+                onChange={(e) =>
+                  opslaan.mutate({ doelgroep: e.target.value || null })
+                }
+                value={org.doelgroep ?? ""}
+              >
+                <option value="">—</option>
+                <option value="zzp">ZZP</option>
+                <option value="mkb">MKB</option>
+                <option value="aanbieder">Aanbieder</option>
+                <option value="overig">Overig</option>
+              </select>
+            </label>
             <label>
               Sector
               <input
@@ -448,7 +478,8 @@ function NieuwContact({ onClose, onToast }: Omit<ContactProps, "contactId">) {
         soort: "ok",
       });
       qc.invalidateQueries({ queryKey: ["panel", "contacten"] });
-      router.replace(`/admin/pipeline?contact=${doc.id}`);
+      qc.invalidateQueries({ queryKey: ["relaties", "contacten"] });
+      router.replace(`${window.location.pathname}?contact=${doc.id}`);
     },
     onError: () =>
       onToast({
@@ -560,6 +591,7 @@ function ContactDetail({ contactId, onClose, onToast }: ContactProps) {
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ["contact", contactId] });
       qc.invalidateQueries({ queryKey: ["panel", "contacten"] });
+      qc.invalidateQueries({ queryKey: ["relaties", "contacten"] });
     },
     onError: () =>
       onToast({ tekst: "Opslaan mislukt — probeer het opnieuw.", soort: "fout" }),
@@ -655,6 +687,34 @@ function ContactDetail({ contactId, onClose, onToast }: ContactProps) {
                 }}
                 type="email"
               />
+            </label>
+            <label>
+              Relatietype
+              <select
+                onChange={(e) => opslaan.mutate({ relatietype: e.target.value })}
+                value={contact.relatietype ?? "prospect"}
+              >
+                <option value="prospect">Prospect</option>
+                <option value="lead">Lead</option>
+                <option value="klant">Klant</option>
+                <option value="partner">Partner</option>
+                <option value="overig">Overig</option>
+              </select>
+            </label>
+            <label>
+              Doelgroep
+              <select
+                onChange={(e) =>
+                  opslaan.mutate({ doelgroep: e.target.value || null })
+                }
+                value={contact.doelgroep ?? ""}
+              >
+                <option value="">—</option>
+                <option value="zzp">ZZP</option>
+                <option value="mkb">MKB</option>
+                <option value="aanbieder">Aanbieder</option>
+                <option value="overig">Overig</option>
+              </select>
             </label>
             <label>
               Functie
