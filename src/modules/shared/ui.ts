@@ -26,6 +26,16 @@ export function initialen(naam?: string | null): string {
   return letters || "?";
 }
 
+/** Bedrag als euro zonder decimalen (nl-NL), null-veilig. */
+export function euro(bedrag?: number | null): string | null {
+  if (bedrag == null) return null;
+  return new Intl.NumberFormat("nl-NL", {
+    style: "currency",
+    currency: "EUR",
+    maximumFractionDigits: 0,
+  }).format(bedrag);
+}
+
 /** Deterministische avatarkleur op basis van een stabiele seed (id of naam). */
 export function avatarKleur(seed?: string | number | null): string {
   const s = String(seed ?? "");

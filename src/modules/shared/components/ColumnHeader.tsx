@@ -13,16 +13,20 @@ type KolomInfo = {
 export type ColumnHeaderProps = {
   kolom: KolomInfo;
   isBeheerder: boolean;
+  /** Metaregel onder de naam, Pipedrive-stijl: "€ 12.400 · 3 deals". */
+  meta?: string;
   onRename: (id: number, naam: string) => void;
-  onTrash: (id: number, kaartAantal: number, naam: string) => void;
 };
 
-/** Kolomkop met inline hernoemen en verwijderen (gedeeld door alle boards). */
+/**
+ * Kolomkop als trechter-segment (PRD §2.1): naam + metaregel, chevron-vorm
+ * via board.scss. Verwijderen/kleur/volgorde loopt via het kolommen-sidepanel.
+ */
 export function ColumnHeader({
   kolom,
   isBeheerder,
+  meta,
   onRename,
-  onTrash,
 }: ColumnHeaderProps) {
   const [bewerkt, setBewerkt] = useState(false);
   const [naam, setNaam] = useState(kolom.naam);
@@ -40,48 +44,40 @@ export function ColumnHeader({
   };
 
   return (
-    <div className="hm-pipeline__kolomkop">
-      <span className={`hm-kleur hm-kleur--${kolom.kleur}`} />
-      {bewerkt ? (
-        <input
-          autoFocus
-          className="hm-pipeline__kolominput"
-          onBlur={bevestigNaam}
-          onChange={(e) => setNaam(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === "Enter") bevestigNaam();
-            if (e.key === "Escape") {
-              setNaam(kolom.naam);
-              setBewerkt(false);
-            }
-          }}
-          value={naam}
-        />
-      ) : (
-        <button
-          className="hm-pipeline__kolomnaam"
-          disabled={!magBeheren}
-          onClick={() => magBeheren && setBewerkt(true)}
-          title={magBeheren ? "Klik om te hernoemen" : undefined}
-          type="button"
-        >
-          {kolom.naam}
-        </button>
-      )}
-      <span className="hm-pipeline__aantal">{kolom.deals.length}</span>
-      {magBeheren && (
-        <button
-          aria-label={`Kolom ${kolom.naam} verwijderen`}
-          className="hm-pipeline__verwijder"
-          onClick={() =>
-            onTrash(Number(kolom.id), kolom.deals.length, kolom.naam)
-          }
-          title="Kolom verwijderen (naar prullenbak)"
-          type="button"
-        >
-          ×
-        </button>
-      )}
+    <div
+      className={`hm-kolomkop${kolom.isFallback ? " hm-kolomkop--fallback" : ""}`}
+    >
+      <div className="hm-kolomkop__rij">
+        <span className={`hm-kleur hm-kleur--${kolom.kleur}`} />
+        {bewerkt ? (
+          <input
+            autoFocus
+            className="hm-kolomkop__input"
+            onBlur={bevestigNaam}
+            onChange={(e) => setNaam(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") bevestigNaam();
+              if (e.key === "Escape") {
+                setNaam(kolom.naam);
+                setBewerkt(false);
+              }
+            }}
+            value={naam}
+          />
+        ) : (
+          <button
+            className="hm-kolomkop__naam"
+            disabled={!magBeheren}
+            onClick={() => magBeheren && setBewerkt(true)}
+            title={magBeheren ? "Klik om te hernoemen" : undefined}
+            type="button"
+          >
+            {kolom.naam}
+          </button>
+        )}
+        <span className="hm-kolomkop__aantal">{kolom.deals.length}</span>
+      </div>
+      {meta && <div className="hm-kolomkop__meta">{meta}</div>}
     </div>
   );
 }

@@ -141,24 +141,6 @@ function Board({ initialStatussen, initialTaken, projecten, isBeheerder }: Props
     onSettled: statusInvalidate,
   });
 
-  const trashStatus = useMutation({
-    mutationFn: (id: number) => projectsApi.trashStatus(id),
-    onSettled: () => {
-      statusInvalidate();
-      qc.invalidateQueries({ queryKey: ["taken", "taken"] });
-    },
-  });
-
-  const handleTrash = (id: number, kaartAantal: number, naam: string) => {
-    const melding =
-      kaartAantal > 0
-        ? `${kaartAantal} ta${kaartAantal === 1 ? "ak valt" : "ken vallen"} terug naar 'Geen status'. Status '${naam}' verwijderen?`
-        : `Status '${naam}' verwijderen? (Herstellen kan via de prullenbak van Taakstatussen.)`;
-    if (window.confirm(melding)) {
-      trashStatus.mutate(id);
-    }
-  };
-
   const alleTaken = takenQuery.data ?? [];
   const gefilterd = alleTaken.filter((t) => {
     if (projectFilter) {
@@ -257,7 +239,6 @@ function Board({ initialStatussen, initialTaken, projecten, isBeheerder }: Props
                     isBeheerder={isBeheerder}
                     kolom={kolom}
                     onRename={(id, naam) => renameStatus.mutate({ id, naam })}
-                    onTrash={handleTrash}
                   />
                   <div className="hm-pipeline__kaarten">
                     {kolom.deals.map((taak, index) => {

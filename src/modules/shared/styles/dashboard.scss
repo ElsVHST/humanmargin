@@ -119,6 +119,13 @@ html[data-theme="dark"] {
   background: var(--hm-surface-2);
   color: var(--hm-ink);
 }
+.hm-btn--gevaar {
+  background: var(--hm-rood);
+  color: #fff;
+}
+.hm-btn--gevaar:hover {
+  filter: brightness(0.92);
+}
 
 /* Segmented control (weergave-wissel) */
 .hm-seg {
@@ -293,6 +300,269 @@ html[data-theme="dark"] {
 }
 .hm-slideover__close:hover { background: var(--hm-surface-2); color: var(--hm-ink); }
 .hm-slideover__body { padding: 18px; overflow-y: auto; }
+
+.hm-slideover--breed {
+  width: min(760px, 96vw);
+}
+
+/* ── Deal-paneel (PRD Epic C) ─────────────────────────────────────────── */
+.hm-dealpanel__titel {
+  background: none;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--hm-ink);
+  flex: 1;
+  font-family: var(--hm-font);
+  font-size: 1.05rem;
+  font-weight: 750;
+  min-width: 0;
+  padding: 2px 4px;
+
+  &:focus {
+    background: var(--hm-bg);
+    border-radius: var(--hm-r-s) !important;
+    outline: 2px solid var(--hm-accent);
+  }
+}
+
+.hm-dealpanel__bezig {
+  color: var(--hm-faint);
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+.hm-dealpanel__uitkomst {
+  align-items: center;
+  border-bottom: 1px solid var(--hm-line);
+  display: flex;
+  gap: 8px;
+  padding: 12px 18px;
+}
+
+.hm-dealpanel__win {
+  background: var(--hm-groen);
+  color: #fff;
+}
+.hm-dealpanel__win:hover {
+  filter: brightness(0.92);
+}
+
+.hm-dealpanel__reden {
+  color: var(--hm-muted);
+  font-size: 0.78rem;
+}
+
+.hm-dealpanel__body {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+
+  @media (max-width: 720px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hm-dealpanel__velden,
+.hm-dealpanel__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  label {
+    color: var(--hm-muted);
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7rem;
+    font-weight: 750;
+    gap: 4px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  input,
+  select,
+  textarea {
+    background: var(--hm-bg);
+    border: 1px solid var(--hm-line-2);
+    border-radius: var(--hm-r-s) !important;
+    color: var(--hm-ink);
+    font-family: var(--hm-font);
+    font-size: 0.86rem;
+    font-weight: 550;
+    padding: 8px 10px;
+  }
+}
+
+.hm-dealpanel__gewogen {
+  color: var(--hm-muted);
+  font-size: 0.8rem;
+  margin: 2px 0 0;
+
+  b {
+    color: var(--hm-ink);
+  }
+}
+
+.hm-dealpanel__eigenaar {
+  align-items: center;
+  color: var(--hm-ink-2);
+  display: flex;
+  font-size: 0.82rem;
+  font-weight: 600;
+  gap: 8px;
+  margin: 0;
+}
+
+.hm-dealpanel__editorlink {
+  align-items: center;
+  color: var(--hm-faint);
+  display: inline-flex;
+  font-size: 0.74rem;
+  font-weight: 600;
+  gap: 6px;
+  margin-top: 6px;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--hm-brand-blue);
+  }
+}
+
+.hm-dealpanel__tijdlijn {
+  border-left: 1px solid var(--hm-line);
+  min-width: 0;
+  padding-left: 20px;
+
+  h4 {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    color: var(--hm-muted);
+  }
+
+  @media (max-width: 720px) {
+    border-left: none;
+    border-top: 1px solid var(--hm-line);
+    padding-left: 0;
+    padding-top: 16px;
+  }
+}
+
+.hm-dealpanel__notitie {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+
+  textarea {
+    background: var(--hm-bg);
+    border: 1px solid var(--hm-line-2);
+    border-radius: var(--hm-r-s) !important;
+    color: var(--hm-ink);
+    font-family: var(--hm-font);
+    font-size: 0.84rem;
+    padding: 8px 10px;
+    resize: vertical;
+  }
+
+  button {
+    align-self: flex-end;
+  }
+}
+
+.hm-dealpanel__feed {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: flex;
+    gap: 10px;
+  }
+
+  .hm-pill {
+    flex: none;
+    margin-top: 1px;
+  }
+
+  p {
+    font-size: 0.82rem;
+    font-weight: 550;
+    line-height: 1.35;
+    margin: 0;
+  }
+
+  small {
+    color: var(--hm-faint);
+    font-size: 0.7rem;
+  }
+}
+
+.hm-dealpanel__type--notitie { --k: var(--hm-geel); }
+.hm-dealpanel__type--statuswijziging { --k: var(--hm-blauw); }
+.hm-dealpanel__type--systeem { --k: var(--hm-grijs); }
+.hm-dealpanel__type--email { --k: var(--hm-paars); }
+.hm-dealpanel__type--boeking { --k: var(--hm-turquoise); }
+
+/* ── Bevestigingsdialoog (vervangt window.confirm) ────────────────────── */
+.hm-dialoog__backdrop {
+  background: rgba(17, 16, 16, 0.4);
+  inset: 0;
+  position: fixed;
+  z-index: 70;
+  animation: hm-fade 0.14s ease;
+}
+
+.hm-dialoog {
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line-2);
+  border-radius: var(--hm-r);
+  box-shadow: var(--hm-sh-3);
+  font-family: var(--hm-font);
+  left: 50%;
+  padding: 20px;
+  position: fixed;
+  top: 26vh;
+  transform: translateX(-50%);
+  width: min(430px, 92vw);
+  z-index: 71;
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 750;
+    margin: 0 0 6px;
+  }
+
+  p {
+    color: var(--hm-ink-2);
+    font-size: 0.85rem;
+    margin: 0 0 12px;
+  }
+
+  textarea {
+    background: var(--hm-bg);
+    border: 1px solid var(--hm-line-2);
+    border-radius: var(--hm-r-s) !important;
+    color: var(--hm-ink);
+    font-family: var(--hm-font);
+    font-size: 0.85rem;
+    padding: 8px 10px;
+    resize: vertical;
+    width: 100%;
+  }
+}
+
+.hm-dialoog__acties {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 14px;
+}
 
 @keyframes hm-fade { from { opacity: 0; } to { opacity: 1; } }
 @keyframes hm-slide { from { transform: translateX(100%); } to { transform: translateX(0); } }

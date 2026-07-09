@@ -133,7 +133,7 @@ export async function HomeView({ initPageResult }: AdminViewServerProps) {
         </div>
 
         <div className="hm-home__snel">
-          <Link href="/admin/collections/deals/create">+ Deal</Link>
+          <Link href="/admin/pipeline?deal=nieuw">+ Deal</Link>
           <Link href="/admin/collections/tasks/create">+ Taak</Link>
           <Link href="/admin/collections/content-items/create">+ Content</Link>
           <Link href="/admin/collections/organisations/create">

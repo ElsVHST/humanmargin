@@ -14,7 +14,7 @@ import "@/modules/shared/styles/dashboard.scss";
 import "./shell.scss";
 
 const QUICK_ADD: { label: string; href: string }[] = [
-  { label: "Deal", href: "/admin/collections/deals/create" },
+  { label: "Deal", href: "/admin/pipeline?deal=nieuw" },
   { label: "Taak", href: "/admin/collections/tasks/create" },
   { label: "Content", href: "/admin/collections/content-items/create" },
   { label: "Organisatie", href: "/admin/collections/organisations/create" },

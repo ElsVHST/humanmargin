@@ -14,6 +14,7 @@ export async function PipelineView({
   const { locale, permissions, req, visibleEntities } = initPageResult;
   const { i18n, payload, user } = req;
 
+  const nu = new Date().getTime();
   const [stages, deals] = await Promise.all([
     payload.find({
       collection: "deal-stages",
@@ -47,6 +48,7 @@ export async function PipelineView({
           initialStages={stages.docs}
           initialDeals={deals.docs}
           isBeheerder={user?.role === "beheerder"}
+          nu={nu}
         />
       </Gutter>
     </DefaultTemplate>

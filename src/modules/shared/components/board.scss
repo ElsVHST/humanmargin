@@ -1,19 +1,16 @@
 /* =========================================================================
-   Kanban-boards (pipeline + taken) — SaaS-laag op het dashboard-designsysteem.
+   Kanban-boards (pipeline + taken) — Pipedrive-patroon op HM-tokens (PRD §2.1)
    Tokens & kit: src/modules/shared/styles/dashboard.scss
+   Anatomie: board-toolbar · trechter-kolomkoppen · vlakke kaarten met
+   status-stip · sleep-actiebalk onderin.
    ========================================================================= */
 
 .hm-pipeline {
   font-family: var(--hm-font);
-}
-
-.hm-pipeline__titel {
-  font-family: var(--hm-font-head);
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 0;
-  font-size: 1.7rem;
-  margin: 0 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  /* topbar 60px + gutter/toolbar-ruimte: board vult de rest van de viewport */
+  min-height: calc(100vh - 132px);
 }
 
 .hm-pipeline__fout {
@@ -27,156 +24,324 @@
   padding: 8px 12px;
 }
 
-/* ── Board rail ───────────────────────────────────────────────────────── */
-.hm-pipeline__board {
-  align-items: flex-start;
+/* ── Board-toolbar (§2.1: één verzadigde knop, kale samenvatting rechts) ─ */
+.hm-board__bar {
+  align-items: center;
   display: flex;
   gap: 14px;
+  padding: 14px 0;
+}
+
+.hm-board__samenvatting {
+  color: var(--hm-muted);
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+
+  b {
+    color: var(--hm-ink);
+    font-weight: 750;
+  }
+
+  span {
+    margin-left: 10px;
+    color: var(--hm-faint);
+  }
+}
+
+.hm-board__bar-rechts {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.hm-board__zoek {
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line-2);
+  border-radius: var(--hm-r-s);
+  color: var(--hm-ink);
+  font-family: var(--hm-font);
+  font-size: 0.8rem;
+  padding: 7px 11px;
+  width: 210px;
+
+  &::placeholder {
+    color: var(--hm-faint);
+  }
+}
+
+/* Gestylede native select (vervangt kale browser-dropdowns) */
+.hm-board__select {
+  appearance: none;
+  background:
+    var(--hm-surface)
+    url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")
+    no-repeat right 9px center;
+  border: 1px solid var(--hm-line-2);
+  border-radius: var(--hm-r-s) !important;
+  color: var(--hm-ink);
+  cursor: pointer;
+  font-family: var(--hm-font);
+  font-size: 0.8rem;
+  font-weight: 550;
+  padding: 7px 28px 7px 11px;
+}
+
+.hm-board__icoonknop {
+  align-items: center;
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line-2);
+  border-radius: var(--hm-r-s);
+  color: var(--hm-ink-2);
+  cursor: pointer;
+  display: inline-flex;
+  height: 33px;
+  justify-content: center;
+  width: 33px;
+  transition: background 0.14s, color 0.14s, border-color 0.14s;
+
+  &:hover {
+    background: var(--hm-surface-2);
+    color: var(--hm-ink);
+  }
+}
+
+/* ── Board rail: kolommen vullen de hoogte, alleen het board scrolt ────── */
+.hm-pipeline__board {
+  align-items: stretch;
+  display: flex;
+  flex: 1;
+  gap: 12px;
+  min-height: 0;
   overflow-x: auto;
-  padding-bottom: 1.5rem;
+  padding-bottom: 10px;
   scrollbar-width: thin;
 }
 
 .hm-pipeline__kolom {
-  background: var(--hm-bg);
-  border: 1px solid var(--hm-line);
+  background: transparent;
   border-radius: var(--hm-r);
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  max-height: calc(100vh - 240px);
-  padding: 10px 10px 6px;
-  width: 288px;
+  min-height: 0;
+  padding: 0 2px;
+  width: 282px;
+  transition: background 0.12s ease;
 
+  /* §2.1: doelkolom kleurt egaal grijs tijdens het slepen */
   &.is-over {
-    border-color: color-mix(in srgb, var(--hm-accent) 55%, var(--hm-line-2));
-    box-shadow: 0 0 0 2px color-mix(in srgb, var(--hm-accent) 30%, transparent);
-  }
-
-  &.is-fallback {
-    border-style: dashed;
-    background: transparent;
+    background: var(--hm-surface-2);
   }
 }
 
-/* ── Kolomkop (ColumnHeader.tsx) ──────────────────────────────────────── */
-.hm-pipeline__kolomkop {
+/* ── Trechter-kolomkop (chevron-strip, §2.1) ──────────────────────────── */
+.hm-kolomkop {
+  background: var(--hm-surface);
+  box-shadow: var(--hm-sh-1);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 11px) 0,
+    100% 50%,
+    calc(100% - 11px) 100%,
+    0 100%
+  );
+  flex: none;
+  margin-bottom: 10px;
+  padding: 9px 20px 9px 12px;
+
+  &--fallback {
+    background: var(--hm-surface-2);
+    box-shadow: none;
+  }
+}
+
+.hm-kolomkop__rij {
   align-items: center;
   display: flex;
-  gap: 8px;
-  padding: 4px 4px 12px;
+  gap: 7px;
 }
 
-.hm-pipeline__kolomnaam {
+.hm-kolomkop__naam {
   background: none;
   border: none;
   color: var(--hm-ink);
   cursor: pointer;
   font: inherit;
-  font-size: 0.82rem;
+  font-family: var(--hm-font);
+  font-size: 0.84rem;
   font-weight: 750;
+  overflow: hidden;
   padding: 0;
   text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
-  &:disabled { cursor: default; }
-  &:not(:disabled):hover { color: var(--hm-brand-blue); }
+  &:disabled {
+    cursor: default;
+  }
+  &:not(:disabled):hover {
+    color: var(--hm-brand-blue);
+  }
 }
 
-.hm-pipeline__kolominput {
-  background: var(--hm-surface);
+.hm-kolomkop__input {
+  background: var(--hm-bg);
   border: 1px solid var(--hm-line-2);
-  border-radius: 4px;
+  border-radius: 4px !important;
   color: var(--hm-ink);
   font: inherit;
-  font-size: 0.82rem;
+  font-family: var(--hm-font);
+  font-size: 0.84rem;
   font-weight: 750;
-  padding: 2px 6px;
+  padding: 1px 6px;
   width: 100%;
 }
 
-.hm-pipeline__aantal {
-  background: var(--hm-surface);
-  border: 1px solid var(--hm-line);
-  border-radius: var(--hm-pill);
-  color: var(--hm-muted);
-  font-size: 0.68rem;
+.hm-kolomkop__aantal {
+  color: var(--hm-faint);
+  font-size: 0.72rem;
   font-weight: 700;
-  margin-left: auto;
-  padding: 1px 8px;
   font-variant-numeric: tabular-nums;
+  margin-left: auto;
 }
 
-.hm-pipeline__verwijder {
-  background: none;
-  border: none;
-  border-radius: 4px;
-  color: var(--hm-faint);
-  cursor: pointer;
-  font-size: 1rem;
-  line-height: 1;
-  padding: 2px 6px;
-
-  &:hover {
-    background: color-mix(in srgb, var(--hm-rood) 14%, transparent);
-    color: var(--hm-rood);
-  }
+.hm-kolomkop__meta {
+  color: var(--hm-muted);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  margin-top: 2px;
+  padding-left: 17px;
 }
 
 /* ── Kaartenstapel ────────────────────────────────────────────────────── */
 .hm-pipeline__kaarten {
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 8px;
-  min-height: 8px;
+  min-height: 40px;
   overflow-y: auto;
   padding: 1px;
+  scrollbar-width: thin;
 }
 
-/* ── Deal-kaart (bovenop .hm-card .hm-card--hover) ────────────────────── */
+.hm-pipeline__leeg {
+  border: 1.5px dashed var(--hm-line-2);
+  border-radius: var(--hm-r);
+  color: var(--hm-faint);
+  font-size: 0.76rem;
+  margin: 2px 1px;
+  padding: 18px 12px;
+  text-align: center;
+}
+
+/* ── Deal/taak-kaart — vlak in rust, elevatie alleen bij drag (§2.1) ───── */
 .hm-deal {
   color: var(--hm-ink);
   display: flex;
   flex-direction: column;
-  gap: 7px;
-  padding: 12px 13px;
+  gap: 6px;
+  padding: 10px 12px;
   text-decoration: none;
+
+  /* vlakke rustsituatie: geen zweefschaduw */
+  box-shadow: none;
 
   &.is-dragging {
     box-shadow: var(--hm-sh-3);
-    transform: rotate(1.5deg);
+    transform: rotate(1.5deg) scale(1.02);
+  }
+
+  /* achterstallig: lichtrode zweem over de hele kaart */
+  &.is-laat {
+    background: color-mix(in srgb, var(--hm-rood) 6%, var(--hm-surface));
+    border-color: color-mix(in srgb, var(--hm-rood) 28%, var(--hm-line));
   }
 }
 
-.hm-deal__co {
+.hm-card--hover.hm-deal:hover {
+  transform: none;
+  box-shadow: var(--hm-sh-2);
+}
+
+.hm-deal__top {
   align-items: center;
   display: flex;
-  gap: 7px;
+  gap: 4px;
+  justify-content: space-between;
+  min-height: 14px;
 }
-.hm-deal__coname {
+
+/* Label-strips: 3px-balkjes, subtieler dan pills (§2.1) */
+.hm-deal__tags {
+  display: flex;
+  gap: 4px;
+}
+.hm-deal__tags i {
+  border-radius: 2px;
+  display: block;
+  height: 4px;
+  width: 22px;
+}
+
+/* Status-stip volgende actie (§2.1: dé Pipedrive-signatuur) */
+.hm-deal__stip {
+  align-items: center;
+  border-radius: var(--hm-pill);
+  display: inline-flex;
+  flex: none;
+  font-size: 0.6rem;
+  font-weight: 800;
+  gap: 3px;
+  height: 16px;
+  justify-content: center;
+  min-width: 16px;
+  padding: 0 3px;
+
+  &--gepland {
+    background: var(--hm-groen);
+    color: #fff;
+  }
+  &--laat {
+    background: var(--hm-rood);
+    color: #fff;
+    padding: 0 6px;
+  }
+  &--stil {
+    background: transparent;
+    color: var(--hm-oranje);
+  }
+  &--leeg {
+    border: 1.5px solid var(--hm-line-2);
+    background: transparent;
+  }
+}
+
+.hm-deal__title {
+  font-size: 0.85rem;
+  font-weight: 680;
+  line-height: 1.3;
+}
+
+.hm-deal__org {
   color: var(--hm-muted);
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 550;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.hm-deal__title {
-  font-size: 0.86rem;
-  font-weight: 680;
-  line-height: 1.3;
-}
-
 .hm-deal__foot {
   align-items: center;
   display: flex;
-  justify-content: space-between;
   gap: 8px;
+  justify-content: space-between;
   margin-top: 1px;
 }
 .hm-deal__amount {
-  font-family: var(--hm-font);
-  font-size: 0.84rem;
+  font-size: 0.82rem;
   font-weight: 750;
   font-variant-numeric: tabular-nums;
 }
@@ -188,7 +353,12 @@
 .hm-pipeline__nieuw {
   border-radius: var(--hm-r-s);
   color: var(--hm-muted);
+  cursor: pointer;
+  background: none;
+  border: none;
   display: block;
+  flex: none;
+  font-family: var(--hm-font);
   font-size: 0.78rem;
   font-weight: 650;
   margin-top: 6px;
@@ -201,6 +371,119 @@
     background: var(--hm-surface-2);
     color: var(--hm-ink);
   }
+}
+
+/* ── Sleep-actiebalk (§2.1: DELETE · LOST · WON, gestippelde zones) ────── */
+.hm-dragbar {
+  background: var(--hm-surface);
+  border-top: 1.5px dashed var(--hm-line-2);
+  bottom: 0;
+  box-shadow: var(--hm-sh-3);
+  display: flex;
+  left: var(--hm-rail-w, 64px);
+  position: fixed;
+  right: 0;
+  z-index: 55;
+
+  /* Altijd gemonteerd (dnd-geometrie); zichtbaar alleen tijdens slepen */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+
+  &.is-actief {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+}
+
+.hm-dragbar__zone {
+  align-items: center;
+  color: var(--hm-muted);
+  display: flex;
+  flex: 1;
+  font-family: var(--hm-font);
+  font-size: 0.78rem;
+  font-weight: 800;
+  gap: 8px;
+  justify-content: center;
+  letter-spacing: 0.08em;
+  min-height: 64px;
+  text-transform: uppercase;
+  transition: background 0.12s ease;
+
+  & + & {
+    border-left: 1.5px dashed var(--hm-line-2);
+  }
+
+  &--verloren {
+    color: var(--hm-rood);
+  }
+  &--gewonnen {
+    color: var(--hm-groen);
+  }
+
+  &.is-over {
+    background: var(--hm-surface-2);
+  }
+  &--verloren.is-over {
+    background: color-mix(in srgb, var(--hm-rood) 14%, var(--hm-surface));
+  }
+  &--gewonnen.is-over {
+    background: color-mix(in srgb, var(--hm-groen) 14%, var(--hm-surface));
+  }
+}
+
+/* ── Toast ────────────────────────────────────────────────────────────── */
+.hm-toast {
+  align-items: center;
+  background: #111010;
+  border-radius: var(--hm-r);
+  bottom: 20px;
+  box-shadow: var(--hm-sh-3);
+  color: #f4f4f1;
+  display: flex;
+  font-family: var(--hm-font);
+  font-size: 0.84rem;
+  font-weight: 600;
+  gap: 10px;
+  padding: 12px 16px;
+  position: fixed;
+  right: 20px;
+  z-index: 90;
+  animation: hm-toast-in 0.18s ease;
+
+  &--fout {
+    background: var(--hm-rood);
+    color: #fff;
+  }
+}
+
+@keyframes hm-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Legacy kaart-anatomie + kolomknop (taken-board, facelift volgt) ───── */
+.hm-deal__co {
+  align-items: center;
+  display: flex;
+  gap: 7px;
+}
+.hm-deal__coname {
+  color: var(--hm-muted);
+  font-size: 0.7rem;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .hm-pipeline__nieuwekolom {
@@ -247,4 +530,12 @@
   align-items: center;
   display: flex;
   gap: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hm-toast,
+  .hm-deal {
+    animation: none;
+    transition: none;
+  }
 }
