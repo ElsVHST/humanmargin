@@ -134,8 +134,8 @@ export async function HomeView({ initPageResult }: AdminViewServerProps) {
 
         <div className="hm-home__snel">
           <Link href="/admin/pipeline?deal=nieuw">+ Deal</Link>
-          <Link href="/admin/collections/tasks/create">+ Taak</Link>
-          <Link href="/admin/collections/content-items/create">+ Content</Link>
+          <Link href="/admin/taken?taak=nieuw">+ Taak</Link>
+          <Link href="/admin/kalender?item=nieuw">+ Content</Link>
           <Link href="/admin/collections/organisations/create">
             + Organisatie
           </Link>
@@ -250,7 +250,7 @@ export async function HomeView({ initPageResult }: AdminViewServerProps) {
                   <li key={taak.id}>
                     <Link
                       className="hm-home__itemtekst"
-                      href={`/admin/collections/tasks/${taak.id}`}
+                      href={`/admin/taken?taak=${taak.id}`}
                     >
                       {taak.titel}
                     </Link>
@@ -285,7 +285,7 @@ export async function HomeView({ initPageResult }: AdminViewServerProps) {
                   <li key={item.id}>
                     <Link
                       className="hm-home__itemtekst"
-                      href={`/admin/collections/content-items/${item.id}`}
+                      href={`/admin/kalender?item=${item.id}`}
                     >
                       {item.titel}
                     </Link>

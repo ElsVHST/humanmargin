@@ -15,6 +15,7 @@ import {
 } from "@tanstack/react-query";
 import { Pencil } from "lucide-react";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 import {
@@ -23,6 +24,7 @@ import {
   positionBetween,
 } from "@/modules/crm/views/pipeline/lib";
 import { projectsApi } from "@/modules/projects/api";
+import { TaakPanel, type PanelToast } from "@/modules/projects/views/taken/TaakPanel";
 import { ColumnHeader } from "@/modules/shared/components/ColumnHeader";
 import { ColumnsPanel } from "@/modules/shared/components/ColumnsPanel";
 import { avatarKleur, initialen } from "@/modules/shared/ui";
@@ -82,13 +84,16 @@ function Board({ initialStatussen, initialTaken, projecten, isBeheerder }: Props
   const [projectFilter, setProjectFilter] = useState<string>("");
   const [persoonFilter, setPersoonFilter] = useState<string>("");
   const [kolommenOpen, setKolommenOpen] = useState(false);
-  const [fout, setFout] = useState<string | null>(null);
+  const [toast, setToast] = useState<PanelToast | null>(null);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const taakParam = searchParams.get("taak");
 
   useEffect(() => {
-    if (!fout) return;
-    const timer = setTimeout(() => setFout(null), 4000);
+    if (!toast) return;
+    const timer = setTimeout(() => setToast(null), 4000);
     return () => clearTimeout(timer);
-  }, [fout]);
+  }, [toast]);
 
   const statussenQuery = useQuery({
     queryKey: ["taken", "statussen"],
@@ -267,7 +272,8 @@ function Board({ initialStatussen, initialTaken, projecten, isBeheerder }: Props
                             return (
                               <Link
                                 className={`hm-card hm-card--hover hm-deal${kaartSnapshot.isDragging ? " is-dragging" : ""}`}
-                                href={`/admin/collections/tasks/${taak.id}`}
+                                href={`/admin/taken?taak=${taak.id}`}
+                                prefetch={false}
                                 ref={p.innerRef}
                                 {...p.draggableProps}
                                 {...p.dragHandleProps}
@@ -322,7 +328,11 @@ function Board({ initialStatussen, initialTaken, projecten, isBeheerder }: Props
                   </div>
                   <Link
                     className="hm-pipeline__nieuw"
-                    href="/admin/collections/tasks/create"
+                    href={
+                      kolom.isFallback
+                        ? "/admin/taken?taak=nieuw"
+                        : `/admin/taken?taak=nieuw&status=${kolom.id}`
+                    }
                   >
                     + Taak
                   </Link>
@@ -353,7 +363,7 @@ function Board({ initialStatussen, initialTaken, projecten, isBeheerder }: Props
             _order: s._order,
           }))}
           onClose={() => setKolommenOpen(false)}
-          onFout={setFout}
+          onFout={(melding) => setToast({ tekst: melding, soort: "fout" })}
           onGewijzigd={() => {
             statusInvalidate();
             qc.invalidateQueries({ queryKey: ["taken", "taken"] });
@@ -361,9 +371,24 @@ function Board({ initialStatussen, initialTaken, projecten, isBeheerder }: Props
         />
       )}
 
-      {fout && (
-        <div className="hm-toast hm-toast--fout" role="status">
-          {fout}
+      {taakParam && (
+        <TaakPanel
+          key={taakParam}
+          onClose={() => router.push("/admin/taken")}
+          onToast={setToast}
+          projecten={projecten}
+          statusParam={searchParams.get("status")}
+          statussen={statussenQuery.data ?? []}
+          taakId={taakParam}
+        />
+      )}
+
+      {toast && (
+        <div
+          className={`hm-toast${toast.soort === "fout" ? " hm-toast--fout" : ""}`}
+          role="status"
+        >
+          {toast.tekst}
         </div>
       )}
     </div>

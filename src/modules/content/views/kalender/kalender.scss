@@ -108,14 +108,25 @@
 .hm-kalender__dagnummer {
   align-items: center;
   align-self: flex-start;
+  background: none;
+  border: none;
+  border-radius: 50%;
   box-sizing: border-box;
+  color: inherit;
+  cursor: pointer;
   display: inline-flex;
+  font-family: var(--hm-font);
   font-size: 0.72rem;
   font-weight: 700;
   height: 22px;
   justify-content: center;
   min-width: 22px;
   padding: 0 5px;
+
+  &:hover {
+    background: var(--hm-surface-2);
+    outline: 1.5px dashed var(--hm-line-2);
+  }
 }
 
 .hm-kalender__item {

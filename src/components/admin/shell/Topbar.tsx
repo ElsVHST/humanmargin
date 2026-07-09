@@ -15,8 +15,8 @@ import "./shell.scss";
 
 const QUICK_ADD: { label: string; href: string }[] = [
   { label: "Deal", href: "/admin/pipeline?deal=nieuw" },
-  { label: "Taak", href: "/admin/collections/tasks/create" },
-  { label: "Content", href: "/admin/collections/content-items/create" },
+  { label: "Taak", href: "/admin/taken?taak=nieuw" },
+  { label: "Content", href: "/admin/kalender?item=nieuw" },
   { label: "Organisatie", href: "/admin/collections/organisations/create" },
   { label: "Contactpersoon", href: "/admin/collections/contacts/create" },
   { label: "Kennisdocument", href: "/admin/collections/knowledge-docs/create" },

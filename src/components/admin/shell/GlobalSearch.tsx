@@ -40,13 +40,13 @@ const BRONNEN: Bron[] = [
     slug: "tasks",
     label: "Taken",
     veld: "titel",
-    href: (id) => `/admin/collections/tasks/${id}`,
+    href: (id) => `/admin/taken?taak=${id}`,
   },
   {
     slug: "content-items",
     label: "Content",
     veld: "titel",
-    href: (id) => `/admin/collections/content-items/${id}`,
+    href: (id) => `/admin/kalender?item=${id}`,
   },
   {
     slug: "knowledge-docs",

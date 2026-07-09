@@ -14,9 +14,14 @@ import {
   useQueryClient,
 } from "@tanstack/react-query";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import React, { useEffect, useState } from "react";
 
 import { contentApi } from "@/modules/content/api";
+import {
+  ContentPanel,
+  type PanelToast,
+} from "@/modules/content/views/kalender/ContentPanel";
 import {
   dagSleutel,
   itemsPerDag,
@@ -58,8 +63,18 @@ function kanaalInfo(item: ContentItem): { naam: string; kleur: string } | null {
 
 function KalenderInner({ initialItems }: Props) {
   const qc = useQueryClient();
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const itemParam = searchParams.get("item");
   const [weergave, setWeergave] = useState<Weergave>("maand");
   const [anker, setAnker] = useState(() => new Date());
+  const [toast, setToast] = useState<PanelToast | null>(null);
+
+  useEffect(() => {
+    if (!toast) return;
+    const timer = setTimeout(() => setToast(null), 4000);
+    return () => clearTimeout(timer);
+  }, [toast]);
 
   const itemsQuery = useQuery({
     queryKey: ["kalender", "items"],
@@ -229,9 +244,17 @@ function KalenderInner({ initialItems }: Props) {
                       ref={provided.innerRef}
                       {...provided.droppableProps}
                     >
-                      <span className="hm-kalender__dagnummer">
+                      <button
+                        aria-label={`Nieuw item op ${sleutel}`}
+                        className="hm-kalender__dagnummer"
+                        onClick={() =>
+                          router.push(`/admin/kalender?item=nieuw&datum=${sleutel}`)
+                        }
+                        title="Klik om hier content te plannen"
+                        type="button"
+                      >
                         {dag.getDate()}
-                      </span>
+                      </button>
                       {dagItems.map((item, index) => (
                         <Draggable
                           draggableId={String(item.id)}
@@ -259,10 +282,27 @@ function KalenderInner({ initialItems }: Props) {
         </DragDropContext>
       )}
       <p className="hm-kalender__voet">
-        <Link href="/admin/collections/content-items/create">
-          + Nieuw content-item
-        </Link>
+        <Link href="/admin/kalender?item=nieuw">+ Nieuw content-item</Link>
       </p>
+
+      {itemParam && (
+        <ContentPanel
+          datumParam={searchParams.get("datum")}
+          itemId={itemParam}
+          key={itemParam}
+          onClose={() => router.push("/admin/kalender")}
+          onToast={setToast}
+        />
+      )}
+
+      {toast && (
+        <div
+          className={`hm-toast${toast.soort === "fout" ? " hm-toast--fout" : ""}`}
+          role="status"
+        >
+          {toast.tekst}
+        </div>
+      )}
     </div>
   );
 }
@@ -278,7 +318,8 @@ function ItemChip({
   return (
     <Link
       className={`hm-kalender__item is-${item.status}`}
-      href={`/admin/collections/content-items/${item.id}`}
+      href={`/admin/kalender?item=${item.id}`}
+      prefetch={false}
     >
       {kanaal && <span className={`hm-kleur hm-kleur--${kanaal.kleur}`} />}
       <span className="hm-kalender__itemtitel">{item.titel}</span>
