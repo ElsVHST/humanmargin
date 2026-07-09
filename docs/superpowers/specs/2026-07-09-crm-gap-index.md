@@ -43,6 +43,8 @@ Bestaand en al werkend (ter context): organisatie-/contactpanelen met inline edi
 ## 3. Voorgestelde volgorde
 
 **Sprint 1 (fase A-plus, ±1 dag):** ✅ **AFGEROND 2026-07-09** — punten 1, 2, 4, 5: reminders + deal-vanuit-relatie + risicoklasse + tags-UI. Daarmee is de dagelijkse prospectie-loop compleet: toevoegen → labelen → opvolgen → converteren.
+**⚠️ Tussenvoegsel (2026-07-09, na sprint 1):** Chris heeft de lat verhoogd naar volwaardig MKB-CRM — zie `2026-07-09-crm-mkb-plan.md` (adressen/facturatie, contactbeheer vanuit het org-paneel, beheerbare sectoren/functies, custom velden, configureerbare kolommen). Dat plan (sprints A-D) gaat vóór de import hieronder — import moet het complete datamodel kunnen mappen.
+
 **Sprint 2:** 3 + 11 (import + dedupe) vóór de outreach-campagnes starten.
 **Sprint 3:** 6, 7, 8, 10 (bulk, opgeslagen lijsten, sorteren, laatste contact).
 Punten 14-18 blijven op de bestaande routekaart.
