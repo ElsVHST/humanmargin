@@ -51,3 +51,6 @@ temp/
 # WP-extractie staging (bron voor Payload-seed)
 .seed-assets/
 .claude/worktrees/
+
+# Playwright MCP QA-artefacten
+.playwright-mcp/
