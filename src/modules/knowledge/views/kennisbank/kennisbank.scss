@@ -717,6 +717,33 @@
   }
 }
 
+/* ── Documentpaneel (Google Docs-gevoel) ──────────────────────────────── */
+.hm-docpanel {
+  display: flex;
+  flex-direction: column;
+
+  .hm-slideover__head {
+    flex: none;
+  }
+}
+
+.hm-docpanel__status {
+  color: var(--hm-faint);
+  flex: none;
+  font-size: 0.72rem;
+  font-weight: 650;
+  white-space: nowrap;
+
+  &.is-fout {
+    color: var(--hm-rood);
+  }
+}
+
+.hm-docpanel__zicht {
+  border: none;
+  cursor: pointer;
+}
+
 /* ── Lees-slideover ───────────────────────────────────────────────────── */
 .hm-kb__leesbewerk {
   align-items: center;

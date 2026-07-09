@@ -1,0 +1,213 @@
+/* =========================================================================
+   HmEditor — Google Docs-gevoel op HM-tokens.
+   Werkbalk sticky bovenin, rustig schrijfvlak, typografie = merk.
+   ========================================================================= */
+
+.hm-ed {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+}
+
+/* ── Werkbalk ─────────────────────────────────────────────────────────── */
+.hm-ed__balk {
+  align-items: center;
+  background: var(--hm-surface);
+  border-bottom: 1px solid var(--hm-line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 8px 14px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.hm-ed__knop {
+  align-items: center;
+  background: none;
+  border: none;
+  border-radius: var(--hm-r-s);
+  color: var(--hm-ink-2);
+  cursor: pointer;
+  display: inline-flex;
+  height: 30px;
+  justify-content: center;
+  width: 30px;
+  transition: background 0.12s ease, color 0.12s ease;
+
+  &:hover:not(:disabled) {
+    background: var(--hm-surface-2);
+    color: var(--hm-ink);
+  }
+
+  &.is-actief {
+    background: var(--hm-accent);
+    color: var(--hm-accent-ink);
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.35;
+  }
+}
+
+.hm-ed__scheider {
+  background: var(--hm-line);
+  height: 18px;
+  margin: 0 6px;
+  width: 1px;
+}
+
+.hm-ed__blok {
+  appearance: none;
+  background:
+    var(--hm-surface)
+    url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")
+    no-repeat right 8px center;
+  border: 1px solid var(--hm-line-2);
+  border-radius: var(--hm-r-s) !important;
+  color: var(--hm-ink);
+  cursor: pointer;
+  font-family: var(--hm-font);
+  font-size: 0.78rem;
+  font-weight: 650;
+  padding: 5px 26px 5px 10px;
+}
+
+.hm-ed__linkwrap {
+  position: relative;
+}
+
+.hm-ed__linkpop {
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line-2);
+  border-radius: var(--hm-r);
+  box-shadow: var(--hm-sh-3);
+  display: flex;
+  gap: 6px;
+  padding: 8px;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  width: 320px;
+  z-index: 50;
+
+  input {
+    background: var(--hm-bg);
+    border: 1px solid var(--hm-line-2);
+    border-radius: var(--hm-r-s) !important;
+    color: var(--hm-ink);
+    flex: 1;
+    font-family: var(--hm-font);
+    font-size: 0.8rem;
+    min-width: 0;
+    padding: 6px 9px;
+  }
+}
+
+/* ── Schrijfvlak ──────────────────────────────────────────────────────── */
+.hm-ed__vlak {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  position: relative;
+}
+
+.hm-ed__inhoud {
+  caret-color: var(--hm-brand-blue);
+  color: var(--hm-ink);
+  font-family: var(--hm-font);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  min-height: 260px;
+  outline: none;
+  padding: 22px 26px 60px;
+}
+
+.hm-ed__placeholder {
+  color: var(--hm-faint);
+  font-family: var(--hm-font);
+  font-size: 0.95rem;
+  left: 26px;
+  margin: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 22px;
+}
+
+/* Typografie — zelfde stem als de site/leesweergave */
+.hm-ed__p {
+  margin: 0 0 0.65em;
+}
+
+.hm-ed__h1,
+.hm-ed__h2,
+.hm-ed__h3 {
+  font-family: var(--hm-font-head);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25;
+  margin: 1.1em 0 0.4em;
+  text-transform: uppercase;
+}
+
+.hm-ed__h1 { font-size: 1.45rem; }
+.hm-ed__h2 { font-size: 1.15rem; }
+.hm-ed__h3 { font-size: 0.98rem; }
+
+.hm-ed__quote {
+  border-left: 3px solid var(--hm-accent);
+  color: var(--hm-ink-2);
+  font-style: italic;
+  margin: 0.6em 0;
+  padding: 2px 0 2px 14px;
+}
+
+.hm-ed__ul,
+.hm-ed__ol {
+  margin: 0 0 0.65em;
+  padding-left: 1.4em;
+}
+
+.hm-ed__li {
+  margin: 0.15em 0;
+}
+
+.hm-ed__li--nest {
+  list-style: none;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.hm-ed__link {
+  color: var(--hm-brand-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.hm-ed__vet { font-weight: 750; }
+.hm-ed__cursief { font-style: italic; }
+.hm-ed__onderstreept { text-decoration: underline; }
+.hm-ed__doorgehaald { text-decoration: line-through; }
+.hm-ed__onderstreept.hm-ed__doorgehaald {
+  text-decoration: underline line-through;
+}
+
+.hm-ed__code {
+  background: var(--hm-surface-2);
+  border-radius: 4px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.85em;
+  padding: 1px 5px;
+}
+
+.hm-ed__inhoud hr {
+  border: none;
+  border-top: 1.5px solid var(--hm-line-2);
+  margin: 1.2em 0;
+}

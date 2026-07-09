@@ -24,7 +24,6 @@ import {
   Upload,
   X,
 } from "lucide-react";
-import { useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 
 import {
@@ -33,7 +32,7 @@ import {
   itemType,
   thumbnailUrl,
 } from "@/modules/knowledge/views/kennisbank/bestandstype";
-import { LeesPanel } from "@/modules/knowledge/views/kennisbank/LeesPanel";
+import { DocPanel } from "@/modules/knowledge/views/kennisbank/DocPanel";
 import { VerplaatsDialoog } from "@/modules/knowledge/views/kennisbank/VerplaatsDialoog";
 import type { KnowledgeDoc } from "@/payload-types";
 
@@ -114,7 +113,6 @@ type ContextStand = { x: number; y: number; id: number };
 
 function Browser({ initialDocs, isBeheerder }: Props) {
   const qc = useQueryClient();
-  const router = useRouter();
   const fileInput = useRef<HTMLInputElement>(null);
 
   const [parentId, setParentId] = useState<number | null>(null);
@@ -295,7 +293,7 @@ function Browser({ initialDocs, isBeheerder }: Props) {
             ...(parentId ? { parent: parentId } : {}),
           },
         );
-        router.push(`/admin/collections/knowledge-docs/${res.doc.id}`);
+        setLeesDoc(res.doc);
       },
     });
 
@@ -1096,7 +1094,14 @@ function Browser({ initialDocs, isBeheerder }: Props) {
         />
       )}
 
-      {leesDoc && <LeesPanel doc={leesDoc} onSluit={() => setLeesDoc(null)} />}
+      {leesDoc && (
+        <DocPanel
+          doc={leesDoc}
+          key={leesDoc.id}
+          onGewijzigd={invalidate}
+          onSluit={() => setLeesDoc(null)}
+        />
+      )}
 
       {viewerDoc && (
         <div
@@ -1251,7 +1256,7 @@ function DetailRail({
         ) : (
           <>
             <button className="hm-btn hm-btn--primary" onClick={onOpen} type="button">
-              {map ? "Openen" : doc.soort === "bestand" ? "Bekijken" : "Lezen"}
+              {map ? "Openen" : doc.soort === "bestand" ? "Bekijken" : "Bewerken"}
             </button>
             {file?.url && (
               <a
