@@ -877,6 +877,8 @@ export interface Organisation {
   };
   relatietype?: ('prospect' | 'lead' | 'klant' | 'partner' | 'overig') | null;
   doelgroep?: ('zzp' | 'mkb' | 'aanbieder' | 'overig') | null;
+  risicoklasse?: ('hoog' | 'verboden' | 'geen') | null;
+  opvolgenOp?: string | null;
   tags?: string[] | null;
   eigenaar?: (number | null) | User;
   updatedAt: string;
@@ -910,6 +912,8 @@ export interface Contact {
   bron?: string | null;
   relatietype?: ('prospect' | 'lead' | 'klant' | 'partner' | 'overig') | null;
   doelgroep?: ('zzp' | 'mkb' | 'aanbieder' | 'overig') | null;
+  risicoklasse?: ('hoog' | 'verboden' | 'geen') | null;
+  opvolgenOp?: string | null;
   tags?: string[] | null;
   eigenaar?: (number | null) | User;
   updatedAt: string;
@@ -1848,6 +1852,8 @@ export interface OrganisationsSelect<T extends boolean = true> {
   projecten?: T;
   relatietype?: T;
   doelgroep?: T;
+  risicoklasse?: T;
+  opvolgenOp?: T;
   tags?: T;
   eigenaar?: T;
   updatedAt?: T;
@@ -1873,6 +1879,8 @@ export interface ContactsSelect<T extends boolean = true> {
   bron?: T;
   relatietype?: T;
   doelgroep?: T;
+  risicoklasse?: T;
+  opvolgenOp?: T;
   tags?: T;
   eigenaar?: T;
   updatedAt?: T;

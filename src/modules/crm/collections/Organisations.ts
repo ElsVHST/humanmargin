@@ -68,6 +68,25 @@ export const Organisations: CollectionConfig = {
       ],
       admin: { position: "sidebar" },
     },
+    {
+      // Tweede as van Els's kwadrant (W8/W14): AI-risicoklasse van de relatie
+      name: "risicoklasse",
+      label: "Risicoklasse",
+      type: "select",
+      options: [
+        { label: "Hoog risico", value: "hoog" },
+        { label: "Verboden", value: "verboden" },
+        { label: "Geen risico", value: "geen" },
+      ],
+      admin: { position: "sidebar" },
+    },
+    {
+      // Pipedrive-kern (W13): geen relatie zonder geplande volgende actie
+      name: "opvolgenOp",
+      label: "Opvolgen op",
+      type: "date",
+      admin: { position: "sidebar" },
+    },
     tagsField,
     eigenaarField,
     {

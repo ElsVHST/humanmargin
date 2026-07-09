@@ -13,6 +13,7 @@ export async function RelatiesView({
 }: AdminViewServerProps) {
   const { locale, permissions, req, visibleEntities } = initPageResult;
   const { i18n, payload, user } = req;
+  const nu = new Date().getTime();
 
   const [organisaties, contacten] = await Promise.all([
     payload.find({
@@ -45,6 +46,7 @@ export async function RelatiesView({
         <RelatiesLijst
           initialContacten={contacten.docs}
           initialOrganisaties={organisaties.docs}
+          nu={nu}
         />
       </Gutter>
     </DefaultTemplate>

@@ -17,11 +17,11 @@ Bestaand en al werkend (ter context): organisatie-/contactpanelen met inline edi
 ## 2. Nog ontbrekend — volledige index (geprioriteerd)
 
 ### A. Hoog — raakt Els's dagelijkse prospectie (W13-W15)
-1. **Opvolg-reminder per relatie** ("volgende actie op <datum>") + "vandaag opvolgen"-blok op home — Pipedrive's kern: geen contact zonder geplande volgende activiteit. *(fase A)*
-2. **Leads-inbox-flow**: prospect → lead kwalificeren → **"Maak deal van deze relatie"**-knop in het organisatie/contactpaneel (nu moet je een deal los aanmaken en zelf koppelen).
+1. ~~**Opvolg-reminder per relatie**~~ ✅ **Gebouwd (sprint 1, 2026-07-09):** `opvolgenOp`-veld op beide collecties, datum in de panelen, Opvolgen-kolom + "vandaag/achterstallig"-filter in de lijst, "Vandaag opvolgen"-blok op home.
+2. ~~**Leads-inbox-flow**~~ ✅ **Gebouwd (sprint 1):** "+ Maak deal van deze relatie"-knop in organisatie- én contactpaneel; maakt open deal, kwalificeert prospect→lead automatisch, redirect naar het dealpaneel.
 3. **CSV/Excel-import** van prospectlijsten (Pipedrive-import met kolom-mapping) — Els gaat outreach doen; lijsten komen van buiten.
-4. **Risicoklasse-veld** (hoog/verboden/geen) op relaties — tweede as van haar kwadrant; nu alleen doelgroep. *(triviaal, zelfde patroon)*
-5. **Tags-beheer in de UI** — tags bestaan op het schema maar zijn in de panelen niet te bewerken en niet filterbaar in de lijst.
+4. ~~**Risicoklasse-veld**~~ ✅ **Gebouwd (sprint 1):** `risicoklasse` (hoog/verboden/geen) op beide collecties, select in de panelen.
+5. ~~**Tags-beheer in de UI**~~ ✅ **Gebouwd (sprint 1):** tags-chips-invoer (`TagsVeld`) in de panelen + tag-filter in de lijst.
 6. **Bulk-acties** op de lijst: selectie → type/doelgroep/eigenaar wijzigen, taggen, verwijderen (multi-select bestaat al in de kennisbank — patroon herbruikbaar).
 
 ### B. Middel — completeren het Pipedrive-gevoel
@@ -42,7 +42,7 @@ Bestaand en al werkend (ter context): organisatie-/contactpanelen met inline edi
 
 ## 3. Voorgestelde volgorde
 
-**Sprint 1 (fase A-plus, ±1 dag):** punten 1, 2, 4, 5 — reminders + deal-vanuit-relatie + risicoklasse + tags-UI. Daarmee is de dagelijkse prospectie-loop compleet: toevoegen → labelen → opvolgen → converteren.
+**Sprint 1 (fase A-plus, ±1 dag):** ✅ **AFGEROND 2026-07-09** — punten 1, 2, 4, 5: reminders + deal-vanuit-relatie + risicoklasse + tags-UI. Daarmee is de dagelijkse prospectie-loop compleet: toevoegen → labelen → opvolgen → converteren.
 **Sprint 2:** 3 + 11 (import + dedupe) vóór de outreach-campagnes starten.
 **Sprint 3:** 6, 7, 8, 10 (bulk, opgeslagen lijsten, sorteren, laatste contact).
 Punten 14-18 blijven op de bestaande routekaart.

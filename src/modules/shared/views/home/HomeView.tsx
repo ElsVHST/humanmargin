@@ -95,8 +95,18 @@ export async function HomeView({ initPageResult }: AdminViewServerProps) {
     vandaag.getDate(),
   );
   const overEenWeek = new Date(startVandaag.getTime() + 7 * 86400000);
+  const eindVandaag = new Date(startVandaag.getTime() + 86400000);
 
-  const [openDeals, stages, mijnTaken, weekContent, recenteActiviteit, weekDeals] =
+  const [
+    openDeals,
+    stages,
+    mijnTaken,
+    weekContent,
+    recenteActiviteit,
+    weekDeals,
+    opvolgOrgs,
+    opvolgContacten,
+  ] =
     await Promise.all([
       payload.find({
         collection: "deals",
@@ -154,7 +164,41 @@ export async function HomeView({ initPageResult }: AdminViewServerProps) {
         limit: 8,
         depth: 0,
       }),
+      // Vandaag opvolgen: opvolgdatum vandaag of eerder (achterstallig telt mee)
+      payload.find({
+        collection: "organisations",
+        where: { opvolgenOp: { less_than: eindVandaag.toISOString() } },
+        sort: "opvolgenOp",
+        limit: 8,
+        depth: 0,
+      }),
+      payload.find({
+        collection: "contacts",
+        where: { opvolgenOp: { less_than: eindVandaag.toISOString() } },
+        sort: "opvolgenOp",
+        limit: 8,
+        depth: 0,
+      }),
     ]);
+
+  const opvolgRelaties = [
+    ...opvolgOrgs.docs.map((o) => ({
+      key: `org-${o.id}`,
+      naam: o.naam,
+      href: `/admin/relaties?organisatie=${o.id}`,
+      soort: "organisatie",
+      op: o.opvolgenOp ?? "",
+    })),
+    ...opvolgContacten.docs.map((c) => ({
+      key: `contact-${c.id}`,
+      naam: c.naam ?? c.email,
+      href: `/admin/relaties?contact=${c.id}`,
+      soort: "contact",
+      op: c.opvolgenOp ?? "",
+    })),
+  ]
+    .sort((a, b) => a.op.localeCompare(b.op))
+    .slice(0, 8);
 
   const totaalWaarde = openDeals.docs.reduce(
     (som, d) => som + (d.bedrag ?? 0),
@@ -261,6 +305,34 @@ export async function HomeView({ initPageResult }: AdminViewServerProps) {
         </div>
 
         <div className="hm-home__grid">
+          <section className="hm-home__kaart">
+            <header>
+              <h2>Vandaag opvolgen</h2>
+              <Link href="/admin/relaties">Naar relaties →</Link>
+            </header>
+            {opvolgRelaties.length === 0 ? (
+              <p className="hm-home__leeg">
+                Geen relaties om vandaag op te volgen.
+              </p>
+            ) : (
+              <ul className="hm-home__lijst">
+                {opvolgRelaties.map((rel) => (
+                  <li key={rel.key}>
+                    <Link className="hm-home__itemtekst" href={rel.href}>
+                      {rel.naam}
+                    </Link>
+                    <span className="hm-home__badge">{rel.soort}</span>
+                    <span
+                      className={`hm-home__badge${new Date(rel.op).getTime() < startVandaag.getTime() ? " is-verlopen" : ""}`}
+                    >
+                      {datumKort(rel.op)}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+
           <section className="hm-home__kaart">
             <header>
               <h2>Pipeline</h2>

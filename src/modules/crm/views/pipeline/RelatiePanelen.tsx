@@ -43,6 +43,20 @@ async function patchDoc<T>(
   return (await res.json()) as T;
 }
 
+async function postDoc<T>(
+  slug: string,
+  data: Record<string, unknown>,
+): Promise<T> {
+  const res = await fetch(`/api/${slug}`, {
+    method: "POST",
+    credentials: "include",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  if (!res.ok) throw new Error(`POST ${slug} → ${res.status}`);
+  return ((await res.json()) as { doc: T }).doc;
+}
+
 function relId(value: unknown): string {
   if (value == null) return "";
   if (typeof value === "object") {
@@ -66,6 +80,58 @@ function useGebruikers() {
     queryKey: ["panel", "gebruikers"],
     queryFn: () => fetchDocs<User>("/api/users?limit=100&depth=0"),
   });
+}
+
+/** Vrije-tekst-tags als chips: Enter/komma voegt toe, × verwijdert. */
+function TagsVeld({
+  onWijzig,
+  tags,
+}: {
+  onWijzig: (tags: string[]) => void;
+  tags: string[];
+}) {
+  const [invoer, setInvoer] = useState("");
+
+  const voegToe = () => {
+    const tag = invoer.trim();
+    setInvoer("");
+    if (!tag || tags.includes(tag)) return;
+    onWijzig([...tags, tag]);
+  };
+
+  return (
+    <div className="hm-tagsveld">
+      {tags.map((tag) => (
+        <span className="hm-pill" key={tag}>
+          {tag}
+          <button
+            aria-label={`Tag '${tag}' verwijderen`}
+            onClick={() => onWijzig(tags.filter((t) => t !== tag))}
+            type="button"
+          >
+            <X size={11} />
+          </button>
+        </span>
+      ))}
+      <input
+        aria-label="Nieuwe tag"
+        onBlur={voegToe}
+        onChange={(e) => setInvoer(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === ",") {
+            e.preventDefault();
+            voegToe();
+          }
+        }}
+        placeholder={tags.length === 0 ? "Tag + Enter…" : ""}
+        value={invoer}
+      />
+    </div>
+  );
+}
+
+function tagsVan(rel: { tags?: (string | null)[] | null }): string[] {
+  return (rel.tags ?? []).filter((t): t is string => Boolean(t));
 }
 
 /* ═══ Organisatie-paneel ═══════════════════════════════════════════════ */
@@ -175,6 +241,7 @@ function NieuweOrganisatie({ onClose, onToast }: Omit<OrgProps, "organisatieId">
 
 function OrganisatieDetail({ onClose, onToast, organisatieId }: OrgProps) {
   const qc = useQueryClient();
+  const router = useRouter();
   const gebruikers = useGebruikers();
   useEscape(onClose);
 
@@ -210,6 +277,34 @@ function OrganisatieDetail({ onClose, onToast, organisatieId }: OrgProps) {
     },
     onError: () =>
       onToast({ tekst: "Opslaan mislukt — probeer het opnieuw.", soort: "fout" }),
+  });
+
+  const maakDeal = useMutation({
+    mutationFn: async () => {
+      const huidig = orgQuery.data;
+      const deal = await postDoc<Deal>("deals", {
+        titel: `${huidig?.naam ?? "Relatie"} — nieuw`,
+        uitkomst: "open",
+        organisatie: Number(organisatieId),
+      });
+      // Pipedrive-kwalificatie: prospect wordt lead zodra er een deal ontstaat
+      if ((huidig?.relatietype ?? "prospect") === "prospect") {
+        await patchDoc("organisations", organisatieId, { relatietype: "lead" });
+      }
+      return deal;
+    },
+    onSuccess: (deal) => {
+      qc.invalidateQueries({ queryKey: ["organisatie", organisatieId] });
+      qc.invalidateQueries({ queryKey: ["relaties", "organisaties"] });
+      qc.invalidateQueries({ queryKey: ["pipeline", "deals"] });
+      onToast({ tekst: `Deal '${deal.titel}' aangemaakt.`, soort: "ok" });
+      router.replace(`/admin/pipeline?deal=${deal.id}`);
+    },
+    onError: () =>
+      onToast({
+        tekst: "Deal aanmaken mislukt — probeer het opnieuw.",
+        soort: "fout",
+      }),
   });
 
   const org = orgQuery.data;
@@ -299,6 +394,43 @@ function OrganisatieDetail({ onClose, onToast, organisatieId }: OrgProps) {
                 <option value="overig">Overig</option>
               </select>
             </label>
+            <label>
+              Risicoklasse
+              <select
+                onChange={(e) =>
+                  opslaan.mutate({ risicoklasse: e.target.value || null })
+                }
+                value={org.risicoklasse ?? ""}
+              >
+                <option value="">—</option>
+                <option value="hoog">Hoog risico</option>
+                <option value="verboden">Verboden</option>
+                <option value="geen">Geen risico</option>
+              </select>
+            </label>
+            <label>
+              Opvolgen op
+              <input
+                defaultValue={org.opvolgenOp?.slice(0, 10) ?? ""}
+                key={`opvolg-${org.updatedAt}`}
+                onBlur={(e) => {
+                  const nieuw = e.target.value
+                    ? new Date(`${e.target.value}T12:00:00`).toISOString()
+                    : null;
+                  if (nieuw !== (org.opvolgenOp ?? null)) {
+                    opslaan.mutate({ opvolgenOp: nieuw });
+                  }
+                }}
+                type="date"
+              />
+            </label>
+            <div className="hm-veld">
+              Tags
+              <TagsVeld
+                onWijzig={(tags) => opslaan.mutate({ tags })}
+                tags={tagsVan(org)}
+              />
+            </div>
             <label>
               Sector
               <input
@@ -390,6 +522,16 @@ function OrganisatieDetail({ onClose, onToast, organisatieId }: OrgProps) {
                   </span>
                 </Link>
               ))}
+              <button
+                className="hm-btn"
+                disabled={maakDeal.isPending}
+                onClick={() => maakDeal.mutate()}
+                type="button"
+              >
+                {maakDeal.isPending
+                  ? "Deal aanmaken…"
+                  : "+ Maak deal van deze relatie"}
+              </button>
             </div>
 
             <div className="hm-relatie__blok">
@@ -571,6 +713,7 @@ function NieuwContact({ onClose, onToast }: Omit<ContactProps, "contactId">) {
 
 function ContactDetail({ contactId, onClose, onToast }: ContactProps) {
   const qc = useQueryClient();
+  const router = useRouter();
   const gebruikers = useGebruikers();
   useEscape(onClose);
 
@@ -595,6 +738,40 @@ function ContactDetail({ contactId, onClose, onToast }: ContactProps) {
     },
     onError: () =>
       onToast({ tekst: "Opslaan mislukt — probeer het opnieuw.", soort: "fout" }),
+  });
+
+  const maakDeal = useMutation({
+    mutationFn: async () => {
+      const huidig = contactQuery.data;
+      const orgId = relId(huidig?.organisatie);
+      const orgNaam =
+        huidig?.organisatie && typeof huidig.organisatie === "object"
+          ? huidig.organisatie.naam
+          : null;
+      const deal = await postDoc<Deal>("deals", {
+        titel: `${orgNaam ?? huidig?.naam ?? huidig?.email ?? "Relatie"} — nieuw`,
+        uitkomst: "open",
+        contactpersoon: Number(contactId),
+        organisatie: orgId ? Number(orgId) : null,
+      });
+      // Pipedrive-kwalificatie: prospect wordt lead zodra er een deal ontstaat
+      if ((huidig?.relatietype ?? "prospect") === "prospect") {
+        await patchDoc("contacts", contactId, { relatietype: "lead" });
+      }
+      return deal;
+    },
+    onSuccess: (deal) => {
+      qc.invalidateQueries({ queryKey: ["contact", contactId] });
+      qc.invalidateQueries({ queryKey: ["relaties", "contacten"] });
+      qc.invalidateQueries({ queryKey: ["pipeline", "deals"] });
+      onToast({ tekst: `Deal '${deal.titel}' aangemaakt.`, soort: "ok" });
+      router.replace(`/admin/pipeline?deal=${deal.id}`);
+    },
+    onError: () =>
+      onToast({
+        tekst: "Deal aanmaken mislukt — probeer het opnieuw.",
+        soort: "fout",
+      }),
   });
 
   const contact = contactQuery.data;
@@ -717,6 +894,43 @@ function ContactDetail({ contactId, onClose, onToast }: ContactProps) {
               </select>
             </label>
             <label>
+              Risicoklasse
+              <select
+                onChange={(e) =>
+                  opslaan.mutate({ risicoklasse: e.target.value || null })
+                }
+                value={contact.risicoklasse ?? ""}
+              >
+                <option value="">—</option>
+                <option value="hoog">Hoog risico</option>
+                <option value="verboden">Verboden</option>
+                <option value="geen">Geen risico</option>
+              </select>
+            </label>
+            <label>
+              Opvolgen op
+              <input
+                defaultValue={contact.opvolgenOp?.slice(0, 10) ?? ""}
+                key={`opvolg-${contact.updatedAt}`}
+                onBlur={(e) => {
+                  const nieuw = e.target.value
+                    ? new Date(`${e.target.value}T12:00:00`).toISOString()
+                    : null;
+                  if (nieuw !== (contact.opvolgenOp ?? null)) {
+                    opslaan.mutate({ opvolgenOp: nieuw });
+                  }
+                }}
+                type="date"
+              />
+            </label>
+            <div className="hm-veld">
+              Tags
+              <TagsVeld
+                onWijzig={(tags) => opslaan.mutate({ tags })}
+                tags={tagsVan(contact)}
+              />
+            </div>
+            <label>
               Functie
               <input
                 defaultValue={contact.functie ?? ""}
@@ -779,6 +993,19 @@ function ContactDetail({ contactId, onClose, onToast }: ContactProps) {
                 ))}
               </select>
             </label>
+
+            <div className="hm-relatie__blok">
+              <button
+                className="hm-btn"
+                disabled={maakDeal.isPending}
+                onClick={() => maakDeal.mutate()}
+                type="button"
+              >
+                {maakDeal.isPending
+                  ? "Deal aanmaken…"
+                  : "+ Maak deal van deze relatie"}
+              </button>
+            </div>
 
             <Link
               className="hm-dealpanel__editorlink"

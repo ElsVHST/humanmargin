@@ -23,6 +23,8 @@ import "./relaties.scss";
 type Props = {
   initialOrganisaties: Organisation[];
   initialContacten: Contact[];
+  /** Servertijd (ms) — geen Date.now() in de componentbody (react-hooks/purity). */
+  nu: number;
 };
 
 export function RelatiesLijst(props: Props) {
@@ -80,7 +82,7 @@ async function fetchDocs<T>(url: string): Promise<T[]> {
   return ((await res.json()) as { docs: T[] }).docs;
 }
 
-function Lijst({ initialContacten, initialOrganisaties }: Props) {
+function Lijst({ initialContacten, initialOrganisaties, nu }: Props) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const organisatieParam = searchParams.get("organisatie");
@@ -93,7 +95,17 @@ function Lijst({ initialContacten, initialOrganisaties }: Props) {
   const [zoek, setZoek] = useState("");
   const [typeFilter, setTypeFilter] = useState("alle");
   const [doelgroepFilter, setDoelgroepFilter] = useState("alle");
+  const [opvolgFilter, setOpvolgFilter] = useState("alle");
+  const [tagFilter, setTagFilter] = useState("alle");
   const [toast, setToast] = useState<PanelToast | null>(null);
+
+  const vandaag = new Date(nu);
+  const startVandaag = new Date(
+    vandaag.getFullYear(),
+    vandaag.getMonth(),
+    vandaag.getDate(),
+  ).getTime();
+  const eindVandaag = startVandaag + 86400000;
 
   useEffect(() => {
     if (!toast) return;
@@ -126,8 +138,45 @@ function Lijst({ initialContacten, initialOrganisaties }: Props) {
     if (doelgroepFilter !== "alle" && rel.doelgroep !== doelgroepFilter) {
       return false;
     }
+    if (opvolgFilter !== "alle") {
+      const t = rel.opvolgenOp ? new Date(rel.opvolgenOp).getTime() : null;
+      if (t == null) return false;
+      // "vandaag" = vandaag opvolgen, achterstallig telt mee
+      if (opvolgFilter === "vandaag" && t >= eindVandaag) return false;
+      if (opvolgFilter === "achterstallig" && t >= startVandaag) return false;
+    }
+    if (
+      tagFilter !== "alle" &&
+      !(rel.tags ?? []).some((tag) => tag === tagFilter)
+    ) {
+      return false;
+    }
     if (term && !naam.toLowerCase().includes(term)) return false;
     return true;
+  };
+
+  const alleTags = Array.from(
+    new Set(
+      [...(orgsQuery.data ?? []), ...(contactenQuery.data ?? [])].flatMap(
+        (rel) => (rel.tags ?? []).filter((tag): tag is string => Boolean(tag)),
+      ),
+    ),
+  ).sort((a, b) => a.localeCompare(b, "nl"));
+
+  const opvolgCel = (iso?: string | null): React.ReactNode => {
+    if (!iso) return "—";
+    const t = new Date(iso).getTime();
+    if (t < startVandaag) {
+      return (
+        <span className="hm-pill hm-pill--rose">
+          {datumKort(iso)} · achterstallig
+        </span>
+      );
+    }
+    if (t < eindVandaag) {
+      return <span className="hm-pill hm-pill--amber">vandaag</span>;
+    }
+    return datumKort(iso);
   };
 
   const organisaties = (orgsQuery.data ?? []).filter((o) =>
@@ -139,6 +188,13 @@ function Lijst({ initialContacten, initialOrganisaties }: Props) {
 
   const openPaneel = (soort: "organisatie" | "contact", id: number | "nieuw") =>
     router.push(`/admin/relaties?tab=${tab}&${soort}=${id}`);
+
+  const filtersActief =
+    Boolean(term) ||
+    typeFilter !== "alle" ||
+    doelgroepFilter !== "alle" ||
+    opvolgFilter !== "alle" ||
+    tagFilter !== "alle";
 
   return (
     <div className="hm-relaties">
@@ -206,6 +262,30 @@ function Lijst({ initialContacten, initialOrganisaties }: Props) {
               </option>
             ))}
           </select>
+          <select
+            aria-label="Filter op opvolgdatum"
+            className="hm-board__select"
+            onChange={(e) => setOpvolgFilter(e.target.value)}
+            value={opvolgFilter}
+          >
+            <option value="alle">Opvolgen: alles</option>
+            <option value="vandaag">Vandaag opvolgen</option>
+            <option value="achterstallig">Achterstallig</option>
+          </select>
+          <select
+            aria-label="Filter op tag"
+            className="hm-board__select"
+            disabled={alleTags.length === 0}
+            onChange={(e) => setTagFilter(e.target.value)}
+            value={tagFilter}
+          >
+            <option value="alle">Alle tags</option>
+            {alleTags.map((tag) => (
+              <option key={tag} value={tag}>
+                {tag}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
 
@@ -213,7 +293,7 @@ function Lijst({ initialContacten, initialOrganisaties }: Props) {
         organisaties.length === 0 ? (
           <div className="hm-relaties__leeg">
             <p>
-              {term || typeFilter !== "alle" || doelgroepFilter !== "alle"
+              {filtersActief
                 ? "Geen organisaties gevonden met deze filters."
                 : "Nog geen organisaties — voeg je eerste prospect toe."}
             </p>
@@ -225,6 +305,7 @@ function Lijst({ initialContacten, initialOrganisaties }: Props) {
                 <th>Naam</th>
                 <th>Type</th>
                 <th>Doelgroep</th>
+                <th>Opvolgen</th>
                 <th>Sector</th>
                 <th>Eigenaar</th>
                 <th>Bijgewerkt</th>
@@ -255,6 +336,7 @@ function Lijst({ initialContacten, initialOrganisaties }: Props) {
                       {DOELGROEPEN.find((d) => d.waarde === org.doelgroep)
                         ?.label ?? "—"}
                     </td>
+                    <td>{opvolgCel(org.opvolgenOp)}</td>
                     <td>{org.sector ?? "—"}</td>
                     <td>{eigenaarNaam(org) ?? "—"}</td>
                     <td>{datumKort(org.updatedAt)}</td>
@@ -267,7 +349,7 @@ function Lijst({ initialContacten, initialOrganisaties }: Props) {
       ) : contacten.length === 0 ? (
         <div className="hm-relaties__leeg">
           <p>
-            {term || typeFilter !== "alle" || doelgroepFilter !== "alle"
+            {filtersActief
               ? "Geen contactpersonen gevonden met deze filters."
               : "Nog geen contactpersonen — voeg je eerste contact toe."}
           </p>
@@ -278,6 +360,7 @@ function Lijst({ initialContacten, initialOrganisaties }: Props) {
             <tr>
               <th>Naam</th>
               <th>Type</th>
+              <th>Opvolgen</th>
               <th>E-mail</th>
               <th>Organisatie</th>
               <th>Functie</th>
@@ -308,6 +391,7 @@ function Lijst({ initialContacten, initialOrganisaties }: Props) {
                       {type.label}
                     </span>
                   </td>
+                  <td>{opvolgCel(contact.opvolgenOp)}</td>
                   <td>{contact.email}</td>
                   <td>{orgNaamVan(contact) ?? "—"}</td>
                   <td>{contact.functie ?? "—"}</td>
