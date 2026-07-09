@@ -3,7 +3,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { ExternalLink, X } from "lucide-react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 import { RecordTijdlijn } from "@/modules/shared/components/RecordTijdlijn";
@@ -82,12 +82,14 @@ function useGebruikers() {
   });
 }
 
-/** Vrije-tekst-tags als chips: Enter/komma voegt toe, × verwijdert. */
+/** Vrije-tekst-waarden als chips: Enter/komma voegt toe, × verwijdert. */
 function TagsVeld({
   onWijzig,
+  placeholder,
   tags,
 }: {
   onWijzig: (tags: string[]) => void;
+  placeholder?: string;
   tags: string[];
 }) {
   const [invoer, setInvoer] = useState("");
@@ -123,15 +125,71 @@ function TagsVeld({
             voegToe();
           }
         }}
-        placeholder={tags.length === 0 ? "Tag + Enter…" : ""}
+        placeholder={tags.length === 0 ? (placeholder ?? "Tag + Enter…") : ""}
         value={invoer}
       />
     </div>
   );
 }
 
-function tagsVan(rel: { tags?: (string | null)[] | null }): string[] {
-  return (rel.tags ?? []).filter((t): t is string => Boolean(t));
+function lijstVan(arr?: (string | null)[] | null): string[] {
+  return (arr ?? []).filter((t): t is string => Boolean(t));
+}
+
+/** Stel een href samen op de huidige route met gewijzigde query-params
+    (null = param verwijderen) — houdt tab/deal/organisatie intact. */
+export function useMetParams() {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  return (wijzig: Record<string, string | null>) => {
+    const p = new URLSearchParams(searchParams.toString());
+    for (const [k, v] of Object.entries(wijzig)) {
+      if (v === null) p.delete(k);
+      else p.set(k, v);
+    }
+    const qs = p.toString();
+    return qs ? `${pathname}?${qs}` : pathname;
+  };
+}
+
+type Adres = NonNullable<Organisation["bezoekadres"]>;
+
+/** Vijf adres-inputs met autosave per veld (partial-group PATCH). */
+function AdresVelden({
+  adres,
+  onOpslaan,
+  prefix,
+  updatedAt,
+}: {
+  adres: Adres | null | undefined;
+  onOpslaan: (deel: Record<string, string | null>) => void;
+  prefix: string;
+  updatedAt: string;
+}) {
+  const veld = (naam: keyof Adres & string, label: string) => (
+    <label>
+      {label}
+      <input
+        defaultValue={(adres?.[naam] as string | null) ?? ""}
+        key={`${prefix}-${naam}-${updatedAt}`}
+        onBlur={(e) => {
+          const nieuw = e.target.value.trim() || null;
+          if (nieuw !== ((adres?.[naam] as string | null) ?? null)) {
+            onOpslaan({ [naam]: nieuw });
+          }
+        }}
+      />
+    </label>
+  );
+  return (
+    <div className="hm-adres">
+      {veld("straat", "Straat")}
+      {veld("huisnummer", "Huisnummer")}
+      {veld("postcode", "Postcode")}
+      {veld("plaats", "Plaats")}
+      {veld("land", "Land")}
+    </div>
+  );
 }
 
 /* ═══ Organisatie-paneel ═══════════════════════════════════════════════ */
@@ -242,6 +300,7 @@ function NieuweOrganisatie({ onClose, onToast }: Omit<OrgProps, "organisatieId">
 function OrganisatieDetail({ onClose, onToast, organisatieId }: OrgProps) {
   const qc = useQueryClient();
   const router = useRouter();
+  const metParams = useMetParams();
   const gebruikers = useGebruikers();
   useEscape(onClose);
 
@@ -264,6 +323,37 @@ function OrganisatieDetail({ onClose, onToast, organisatieId }: OrgProps) {
       fetchDocs<Contact>(
         `/api/contacts?where[organisatie][equals]=${organisatieId}&limit=50&depth=0`,
       ),
+  });
+
+  const alleContacten = useQuery({
+    queryKey: ["panel", "contacten"],
+    queryFn: () =>
+      fetchDocs<Contact>("/api/contacts?limit=300&sort=naam&depth=0"),
+  });
+
+  const invalideerContacten = () => {
+    qc.invalidateQueries({ queryKey: ["organisatie", organisatieId, "contacten"] });
+    qc.invalidateQueries({ queryKey: ["panel", "contacten"] });
+    qc.invalidateQueries({ queryKey: ["relaties", "contacten"] });
+  };
+
+  const contactKoppelen = useMutation({
+    mutationFn: (contactId: string) =>
+      patchDoc("contacts", contactId, { organisatie: Number(organisatieId) }),
+    onSuccess: invalideerContacten,
+    onError: () =>
+      onToast({ tekst: "Koppelen mislukt — probeer het opnieuw.", soort: "fout" }),
+  });
+
+  const contactOntkoppelen = useMutation({
+    mutationFn: (contactId: string) =>
+      patchDoc("contacts", contactId, { organisatie: null }),
+    onSuccess: invalideerContacten,
+    onError: () =>
+      onToast({
+        tekst: "Ontkoppelen mislukt — probeer het opnieuw.",
+        soort: "fout",
+      }),
   });
 
   const opslaan = useMutation({
@@ -428,7 +518,7 @@ function OrganisatieDetail({ onClose, onToast, organisatieId }: OrgProps) {
               Tags
               <TagsVeld
                 onWijzig={(tags) => opslaan.mutate({ tags })}
-                tags={tagsVan(org)}
+                tags={lijstVan(org.tags)}
               />
             </div>
             <label>
@@ -507,6 +597,110 @@ function OrganisatieDetail({ onClose, onToast, organisatieId }: OrgProps) {
               />
             </label>
 
+            <details className="hm-sectie">
+              <summary>Adressen</summary>
+              <div className="hm-sectie__body">
+                <h5>Bezoekadres</h5>
+                <AdresVelden
+                  adres={org.bezoekadres}
+                  onOpslaan={(deel) => opslaan.mutate({ bezoekadres: deel })}
+                  prefix="bezoek"
+                  updatedAt={org.updatedAt}
+                />
+                <label className="hm-check">
+                  <input
+                    checked={org.postadresZelfde ?? true}
+                    onChange={(e) =>
+                      opslaan.mutate({ postadresZelfde: e.target.checked })
+                    }
+                    type="checkbox"
+                  />
+                  Postadres gelijk aan bezoekadres
+                </label>
+                {!(org.postadresZelfde ?? true) && (
+                  <>
+                    <h5>Postadres</h5>
+                    <AdresVelden
+                      adres={org.postadres}
+                      onOpslaan={(deel) => opslaan.mutate({ postadres: deel })}
+                      prefix="post"
+                      updatedAt={org.updatedAt}
+                    />
+                  </>
+                )}
+                <label className="hm-check">
+                  <input
+                    checked={org.factuuradresZelfde ?? true}
+                    onChange={(e) =>
+                      opslaan.mutate({ factuuradresZelfde: e.target.checked })
+                    }
+                    type="checkbox"
+                  />
+                  Factuuradres gelijk aan postadres
+                </label>
+                {!(org.factuuradresZelfde ?? true) && (
+                  <>
+                    <h5>Factuuradres</h5>
+                    <AdresVelden
+                      adres={org.factuuradres}
+                      onOpslaan={(deel) => opslaan.mutate({ factuuradres: deel })}
+                      prefix="factuur"
+                      updatedAt={org.updatedAt}
+                    />
+                  </>
+                )}
+              </div>
+            </details>
+
+            <details className="hm-sectie">
+              <summary>Facturatie</summary>
+              <div className="hm-sectie__body">
+                <div className="hm-adres">
+                  {(
+                    [
+                      ["kvkNummer", "KvK-nummer"],
+                      ["btwNummer", "BTW-nummer"],
+                      ["iban", "IBAN"],
+                      ["tenaamstelling", "Tenaamstelling"],
+                      ["factuurEmail", "Factuur-e-mail"],
+                    ] as const
+                  ).map(([naam, label]) => (
+                    <label key={naam}>
+                      {label}
+                      <input
+                        defaultValue={org.facturatie?.[naam] ?? ""}
+                        key={`fact-${naam}-${org.updatedAt}`}
+                        onBlur={(e) => {
+                          const nieuw = e.target.value.trim() || null;
+                          if (nieuw !== (org.facturatie?.[naam] ?? null)) {
+                            opslaan.mutate({ facturatie: { [naam]: nieuw } });
+                          }
+                        }}
+                      />
+                    </label>
+                  ))}
+                  <label>
+                    Betaaltermijn (dagen)
+                    <input
+                      defaultValue={org.facturatie?.betaaltermijnDagen ?? 30}
+                      key={`fact-termijn-${org.updatedAt}`}
+                      min={0}
+                      onBlur={(e) => {
+                        const nieuw =
+                          e.target.value === "" ? null : Number(e.target.value);
+                        if (nieuw !== (org.facturatie?.betaaltermijnDagen ?? null)) {
+                          opslaan.mutate({
+                            facturatie: { betaaltermijnDagen: nieuw },
+                          });
+                        }
+                      }}
+                      type="number"
+                    />
+                  </label>
+                </div>
+              </div>
+            </details>
+
             <div className="hm-relatie__blok">
               <h4>Deals ({(dealsQuery.data ?? []).length})</h4>
               {(dealsQuery.data ?? []).map((deal) => (
@@ -537,15 +731,62 @@ function OrganisatieDetail({ onClose, onToast, organisatieId }: OrgProps) {
             <div className="hm-relatie__blok">
               <h4>Contactpersonen ({(contactenQuery.data ?? []).length})</h4>
               {(contactenQuery.data ?? []).map((c) => (
-                <Link
-                  href={`/admin/pipeline?contact=${c.id}`}
-                  key={c.id}
-                  replace
-                >
-                  {c.naam ?? c.email}
-                  <span>{c.functie ?? ""}</span>
-                </Link>
+                <div className="hm-relatie__rij" key={c.id}>
+                  <Link
+                    href={metParams({
+                      organisatie: organisatieId,
+                      contact: String(c.id),
+                    })}
+                    replace
+                  >
+                    {c.naam ?? c.email}
+                    <span>{c.functie ?? ""}</span>
+                  </Link>
+                  <button
+                    aria-label={`${c.naam ?? c.email} ontkoppelen`}
+                    className="hm-relatie__ontkoppel"
+                    disabled={contactOntkoppelen.isPending}
+                    onClick={() => contactOntkoppelen.mutate(String(c.id))}
+                    title="Ontkoppelen van deze organisatie"
+                    type="button"
+                  >
+                    <X size={13} />
+                  </button>
+                </div>
               ))}
+              <button
+                className="hm-btn"
+                onClick={() =>
+                  router.replace(
+                    metParams({ organisatie: organisatieId, contact: "nieuw" }),
+                  )
+                }
+                type="button"
+              >
+                + Nieuw contactpersoon
+              </button>
+              {(alleContacten.data ?? []).some(
+                (c) => relId(c.organisatie) !== organisatieId,
+              ) && (
+                <select
+                  aria-label="Koppel bestaande contactpersoon"
+                  className="hm-relatie__koppel"
+                  disabled={contactKoppelen.isPending}
+                  onChange={(e) => {
+                    if (e.target.value) contactKoppelen.mutate(e.target.value);
+                  }}
+                  value=""
+                >
+                  <option value="">Koppel bestaande contactpersoon…</option>
+                  {(alleContacten.data ?? [])
+                    .filter((c) => relId(c.organisatie) !== organisatieId)
+                    .map((c) => (
+                      <option key={c.id} value={String(c.id)}>
+                        {c.naam ?? c.email}
+                      </option>
+                    ))}
+                </select>
+              )}
             </div>
 
             <Link
@@ -581,15 +822,21 @@ type ContactProps = {
   contactId: string;
   onClose: () => void;
   onToast: (toast: PanelToast) => void;
+  /** Vooringevulde organisatie bij aanmaken vanuit het organisatiepaneel. */
+  standaardOrganisatie?: string;
 };
 
-function NieuwContact({ onClose, onToast }: Omit<ContactProps, "contactId">) {
+function NieuwContact({
+  onClose,
+  onToast,
+  standaardOrganisatie,
+}: Omit<ContactProps, "contactId">) {
   const qc = useQueryClient();
   const router = useRouter();
   const [voornaam, setVoornaam] = useState("");
   const [achternaam, setAchternaam] = useState("");
   const [email, setEmail] = useState("");
-  const [organisatie, setOrganisatie] = useState("");
+  const [organisatie, setOrganisatie] = useState(standaardOrganisatie ?? "");
   useEscape(onClose);
 
   const orgs = useQuery({
@@ -621,7 +868,12 @@ function NieuwContact({ onClose, onToast }: Omit<ContactProps, "contactId">) {
       });
       qc.invalidateQueries({ queryKey: ["panel", "contacten"] });
       qc.invalidateQueries({ queryKey: ["relaties", "contacten"] });
-      router.replace(`${window.location.pathname}?contact=${doc.id}`);
+      qc.invalidateQueries({ queryKey: ["organisatie"] });
+      // Behoud bestaande params (tab/organisatie) zodat het contact
+      // gestapeld op het organisatiepaneel opent.
+      const p = new URLSearchParams(window.location.search);
+      p.set("contact", String(doc.id));
+      router.replace(`${window.location.pathname}?${p.toString()}`);
     },
     onError: () =>
       onToast({
@@ -735,6 +987,7 @@ function ContactDetail({ contactId, onClose, onToast }: ContactProps) {
       qc.invalidateQueries({ queryKey: ["contact", contactId] });
       qc.invalidateQueries({ queryKey: ["panel", "contacten"] });
       qc.invalidateQueries({ queryKey: ["relaties", "contacten"] });
+      qc.invalidateQueries({ queryKey: ["organisatie"] });
     },
     onError: () =>
       onToast({ tekst: "Opslaan mislukt — probeer het opnieuw.", soort: "fout" }),
@@ -865,6 +1118,22 @@ function ContactDetail({ contactId, onClose, onToast }: ContactProps) {
                 type="email"
               />
             </label>
+            <div className="hm-veld">
+              Telefoonnummers
+              <TagsVeld
+                onWijzig={(telefoons) => opslaan.mutate({ telefoons })}
+                placeholder="Nummer + Enter…"
+                tags={lijstVan(contact.telefoons)}
+              />
+            </div>
+            <div className="hm-veld">
+              Extra e-mailadressen
+              <TagsVeld
+                onWijzig={(extraEmails) => opslaan.mutate({ extraEmails })}
+                placeholder="E-mail + Enter…"
+                tags={lijstVan(contact.extraEmails)}
+              />
+            </div>
             <label>
               Relatietype
               <select
@@ -927,7 +1196,7 @@ function ContactDetail({ contactId, onClose, onToast }: ContactProps) {
               Tags
               <TagsVeld
                 onWijzig={(tags) => opslaan.mutate({ tags })}
-                tags={tagsVan(contact)}
+                tags={lijstVan(contact.tags)}
               />
             </div>
             <label>
@@ -1029,7 +1298,13 @@ function ContactDetail({ contactId, onClose, onToast }: ContactProps) {
 
 export function ContactPanel(props: ContactProps) {
   if (props.contactId === "nieuw") {
-    return <NieuwContact onClose={props.onClose} onToast={props.onToast} />;
+    return (
+      <NieuwContact
+        onClose={props.onClose}
+        onToast={props.onToast}
+        standaardOrganisatie={props.standaardOrganisatie}
+      />
+    );
   }
   return <ContactDetail {...props} />;
 }

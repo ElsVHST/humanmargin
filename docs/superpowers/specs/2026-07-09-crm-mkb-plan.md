@@ -54,6 +54,13 @@ Els kan zelf kolommen/velden aanmaken, wijzigen, verplaatsen, archiveren — zon
 - **Sorteren** op kolomkop (klik = asc/desc), client-side.
 - Opslag in `users.lijstVoorkeuren` (json; self-update-access bestaat al) — per gebruiker, zoals Pipedrive. Fallback = huidige standaardkolommen.
 
+### B7 — Pipeline volledig verbonden met relaties (Chris, 2026-07-09)
+De pipeline is een weergave van dezelfde relaties, geen eiland:
+- **Dealkaart** toont naast de organisatie ook de **contactpersoon** (deals worden al met depth=1 geladen — geen extra query); de board-zoekbalk matcht ook op contactnaam.
+- **DealPanel** krijgt een "Gekoppeld"-blok met de échte gegevens van organisatie en contactpersoon (naam, functie, e-mail, telefoon) en doorklik: org/contact openen als **gestapeld paneel bovenop de deal** (`?deal=X&organisatie=Y` / `?deal=X&contact=Z` — de render-paden bestaan al op de pipeline, alleen volgorde en sluit-gedrag met param-behoud).
+- **Contactpersoon-select in het DealPanel wordt gefilterd op de gekozen organisatie** (Pipedrive-gedrag); de huidige koppeling blijft altijd zichtbaar.
+- Wijzig je organisatie/contact via de gestapelde panelen, dan verversen kaart en dealpaneel automatisch (query-invalidatie is er al).
+
 ### B6 — Eén beheerplek: CRM-instellingen-slideover
 Potlood-icoon op `/admin/relaties` (zelfde plek als kolommenbeheer op de boards) → slideover met tabs: **Velden** (crm-velden CRUD), **Sectoren**, **Functies** (beide via het bestaande generieke `ColumnsPanel`-patroon), **Kolommen** (B5). Alles zonder Payload-editor; die blijft fallback.
 
@@ -67,8 +74,8 @@ Potlood-icoon op `/admin/relaties` (zelfde plek als kolommenbeheer op de boards)
 ## 4. Sprintplan met acceptatiecriteria
 
 ### Sprint A — Relatie-hub & volledige records (±1 dag)
-Adressen + facturatie op organisations (B2, incl. paneel-secties); org-paneel contacten-blok: nieuw (vooringevuld) / bestaand koppelen / ontkoppelen / gestapeld openen (B1); contactpaneel: chips-editors voor telefoons[] en extraEmails[] (patroon `TagsVeld`).
-**Klaar als:** vanuit een organisatie een contact aanmaken → staat direct in het blok én de contactenlijst-tab; koppelen/ontkoppelen werkt; adres- en factuurvelden autosaven; check + tests groen.
+Adressen + facturatie op organisations (B2, incl. paneel-secties); org-paneel contacten-blok: nieuw (vooringevuld) / bestaand koppelen / ontkoppelen / gestapeld openen (B1); contactpaneel: chips-editors voor telefoons[] en extraEmails[] (patroon `TagsVeld`); **pipeline-verbinding (B7)**: contactpersoon op de dealkaart + Gekoppeld-blok met doorklik in het DealPanel + org-gefilterde contact-select.
+**Klaar als:** vanuit een organisatie een contact aanmaken → staat direct in het blok én de contactenlijst-tab; koppelen/ontkoppelen werkt; adres- en factuurvelden autosaven; dealkaart toont org + contact en het DealPanel toont hun echte gegevens met doorklik; check + tests groen.
 
 ### Sprint B — Beheerbare lijsten (±1 dag)
 `sectoren` + `functies` collecties + migratiescript; combobox create-on-type in beide panelen; sector-filter in de lijst; CRM-instellingen-slideover met tabs Sectoren/Functies (B3, B6-basis).

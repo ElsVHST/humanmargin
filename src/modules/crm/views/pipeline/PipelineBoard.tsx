@@ -79,6 +79,12 @@ function eigenaarInfo(deal: Deal): { naam: string; id: string | number } | null 
   return null;
 }
 
+function contactInfo(deal: Deal): { naam: string; id: string | number } | null {
+  const c = deal.contactpersoon;
+  if (c && typeof c === "object") return { naam: c.naam ?? c.email, id: c.id };
+  return null;
+}
+
 const DAG = 86_400_000;
 const STILSTAND_DAGEN = 14;
 
@@ -276,7 +282,12 @@ function Board({ initialStages, initialDeals, isBeheerder, nu }: Props) {
     }
     if (term) {
       const org = orgInfo(d)?.naam.toLowerCase() ?? "";
-      if (!d.titel.toLowerCase().includes(term) && !org.includes(term)) {
+      const contact = contactInfo(d)?.naam.toLowerCase() ?? "";
+      if (
+        !d.titel.toLowerCase().includes(term) &&
+        !org.includes(term) &&
+        !contact.includes(term)
+      ) {
         return false;
       }
     }
@@ -432,6 +443,7 @@ function Board({ initialStages, initialDeals, isBeheerder, nu }: Props) {
                         >
                           {(p, kaartSnapshot) => {
                             const org = orgInfo(deal);
+                            const contact = contactInfo(deal);
                             const eigenaar = eigenaarInfo(deal);
                             const bedrag = euro(deal.bedrag);
                             const kans =
@@ -465,9 +477,15 @@ function Board({ initialStages, initialDeals, isBeheerder, nu }: Props) {
                                 <span className="hm-deal__title">
                                   {deal.titel}
                                 </span>
-                                {org && (
+                                {(org || contact) && (
                                   <span className="hm-deal__org">
-                                    {org.naam}
+                                    {org?.naam}
+                                    {org && contact && " · "}
+                                    {contact && (
+                                      <span className="hm-deal__contact">
+                                        {contact.naam}
+                                      </span>
+                                    )}
                                   </span>
                                 )}
                                 <span className="hm-deal__foot">
@@ -603,24 +621,7 @@ function Board({ initialStages, initialDeals, isBeheerder, nu }: Props) {
         />
       )}
 
-      {organisatieParam && (
-        <OrganisatiePanel
-          key={`org-${organisatieParam}`}
-          onClose={() => router.push("/admin/pipeline")}
-          onToast={setToast}
-          organisatieId={organisatieParam}
-        />
-      )}
-
-      {contactParam && (
-        <ContactPanel
-          contactId={contactParam}
-          key={`contact-${contactParam}`}
-          onClose={() => router.push("/admin/pipeline")}
-          onToast={setToast}
-        />
-      )}
-
+      {/* DealPanel eerst: organisatie/contact stapelen er bovenop */}
       {dealParam && (
         <DealPanel
           dealId={dealParam}
@@ -630,6 +631,37 @@ function Board({ initialStages, initialDeals, isBeheerder, nu }: Props) {
           onClose={() => router.push("/admin/pipeline")}
           onToast={setToast}
           stages={stagesQuery.data ?? []}
+        />
+      )}
+
+      {organisatieParam && (
+        <OrganisatiePanel
+          key={`org-${organisatieParam}`}
+          onClose={() =>
+            router.push(
+              dealParam
+                ? `/admin/pipeline?deal=${dealParam}`
+                : "/admin/pipeline",
+            )
+          }
+          onToast={setToast}
+          organisatieId={organisatieParam}
+        />
+      )}
+
+      {contactParam && (
+        <ContactPanel
+          contactId={contactParam}
+          key={`contact-${contactParam}`}
+          onClose={() => {
+            const p = new URLSearchParams();
+            if (dealParam) p.set("deal", dealParam);
+            if (organisatieParam) p.set("organisatie", organisatieParam);
+            const qs = p.toString();
+            router.push(qs ? `/admin/pipeline?${qs}` : "/admin/pipeline");
+          }}
+          onToast={setToast}
+          standaardOrganisatie={organisatieParam ?? undefined}
         />
       )}
 

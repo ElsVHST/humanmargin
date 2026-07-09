@@ -416,8 +416,15 @@ function Lijst({ initialContacten, initialOrganisaties, nu }: Props) {
         <ContactPanel
           contactId={contactParam}
           key={`contact-${contactParam}`}
-          onClose={() => router.push(`/admin/relaties?tab=${tab}`)}
+          onClose={() =>
+            router.push(
+              organisatieParam
+                ? `/admin/relaties?tab=${tab}&organisatie=${organisatieParam}`
+                : `/admin/relaties?tab=${tab}`,
+            )
+          }
           onToast={setToast}
+          standaardOrganisatie={organisatieParam ?? undefined}
         />
       )}
 

@@ -18,6 +18,27 @@ export const tagsField: Field = {
   hasMany: true,
 };
 
+/** Herbruikbare adres-group (bezoek-, post- en factuuradres op organisaties). */
+export function adresGroup(
+  name: string,
+  label: string,
+  condition?: (data: Partial<Record<string, unknown>>) => boolean,
+): Field {
+  return {
+    name,
+    label,
+    type: "group",
+    ...(condition ? { admin: { condition } } : {}),
+    fields: [
+      { name: "straat", label: "Straat", type: "text" },
+      { name: "huisnummer", label: "Huisnummer", type: "text" },
+      { name: "postcode", label: "Postcode", type: "text" },
+      { name: "plaats", label: "Plaats", type: "text" },
+      { name: "land", label: "Land", type: "text", defaultValue: "Nederland" },
+    ],
+  };
+}
+
 /** Kennisbank-documenten als referentie — op deals, taken, content en projecten,
     zodat context overal meereist (Asana attachments / Pipedrive files-patroon). */
 export const referentiesField: Field = {

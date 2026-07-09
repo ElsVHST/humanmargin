@@ -1,7 +1,7 @@
 import type { CollectionConfig } from "payload";
 
 import { dashboardCollectionAccess } from "@/modules/shared/access";
-import { eigenaarField, tagsField } from "@/modules/shared/fields";
+import { adresGroup, eigenaarField, tagsField } from "@/modules/shared/fields";
 
 export const Organisations: CollectionConfig = {
   slug: "organisations",
@@ -20,6 +20,44 @@ export const Organisations: CollectionConfig = {
     { name: "sector", label: "Sector", type: "text" },
     { name: "logo", label: "Logo", type: "upload", relationTo: "media" },
     { name: "notities", label: "Notities", type: "textarea" },
+    adresGroup("bezoekadres", "Bezoekadres"),
+    {
+      name: "postadresZelfde",
+      label: "Postadres gelijk aan bezoekadres",
+      type: "checkbox",
+      defaultValue: true,
+    },
+    adresGroup("postadres", "Postadres", (data) => !data?.postadresZelfde),
+    {
+      name: "factuuradresZelfde",
+      label: "Factuuradres gelijk aan postadres",
+      type: "checkbox",
+      defaultValue: true,
+    },
+    adresGroup(
+      "factuuradres",
+      "Factuuradres",
+      (data) => !data?.factuuradresZelfde,
+    ),
+    {
+      name: "facturatie",
+      label: "Factuurgegevens",
+      type: "group",
+      fields: [
+        { name: "kvkNummer", label: "KvK-nummer", type: "text" },
+        { name: "btwNummer", label: "BTW-nummer", type: "text" },
+        { name: "iban", label: "IBAN", type: "text" },
+        { name: "tenaamstelling", label: "Tenaamstelling", type: "text" },
+        { name: "factuurEmail", label: "Factuur-e-mailadres", type: "text" },
+        {
+          name: "betaaltermijnDagen",
+          label: "Betaaltermijn (dagen)",
+          type: "number",
+          defaultValue: 30,
+          min: 0,
+        },
+      ],
+    },
     {
       name: "contacten",
       label: "Contactpersonen",

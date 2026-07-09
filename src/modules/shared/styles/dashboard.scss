@@ -1043,6 +1043,78 @@ html[data-theme="dark"] {
   }
 }
 
+/* ── Inklapbare paneel-secties (adressen, facturatie) ────────────────── */
+.hm-sectie {
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-r-s);
+
+  > summary {
+    color: var(--hm-muted);
+    cursor: pointer;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    list-style: none;
+    padding: 9px 12px;
+    text-transform: uppercase;
+    user-select: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: "▸";
+      display: inline-block;
+      margin-right: 7px;
+      transition: transform 0.15s ease;
+    }
+  }
+
+  &[open] > summary::before {
+    transform: rotate(90deg);
+  }
+
+  .hm-sectie__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2px 12px 12px;
+
+    h5 {
+      color: var(--hm-faint);
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      margin: 4px 0 0;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.hm-adres {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 2fr 1fr;
+
+  label:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Checkbox-regel: rij i.p.v. de kolom-layout van paneel-labels */
+.hm-check {
+  align-items: center !important;
+  flex-direction: row !important;
+
+  input[type="checkbox"] {
+    accent-color: var(--hm-blauw, #002ccf);
+    height: 15px;
+    padding: 0 !important;
+    width: 15px;
+  }
+}
+
 /* ── Relatie-panelen: gekoppelde deals/contacten-blokken ─────────────── */
 .hm-relatie__blok {
   display: flex;
@@ -1080,4 +1152,35 @@ html[data-theme="dark"] {
       font-weight: 550;
     }
   }
+}
+
+.hm-relatie__rij {
+  align-items: stretch;
+  display: flex;
+  gap: 6px;
+
+  a {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.hm-relatie__ontkoppel {
+  align-items: center;
+  background: var(--hm-bg);
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-r-s);
+  color: var(--hm-faint);
+  cursor: pointer;
+  display: inline-flex;
+  padding: 0 8px;
+
+  &:hover {
+    background: var(--hm-surface-2);
+    color: var(--hm-ink);
+  }
+}
+
+.hm-relatie__koppel {
+  color: var(--hm-muted);
 }

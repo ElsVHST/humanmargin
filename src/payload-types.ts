@@ -860,6 +860,37 @@ export interface Organisation {
   sector?: string | null;
   logo?: (number | null) | Media;
   notities?: string | null;
+  bezoekadres?: {
+    straat?: string | null;
+    huisnummer?: string | null;
+    postcode?: string | null;
+    plaats?: string | null;
+    land?: string | null;
+  };
+  postadresZelfde?: boolean | null;
+  postadres?: {
+    straat?: string | null;
+    huisnummer?: string | null;
+    postcode?: string | null;
+    plaats?: string | null;
+    land?: string | null;
+  };
+  factuuradresZelfde?: boolean | null;
+  factuuradres?: {
+    straat?: string | null;
+    huisnummer?: string | null;
+    postcode?: string | null;
+    plaats?: string | null;
+    land?: string | null;
+  };
+  facturatie?: {
+    kvkNummer?: string | null;
+    btwNummer?: string | null;
+    iban?: string | null;
+    tenaamstelling?: string | null;
+    factuurEmail?: string | null;
+    betaaltermijnDagen?: number | null;
+  };
   contacten?: {
     docs?: (number | Contact)[];
     hasNextPage?: boolean;
@@ -1847,6 +1878,45 @@ export interface OrganisationsSelect<T extends boolean = true> {
   sector?: T;
   logo?: T;
   notities?: T;
+  bezoekadres?:
+    | T
+    | {
+        straat?: T;
+        huisnummer?: T;
+        postcode?: T;
+        plaats?: T;
+        land?: T;
+      };
+  postadresZelfde?: T;
+  postadres?:
+    | T
+    | {
+        straat?: T;
+        huisnummer?: T;
+        postcode?: T;
+        plaats?: T;
+        land?: T;
+      };
+  factuuradresZelfde?: T;
+  factuuradres?:
+    | T
+    | {
+        straat?: T;
+        huisnummer?: T;
+        postcode?: T;
+        plaats?: T;
+        land?: T;
+      };
+  facturatie?:
+    | T
+    | {
+        kvkNummer?: T;
+        btwNummer?: T;
+        iban?: T;
+        tenaamstelling?: T;
+        factuurEmail?: T;
+        betaaltermijnDagen?: T;
+      };
   contacten?: T;
   deals?: T;
   projecten?: T;

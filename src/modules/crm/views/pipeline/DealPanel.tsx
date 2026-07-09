@@ -8,6 +8,7 @@ import React, { useEffect, useState } from "react";
 
 import { crmApi } from "@/modules/crm/api";
 import type { Toast } from "@/modules/crm/views/pipeline/PipelineBoard";
+import { useMetParams } from "@/modules/crm/views/pipeline/RelatiePanelen";
 import { VerliesDialoog } from "@/modules/crm/views/pipeline/VerliesDialoog";
 import { RecordTijdlijn } from "@/modules/shared/components/RecordTijdlijn";
 import { ReferentiesVeld } from "@/modules/shared/components/ReferentiesVeld";
@@ -219,6 +220,7 @@ function DealDetail({
     queryKey: ["panel", "gebruikers"],
     queryFn: () => fetchDocs<User>("/api/users?limit=100&depth=0"),
   });
+  const metParams = useMetParams();
 
   const opslaan = useMutation({
     mutationFn: (data: Partial<Deal>) => crmApi.updateDeal(Number(dealId), data),
@@ -450,11 +452,20 @@ function DealDetail({
                 value={relId(deal.contactpersoon)}
               >
                 <option value="">—</option>
-                {(contacten.data ?? []).map((c) => (
-                  <option key={c.id} value={String(c.id)}>
-                    {c.naam ?? c.email}
-                  </option>
-                ))}
+                {/* Gefilterd op de gekozen organisatie (Pipedrive-gedrag);
+                    de huidige koppeling blijft altijd zichtbaar */}
+                {(contacten.data ?? [])
+                  .filter(
+                    (c) =>
+                      !relId(deal.organisatie) ||
+                      relId(c.organisatie) === relId(deal.organisatie) ||
+                      String(c.id) === relId(deal.contactpersoon),
+                  )
+                  .map((c) => (
+                    <option key={c.id} value={String(c.id)}>
+                      {c.naam ?? c.email}
+                    </option>
+                  ))}
               </select>
             </label>
             <label>
@@ -493,6 +504,45 @@ function DealDetail({
                 </span>
                 {deal.eigenaar.name}
               </p>
+            )}
+
+            {((deal.organisatie && typeof deal.organisatie === "object") ||
+              (deal.contactpersoon &&
+                typeof deal.contactpersoon === "object")) && (
+              <div className="hm-relatie__blok">
+                <h4>Gekoppeld</h4>
+                {deal.organisatie && typeof deal.organisatie === "object" && (
+                  <Link
+                    href={metParams({
+                      organisatie: String(deal.organisatie.id),
+                    })}
+                    replace
+                  >
+                    {deal.organisatie.naam}
+                    <span>organisatie</span>
+                  </Link>
+                )}
+                {deal.contactpersoon &&
+                  typeof deal.contactpersoon === "object" && (
+                    <Link
+                      href={metParams({
+                        contact: String(deal.contactpersoon.id),
+                      })}
+                      replace
+                    >
+                      {deal.contactpersoon.naam ?? deal.contactpersoon.email}
+                      <span>
+                        {[
+                          deal.contactpersoon.functie,
+                          deal.contactpersoon.email,
+                          (deal.contactpersoon.telefoons ?? [])[0],
+                        ]
+                          .filter(Boolean)
+                          .join(" · ")}
+                      </span>
+                    </Link>
+                  )}
+              </div>
             )}
 
             <ReferentiesVeld
