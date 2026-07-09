@@ -818,6 +818,15 @@ export interface User {
    * Beheerders beheren gebruikers, kolommen en de prullenbak; teamleden werken in alle domeinen.
    */
   role: 'beheerder' | 'teamlid';
+  lijstVoorkeuren?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -1923,6 +1932,7 @@ export interface MediaSelect<T extends boolean = true> {
 export interface UsersSelect<T extends boolean = true> {
   name?: T;
   role?: T;
+  lijstVoorkeuren?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;

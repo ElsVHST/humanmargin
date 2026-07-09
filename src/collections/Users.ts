@@ -41,5 +41,13 @@ export const Users: CollectionConfig = {
           "Beheerders beheren gebruikers, kolommen en de prullenbak; teamleden werken in alle domeinen.",
       },
     },
+    {
+      // Per-gebruiker lijstinstellingen (MKB-plan B5): kolomkeuze + sortering
+      // per werkblad. Zelf bij te werken (isBeheerderOrSelf op de collectie).
+      name: "lijstVoorkeuren",
+      label: "Lijstvoorkeuren",
+      type: "json",
+      admin: { hidden: true },
+    },
   ],
 };

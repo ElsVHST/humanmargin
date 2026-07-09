@@ -6,9 +6,9 @@ import {
   useQuery,
   useQueryClient,
 } from "@tanstack/react-query";
-import { Pencil } from "lucide-react";
+import { Columns3, Pencil } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import {
   ContactPanel,
@@ -16,9 +16,15 @@ import {
   type PanelToast,
 } from "@/modules/crm/views/pipeline/RelatiePanelen";
 import { CrmInstellingen } from "@/modules/crm/views/relaties/CrmInstellingen";
-import { avatarKleur, initialen, naamVan } from "@/modules/shared/ui";
 import { useCrmVelden } from "@/modules/crm/views/pipeline/ExtraVelden";
-import type { Contact, Functie, Organisation, Sector } from "@/payload-types";
+import { avatarKleur, initialen, naamVan } from "@/modules/shared/ui";
+import type {
+  Contact,
+  CrmVeld,
+  Functie,
+  Organisation,
+  Sector,
+} from "@/payload-types";
 
 import "@/modules/shared/styles/dashboard.scss";
 import "@/modules/shared/components/board.scss";
@@ -30,6 +36,11 @@ type Props = {
   initialSectoren: Sector[];
   initialFuncties: Functie[];
   isBeheerder: boolean;
+  /** Voor het opslaan van kolomkeuze/sortering (users.lijstVoorkeuren). */
+  gebruikerId: number | null;
+  initialVoorkeuren: Record<string, unknown> | null;
+  /** Recentste tijdlijn-activiteit per relatie: "organisations:1" → ISO. */
+  laatsteContact: Record<string, string>;
   /** Servertijd (ms) — geen Date.now() in de componentbody (react-hooks/purity). */
   nu: number;
 };
@@ -56,6 +67,12 @@ const DOELGROEPEN: { waarde: string; label: string }[] = [
   { waarde: "mkb", label: "MKB" },
   { waarde: "aanbieder", label: "Aanbieder" },
   { waarde: "overig", label: "Overig" },
+];
+
+const RISICOKLASSEN: { waarde: string; label: string }[] = [
+  { waarde: "hoog", label: "Hoog risico" },
+  { waarde: "verboden", label: "Verboden" },
+  { waarde: "geen", label: "Geen risico" },
 ];
 
 function typeInfo(waarde?: string | null) {
@@ -95,12 +112,175 @@ async function fetchDocs<T>(url: string): Promise<T[]> {
   return ((await res.json()) as { docs: T[] }).docs;
 }
 
+/* ── Configureerbare kolommen (MKB-plan B5) ──────────────────────────── */
+
+type KolomDef<T> = {
+  sleutel: string;
+  label: string;
+  render: (rel: T) => React.ReactNode;
+  sorteer: (rel: T) => string | number;
+};
+
+type TabVoorkeur = {
+  kolommen?: string[];
+  sortering?: { kolom: string; richting: "asc" | "desc" };
+};
+
+type Voorkeuren = {
+  relaties?: { organisaties?: TabVoorkeur; contacten?: TabVoorkeur };
+};
+
+const ORG_STANDAARD = [
+  "type",
+  "doelgroep",
+  "opvolgen",
+  "sector",
+  "eigenaar",
+  "bijgewerkt",
+];
+const CONTACT_STANDAARD = [
+  "type",
+  "opvolgen",
+  "email",
+  "organisatie",
+  "functie",
+  "bijgewerkt",
+];
+
+function xvWaarde(
+  rel: Organisation | Contact,
+  veld: CrmVeld,
+): unknown {
+  return ((rel.extraVelden ?? {}) as Record<string, unknown>)[
+    veld.sleutel ?? ""
+  ];
+}
+
+function xvCel(rel: Organisation | Contact, veld: CrmVeld): React.ReactNode {
+  const w = xvWaarde(rel, veld);
+  if (w == null || w === "" || (Array.isArray(w) && w.length === 0)) return "—";
+  if (veld.type === "janee") return w ? "Ja" : "Nee";
+  if (Array.isArray(w)) return w.join(", ");
+  if (veld.type === "datum") return datumKort(String(w));
+  if (veld.type === "link") {
+    return (
+      <a
+        href={String(w)}
+        onClick={(e) => e.stopPropagation()}
+        rel="noreferrer"
+        target="_blank"
+      >
+        {String(w)}
+      </a>
+    );
+  }
+  return String(w);
+}
+
+function KolomKiezer({
+  aanbod,
+  actief,
+  onWijzig,
+}: {
+  aanbod: { sleutel: string; label: string }[];
+  actief: string[];
+  onWijzig: (kolommen: string[]) => void;
+}) {
+  const [open, setOpen] = useState(false);
+
+  const verplaats = (sleutel: string, delta: number) => {
+    const i = actief.indexOf(sleutel);
+    const j = i + delta;
+    if (i < 0 || j < 0 || j >= actief.length) return;
+    const kopie = [...actief];
+    [kopie[i], kopie[j]] = [kopie[j], kopie[i]];
+    onWijzig(kopie);
+  };
+
+  return (
+    <div className="hm-kolomkiezer">
+      <button
+        aria-label="Kolommen kiezen"
+        className="hm-board__icoonknop"
+        onClick={() => setOpen((v) => !v)}
+        title="Kolommen kiezen"
+        type="button"
+      >
+        <Columns3 size={15} strokeWidth={2} />
+      </button>
+      {open && (
+        <>
+          <div
+            aria-hidden
+            className="hm-menu__backdrop"
+            onClick={() => setOpen(false)}
+            role="presentation"
+          />
+          <div className="hm-kolomkiezer__menu">
+            {actief.map((sleutel) => {
+              const k = aanbod.find((a) => a.sleutel === sleutel);
+              if (!k) return null;
+              return (
+                <div className="hm-kolomkiezer__rij" key={sleutel}>
+                  <label className="hm-check">
+                    <input
+                      checked
+                      onChange={() =>
+                        onWijzig(actief.filter((s) => s !== sleutel))
+                      }
+                      type="checkbox"
+                    />
+                    {k.label}
+                  </label>
+                  <span className="hm-kolomkiezer__pijlen">
+                    <button
+                      aria-label={`${k.label} omhoog`}
+                      onClick={() => verplaats(sleutel, -1)}
+                      type="button"
+                    >
+                      ↑
+                    </button>
+                    <button
+                      aria-label={`${k.label} omlaag`}
+                      onClick={() => verplaats(sleutel, 1)}
+                      type="button"
+                    >
+                      ↓
+                    </button>
+                  </span>
+                </div>
+              );
+            })}
+            {aanbod
+              .filter((k) => !actief.includes(k.sleutel))
+              .map((k) => (
+                <div className="hm-kolomkiezer__rij" key={k.sleutel}>
+                  <label className="hm-check">
+                    <input
+                      checked={false}
+                      onChange={() => onWijzig([...actief, k.sleutel])}
+                      type="checkbox"
+                    />
+                    {k.label}
+                  </label>
+                </div>
+              ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
 function Lijst({
+  gebruikerId,
   initialContacten,
   initialFuncties,
   initialOrganisaties,
   initialSectoren,
+  initialVoorkeuren,
   isBeheerder,
+  laatsteContact,
   nu,
 }: Props) {
   const router = useRouter();
@@ -121,6 +301,10 @@ function Lijst({
   const [tagFilter, setTagFilter] = useState("alle");
   const [instellingenOpen, setInstellingenOpen] = useState(false);
   const [toast, setToast] = useState<PanelToast | null>(null);
+  const [voorkeuren, setVoorkeuren] = useState<Voorkeuren>(
+    (initialVoorkeuren ?? {}) as Voorkeuren,
+  );
+  const opslaanTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const vandaag = new Date(nu);
   const startVandaag = new Date(
@@ -222,6 +406,268 @@ function Lijst({
       return <span className="hm-pill hm-pill--amber">vandaag</span>;
     }
     return datumKort(iso);
+  };
+
+  const typeCel = (waarde?: string | null) => {
+    const type = typeInfo(waarde);
+    return (
+      <span className={`hm-pill hm-kleur--${type.kleur}`}>{type.label}</span>
+    );
+  };
+
+  /* ── Kolomaanbod per tab (vaste + Els's eigen velden) ─────────────── */
+
+  const xvKolommen = <T extends Organisation | Contact>(
+    doel: "organisaties" | "contacten",
+  ): KolomDef<T>[] =>
+    (veldenQuery.data ?? [])
+      .filter((v) => v.geldtVoor === "beide" || v.geldtVoor === doel)
+      .map((v) => ({
+        sleutel: `xv:${v.sleutel}`,
+        label: v.label,
+        render: (rel: T) => xvCel(rel, v),
+        sorteer: (rel: T) => {
+          const w = xvWaarde(rel, v);
+          return typeof w === "number" ? w : String(w ?? "");
+        },
+      }));
+
+  const orgKolommen: KolomDef<Organisation>[] = [
+    {
+      sleutel: "type",
+      label: "Type",
+      render: (o) => typeCel(o.relatietype),
+      sorteer: (o) => o.relatietype ?? "prospect",
+    },
+    {
+      sleutel: "doelgroep",
+      label: "Doelgroep",
+      render: (o) =>
+        DOELGROEPEN.find((d) => d.waarde === o.doelgroep)?.label ?? "—",
+      sorteer: (o) => o.doelgroep ?? "",
+    },
+    {
+      sleutel: "risicoklasse",
+      label: "Risicoklasse",
+      render: (o) =>
+        RISICOKLASSEN.find((r) => r.waarde === o.risicoklasse)?.label ?? "—",
+      sorteer: (o) => o.risicoklasse ?? "",
+    },
+    {
+      sleutel: "opvolgen",
+      label: "Opvolgen",
+      render: (o) => opvolgCel(o.opvolgenOp),
+      sorteer: (o) => o.opvolgenOp ?? "9999",
+    },
+    {
+      sleutel: "sector",
+      label: "Sector",
+      render: (o) => naamVan(o.sector) ?? "—",
+      sorteer: (o) => naamVan(o.sector) ?? "",
+    },
+    {
+      sleutel: "eigenaar",
+      label: "Eigenaar",
+      render: (o) => eigenaarNaam(o) ?? "—",
+      sorteer: (o) => eigenaarNaam(o) ?? "",
+    },
+    {
+      sleutel: "laatsteContact",
+      label: "Laatste contact",
+      render: (o) => datumKort(laatsteContact[`organisations:${o.id}`]),
+      sorteer: (o) => laatsteContact[`organisations:${o.id}`] ?? "",
+    },
+    {
+      sleutel: "bijgewerkt",
+      label: "Bijgewerkt",
+      render: (o) => datumKort(o.updatedAt),
+      sorteer: (o) => o.updatedAt,
+    },
+    ...xvKolommen<Organisation>("organisaties"),
+  ];
+
+  const contactKolommen: KolomDef<Contact>[] = [
+    {
+      sleutel: "type",
+      label: "Type",
+      render: (c) => typeCel(c.relatietype),
+      sorteer: (c) => c.relatietype ?? "prospect",
+    },
+    {
+      sleutel: "opvolgen",
+      label: "Opvolgen",
+      render: (c) => opvolgCel(c.opvolgenOp),
+      sorteer: (c) => c.opvolgenOp ?? "9999",
+    },
+    {
+      sleutel: "email",
+      label: "E-mail",
+      render: (c) => c.email,
+      sorteer: (c) => c.email,
+    },
+    {
+      sleutel: "telefoon",
+      label: "Telefoon",
+      render: (c) => (c.telefoons ?? [])[0] ?? "—",
+      sorteer: (c) => (c.telefoons ?? [])[0] ?? "",
+    },
+    {
+      sleutel: "organisatie",
+      label: "Organisatie",
+      render: (c) => orgNaamVan(c) ?? "—",
+      sorteer: (c) => orgNaamVan(c) ?? "",
+    },
+    {
+      sleutel: "functie",
+      label: "Functie",
+      render: (c) => naamVan(c.functie) ?? "—",
+      sorteer: (c) => naamVan(c.functie) ?? "",
+    },
+    {
+      sleutel: "doelgroep",
+      label: "Doelgroep",
+      render: (c) =>
+        DOELGROEPEN.find((d) => d.waarde === c.doelgroep)?.label ?? "—",
+      sorteer: (c) => c.doelgroep ?? "",
+    },
+    {
+      sleutel: "risicoklasse",
+      label: "Risicoklasse",
+      render: (c) =>
+        RISICOKLASSEN.find((r) => r.waarde === c.risicoklasse)?.label ?? "—",
+      sorteer: (c) => c.risicoklasse ?? "",
+    },
+    {
+      sleutel: "laatsteContact",
+      label: "Laatste contact",
+      render: (c) => datumKort(laatsteContact[`contacts:${c.id}`]),
+      sorteer: (c) => laatsteContact[`contacts:${c.id}`] ?? "",
+    },
+    {
+      sleutel: "bijgewerkt",
+      label: "Bijgewerkt",
+      render: (c) => datumKort(c.updatedAt),
+      sorteer: (c) => c.updatedAt,
+    },
+    ...xvKolommen<Contact>("contacten"),
+  ];
+
+  /* ── Voorkeuren (kolomkeuze + sortering) per gebruiker ────────────── */
+
+  const tabVoorkeur = voorkeuren.relaties?.[tab] ?? {};
+  const standaard = tab === "organisaties" ? ORG_STANDAARD : CONTACT_STANDAARD;
+  const kolomAanbod =
+    tab === "organisaties"
+      ? orgKolommen.map((k) => ({ sleutel: k.sleutel, label: k.label }))
+      : contactKolommen.map((k) => ({ sleutel: k.sleutel, label: k.label }));
+  const actieveSleutels = (tabVoorkeur.kolommen ?? standaard).filter((s) =>
+    kolomAanbod.some((k) => k.sleutel === s),
+  );
+  const sortering = tabVoorkeur.sortering ?? {
+    kolom: "naam",
+    richting: "asc" as const,
+  };
+
+  const zetTabVoorkeur = (deel: Partial<TabVoorkeur>) => {
+    const nieuw: Voorkeuren = {
+      ...voorkeuren,
+      relaties: {
+        ...voorkeuren.relaties,
+        [tab]: { ...voorkeuren.relaties?.[tab], ...deel },
+      },
+    };
+    setVoorkeuren(nieuw);
+    if (!gebruikerId) return;
+    if (opslaanTimer.current) clearTimeout(opslaanTimer.current);
+    opslaanTimer.current = setTimeout(() => {
+      void fetch(`/api/users/${gebruikerId}`, {
+        method: "PATCH",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ lijstVoorkeuren: nieuw }),
+      });
+    }, 600);
+  };
+
+  const toggleSort = (kolom: string) =>
+    zetTabVoorkeur({
+      sortering:
+        sortering.kolom === kolom
+          ? { kolom, richting: sortering.richting === "asc" ? "desc" : "asc" }
+          : { kolom, richting: "asc" },
+    });
+
+  const indicator = (kolom: string) =>
+    sortering.kolom === kolom ? (
+      <span aria-hidden className="hm-relaties__sort">
+        {sortering.richting === "asc" ? "▲" : "▼"}
+      </span>
+    ) : null;
+
+  const sorteerRijen = <T,>(
+    rijen: T[],
+    kolommen: KolomDef<T>[],
+    naamWaarde: (rel: T) => string,
+  ): T[] => {
+    const def =
+      sortering.kolom === "naam"
+        ? null
+        : kolommen.find((k) => k.sleutel === sortering.kolom);
+    const waarde = def ? def.sorteer : naamWaarde;
+    const dir = sortering.richting === "desc" ? -1 : 1;
+    return [...rijen].sort((a, b) => {
+      const wa = waarde(a);
+      const wb = waarde(b);
+      if (typeof wa === "number" && typeof wb === "number") {
+        return (wa - wb) * dir;
+      }
+      return (
+        String(wa).localeCompare(String(wb), "nl", { numeric: true }) * dir
+      );
+    });
+  };
+
+  const tabelVoor = <T extends { id: number }>(
+    rijen: T[],
+    kolommen: KolomDef<T>[],
+    naamCel: (rel: T) => React.ReactNode,
+    naamWaarde: (rel: T) => string,
+    onKlik: (rel: T) => void,
+  ) => {
+    const actief = actieveSleutels
+      .map((s) => kolommen.find((k) => k.sleutel === s))
+      .filter((k): k is KolomDef<T> => Boolean(k));
+    return (
+      <table className="hm-relaties__tabel">
+        <thead>
+          <tr>
+            <th className="is-sorteerbaar" onClick={() => toggleSort("naam")}>
+              Naam{indicator("naam")}
+            </th>
+            {actief.map((k) => (
+              <th
+                className="is-sorteerbaar"
+                key={k.sleutel}
+                onClick={() => toggleSort(k.sleutel)}
+              >
+                {k.label}
+                {indicator(k.sleutel)}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {sorteerRijen(rijen, kolommen, naamWaarde).map((rel) => (
+            <tr key={rel.id} onClick={() => onKlik(rel)}>
+              <td>{naamCel(rel)}</td>
+              {actief.map((k) => (
+                <td key={k.sleutel}>{k.render(rel)}</td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    );
   };
 
   const organisaties = (orgsQuery.data ?? []).filter((o) =>
@@ -355,11 +801,16 @@ function Lijst({
               </option>
             ))}
           </select>
+          <KolomKiezer
+            aanbod={kolomAanbod}
+            actief={actieveSleutels}
+            onWijzig={(kolommen) => zetTabVoorkeur({ kolommen })}
+          />
           <button
             aria-label="CRM-instellingen"
             className="hm-board__icoonknop"
             onClick={() => setInstellingenOpen(true)}
-            title="CRM-instellingen (sectoren, functies)"
+            title="CRM-instellingen (sectoren, functies, velden)"
             type="button"
           >
             <Pencil size={15} strokeWidth={2} />
@@ -377,52 +828,23 @@ function Lijst({
             </p>
           </div>
         ) : (
-          <table className="hm-relaties__tabel">
-            <thead>
-              <tr>
-                <th>Naam</th>
-                <th>Type</th>
-                <th>Doelgroep</th>
-                <th>Opvolgen</th>
-                <th>Sector</th>
-                <th>Eigenaar</th>
-                <th>Bijgewerkt</th>
-              </tr>
-            </thead>
-            <tbody>
-              {organisaties.map((org) => {
-                const type = typeInfo(org.relatietype);
-                return (
-                  <tr key={org.id} onClick={() => openPaneel("organisatie", org.id)}>
-                    <td>
-                      <span className="hm-relaties__naam">
-                        <span
-                          className="hm-av hm-av--sm"
-                          style={{ background: avatarKleur(org.id) }}
-                        >
-                          {initialen(org.naam)}
-                        </span>
-                        {org.naam}
-                      </span>
-                    </td>
-                    <td>
-                      <span className={`hm-pill hm-kleur--${type.kleur}`}>
-                        {type.label}
-                      </span>
-                    </td>
-                    <td>
-                      {DOELGROEPEN.find((d) => d.waarde === org.doelgroep)
-                        ?.label ?? "—"}
-                    </td>
-                    <td>{opvolgCel(org.opvolgenOp)}</td>
-                    <td>{naamVan(org.sector) ?? "—"}</td>
-                    <td>{eigenaarNaam(org) ?? "—"}</td>
-                    <td>{datumKort(org.updatedAt)}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+          tabelVoor(
+            organisaties,
+            orgKolommen,
+            (org) => (
+              <span className="hm-relaties__naam">
+                <span
+                  className="hm-av hm-av--sm"
+                  style={{ background: avatarKleur(org.id) }}
+                >
+                  {initialen(org.naam)}
+                </span>
+                {org.naam}
+              </span>
+            ),
+            (org) => org.naam,
+            (org) => openPaneel("organisatie", org.id),
+          )
         )
       ) : contacten.length === 0 ? (
         <div className="hm-relaties__leeg">
@@ -433,52 +855,23 @@ function Lijst({
           </p>
         </div>
       ) : (
-        <table className="hm-relaties__tabel">
-          <thead>
-            <tr>
-              <th>Naam</th>
-              <th>Type</th>
-              <th>Opvolgen</th>
-              <th>E-mail</th>
-              <th>Organisatie</th>
-              <th>Functie</th>
-              <th>Bijgewerkt</th>
-            </tr>
-          </thead>
-          <tbody>
-            {contacten.map((contact) => {
-              const type = typeInfo(contact.relatietype);
-              return (
-                <tr
-                  key={contact.id}
-                  onClick={() => openPaneel("contact", contact.id)}
-                >
-                  <td>
-                    <span className="hm-relaties__naam">
-                      <span
-                        className="hm-av hm-av--sm"
-                        style={{ background: avatarKleur(contact.id) }}
-                      >
-                        {initialen(contact.naam ?? contact.email)}
-                      </span>
-                      {contact.naam ?? contact.email}
-                    </span>
-                  </td>
-                  <td>
-                    <span className={`hm-pill hm-kleur--${type.kleur}`}>
-                      {type.label}
-                    </span>
-                  </td>
-                  <td>{opvolgCel(contact.opvolgenOp)}</td>
-                  <td>{contact.email}</td>
-                  <td>{orgNaamVan(contact) ?? "—"}</td>
-                  <td>{naamVan(contact.functie) ?? "—"}</td>
-                  <td>{datumKort(contact.updatedAt)}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+        tabelVoor(
+          contacten,
+          contactKolommen,
+          (contact) => (
+            <span className="hm-relaties__naam">
+              <span
+                className="hm-av hm-av--sm"
+                style={{ background: avatarKleur(contact.id) }}
+              >
+                {initialen(contact.naam ?? contact.email)}
+              </span>
+              {contact.naam ?? contact.email}
+            </span>
+          ),
+          (contact) => contact.naam ?? contact.email,
+          (contact) => openPaneel("contact", contact.id),
+        )
       )}
 
       {instellingenOpen && (

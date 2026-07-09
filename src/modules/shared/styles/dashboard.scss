@@ -1105,7 +1105,10 @@ html[data-theme="dark"] {
 /* Checkbox-regel: rij i.p.v. de kolom-layout van paneel-labels */
 .hm-check {
   align-items: center !important;
+  cursor: pointer;
+  display: flex;
   flex-direction: row !important;
+  gap: 7px;
 
   input[type="checkbox"] {
     accent-color: var(--hm-blauw, #002ccf);
@@ -1265,4 +1268,82 @@ html[data-theme="dark"] {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+/* ── Kolomkiezer (relatie-overzicht, MKB-plan B5) ────────────────────── */
+.hm-kolomkiezer {
+  position: relative;
+}
+
+.hm-kolomkiezer__menu {
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-r-s);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 14%);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 340px;
+  min-width: 220px;
+  overflow-y: auto;
+  padding: 8px;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 60;
+}
+
+.hm-kolomkiezer__rij {
+  align-items: center;
+  border-radius: var(--hm-r-s);
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+  padding: 3px 5px;
+
+  &:hover {
+    background: var(--hm-surface-2);
+  }
+
+  .hm-check {
+    color: var(--hm-ink-2);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+}
+
+.hm-kolomkiezer__pijlen {
+  display: inline-flex;
+  gap: 2px;
+
+  button {
+    background: none;
+    border: none;
+    border-radius: var(--hm-r-s);
+    color: var(--hm-faint);
+    cursor: pointer;
+    font-size: 0.78rem;
+    padding: 1px 4px;
+
+    &:hover {
+      background: var(--hm-line);
+      color: var(--hm-ink);
+    }
+  }
+}
+
+.hm-relaties__tabel th.is-sorteerbaar {
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    color: var(--hm-ink);
+  }
+}
+
+.hm-relaties__sort {
+  font-size: 0.6rem;
+  margin-left: 4px;
 }
