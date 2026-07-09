@@ -68,6 +68,7 @@ const root = await payload.create({
   collection: "knowledge-docs",
   data: {
     titel: HOOFDTITEL,
+    soort: "map",
     zichtbaarheid: "intern",
     tags: ["handleiding"],
     inhoud: lexical([
@@ -146,6 +147,7 @@ for (const hoofdstuk of hoofdstukken) {
     collection: "knowledge-docs",
     data: {
       titel: hoofdstuk.titel,
+      soort: "document",
       zichtbaarheid: "intern",
       parent: root.id,
       position: positie++,

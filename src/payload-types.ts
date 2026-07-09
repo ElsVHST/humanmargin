@@ -81,6 +81,7 @@ export interface Config {
     'content-items': ContentItem;
     'content-channels': ContentChannel;
     'knowledge-docs': KnowledgeDoc;
+    'knowledge-files': KnowledgeFile;
     activities: Activity;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
@@ -115,6 +116,7 @@ export interface Config {
     'content-items': ContentItemsSelect<false> | ContentItemsSelect<true>;
     'content-channels': ContentChannelsSelect<false> | ContentChannelsSelect<true>;
     'knowledge-docs': KnowledgeDocsSelect<false> | KnowledgeDocsSelect<true>;
+    'knowledge-files': KnowledgeFilesSelect<false> | KnowledgeFilesSelect<true>;
     activities: ActivitiesSelect<false> | ActivitiesSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
@@ -1077,6 +1079,7 @@ export interface ContentChannel {
 export interface KnowledgeDoc {
   id: number;
   titel: string;
+  soort: 'map' | 'document' | 'bestand';
   inhoud?: {
     root: {
       type: string;
@@ -1093,6 +1096,10 @@ export interface KnowledgeDoc {
     [k: string]: unknown;
   } | null;
   /**
+   * Het geüploade bestand (alleen bij soort 'Bestand').
+   */
+  bestand?: (number | null) | KnowledgeFile;
+  /**
    * Leeg = hoofdstuk op het hoogste niveau.
    */
   parent?: (number | null) | KnowledgeDoc;
@@ -1105,6 +1112,36 @@ export interface KnowledgeDoc {
   updatedAt: string;
   createdAt: string;
   deletedAt?: string | null;
+}
+/**
+ * Bestanden die in de kennisbank zijn geüpload.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "knowledge-files".
+ */
+export interface KnowledgeFile {
+  id: number;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
+  sizes?: {
+    thumbnail?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+  };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1244,6 +1281,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'knowledge-docs';
         value: number | KnowledgeDoc;
+      } | null)
+    | ({
+        relationTo: 'knowledge-files';
+        value: number | KnowledgeFile;
       } | null)
     | ({
         relationTo: 'activities';
@@ -1918,7 +1959,9 @@ export interface ContentChannelsSelect<T extends boolean = true> {
  */
 export interface KnowledgeDocsSelect<T extends boolean = true> {
   titel?: T;
+  soort?: T;
   inhoud?: T;
+  bestand?: T;
   parent?: T;
   zichtbaarheid?: T;
   organisatie?: T;
@@ -1929,6 +1972,37 @@ export interface KnowledgeDocsSelect<T extends boolean = true> {
   updatedAt?: T;
   createdAt?: T;
   deletedAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "knowledge-files_select".
+ */
+export interface KnowledgeFilesSelect<T extends boolean = true> {
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
+  sizes?:
+    | T
+    | {
+        thumbnail?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+      };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

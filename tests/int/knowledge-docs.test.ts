@@ -18,7 +18,7 @@ describe("kennisbank", () => {
   it("maakt een document met subdocument (parent-boom); zichtbaarheid default intern", async () => {
     const root = await payload.create({
       collection: "knowledge-docs",
-      data: { titel: `Handboek ${randomUUID().slice(0, 6)}`, zichtbaarheid: "intern" },
+      data: { titel: `Handboek ${randomUUID().slice(0, 6)}`, zichtbaarheid: "intern", soort: "document" },
       overrideAccess: false,
       user: teamlid,
     });
@@ -27,7 +27,7 @@ describe("kennisbank", () => {
 
     const kind = await payload.create({
       collection: "knowledge-docs",
-      data: { titel: "Hoofdstuk 1", parent: root.id, zichtbaarheid: "intern" },
+      data: { titel: "Hoofdstuk 1", parent: root.id, zichtbaarheid: "intern", soort: "document" },
       overrideAccess: false,
       user: teamlid,
     });
@@ -45,7 +45,7 @@ describe("kennisbank", () => {
   it("auteur wordt automatisch gezet op de ingelogde gebruiker", async () => {
     const docItem = await payload.create({
       collection: "knowledge-docs",
-      data: { titel: `Auteurtest ${randomUUID().slice(0, 6)}`, zichtbaarheid: "intern" },
+      data: { titel: `Auteurtest ${randomUUID().slice(0, 6)}`, zichtbaarheid: "intern", soort: "document" },
       overrideAccess: false,
       user: teamlid,
     });

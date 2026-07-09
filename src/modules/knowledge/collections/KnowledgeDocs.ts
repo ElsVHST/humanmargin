@@ -15,7 +15,31 @@ export const KnowledgeDocs: CollectionConfig = {
   },
   fields: [
     { name: "titel", label: "Titel", type: "text", required: true },
+    {
+      // Expliciet itemtype (myDrive-patroon); bestaande docs = "document"
+      name: "soort",
+      label: "Soort",
+      type: "select",
+      required: true,
+      defaultValue: "document",
+      options: [
+        { label: "Map", value: "map" },
+        { label: "Document", value: "document" },
+        { label: "Bestand", value: "bestand" },
+      ],
+      admin: { position: "sidebar" },
+    },
     { name: "inhoud", label: "Inhoud", type: "richText" },
+    {
+      name: "bestand",
+      label: "Bestand",
+      type: "upload",
+      relationTo: "knowledge-files",
+      admin: {
+        condition: (data) => data?.soort === "bestand",
+        description: "Het geüploade bestand (alleen bij soort 'Bestand').",
+      },
+    },
     {
       name: "parent",
       label: "Hoort onder",

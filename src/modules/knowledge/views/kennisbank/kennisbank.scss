@@ -1,233 +1,780 @@
 /* =========================================================================
-   Kennisbank — myDrive-stijl browser (breadcrumb, kaartgrid, detailrail)
+   Kennisbank — myDrive-patroon op HM-tokens (uitgebreid 2026-07-09)
+   Drie kolommen: zijbalk (nieuw + nav) · hoofdvlak (secties, grid/lijst) ·
+   detailrail. Contextmenu, multi-select-balk, verplaats-popup, viewer.
    Tokens & kit: src/modules/shared/styles/dashboard.scss
    ========================================================================= */
 
 .hm-kb {
+  display: grid;
   font-family: var(--hm-font);
+  gap: 22px;
+  grid-template-columns: 190px minmax(0, 1fr) 260px;
+  padding-top: 14px;
+  min-height: calc(100vh - 132px);
+
+  @media (max-width: 1100px) {
+    grid-template-columns: 170px minmax(0, 1fr);
+
+    .hm-kb__rail {
+      display: none;
+    }
+  }
+
+  @media (max-width: 760px) {
+    grid-template-columns: 1fr;
+
+    .hm-kb__side {
+      border-right: none;
+      border-bottom: 1px solid var(--hm-line);
+      flex-direction: row;
+      align-items: center;
+      padding-bottom: 12px;
+    }
+
+    .hm-kb__totalen {
+      display: none;
+    }
+  }
 }
 
-/* Zoekveld in de kop */
-.hm-kb__zoek {
-  background: var(--hm-surface);
-  border: 1px solid var(--hm-line-2);
-  border-radius: var(--hm-r-s);
-  color: var(--hm-ink);
-  font: inherit;
-  font-size: 0.82rem;
-  padding: 8px 12px;
-  width: 260px;
-  max-width: 42vw;
-}
-
-/* Quick access */
-.hm-kb__qa {
-  align-items: center;
+/* ── Zijbalk links ────────────────────────────────────────────────────── */
+.hm-kb__side {
+  border-right: 1px solid var(--hm-line);
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-.hm-kb__qalabel {
-  color: var(--hm-faint);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-.hm-kb__qchip {
-  align-items: center;
-  background: var(--hm-surface);
-  border: 1px solid var(--hm-line);
-  border-radius: var(--hm-pill);
-  box-shadow: var(--hm-sh-1);
-  color: var(--hm-ink);
-  display: inline-flex;
-  font-size: 0.72rem;
-  font-weight: 600;
-  gap: 7px;
-  padding: 6px 12px 6px 9px;
-  text-decoration: none;
-}
-.hm-kb__qchip:hover {
-  border-color: var(--hm-line-2);
-  color: var(--hm-brand-blue);
+  flex-direction: column;
+  gap: 16px;
+  padding-right: 18px;
 }
 
-/* Breadcrumb */
+.hm-kb__nieuw {
+  justify-content: center;
+  width: 100%;
+}
+
+.hm-kb__nieuwmenu {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+
+.hm-kb__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  button {
+    align-items: center;
+    background: none;
+    border: none;
+    border-radius: var(--hm-r-s);
+    color: var(--hm-ink-2);
+    cursor: pointer;
+    display: flex;
+    font-family: var(--hm-font);
+    font-size: 0.84rem;
+    font-weight: 600;
+    gap: 9px;
+    padding: 8px 10px;
+    text-align: left;
+
+    &:hover {
+      background: var(--hm-surface-2);
+      color: var(--hm-ink);
+    }
+
+    &.is-actief {
+      background: var(--hm-surface-2);
+      color: var(--hm-ink);
+      font-weight: 750;
+    }
+
+    &.is-dropdoel {
+      outline: 2px dashed var(--hm-accent);
+    }
+  }
+
+  .hm-kb__navtrash.is-actief {
+    color: var(--hm-rood);
+  }
+}
+
+.hm-kb__totalen {
+  color: var(--hm-faint);
+  font-size: 0.72rem;
+  margin-top: auto;
+}
+
+/* ── Hoofdvlak ────────────────────────────────────────────────────────── */
+.hm-kb__main {
+  min-width: 0;
+  position: relative;
+}
+
+.hm-kb__dropoverlay {
+  align-items: center;
+  background: color-mix(in srgb, var(--hm-accent) 14%, var(--hm-surface));
+  border: 2px dashed var(--hm-accent-ink);
+  border-radius: var(--hm-r);
+  color: var(--hm-accent-ink);
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  font-weight: 700;
+  gap: 8px;
+  inset: 0;
+  justify-content: center;
+  pointer-events: none;
+  position: absolute;
+  z-index: 20;
+}
+
+.hm-kb__banner {
+  background: color-mix(in srgb, var(--hm-blauw) 12%, var(--hm-surface));
+  border-radius: var(--hm-r);
+  color: var(--hm-ink-2);
+  font-size: 0.8rem;
+  font-weight: 550;
+  margin-bottom: 14px;
+  padding: 10px 14px;
+}
+
 .hm-kb__crumbs {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 16px;
+  gap: 4px;
+  margin-bottom: 4px;
 }
+
 .hm-kb__crumb {
   background: none;
   border: none;
+  border-radius: 4px;
   color: var(--hm-muted);
   cursor: pointer;
-  font: inherit;
-  font-size: 0.82rem;
-  padding: 2px 4px;
-  border-radius: 4px;
-}
-.hm-kb__crumb:hover:not(.is-current) {
-  color: var(--hm-ink);
-  background: var(--hm-surface-2);
-}
-.hm-kb__crumb.is-current {
-  color: var(--hm-ink);
-  cursor: default;
-  font-weight: 750;
-}
-.hm-kb__sep {
-  color: var(--hm-faint);
-  font-size: 0.8rem;
+  font-family: var(--hm-font);
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 3px 6px;
+
+  &:hover {
+    background: var(--hm-surface-2);
+    color: var(--hm-ink);
+  }
+
+  &.is-current {
+    color: var(--hm-ink);
+    cursor: default;
+  }
+
+  &.is-dropdoel {
+    outline: 2px dashed var(--hm-accent);
+  }
 }
 
-/* Layout: grid + rail */
-.hm-kb__layout {
-  display: grid;
-  grid-template-columns: 1fr 250px;
-  gap: 18px;
-  align-items: start;
+.hm-kb__sep {
+  color: var(--hm-faint);
+  font-size: 0.76rem;
 }
-@media (max-width: 900px) {
-  .hm-kb__layout {
-    grid-template-columns: 1fr;
+
+.hm-kb__balk {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+
+  h2 {
+    font-family: var(--hm-font-head);
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin: 0;
+    text-transform: uppercase;
   }
-  .hm-kb__rail {
-    display: none;
+}
+
+.hm-kb__balkacties {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+
+  @media (max-width: 760px) {
+    flex-wrap: wrap;
+    margin-left: 0;
+    width: 100%;
   }
+}
+
+.hm-kb__sortlabel {
+  color: var(--hm-muted);
+  font-size: 0.74rem;
+  font-weight: 650;
 }
 
 .hm-kb__sectlabel {
-  color: var(--hm-faint);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  color: var(--hm-muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  margin: 16px 0 10px;
   text-transform: uppercase;
-  margin: 4px 2px 10px;
-}
-.hm-kb__sectlabel + .hm-kb__grid {
-  margin-bottom: 20px;
 }
 
+/* ── Snelle toegang ───────────────────────────────────────────────────── */
+.hm-kb__qa {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.hm-kb__qitem {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-family: var(--hm-font);
+  gap: 9px;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.hm-kb__qvlak {
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  flex: none;
+  height: 30px;
+  justify-content: center;
+  overflow: hidden;
+  width: 30px;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.hm-kb__qnaam {
+  font-size: 0.76rem;
+  font-weight: 650;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Grid-kaarten (myDrive-stijl: vlak + naam + metaregel) ───────────── */
 .hm-kb__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
 }
 
-.hm-kb__cardwrap {
-  position: relative;
-}
-.hm-kb__card {
-  align-items: flex-start;
-  background: var(--hm-surface);
-  color: var(--hm-ink);
+.hm-kb__kaart {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 14px;
-  text-align: left;
-  text-decoration: none;
-  width: 100%;
-  font-family: var(--hm-font);
-}
-.hm-kb__icon {
-  align-items: center;
-  border-radius: var(--hm-r-s);
-  display: inline-flex;
-  height: 36px;
-  justify-content: center;
-  margin-bottom: 6px;
-  width: 36px;
-  background: color-mix(in srgb, currentColor 15%, transparent);
-}
-.hm-kb__naam {
-  font-size: 0.83rem;
-  font-weight: 680;
-  line-height: 1.3;
   overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-.hm-kb__meta {
-  color: var(--hm-faint);
-  font-size: 0.68rem;
+  padding: 0;
+  position: relative;
+  user-select: none;
+
+  &:hover .hm-kb__meer {
+    opacity: 1;
+  }
+
+  &.is-geselecteerd {
+    border-color: var(--hm-brand-blue);
+    box-shadow: 0 0 0 2px
+      color-mix(in srgb, var(--hm-brand-blue) 45%, transparent);
+  }
+
+  &.is-dropdoel {
+    border-color: var(--hm-accent-ink);
+    box-shadow: 0 0 0 2px var(--hm-accent);
+  }
 }
 
-/* Hover-acties op de kaart */
-.hm-kb__info,
-.hm-kb__plus {
+.hm-kb__vlak {
+  align-items: center;
+  background: var(--hm-surface-2);
+  display: flex;
+  height: 86px;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.hm-kb__kaartnaam {
+  font-size: 0.8rem;
+  font-weight: 650;
+  overflow: hidden;
+  padding: 8px 10px 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hm-kb__kaartmeta {
+  align-items: center;
+  color: var(--hm-faint);
+  display: flex;
+  font-size: 0.68rem;
+  gap: 4px;
+  padding: 0 10px 9px;
+}
+
+.hm-kb__meer {
   align-items: center;
   background: var(--hm-surface);
-  border: 1px solid var(--hm-line);
-  border-radius: 6px;
-  color: var(--hm-muted);
+  border: 1px solid var(--hm-line-2);
+  border-radius: 50%;
+  color: var(--hm-ink-2);
   cursor: pointer;
   display: flex;
-  font-size: 0.8rem;
-  height: 24px;
+  height: 26px;
   justify-content: center;
   opacity: 0;
   position: absolute;
-  top: 10px;
-  transition: opacity 0.12s, color 0.12s, background 0.12s;
-  width: 24px;
-}
-.hm-kb__info { right: 10px; }
-.hm-kb__plus { right: 40px; font-size: 1rem; line-height: 1; }
-.hm-kb__cardwrap:hover .hm-kb__info,
-.hm-kb__cardwrap:hover .hm-kb__plus {
-  opacity: 1;
-}
-.hm-kb__info:hover,
-.hm-kb__plus:hover {
-  background: var(--hm-surface-2);
-  color: var(--hm-ink);
+  right: 7px;
+  top: 7px;
+  transition: opacity 0.12s ease;
+  width: 26px;
+
+  &:hover {
+    background: var(--hm-surface-2);
+    color: var(--hm-ink);
+  }
 }
 
-/* Detailrail */
-.hm-kb__rail {
-  padding: 16px;
-  position: sticky;
-  top: 12px;
+/* ── Lijstweergave ────────────────────────────────────────────────────── */
+.hm-kb__tabel {
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  width: 100%;
+
+  th {
+    border-bottom: 2px solid var(--hm-ink);
+    color: var(--hm-muted);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    padding: 8px 10px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  td {
+    border-bottom: 1px solid var(--hm-line);
+    color: var(--hm-ink-2);
+    padding: 9px 10px;
+  }
+
+  tr {
+    cursor: pointer;
+    user-select: none;
+
+    &:hover td {
+      background: var(--hm-surface-2);
+    }
+
+    &.is-geselecteerd td {
+      background: color-mix(in srgb, var(--hm-brand-blue) 8%, transparent);
+    }
+
+    &.is-dropdoel td {
+      background: color-mix(in srgb, var(--hm-accent) 22%, transparent);
+    }
+  }
 }
-.hm-kb__railtitle {
-  font-size: 0.9rem;
-  font-weight: 730;
-  line-height: 1.3;
-  margin-bottom: 12px;
-}
-.hm-kb__kv {
+
+.hm-kb__rijnaam {
   align-items: center;
-  border-bottom: 1px dashed var(--hm-line);
+  color: var(--hm-ink);
+  display: flex;
+  font-weight: 650;
+  gap: 8px;
+}
+
+/* ── Lege staat ───────────────────────────────────────────────────────── */
+.hm-kb__leeg {
+  align-items: center;
+  border: 1.5px dashed var(--hm-line-2);
+  border-radius: var(--hm-r);
+  color: var(--hm-faint);
+  display: flex;
+  flex-direction: column;
+  font-size: 0.86rem;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 44px 20px;
+  text-align: center;
+
+  b {
+    color: var(--hm-ink-2);
+  }
+}
+
+/* ── Detailrail rechts ────────────────────────────────────────────────── */
+.hm-kb__rail {
+  align-self: start;
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-r);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: sticky;
+  top: 74px;
+}
+
+.hm-kb__railbanner {
+  align-items: center;
   display: flex;
   font-size: 0.74rem;
-  justify-content: space-between;
+  font-weight: 800;
+  gap: 7px;
+  letter-spacing: 0.04em;
+  padding: 12px 16px;
+}
+
+.hm-kb__railthumb {
+  background: var(--hm-surface-2);
+  max-height: 150px;
+  overflow: hidden;
+
+  img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.hm-kb__railtitle {
+  font-size: 0.92rem;
+  font-weight: 750;
+  overflow-wrap: break-word;
+  padding: 13px 16px 6px;
+}
+
+.hm-kb__railkop {
+  color: var(--hm-muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 8px 16px 2px;
+  text-transform: uppercase;
+}
+
+.hm-kb__kv {
+  display: flex;
+  font-size: 0.78rem;
   gap: 10px;
-  padding: 7px 0;
+  justify-content: space-between;
+  padding: 5px 16px;
+
+  > span:first-child {
+    color: var(--hm-faint);
+    flex: none;
+  }
+
+  > span:last-child {
+    text-align: right;
+  }
 }
-.hm-kb__kv span:first-child {
+
+.hm-kb__railtags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 6px 16px;
+}
+
+.hm-kb__railacties {
+  border-top: 1px solid var(--hm-line);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 10px;
+  padding: 13px 16px 15px;
+
+  .hm-btn {
+    justify-content: center;
+  }
+}
+
+.hm-kb__raillleeg {
+  align-items: center;
   color: var(--hm-faint);
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  gap: 10px;
+  padding: 46px 20px;
+  text-align: center;
 }
-.hm-kb__kv span:last-child {
-  font-weight: 600;
-  text-align: right;
+
+/* ── Contextmenu (positie via inline style) ───────────────────────────── */
+.hm-kb__context {
+  min-width: 200px;
+  position: fixed;
+  right: auto;
+  top: auto;
+  z-index: 85;
+
+  a,
+  button {
+    align-items: center;
+    display: flex;
+    gap: 9px;
+  }
+
+  .is-gevaar {
+    color: var(--hm-rood);
+
+    &:hover {
+      background: color-mix(in srgb, var(--hm-rood) 12%, transparent);
+      color: var(--hm-rood);
+    }
+  }
 }
-.hm-kb__railopen {
-  margin-top: 14px;
-  width: 100%;
+
+/* ── Multi-select-balk (zwevend onderaan) ─────────────────────────────── */
+.hm-kb__multibalk {
+  align-items: center;
+  background: #111010;
+  border-radius: var(--hm-pill);
+  bottom: 22px;
+  box-shadow: var(--hm-sh-3);
+  color: #f4f4f1;
+  display: flex;
+  font-family: var(--hm-font);
+  font-size: 0.8rem;
+  font-weight: 650;
+  gap: 6px;
+  left: 50%;
+  padding: 7px 14px 7px 8px;
+  position: fixed;
+  transform: translateX(-50%);
+  z-index: 60;
+
+  span {
+    margin-right: 8px;
+  }
+
+  button {
+    align-items: center;
+    background: none;
+    border: none;
+    border-radius: var(--hm-pill);
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    font: inherit;
+    gap: 6px;
+    padding: 6px 10px;
+
+    &:hover {
+      background: rgba(244, 244, 241, 0.14);
+    }
+
+    &.is-gevaar:hover {
+      background: color-mix(in srgb, var(--hm-rood) 55%, transparent);
+    }
+  }
+}
+
+/* ── Verplaats-popup ──────────────────────────────────────────────────── */
+.hm-kb__mover {
+  width: min(480px, 94vw);
+}
+
+.hm-kb__moverkop {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.hm-kb__movernav {
+  align-items: center;
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line-2);
+  border-radius: var(--hm-r-s);
+  color: var(--hm-ink-2);
+  cursor: pointer;
+  display: flex;
+  height: 32px;
   justify-content: center;
+  width: 32px;
+
+  &:hover:not(:disabled) {
+    background: var(--hm-surface-2);
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.4;
+  }
 }
-.hm-kb__railhint {
+
+.hm-kb__moverzoek {
+  align-items: center;
+  border: 1px solid var(--hm-line-2);
+  border-radius: var(--hm-r-s);
   color: var(--hm-faint);
+  display: flex;
+  flex: 1;
+  gap: 7px;
+  padding: 0 10px;
+
+  input {
+    background: none;
+    border: none !important;
+    box-shadow: none !important;
+    color: var(--hm-ink);
+    flex: 1;
+    font-family: var(--hm-font);
+    font-size: 0.82rem;
+    outline: none;
+    padding: 7px 0;
+  }
+}
+
+.hm-kb__moverpad {
+  color: var(--hm-muted);
   font-size: 0.74rem;
-  margin-top: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 12px 0 6px;
+  text-transform: uppercase;
+}
+
+.hm-kb__moverlijst {
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-r-s);
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.hm-kb__moverrij {
+  align-items: center;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--hm-line);
+  color: var(--hm-ink);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--hm-font);
+  font-size: 0.84rem;
+  font-weight: 600;
+  gap: 9px;
+  padding: 9px 12px;
+  text-align: left;
+  width: 100%;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background: var(--hm-surface-2);
+  }
+}
+
+/* ── Afbeelding-viewer (lightbox) ─────────────────────────────────────── */
+.hm-kb__viewer {
+  align-items: center;
+  background: rgba(17, 16, 16, 0.88);
+  cursor: zoom-out;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  inset: 0;
+  justify-content: center;
+  position: fixed;
+  z-index: 95;
+
+  img {
+    border-radius: var(--hm-r);
+    box-shadow: var(--hm-sh-3);
+    max-height: 84vh;
+    max-width: 90vw;
+    object-fit: contain;
+  }
+
+  p {
+    color: rgba(244, 244, 241, 0.75);
+    font-family: var(--hm-font);
+    font-size: 0.8rem;
+    margin: 0;
+  }
+}
+
+/* ── Lees-slideover ───────────────────────────────────────────────────── */
+.hm-kb__leesbewerk {
+  align-items: center;
+  display: inline-flex;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.hm-kb__leesmeta {
+  align-items: center;
+  border-bottom: 1px solid var(--hm-line);
+  color: var(--hm-muted);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.76rem;
+  gap: 9px;
+  padding: 10px 18px;
+}
+
+.hm-kb__leesinhoud {
+  font-family: var(--hm-font);
+  font-size: 0.92rem;
+  line-height: 1.65;
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--hm-font-head);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: 1.35rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  h3 {
+    font-size: 0.95rem;
+  }
+
+  a {
+    color: var(--hm-brand-blue);
+  }
+}
+
+/* ── Hernoem-dialoog ──────────────────────────────────────────────────── */
+.hm-kb__hernoeminput {
+  background: var(--hm-bg);
+  border: 1px solid var(--hm-line-2);
+  border-radius: var(--hm-r-s) !important;
+  color: var(--hm-ink);
+  font-family: var(--hm-font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 9px 11px;
+  width: 100%;
 }

@@ -34,7 +34,10 @@ export async function KennisbankView({
     >
       <Topbar titel="Kennisbank" />
       <Gutter>
-        <KennisbankBrowser initialDocs={docs.docs} />
+        <KennisbankBrowser
+          initialDocs={docs.docs}
+          isBeheerder={user?.role === "beheerder"}
+        />
       </Gutter>
     </DefaultTemplate>
   );
