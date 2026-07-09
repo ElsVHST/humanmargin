@@ -1189,3 +1189,80 @@ html[data-theme="dark"] {
 .hm-instellingen__tabs {
   margin-bottom: 14px;
 }
+
+.hm-veldbeheer__rij {
+  background: var(--hm-bg);
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-r-s);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 6px;
+  padding: 7px 8px;
+
+  &.is-dragging {
+    box-shadow: 0 8px 22px rgb(0 0 0 / 14%);
+  }
+}
+
+.hm-veldbeheer__kop {
+  align-items: center;
+  display: flex;
+  gap: 7px;
+
+  .hm-kolompanel__naam {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.hm-veldbeheer__voor {
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line-2);
+  border-radius: var(--hm-r-s);
+  color: var(--hm-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 6px;
+}
+
+.hm-veldbeheer__opties {
+  padding-left: 22px;
+}
+
+.hm-veldbeheer__nieuw {
+  align-items: center;
+  border-top: 1px solid var(--hm-line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 12px;
+  padding-top: 12px;
+
+  input,
+  select {
+    background: var(--hm-bg);
+    border: 1px solid var(--hm-line-2);
+    border-radius: var(--hm-r-s);
+    color: var(--hm-ink);
+    font-size: 0.82rem;
+    padding: 7px 9px;
+  }
+
+  input {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .hm-btn {
+    align-items: center;
+    display: inline-flex;
+    gap: 5px;
+  }
+}
+
+.hm-multikeuze {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

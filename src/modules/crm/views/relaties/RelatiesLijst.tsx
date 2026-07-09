@@ -17,6 +17,7 @@ import {
 } from "@/modules/crm/views/pipeline/RelatiePanelen";
 import { CrmInstellingen } from "@/modules/crm/views/relaties/CrmInstellingen";
 import { avatarKleur, initialen, naamVan } from "@/modules/shared/ui";
+import { useCrmVelden } from "@/modules/crm/views/pipeline/ExtraVelden";
 import type { Contact, Functie, Organisation, Sector } from "@/payload-types";
 
 import "@/modules/shared/styles/dashboard.scss";
@@ -164,6 +165,8 @@ function Lijst({
       fetchDocs<Functie>("/api/functies?limit=500&sort=_order&depth=0"),
     initialData: initialFuncties,
   });
+
+  const veldenQuery = useCrmVelden();
 
   const term = zoek.trim().toLowerCase();
 
@@ -489,10 +492,12 @@ function Lijst({
           onGewijzigd={() => {
             qc.invalidateQueries({ queryKey: ["lijst", "sectoren"] });
             qc.invalidateQueries({ queryKey: ["lijst", "functies"] });
+            qc.invalidateQueries({ queryKey: ["lijst", "crm-velden"] });
             qc.invalidateQueries({ queryKey: ["relaties", "organisaties"] });
             qc.invalidateQueries({ queryKey: ["relaties", "contacten"] });
           }}
           sectoren={sectorenQuery.data ?? []}
+          velden={veldenQuery.data ?? []}
         />
       )}
 

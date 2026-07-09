@@ -77,6 +77,7 @@ export interface Config {
     'deal-stages': DealStage;
     sectoren: Sector;
     functies: Functie;
+    'crm-velden': CrmVeld;
     projects: Project;
     tasks: Task;
     'task-statuses': TaskStatus;
@@ -114,6 +115,7 @@ export interface Config {
     'deal-stages': DealStagesSelect<false> | DealStagesSelect<true>;
     sectoren: SectorenSelect<false> | SectorenSelect<true>;
     functies: FunctiesSelect<false> | FunctiesSelect<true>;
+    'crm-velden': CrmVeldenSelect<false> | CrmVeldenSelect<true>;
     projects: ProjectsSelect<false> | ProjectsSelect<true>;
     tasks: TasksSelect<false> | TasksSelect<true>;
     'task-statuses': TaskStatusesSelect<false> | TaskStatusesSelect<true>;
@@ -915,6 +917,15 @@ export interface Organisation {
   risicoklasse?: ('hoog' | 'verboden' | 'geen') | null;
   opvolgenOp?: string | null;
   tags?: string[] | null;
+  extraVelden?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   eigenaar?: (number | null) | User;
   updatedAt: string;
   createdAt: string;
@@ -963,6 +974,15 @@ export interface Contact {
   risicoklasse?: ('hoog' | 'verboden' | 'geen') | null;
   opvolgenOp?: string | null;
   tags?: string[] | null;
+  extraVelden?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   eigenaar?: (number | null) | User;
   updatedAt: string;
   createdAt: string;
@@ -1188,6 +1208,28 @@ export interface TaskStatus {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "crm-velden".
+ */
+export interface CrmVeld {
+  id: number;
+  _order?: string | null;
+  label: string;
+  /**
+   * Automatisch afgeleid van het label bij aanmaken; verandert nooit (de opgeslagen waarden hangen eraan).
+   */
+  sleutel?: string | null;
+  type: 'tekst' | 'tekstvak' | 'getal' | 'datum' | 'janee' | 'select' | 'multiselect' | 'link';
+  /**
+   * De keuzes voor keuzelijst/meerkeuze-velden.
+   */
+  opties?: string[] | null;
+  geldtVoor: 'organisaties' | 'contacten' | 'beide';
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "content-items".
  */
 export interface ContentItem {
@@ -1374,6 +1416,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'functies';
         value: number | Functie;
+      } | null)
+    | ({
+        relationTo: 'crm-velden';
+        value: number | CrmVeld;
       } | null)
     | ({
         relationTo: 'projects';
@@ -1963,6 +2009,7 @@ export interface OrganisationsSelect<T extends boolean = true> {
   risicoklasse?: T;
   opvolgenOp?: T;
   tags?: T;
+  extraVelden?: T;
   eigenaar?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -1990,6 +2037,7 @@ export interface ContactsSelect<T extends boolean = true> {
   risicoklasse?: T;
   opvolgenOp?: T;
   tags?: T;
+  extraVelden?: T;
   eigenaar?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -2049,6 +2097,21 @@ export interface FunctiesSelect<T extends boolean = true> {
   _order?: T;
   naam?: T;
   kleur?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  deletedAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "crm-velden_select".
+ */
+export interface CrmVeldenSelect<T extends boolean = true> {
+  _order?: T;
+  label?: T;
+  sleutel?: T;
+  type?: T;
+  opties?: T;
+  geldtVoor?: T;
   updatedAt?: T;
   createdAt?: T;
   deletedAt?: T;

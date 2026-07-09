@@ -8,6 +8,8 @@ import React, { useEffect, useState } from "react";
 
 import { LijstKeuze } from "@/modules/shared/components/LijstKeuze";
 import { RecordTijdlijn } from "@/modules/shared/components/RecordTijdlijn";
+import { lijstVan, TagsVeld } from "@/modules/shared/components/TagsVeld";
+import { ExtraVeldenSectie } from "@/modules/crm/views/pipeline/ExtraVelden";
 import { euro, naamVan } from "@/modules/shared/ui";
 import type {
   Contact,
@@ -106,59 +108,6 @@ function useFuncties() {
   });
 }
 
-/** Vrije-tekst-waarden als chips: Enter/komma voegt toe, × verwijdert. */
-function TagsVeld({
-  onWijzig,
-  placeholder,
-  tags,
-}: {
-  onWijzig: (tags: string[]) => void;
-  placeholder?: string;
-  tags: string[];
-}) {
-  const [invoer, setInvoer] = useState("");
-
-  const voegToe = () => {
-    const tag = invoer.trim();
-    setInvoer("");
-    if (!tag || tags.includes(tag)) return;
-    onWijzig([...tags, tag]);
-  };
-
-  return (
-    <div className="hm-tagsveld">
-      {tags.map((tag) => (
-        <span className="hm-pill" key={tag}>
-          {tag}
-          <button
-            aria-label={`Tag '${tag}' verwijderen`}
-            onClick={() => onWijzig(tags.filter((t) => t !== tag))}
-            type="button"
-          >
-            <X size={11} />
-          </button>
-        </span>
-      ))}
-      <input
-        aria-label="Nieuwe tag"
-        onBlur={voegToe}
-        onChange={(e) => setInvoer(e.target.value)}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === ",") {
-            e.preventDefault();
-            voegToe();
-          }
-        }}
-        placeholder={tags.length === 0 ? (placeholder ?? "Tag + Enter…") : ""}
-        value={invoer}
-      />
-    </div>
-  );
-}
-
-function lijstVan(arr?: (string | null)[] | null): string[] {
-  return (arr ?? []).filter((t): t is string => Boolean(t));
-}
 
 /** Stel een href samen op de huidige route met gewijzigde query-params
     (null = param verwijderen) — houdt tab/deal/organisatie intact. */
@@ -735,6 +684,13 @@ function OrganisatieDetail({ onClose, onToast, organisatieId }: OrgProps) {
                 </div>
               </div>
             </details>
+
+            <ExtraVeldenSectie
+              doel="organisaties"
+              onOpslaan={(extraVelden) => opslaan.mutate({ extraVelden })}
+              updatedAt={org.updatedAt}
+              waarden={(org.extraVelden ?? {}) as Record<string, unknown>}
+            />
 
             <div className="hm-relatie__blok">
               <h4>Deals ({(dealsQuery.data ?? []).length})</h4>
@@ -1315,6 +1271,13 @@ function ContactDetail({ contactId, onClose, onToast }: ContactProps) {
                 ))}
               </select>
             </label>
+
+            <ExtraVeldenSectie
+              doel="contacten"
+              onOpslaan={(extraVelden) => opslaan.mutate({ extraVelden })}
+              updatedAt={contact.updatedAt}
+              waarden={(contact.extraVelden ?? {}) as Record<string, unknown>}
+            />
 
             <div className="hm-relatie__blok">
               <button

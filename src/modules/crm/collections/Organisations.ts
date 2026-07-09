@@ -132,6 +132,14 @@ export const Organisations: CollectionConfig = {
       admin: { position: "sidebar" },
     },
     tagsField,
+    {
+      // Waarden van Els's eigen CRM-velden (crm-velden-collectie, MKB-plan B4):
+      // { [sleutel]: waarde }. Beheer via de panelen, niet via de admin-editor.
+      name: "extraVelden",
+      label: "Extra velden",
+      type: "json",
+      admin: { hidden: true },
+    },
     eigenaarField,
     {
       name: "timeline",
