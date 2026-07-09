@@ -20,7 +20,8 @@ async function req<T>(url: string, method: string, body?: unknown): Promise<T> {
  */
 export const crmApi = {
   getDeal: (id: Deal["id"] | string) =>
-    req<Deal>(`/api/deals/${id}?depth=1`, "GET"),
+    // depth=2: contactpersoon.functie gepopuleerd voor het Gekoppeld-blok
+    req<Deal>(`/api/deals/${id}?depth=2`, "GET"),
   createDeal: (data: Partial<Deal> & { titel: string }) =>
     req<{ doc: Deal }>(`/api/deals`, "POST", data),
   updateDeal: (id: Deal["id"], data: Partial<Deal>) =>

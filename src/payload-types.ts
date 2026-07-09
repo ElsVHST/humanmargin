@@ -75,6 +75,8 @@ export interface Config {
     contacts: Contact;
     deals: Deal;
     'deal-stages': DealStage;
+    sectoren: Sector;
+    functies: Functie;
     projects: Project;
     tasks: Task;
     'task-statuses': TaskStatus;
@@ -110,6 +112,8 @@ export interface Config {
     contacts: ContactsSelect<false> | ContactsSelect<true>;
     deals: DealsSelect<false> | DealsSelect<true>;
     'deal-stages': DealStagesSelect<false> | DealStagesSelect<true>;
+    sectoren: SectorenSelect<false> | SectorenSelect<true>;
+    functies: FunctiesSelect<false> | FunctiesSelect<true>;
     projects: ProjectsSelect<false> | ProjectsSelect<true>;
     tasks: TasksSelect<false> | TasksSelect<true>;
     'task-statuses': TaskStatusesSelect<false> | TaskStatusesSelect<true>;
@@ -857,7 +861,7 @@ export interface Organisation {
   naam: string;
   website?: string | null;
   linkedin?: string | null;
-  sector?: string | null;
+  sector?: (number | null) | Sector;
   logo?: (number | null) | Media;
   notities?: string | null;
   bezoekadres?: {
@@ -918,6 +922,19 @@ export interface Organisation {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sectoren".
+ */
+export interface Sector {
+  id: number;
+  _order?: string | null;
+  naam: string;
+  kleur: 'groen' | 'blauw' | 'paars' | 'rood' | 'oranje' | 'geel' | 'turquoise' | 'roze' | 'grijs';
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "contacts".
  */
 export interface Contact {
@@ -931,7 +948,7 @@ export interface Contact {
   email: string;
   extraEmails?: string[] | null;
   telefoons?: string[] | null;
-  functie?: string | null;
+  functie?: (number | null) | Functie;
   linkedin?: string | null;
   avatar?: (number | null) | Media;
   organisatie?: (number | null) | Organisation;
@@ -947,6 +964,19 @@ export interface Contact {
   opvolgenOp?: string | null;
   tags?: string[] | null;
   eigenaar?: (number | null) | User;
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "functies".
+ */
+export interface Functie {
+  id: number;
+  _order?: string | null;
+  naam: string;
+  kleur: 'groen' | 'blauw' | 'paars' | 'rood' | 'oranje' | 'geel' | 'turquoise' | 'roze' | 'grijs';
   updatedAt: string;
   createdAt: string;
   deletedAt?: string | null;
@@ -1336,6 +1366,14 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'deal-stages';
         value: number | DealStage;
+      } | null)
+    | ({
+        relationTo: 'sectoren';
+        value: number | Sector;
+      } | null)
+    | ({
+        relationTo: 'functies';
+        value: number | Functie;
       } | null)
     | ({
         relationTo: 'projects';
@@ -1984,6 +2022,30 @@ export interface DealsSelect<T extends boolean = true> {
  * via the `definition` "deal-stages_select".
  */
 export interface DealStagesSelect<T extends boolean = true> {
+  _order?: T;
+  naam?: T;
+  kleur?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  deletedAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sectoren_select".
+ */
+export interface SectorenSelect<T extends boolean = true> {
+  _order?: T;
+  naam?: T;
+  kleur?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  deletedAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "functies_select".
+ */
+export interface FunctiesSelect<T extends boolean = true> {
   _order?: T;
   naam?: T;
   kleur?: T;

@@ -16,15 +16,50 @@ beforeAll(async () => {
 
 describe("crm: organisations", () => {
   it("teamlid kan een organisatie aanmaken; eigenaar wordt automatisch gezet", async () => {
+    // Sectoren zijn een beheerbare lijst; create-on-type mag door elk teamlid
+    const sector = await payload.create({
+      collection: "sectoren",
+      data: { naam: "AI-compliance", kleur: "grijs" },
+      overrideAccess: false,
+      user: teamlid,
+    });
     const org = await payload.create({
       collection: "organisations",
-      data: { naam: "Testbedrijf BV", sector: "AI-compliance", tags: ["klant"] },
+      data: { naam: "Testbedrijf BV", sector: sector.id, tags: ["klant"] },
       overrideAccess: false,
       user: teamlid,
     });
     expect(org.naam).toBe("Testbedrijf BV");
+    const sectorId = typeof org.sector === "object" ? org.sector?.id : org.sector;
+    expect(String(sectorId)).toBe(String(sector.id));
     const eigenaarId = typeof org.eigenaar === "object" ? org.eigenaar?.id : org.eigenaar;
     expect(String(eigenaarId)).toBe(String(teamlid.id));
+  });
+
+  it("teamlid mag sectoren niet hernoemen of verwijderen (beheerder wel)", async () => {
+    const sector = await payload.create({
+      collection: "sectoren",
+      data: { naam: "Hernoem-test", kleur: "grijs" },
+      overrideAccess: false,
+      user: teamlid,
+    });
+    await expect(
+      payload.update({
+        collection: "sectoren",
+        id: sector.id,
+        data: { naam: "Anders" },
+        overrideAccess: false,
+        user: teamlid,
+      }),
+    ).rejects.toThrow();
+    const hernoemd = await payload.update({
+      collection: "sectoren",
+      id: sector.id,
+      data: { naam: "Anders" },
+      overrideAccess: false,
+      user: beheerder,
+    });
+    expect(hernoemd.naam).toBe("Anders");
   });
 
   it("teamlid kan naar de prullenbak verwijderen (deletedAt), maar niet permanent", async () => {

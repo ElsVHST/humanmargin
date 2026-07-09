@@ -17,7 +17,13 @@ export const Organisations: CollectionConfig = {
     { name: "naam", label: "Naam", type: "text", required: true },
     { name: "website", label: "Website", type: "text" },
     { name: "linkedin", label: "LinkedIn", type: "text" },
-    { name: "sector", label: "Sector", type: "text" },
+    {
+      // Beheerbare lijst (MKB-plan B3) — was vrije tekst, gemigreerd 2026-07-09
+      name: "sector",
+      label: "Sector",
+      type: "relationship",
+      relationTo: "sectoren",
+    },
     { name: "logo", label: "Logo", type: "upload", relationTo: "media" },
     { name: "notities", label: "Notities", type: "textarea" },
     adresGroup("bezoekadres", "Bezoekadres"),

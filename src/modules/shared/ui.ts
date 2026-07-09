@@ -45,3 +45,12 @@ export function avatarKleur(seed?: string | number | null): string {
   }
   return AVATAR_PALET[h % AVATAR_PALET.length];
 }
+
+/** Naam van een gepopuleerde relatie (sector/functie/kolom-docs); null bij
+    depth-0 id's of lege relaties — caller toont dan "—" of lost zelf op. */
+export function naamVan(rel: unknown): string | null {
+  if (rel && typeof rel === "object" && "naam" in rel) {
+    return (rel as { naam: string }).naam;
+  }
+  return null;
+}

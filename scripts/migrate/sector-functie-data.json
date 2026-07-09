@@ -1,0 +1,18 @@
+{
+  "organisaties": [
+    {
+      "id": 2,
+      "sector": "Fotografie"
+    },
+    {
+      "id": 1,
+      "sector": "AI-training"
+    }
+  ],
+  "contacten": [
+    {
+      "id": 1,
+      "functie": "Eigenaar"
+    }
+  ]
+}

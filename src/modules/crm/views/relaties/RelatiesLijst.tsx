@@ -4,7 +4,9 @@ import {
   QueryClient,
   QueryClientProvider,
   useQuery,
+  useQueryClient,
 } from "@tanstack/react-query";
+import { Pencil } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
@@ -13,8 +15,9 @@ import {
   OrganisatiePanel,
   type PanelToast,
 } from "@/modules/crm/views/pipeline/RelatiePanelen";
-import { avatarKleur, initialen } from "@/modules/shared/ui";
-import type { Contact, Organisation } from "@/payload-types";
+import { CrmInstellingen } from "@/modules/crm/views/relaties/CrmInstellingen";
+import { avatarKleur, initialen, naamVan } from "@/modules/shared/ui";
+import type { Contact, Functie, Organisation, Sector } from "@/payload-types";
 
 import "@/modules/shared/styles/dashboard.scss";
 import "@/modules/shared/components/board.scss";
@@ -23,6 +26,9 @@ import "./relaties.scss";
 type Props = {
   initialOrganisaties: Organisation[];
   initialContacten: Contact[];
+  initialSectoren: Sector[];
+  initialFuncties: Functie[];
+  isBeheerder: boolean;
   /** Servertijd (ms) — geen Date.now() in de componentbody (react-hooks/purity). */
   nu: number;
 };
@@ -76,14 +82,28 @@ function orgNaamVan(contact: Contact): string | null {
   return null;
 }
 
+function relIdVan(value: unknown): string | null {
+  if (value == null) return null;
+  if (typeof value === "object") return String((value as { id: number }).id);
+  return String(value);
+}
+
 async function fetchDocs<T>(url: string): Promise<T[]> {
   const res = await fetch(url, { credentials: "include" });
   if (!res.ok) throw new Error(`GET ${url} → ${res.status}`);
   return ((await res.json()) as { docs: T[] }).docs;
 }
 
-function Lijst({ initialContacten, initialOrganisaties, nu }: Props) {
+function Lijst({
+  initialContacten,
+  initialFuncties,
+  initialOrganisaties,
+  initialSectoren,
+  isBeheerder,
+  nu,
+}: Props) {
   const router = useRouter();
+  const qc = useQueryClient();
   const searchParams = useSearchParams();
   const organisatieParam = searchParams.get("organisatie");
   const contactParam = searchParams.get("contact");
@@ -95,8 +115,10 @@ function Lijst({ initialContacten, initialOrganisaties, nu }: Props) {
   const [zoek, setZoek] = useState("");
   const [typeFilter, setTypeFilter] = useState("alle");
   const [doelgroepFilter, setDoelgroepFilter] = useState("alle");
+  const [sectorFilter, setSectorFilter] = useState("alle");
   const [opvolgFilter, setOpvolgFilter] = useState("alle");
   const [tagFilter, setTagFilter] = useState("alle");
+  const [instellingenOpen, setInstellingenOpen] = useState(false);
   const [toast, setToast] = useState<PanelToast | null>(null);
 
   const vandaag = new Date(nu);
@@ -129,6 +151,20 @@ function Lijst({ initialContacten, initialOrganisaties, nu }: Props) {
     initialData: initialContacten,
   });
 
+  const sectorenQuery = useQuery({
+    queryKey: ["lijst", "sectoren"],
+    queryFn: () =>
+      fetchDocs<Sector>("/api/sectoren?limit=500&sort=_order&depth=0"),
+    initialData: initialSectoren,
+  });
+
+  const functiesQuery = useQuery({
+    queryKey: ["lijst", "functies"],
+    queryFn: () =>
+      fetchDocs<Functie>("/api/functies?limit=500&sort=_order&depth=0"),
+    initialData: initialFuncties,
+  });
+
   const term = zoek.trim().toLowerCase();
 
   const filterRelatie = (rel: Organisation | Contact, naam: string) => {
@@ -136,6 +172,12 @@ function Lijst({ initialContacten, initialOrganisaties, nu }: Props) {
       return false;
     }
     if (doelgroepFilter !== "alle" && rel.doelgroep !== doelgroepFilter) {
+      return false;
+    }
+    if (
+      sectorFilter !== "alle" &&
+      (!("sector" in rel) || relIdVan(rel.sector) !== sectorFilter)
+    ) {
       return false;
     }
     if (opvolgFilter !== "alle") {
@@ -180,7 +222,7 @@ function Lijst({ initialContacten, initialOrganisaties, nu }: Props) {
   };
 
   const organisaties = (orgsQuery.data ?? []).filter((o) =>
-    filterRelatie(o, `${o.naam} ${o.sector ?? ""}`),
+    filterRelatie(o, `${o.naam} ${naamVan(o.sector) ?? ""}`),
   );
   const contacten = (contactenQuery.data ?? []).filter((c) =>
     filterRelatie(c, `${c.naam ?? ""} ${c.email} ${orgNaamVan(c) ?? ""}`),
@@ -193,8 +235,17 @@ function Lijst({ initialContacten, initialOrganisaties, nu }: Props) {
     Boolean(term) ||
     typeFilter !== "alle" ||
     doelgroepFilter !== "alle" ||
+    sectorFilter !== "alle" ||
     opvolgFilter !== "alle" ||
     tagFilter !== "alle";
+
+  const aantalPerSector = (id: number) =>
+    (orgsQuery.data ?? []).filter((o) => relIdVan(o.sector) === String(id))
+      .length;
+  const aantalPerFunctie = (id: number) =>
+    (contactenQuery.data ?? []).filter(
+      (c) => relIdVan(c.functie) === String(id),
+    ).length;
 
   return (
     <div className="hm-relaties">
@@ -262,6 +313,21 @@ function Lijst({ initialContacten, initialOrganisaties, nu }: Props) {
               </option>
             ))}
           </select>
+          {tab === "organisaties" && (
+            <select
+              aria-label="Filter op sector"
+              className="hm-board__select"
+              onChange={(e) => setSectorFilter(e.target.value)}
+              value={sectorFilter}
+            >
+              <option value="alle">Alle sectoren</option>
+              {(sectorenQuery.data ?? []).map((s) => (
+                <option key={s.id} value={String(s.id)}>
+                  {s.naam}
+                </option>
+              ))}
+            </select>
+          )}
           <select
             aria-label="Filter op opvolgdatum"
             className="hm-board__select"
@@ -286,6 +352,15 @@ function Lijst({ initialContacten, initialOrganisaties, nu }: Props) {
               </option>
             ))}
           </select>
+          <button
+            aria-label="CRM-instellingen"
+            className="hm-board__icoonknop"
+            onClick={() => setInstellingenOpen(true)}
+            title="CRM-instellingen (sectoren, functies)"
+            type="button"
+          >
+            <Pencil size={15} strokeWidth={2} />
+          </button>
         </div>
       </div>
 
@@ -337,7 +412,7 @@ function Lijst({ initialContacten, initialOrganisaties, nu }: Props) {
                         ?.label ?? "—"}
                     </td>
                     <td>{opvolgCel(org.opvolgenOp)}</td>
-                    <td>{org.sector ?? "—"}</td>
+                    <td>{naamVan(org.sector) ?? "—"}</td>
                     <td>{eigenaarNaam(org) ?? "—"}</td>
                     <td>{datumKort(org.updatedAt)}</td>
                   </tr>
@@ -394,13 +469,31 @@ function Lijst({ initialContacten, initialOrganisaties, nu }: Props) {
                   <td>{opvolgCel(contact.opvolgenOp)}</td>
                   <td>{contact.email}</td>
                   <td>{orgNaamVan(contact) ?? "—"}</td>
-                  <td>{contact.functie ?? "—"}</td>
+                  <td>{naamVan(contact.functie) ?? "—"}</td>
                   <td>{datumKort(contact.updatedAt)}</td>
                 </tr>
               );
             })}
           </tbody>
         </table>
+      )}
+
+      {instellingenOpen && (
+        <CrmInstellingen
+          aantalPerFunctie={aantalPerFunctie}
+          aantalPerSector={aantalPerSector}
+          functies={functiesQuery.data ?? []}
+          isBeheerder={isBeheerder}
+          onClose={() => setInstellingenOpen(false)}
+          onFout={(m) => setToast({ tekst: m, soort: "fout" })}
+          onGewijzigd={() => {
+            qc.invalidateQueries({ queryKey: ["lijst", "sectoren"] });
+            qc.invalidateQueries({ queryKey: ["lijst", "functies"] });
+            qc.invalidateQueries({ queryKey: ["relaties", "organisaties"] });
+            qc.invalidateQueries({ queryKey: ["relaties", "contacten"] });
+          }}
+          sectoren={sectorenQuery.data ?? []}
+        />
       )}
 
       {organisatieParam && (

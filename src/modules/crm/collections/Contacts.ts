@@ -59,7 +59,13 @@ export const Contacts: CollectionConfig = {
     },
     { name: "extraEmails", label: "Extra e-mailadressen", type: "text", hasMany: true },
     { name: "telefoons", label: "Telefoonnummers", type: "text", hasMany: true },
-    { name: "functie", label: "Functie", type: "text" },
+    {
+      // Beheerbare lijst (MKB-plan B3) — was vrije tekst, gemigreerd 2026-07-09
+      name: "functie",
+      label: "Functie",
+      type: "relationship",
+      relationTo: "functies",
+    },
     { name: "linkedin", label: "LinkedIn", type: "text" },
     { name: "avatar", label: "Foto", type: "upload", relationTo: "media" },
     {

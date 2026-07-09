@@ -15,7 +15,7 @@ export async function RelatiesView({
   const { i18n, payload, user } = req;
   const nu = new Date().getTime();
 
-  const [organisaties, contacten] = await Promise.all([
+  const [organisaties, contacten, sectoren, functies] = await Promise.all([
     payload.find({
       collection: "organisations",
       sort: "naam",
@@ -27,6 +27,18 @@ export async function RelatiesView({
       sort: "naam",
       limit: 1000,
       depth: 1,
+    }),
+    payload.find({
+      collection: "sectoren",
+      sort: "_order",
+      limit: 500,
+      depth: 0,
+    }),
+    payload.find({
+      collection: "functies",
+      sort: "_order",
+      limit: 500,
+      depth: 0,
     }),
   ]);
 
@@ -45,7 +57,10 @@ export async function RelatiesView({
       <Gutter>
         <RelatiesLijst
           initialContacten={contacten.docs}
+          initialFuncties={functies.docs}
           initialOrganisaties={organisaties.docs}
+          initialSectoren={sectoren.docs}
+          isBeheerder={user?.role === "beheerder"}
           nu={nu}
         />
       </Gutter>

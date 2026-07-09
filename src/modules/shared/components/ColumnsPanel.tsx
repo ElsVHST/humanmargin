@@ -31,7 +31,7 @@ export type PanelKolom = {
   _order?: string | null;
 };
 
-type Props = {
+type BeheerProps = {
   /** bv. "deal-stages" — bepaalt de REST-endpoints. */
   collectionSlug: string;
   /** Kolommen in huidige volgorde (gesorteerd op _order). */
@@ -39,13 +39,18 @@ type Props = {
   /** Aantal kaarten per kolom-id, voor de verwijder-melding. */
   aantalPerKolom: (id: number) => number;
   isBeheerder: boolean;
-  itemNaam: string; // "fase" | "status"
-  kaartNaam: string; // "deal" | "taak"
-  onClose: () => void;
+  itemNaam: string; // "fase" | "status" | "sector" | "functie"
+  kaartNaam: string; // "deal" | "taak" | "relatie"
   /** Na elke geslaagde wijziging: caller invalideert zijn queries. */
   onGewijzigd: () => void;
   onFout: (melding: string) => void;
+  /** Label van de toevoegen-knop (default "Kolom toevoegen"). */
+  toevoegLabel?: string;
+  /** Tekst in de verwijder-dialoog (default: board-tekst over fallback-kolom). */
+  verwijderMelding?: (naam: string, aantal: number) => string;
 };
+
+type Props = BeheerProps & { onClose: () => void };
 
 async function rest(url: string, method: string, body?: unknown) {
   const res = await fetch(url, {
@@ -162,22 +167,23 @@ function KolomRij({
 }
 
 /**
- * Kolommenbeheer-sidepanel (PRD Epic D): alle kolommen slepen, hernoemen,
- * kleuren, toevoegen en verwijderen — zonder het board te verlaten.
- * Generiek over kolom-collecties (deal-stages, task-statuses).
+ * Herbruikbare lijst-beheer-inhoud: slepen, hernoemen, kleuren, toevoegen en
+ * verwijderen van docs in een kolom-collectie (deal-stages, task-statuses,
+ * sectoren, functies). Zonder eigen slideover — wrap zelf (ColumnsPanel of
+ * het CRM-instellingenpaneel).
  */
-export function ColumnsPanel({
+export function KolommenBeheer({
   aantalPerKolom,
   collectionSlug,
   isBeheerder,
   itemNaam,
   kaartNaam,
   kolommen,
-  onClose,
   onFout,
   onGewijzigd,
-}: Props) {
-  useEscape(onClose);
+  toevoegLabel,
+  verwijderMelding,
+}: BeheerProps) {
   const [bezig, setBezig] = useState(false);
   const [verwijderKolom, setVerwijderKolom] = useState<PanelKolom | null>(null);
 
@@ -219,33 +225,13 @@ export function ColumnsPanel({
 
   return (
     <>
-      <div
-        aria-hidden
-        className="hm-slideover__backdrop"
-        onClick={onClose}
-        role="presentation"
-      />
-      <aside aria-label="Kolommen beheren" className="hm-slideover" role="dialog">
-        <div className="hm-slideover__head">
-          <h3>Kolommen</h3>
-          {bezig && <span className="hm-dealpanel__bezig">opslaan…</span>}
-          <button
-            aria-label="Sluiten"
-            className="hm-slideover__close"
-            onClick={onClose}
-            type="button"
-          >
-            <X size={18} />
-          </button>
-        </div>
-        <div className="hm-slideover__body">
-          {!isBeheerder && (
-            <p className="hm-kolompanel__hint">
-              Alleen beheerders kunnen kolommen wijzigen — je kijkt mee in
-              leesmodus.
-            </p>
-          )}
-          <DragDropContext onDragEnd={onDragEnd}>
+      {bezig && <span className="hm-dealpanel__bezig">opslaan…</span>}
+      {!isBeheerder && (
+        <p className="hm-kolompanel__hint">
+          Alleen beheerders kunnen dit wijzigen — je kijkt mee in leesmodus.
+        </p>
+      )}
+      <DragDropContext onDragEnd={onDragEnd}>
             <Droppable droppableId="kolompanel">
               {(provided) => (
                 <div
@@ -301,27 +287,25 @@ export function ColumnsPanel({
                 </div>
               )}
             </Droppable>
-          </DragDropContext>
-          {isBeheerder && (
-            <button
-              className="hm-kolompanel__nieuw"
-              disabled={bezig}
-              onClick={() =>
-                void voerUit(() =>
-                  rest(`/api/${collectionSlug}`, "POST", {
-                    naam: `Nieuwe ${itemNaam}`,
-                    kleur: "grijs",
-                  }),
-                )
-              }
-              type="button"
-            >
-              <Plus size={15} strokeWidth={2.25} />
-              Kolom toevoegen
-            </button>
-          )}
-        </div>
-      </aside>
+      </DragDropContext>
+      {isBeheerder && (
+        <button
+          className="hm-kolompanel__nieuw"
+          disabled={bezig}
+          onClick={() =>
+            void voerUit(() =>
+              rest(`/api/${collectionSlug}`, "POST", {
+                naam: `Nieuwe ${itemNaam}`,
+                kleur: "grijs",
+              }),
+            )
+          }
+          type="button"
+        >
+          <Plus size={15} strokeWidth={2.25} />
+          {toevoegLabel ?? "Kolom toevoegen"}
+        </button>
+      )}
 
       {verwijderKolom && (
         <>
@@ -331,12 +315,19 @@ export function ColumnsPanel({
             onClick={() => setVerwijderKolom(null)}
             role="presentation"
           />
-          <div aria-label="Kolom verwijderen" className="hm-dialoog" role="dialog">
-            <h3>Kolom verwijderen</h3>
+          <div aria-label="Verwijderen" className="hm-dialoog" role="dialog">
+            <h3>
+              {itemNaam.charAt(0).toUpperCase() + itemNaam.slice(1)} verwijderen
+            </h3>
             <p>
-              {aantalPerKolom(verwijderKolom.id) > 0
-                ? `${aantalPerKolom(verwijderKolom.id)} ${kaartNaam}${aantalPerKolom(verwijderKolom.id) === 1 ? "" : "s"} in '${verwijderKolom.naam}' ${aantalPerKolom(verwijderKolom.id) === 1 ? "valt" : "vallen"} terug naar de kolom 'Geen ${itemNaam}'.`
-                : `'${verwijderKolom.naam}' is leeg.`}{" "}
+              {verwijderMelding
+                ? verwijderMelding(
+                    verwijderKolom.naam,
+                    aantalPerKolom(verwijderKolom.id),
+                  )
+                : aantalPerKolom(verwijderKolom.id) > 0
+                  ? `${aantalPerKolom(verwijderKolom.id)} ${kaartNaam}${aantalPerKolom(verwijderKolom.id) === 1 ? "" : "s"} in '${verwijderKolom.naam}' ${aantalPerKolom(verwijderKolom.id) === 1 ? "valt" : "vallen"} terug naar de kolom 'Geen ${itemNaam}'.`
+                  : `'${verwijderKolom.naam}' is leeg.`}{" "}
               Herstellen kan via de prullenbak.
             </p>
             <div className="hm-dialoog__acties">
@@ -366,6 +357,41 @@ export function ColumnsPanel({
           </div>
         </>
       )}
+    </>
+  );
+}
+
+/**
+ * Kolommenbeheer-sidepanel (PRD Epic D): alle kolommen slepen, hernoemen,
+ * kleuren, toevoegen en verwijderen — zonder het board te verlaten.
+ * Generiek over kolom-collecties (deal-stages, task-statuses).
+ */
+export function ColumnsPanel({ onClose, ...beheer }: Props) {
+  useEscape(onClose);
+  return (
+    <>
+      <div
+        aria-hidden
+        className="hm-slideover__backdrop"
+        onClick={onClose}
+        role="presentation"
+      />
+      <aside aria-label="Kolommen beheren" className="hm-slideover" role="dialog">
+        <div className="hm-slideover__head">
+          <h3>Kolommen</h3>
+          <button
+            aria-label="Sluiten"
+            className="hm-slideover__close"
+            onClick={onClose}
+            type="button"
+          >
+            <X size={18} />
+          </button>
+        </div>
+        <div className="hm-slideover__body">
+          <KolommenBeheer {...beheer} />
+        </div>
+      </aside>
     </>
   );
 }

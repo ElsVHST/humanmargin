@@ -6,9 +6,17 @@ import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
+import { LijstKeuze } from "@/modules/shared/components/LijstKeuze";
 import { RecordTijdlijn } from "@/modules/shared/components/RecordTijdlijn";
-import { euro } from "@/modules/shared/ui";
-import type { Contact, Deal, Organisation, User } from "@/payload-types";
+import { euro, naamVan } from "@/modules/shared/ui";
+import type {
+  Contact,
+  Deal,
+  Functie,
+  Organisation,
+  Sector,
+  User,
+} from "@/payload-types";
 
 import "@/modules/shared/styles/dashboard.scss";
 
@@ -79,6 +87,22 @@ function useGebruikers() {
   return useQuery({
     queryKey: ["panel", "gebruikers"],
     queryFn: () => fetchDocs<User>("/api/users?limit=100&depth=0"),
+  });
+}
+
+function useSectoren() {
+  return useQuery({
+    queryKey: ["lijst", "sectoren"],
+    queryFn: () =>
+      fetchDocs<Sector>("/api/sectoren?limit=500&sort=naam&depth=0"),
+  });
+}
+
+function useFuncties() {
+  return useQuery({
+    queryKey: ["lijst", "functies"],
+    queryFn: () =>
+      fetchDocs<Functie>("/api/functies?limit=500&sort=naam&depth=0"),
   });
 }
 
@@ -204,7 +228,6 @@ function NieuweOrganisatie({ onClose, onToast }: Omit<OrgProps, "organisatieId">
   const qc = useQueryClient();
   const router = useRouter();
   const [naam, setNaam] = useState("");
-  const [sector, setSector] = useState("");
   const [website, setWebsite] = useState("");
   useEscape(onClose);
 
@@ -216,7 +239,6 @@ function NieuweOrganisatie({ onClose, onToast }: Omit<OrgProps, "organisatieId">
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           naam: naam.trim(),
-          sector: sector.trim() || null,
           website: website.trim() || null,
         }),
       });
@@ -271,10 +293,6 @@ function NieuweOrganisatie({ onClose, onToast }: Omit<OrgProps, "organisatieId">
               />
             </label>
             <label>
-              Sector
-              <input onChange={(e) => setSector(e.target.value)} value={sector} />
-            </label>
-            <label>
               Website
               <input
                 onChange={(e) => setWebsite(e.target.value)}
@@ -321,8 +339,25 @@ function OrganisatieDetail({ onClose, onToast, organisatieId }: OrgProps) {
     queryKey: ["organisatie", organisatieId, "contacten"],
     queryFn: () =>
       fetchDocs<Contact>(
-        `/api/contacts?where[organisatie][equals]=${organisatieId}&limit=50&depth=0`,
+        `/api/contacts?where[organisatie][equals]=${organisatieId}&limit=50&depth=1`,
       ),
+  });
+  const sectoren = useSectoren();
+
+  const nieuweSector = useMutation({
+    mutationFn: async (naam: string) => {
+      const doc = await postDoc<Sector>("sectoren", { naam, kleur: "grijs" });
+      await patchDoc("organisations", organisatieId, { sector: doc.id });
+      return doc;
+    },
+    onSuccess: (doc) => {
+      qc.invalidateQueries({ queryKey: ["lijst", "sectoren"] });
+      qc.invalidateQueries({ queryKey: ["organisatie", organisatieId] });
+      qc.invalidateQueries({ queryKey: ["relaties", "organisaties"] });
+      onToast({ tekst: `Sector '${doc.naam}' aangemaakt.`, soort: "ok" });
+    },
+    onError: () =>
+      onToast({ tekst: "Sector aanmaken mislukt.", soort: "fout" }),
   });
 
   const alleContacten = useQuery({
@@ -523,15 +558,15 @@ function OrganisatieDetail({ onClose, onToast, organisatieId }: OrgProps) {
             </div>
             <label>
               Sector
-              <input
-                defaultValue={org.sector ?? ""}
+              <LijstKeuze
                 key={`sector-${org.updatedAt}`}
-                onBlur={(e) => {
-                  const nieuw = e.target.value.trim() || null;
-                  if (nieuw !== (org.sector ?? null)) {
-                    opslaan.mutate({ sector: nieuw });
-                  }
-                }}
+                onKies={(id) => opslaan.mutate({ sector: id })}
+                onNieuw={(naam) => nieuweSector.mutate(naam)}
+                opties={(sectoren.data ?? []).map((s) => ({
+                  id: s.id,
+                  naam: s.naam,
+                }))}
+                waarde={naamVan(org.sector) ?? ""}
               />
             </label>
             <label>
@@ -740,7 +775,7 @@ function OrganisatieDetail({ onClose, onToast, organisatieId }: OrgProps) {
                     replace
                   >
                     {c.naam ?? c.email}
-                    <span>{c.functie ?? ""}</span>
+                    <span>{naamVan(c.functie) ?? ""}</span>
                   </Link>
                   <button
                     aria-label={`${c.naam ?? c.email} ontkoppelen`}
@@ -979,6 +1014,24 @@ function ContactDetail({ contactId, onClose, onToast }: ContactProps) {
     queryFn: () =>
       fetchDocs<Organisation>("/api/organisations?limit=200&sort=naam&depth=0"),
   });
+  const functies = useFuncties();
+
+  const nieuweFunctie = useMutation({
+    mutationFn: async (naam: string) => {
+      const doc = await postDoc<Functie>("functies", { naam, kleur: "grijs" });
+      await patchDoc("contacts", contactId, { functie: doc.id });
+      return doc;
+    },
+    onSuccess: (doc) => {
+      qc.invalidateQueries({ queryKey: ["lijst", "functies"] });
+      qc.invalidateQueries({ queryKey: ["contact", contactId] });
+      qc.invalidateQueries({ queryKey: ["relaties", "contacten"] });
+      qc.invalidateQueries({ queryKey: ["organisatie"] });
+      onToast({ tekst: `Functie '${doc.naam}' aangemaakt.`, soort: "ok" });
+    },
+    onError: () =>
+      onToast({ tekst: "Functie aanmaken mislukt.", soort: "fout" }),
+  });
 
   const opslaan = useMutation({
     mutationFn: (data: Record<string, unknown>) =>
@@ -1201,15 +1254,15 @@ function ContactDetail({ contactId, onClose, onToast }: ContactProps) {
             </div>
             <label>
               Functie
-              <input
-                defaultValue={contact.functie ?? ""}
+              <LijstKeuze
                 key={`fu-${contact.updatedAt}`}
-                onBlur={(e) => {
-                  const nieuw = e.target.value.trim() || null;
-                  if (nieuw !== (contact.functie ?? null)) {
-                    opslaan.mutate({ functie: nieuw });
-                  }
-                }}
+                onKies={(id) => opslaan.mutate({ functie: id })}
+                onNieuw={(naam) => nieuweFunctie.mutate(naam)}
+                opties={(functies.data ?? []).map((f) => ({
+                  id: f.id,
+                  naam: f.naam,
+                }))}
+                waarde={naamVan(contact.functie) ?? ""}
               />
             </label>
             <label>

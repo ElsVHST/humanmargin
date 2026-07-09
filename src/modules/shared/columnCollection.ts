@@ -27,6 +27,9 @@ export type ColumnCollectionOpts = {
   group: string;
   defaultKleur?: Kleur;
   extraFields?: Field[];
+  /** "teamlid" = elk ingelogd teamlid mag aanmaken (create-on-type in
+      comboboxen, bv. sectoren/functies); beheren blijft beheerder-only. */
+  createRol?: "beheerder" | "teamlid";
 };
 
 /**
@@ -47,7 +50,7 @@ export function makeColumnCollection(
     trash: true,
     access: {
       read: isAuthenticated,
-      create: isBeheerder,
+      create: opts.createRol === "teamlid" ? isAuthenticated : isBeheerder,
       update: isBeheerder,
       delete: isBeheerder,
     },

@@ -12,7 +12,7 @@ import { useMetParams } from "@/modules/crm/views/pipeline/RelatiePanelen";
 import { VerliesDialoog } from "@/modules/crm/views/pipeline/VerliesDialoog";
 import { RecordTijdlijn } from "@/modules/shared/components/RecordTijdlijn";
 import { ReferentiesVeld } from "@/modules/shared/components/ReferentiesVeld";
-import { avatarKleur, euro, initialen } from "@/modules/shared/ui";
+import { avatarKleur, euro, initialen, naamVan } from "@/modules/shared/ui";
 import type {
   Contact,
   Deal,
@@ -533,7 +533,7 @@ function DealDetail({
                       {deal.contactpersoon.naam ?? deal.contactpersoon.email}
                       <span>
                         {[
-                          deal.contactpersoon.functie,
+                          naamVan(deal.contactpersoon.functie),
                           deal.contactpersoon.email,
                           (deal.contactpersoon.telefoons ?? [])[0],
                         ]
