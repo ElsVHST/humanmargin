@@ -17,9 +17,9 @@ const QUICK_ADD: { label: string; href: string }[] = [
   { label: "Deal", href: "/admin/pipeline?deal=nieuw" },
   { label: "Taak", href: "/admin/taken?taak=nieuw" },
   { label: "Content", href: "/admin/kalender?item=nieuw" },
-  { label: "Organisatie", href: "/admin/collections/organisations/create" },
-  { label: "Contactpersoon", href: "/admin/collections/contacts/create" },
-  { label: "Kennisdocument", href: "/admin/collections/knowledge-docs/create" },
+  { label: "Organisatie", href: "/admin/pipeline?organisatie=nieuw" },
+  { label: "Contactpersoon", href: "/admin/pipeline?contact=nieuw" },
+  { label: "Kennisdocument", href: "/admin/kennisbank" },
 ];
 
 function QuickAdd() {

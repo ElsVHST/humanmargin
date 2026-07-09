@@ -203,9 +203,13 @@ function Board({ initialStatussen, initialTaken, projecten, isBeheerder }: Props
 
   return (
     <div className="hm-pipeline">
-      <div className="hm-board__filters">
+      <div className="hm-board__bar">
+        <Link className="hm-btn hm-btn--primary" href="/admin/taken?taak=nieuw">
+          + Taak
+        </Link>
+        <div className="hm-board__bar-rechts">
         <select
-          className="hm-board__filter"
+          className="hm-board__select"
           onChange={(e) => setProjectFilter(e.target.value)}
           value={projectFilter}
         >
@@ -217,7 +221,7 @@ function Board({ initialStatussen, initialTaken, projecten, isBeheerder }: Props
           ))}
         </select>
         <select
-          className="hm-board__filter"
+          className="hm-board__select"
           onChange={(e) => setPersoonFilter(e.target.value)}
           value={persoonFilter}
         >
@@ -237,6 +241,7 @@ function Board({ initialStatussen, initialTaken, projecten, isBeheerder }: Props
         >
           <Pencil size={15} strokeWidth={2} />
         </button>
+        </div>
       </div>
       {moveTask.isError && (
         <p className="hm-pipeline__fout" role="alert">
@@ -269,6 +274,10 @@ function Board({ initialStatussen, initialTaken, projecten, isBeheerder }: Props
                         >
                           {(p, kaartSnapshot) => {
                             const wie = toegewezenInfo(taak);
+                            const checklist = taak.checklist ?? [];
+                            const klaar = checklist.filter(
+                              (punt) => punt.klaar,
+                            ).length;
                             return (
                               <Link
                                 className={`hm-card hm-card--hover hm-deal${kaartSnapshot.isDragging ? " is-dragging" : ""}`}
@@ -305,6 +314,14 @@ function Board({ initialStatussen, initialTaken, projecten, isBeheerder }: Props
                                         className={`hm-pill ${deadline.verlopen ? "hm-pill--rose" : "hm-pill--slate"}`}
                                       >
                                         {deadline.tekst}
+                                      </span>
+                                    )}
+                                    {checklist.length > 0 && (
+                                      <span
+                                        className="hm-pill hm-pill--slate"
+                                        title={`Checklist: ${klaar}/${checklist.length}`}
+                                      >
+                                        ✓ {klaar}/{checklist.length}
                                       </span>
                                     )}
                                   </span>

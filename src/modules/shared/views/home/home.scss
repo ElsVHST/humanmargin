@@ -221,3 +221,26 @@ a.hm-home__itemtekst:hover {
   color: var(--hm-faint);
   font-size: 0.88rem;
 }
+
+/* Feed met avatars + type-pills; hele regel klikbaar naar het record-paneel */
+.hm-home__feedlink {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  flex: 1;
+  gap: 8px;
+  min-width: 0;
+  text-decoration: none;
+
+  &:hover .hm-home__itemtekst {
+    color: var(--hm-brand-blue);
+  }
+
+  .hm-home__itemtekst {
+    flex: 1;
+  }
+
+  .hm-home__meta {
+    flex: none;
+  }
+}

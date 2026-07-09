@@ -4,7 +4,6 @@ import { fileURLToPath } from "node:url";
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { seoPlugin } from "@payloadcms/plugin-seo";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
-import { en } from "@payloadcms/translations/languages/en";
 import { nl } from "@payloadcms/translations/languages/nl";
 import { buildConfig } from "payload";
 import sharp from "sharp";
@@ -74,8 +73,8 @@ export default buildConfig({
     },
     theme: "light",
   },
-  // Els beheert de site in het Nederlands; admin UI valt terug op nl
-  i18n: { supportedLanguages: { en, nl }, fallbackLanguage: "nl" },
+  // Alleen Nederlands: geen taalmix meer, ongeacht gebruikersvoorkeur
+  i18n: { supportedLanguages: { nl }, fallbackLanguage: "nl" },
   collections: [
     Pages,
     Media,

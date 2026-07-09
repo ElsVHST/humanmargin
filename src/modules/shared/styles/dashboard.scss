@@ -1004,3 +1004,42 @@ html[data-theme="dark"] {
   .hm-slideover,
   .hm-slideover__backdrop { transition: none; animation: none; }
 }
+
+/* ── Relatie-panelen: gekoppelde deals/contacten-blokken ─────────────── */
+.hm-relatie__blok {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  h4 {
+    color: var(--hm-muted);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    margin: 6px 0 2px;
+    text-transform: uppercase;
+  }
+
+  a {
+    background: var(--hm-bg);
+    border: 1px solid var(--hm-line);
+    border-radius: var(--hm-r-s);
+    color: var(--hm-ink);
+    display: flex;
+    font-size: 0.82rem;
+    font-weight: 650;
+    gap: 8px;
+    justify-content: space-between;
+    padding: 7px 10px;
+    text-decoration: none;
+
+    &:hover {
+      background: var(--hm-surface-2);
+    }
+
+    span {
+      color: var(--hm-faint);
+      font-weight: 550;
+    }
+  }
+}

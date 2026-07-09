@@ -8,6 +8,24 @@ export const KnowledgeDocs: CollectionConfig = {
   labels: { singular: "Kennisdocument", plural: "Kennisdocumenten" },
   trash: true,
   access: dashboardCollectionAccess,
+  hooks: {
+    // Definitief verwijderd bestand-doc → ruim het fysieke bestand mee op
+    afterDelete: [
+      async ({ doc, req }) => {
+        const bestand = doc?.bestand;
+        const id =
+          bestand && typeof bestand === "object" ? bestand.id : bestand;
+        if (!id) return;
+        try {
+          await req.payload.delete({ collection: "knowledge-files", id, req });
+        } catch (fout) {
+          req.payload.logger.error(
+            `Wees-bestand ${id} opruimen mislukt: ${String(fout)}`,
+          );
+        }
+      },
+    ],
+  },
   admin: {
     useAsTitle: "titel",
     defaultColumns: ["titel", "parent", "zichtbaarheid", "updatedAt"],

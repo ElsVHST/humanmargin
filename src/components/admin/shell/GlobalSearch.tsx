@@ -22,13 +22,13 @@ const BRONNEN: Bron[] = [
     slug: "organisations",
     label: "Organisaties",
     veld: "naam",
-    href: (id) => `/admin/collections/organisations/${id}`,
+    href: (id) => `/admin/pipeline?organisatie=${id}`,
   },
   {
     slug: "contacts",
     label: "Contactpersonen",
     veld: "naam",
-    href: (id) => `/admin/collections/contacts/${id}`,
+    href: (id) => `/admin/pipeline?contact=${id}`,
   },
   {
     slug: "projects",
@@ -52,7 +52,7 @@ const BRONNEN: Bron[] = [
     slug: "knowledge-docs",
     label: "Kennisbank",
     veld: "titel",
-    href: (id) => `/admin/collections/knowledge-docs/${id}`,
+    href: () => `/admin/kennisbank`,
   },
 ];
 

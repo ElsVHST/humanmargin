@@ -20,6 +20,10 @@ import React, { useEffect, useState } from "react";
 
 import { crmApi } from "@/modules/crm/api";
 import { DealPanel } from "@/modules/crm/views/pipeline/DealPanel";
+import {
+  ContactPanel,
+  OrganisatiePanel,
+} from "@/modules/crm/views/pipeline/RelatiePanelen";
 import { VerliesDialoog } from "@/modules/crm/views/pipeline/VerliesDialoog";
 import {
   buildColumns,
@@ -147,6 +151,8 @@ function Board({ initialStages, initialDeals, isBeheerder, nu }: Props) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const dealParam = searchParams.get("deal");
+  const organisatieParam = searchParams.get("organisatie");
+  const contactParam = searchParams.get("contact");
 
   const [zoek, setZoek] = useState("");
   const [eigenaarFilter, setEigenaarFilter] = useState("alle");
@@ -594,6 +600,24 @@ function Board({ initialStages, initialDeals, isBeheerder, nu }: Props) {
             });
             setVerliesDeal(null);
           }}
+        />
+      )}
+
+      {organisatieParam && (
+        <OrganisatiePanel
+          key={`org-${organisatieParam}`}
+          onClose={() => router.push("/admin/pipeline")}
+          onToast={setToast}
+          organisatieId={organisatieParam}
+        />
+      )}
+
+      {contactParam && (
+        <ContactPanel
+          contactId={contactParam}
+          key={`contact-${contactParam}`}
+          onClose={() => router.push("/admin/pipeline")}
+          onToast={setToast}
         />
       )}
 

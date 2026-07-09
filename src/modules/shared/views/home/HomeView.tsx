@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 
 import { Topbar } from "@/components/admin/shell/Topbar";
+import { avatarKleur, initialen } from "@/modules/shared/ui";
 import { relationId } from "@/modules/crm/views/pipeline/lib";
 import type { Activity, ContentItem, Task } from "@/payload-types";
 
@@ -49,6 +50,39 @@ function activiteitAuteur(a: Activity): string | null {
   return null;
 }
 
+const TYPE_LABEL: Record<Activity["type"], string> = {
+  notitie: "Notitie",
+  statuswijziging: "Status",
+  systeem: "Systeem",
+  email: "E-mail",
+  boeking: "Boeking",
+  vraag: "Vraag",
+  log: "LOG",
+};
+
+/** Link naar het paneel van het eerste target van een activiteit. */
+function activiteitHref(a: Activity): string | null {
+  const t = (a.targets ?? [])[0];
+  if (!t) return null;
+  const id = typeof t.value === "object" ? t.value.id : t.value;
+  switch (t.relationTo) {
+    case "deals":
+      return `/admin/pipeline?deal=${id}`;
+    case "organisations":
+      return `/admin/pipeline?organisatie=${id}`;
+    case "contacts":
+      return `/admin/pipeline?contact=${id}`;
+    case "tasks":
+      return `/admin/taken?taak=${id}`;
+    case "content-items":
+      return `/admin/kalender?item=${id}`;
+    case "knowledge-docs":
+      return "/admin/kennisbank";
+    default:
+      return null;
+  }
+}
+
 export async function HomeView({ initPageResult }: AdminViewServerProps) {
   const { req } = initPageResult;
   const { payload, user } = req;
@@ -62,7 +96,7 @@ export async function HomeView({ initPageResult }: AdminViewServerProps) {
   );
   const overEenWeek = new Date(startVandaag.getTime() + 7 * 86400000);
 
-  const [openDeals, stages, mijnTaken, weekContent, recenteActiviteit] =
+  const [openDeals, stages, mijnTaken, weekContent, recenteActiviteit, weekDeals] =
     await Promise.all([
       payload.find({
         collection: "deals",
@@ -103,6 +137,23 @@ export async function HomeView({ initPageResult }: AdminViewServerProps) {
         limit: 8,
         depth: 1,
       }),
+      payload.find({
+        collection: "deals",
+        where: {
+          and: [
+            { uitkomst: { equals: "open" } },
+            {
+              verwachteSluitdatum: {
+                greater_than_equal: startVandaag.toISOString(),
+              },
+            },
+            { verwachteSluitdatum: { less_than: overEenWeek.toISOString() } },
+          ],
+        },
+        sort: "verwachteSluitdatum",
+        limit: 8,
+        depth: 0,
+      }),
     ]);
 
   const totaalWaarde = openDeals.docs.reduce(
@@ -136,7 +187,7 @@ export async function HomeView({ initPageResult }: AdminViewServerProps) {
           <Link href="/admin/pipeline?deal=nieuw">+ Deal</Link>
           <Link href="/admin/taken?taak=nieuw">+ Taak</Link>
           <Link href="/admin/kalender?item=nieuw">+ Content</Link>
-          <Link href="/admin/collections/organisations/create">
+          <Link href="/admin/pipeline?organisatie=nieuw">
             + Organisatie
           </Link>
           <Link href="/admin/collections/knowledge-docs/create">
@@ -309,18 +360,99 @@ export async function HomeView({ initPageResult }: AdminViewServerProps) {
             {recenteActiviteit.docs.length === 0 ? (
               <p className="hm-home__leeg">Nog geen activiteit.</p>
             ) : (
+              <ul className="hm-home__lijst hm-home__feed">
+                {recenteActiviteit.docs.map((a) => {
+                  const href = activiteitHref(a);
+                  const auteur = activiteitAuteur(a);
+                  const kern = (
+                    <>
+                      {auteur && (
+                        <span
+                          className="hm-av hm-av--sm"
+                          style={{
+                            background: avatarKleur(
+                              typeof a.auteur === "object"
+                                ? a.auteur?.id
+                                : a.auteur,
+                            ),
+                          }}
+                        >
+                          {initialen(auteur)}
+                        </span>
+                      )}
+                      <span className={`hm-pill hm-tijdlijn__type--${a.type}`}>
+                        {TYPE_LABEL[a.type]}
+                      </span>
+                      <span className="hm-home__itemtekst">
+                        {a.samenvatting ?? a.type}
+                      </span>
+                      <span className="hm-home__meta">
+                        {datumKort(a.happensAt)}
+                      </span>
+                    </>
+                  );
+                  return (
+                    <li key={a.id}>
+                      {href ? (
+                        <Link className="hm-home__feedlink" href={href}>
+                          {kern}
+                        </Link>
+                      ) : (
+                        kern
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+          </section>
+
+          <section className="hm-home__kaart">
+            <header>
+              <h2>Deze week</h2>
+              <Link href="/admin/kalender">Naar de kalender →</Link>
+            </header>
+            {weekDeals.docs.length === 0 && mijnTaken.docs.length === 0 ? (
+              <p className="hm-home__leeg">Geen deadlines deze week.</p>
+            ) : (
               <ul className="hm-home__lijst">
-                {recenteActiviteit.docs.map((a) => (
-                  <li key={a.id}>
-                    <span className="hm-home__itemtekst">
-                      {a.samenvatting ?? a.type}
-                    </span>
-                    <span className="hm-home__meta">
-                      {activiteitAuteur(a) ? `${activiteitAuteur(a)} · ` : ""}
-                      {datumKort(a.happensAt)}
+                {weekDeals.docs.map((deal) => (
+                  <li key={`deal-${deal.id}`}>
+                    <Link
+                      className="hm-home__itemtekst"
+                      href={`/admin/pipeline?deal=${deal.id}`}
+                    >
+                      {deal.titel}
+                    </Link>
+                    <span className="hm-home__badge">deal sluit</span>
+                    <span className="hm-home__badge">
+                      {datumKort(deal.verwachteSluitdatum)}
                     </span>
                   </li>
                 ))}
+                {mijnTaken.docs
+                  .filter(
+                    (taak) =>
+                      taak.deadline &&
+                      new Date(taak.deadline).getTime() <
+                        overEenWeek.getTime(),
+                  )
+                  .map((taak) => (
+                    <li key={`taak-${taak.id}`}>
+                      <Link
+                        className="hm-home__itemtekst"
+                        href={`/admin/taken?taak=${taak.id}`}
+                      >
+                        {taak.titel}
+                      </Link>
+                      <span className="hm-home__badge">taak</span>
+                      <span
+                        className={`hm-home__badge${new Date(taak.deadline ?? 0).getTime() < nu ? " is-verlopen" : ""}`}
+                      >
+                        {datumKort(taak.deadline)}
+                      </span>
+                    </li>
+                  ))}
               </ul>
             )}
           </section>
