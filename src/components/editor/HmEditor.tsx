@@ -77,6 +77,7 @@ import {
   Underline,
   Undo2,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 
 import "./editor.scss";
@@ -89,6 +90,36 @@ import "./editor.scss";
    ========================================================================= */
 
 export type HmEditorWaarde = SerializedEditorState;
+
+/**
+ * Payload's LinkNode.sanitizeUrl() gooit app-relatieve URL's weg: new URL("/…")
+ * faalt en de href wordt letterlijk "https://". Wiki-links zijn juist relatief
+ * ("/admin/kennisbank?doc=<id>"), dus deze subklasse laat paden die met één "/"
+ * beginnen ongemoeid. Serialisatie blijft identiek (exportJSON van de ouder
+ * schrijft type "link"), dus opgeslagen inhoud verandert niet.
+ */
+class HmLinkNode extends LinkNode {
+  static getType(): string {
+    return "hm-link";
+  }
+
+  static clone(node: HmLinkNode): HmLinkNode {
+    return new HmLinkNode({
+      id: node.getID(),
+      fields: node.getFields(),
+      key: node.getKey(),
+    });
+  }
+
+  static importJSON(json: Parameters<typeof LinkNode.importJSON>[0]) {
+    return LinkNode.importJSON(json);
+  }
+
+  sanitizeUrl(url: string): string {
+    if (url.startsWith("/") && !url.startsWith("//")) return url;
+    return super.sanitizeUrl(url);
+  }
+}
 
 type Props = {
   autoFocus?: boolean;
@@ -524,6 +555,21 @@ function Werkbalk() {
 
 export function HmEditor({ autoFocus, onWijzig, placeholder, waarde }: Props) {
   const laatste = useRef<HmEditorWaarde | null>(null);
+  const router = useRouter();
+
+  // Lexical navigeert zelf nooit bij een klik op een link. App-interne links
+  // (wiki: "/admin/kennisbank?doc=<id>") willen we wél laten werken: gewone
+  // klik = SPA-navigatie; ⌘/Ctrl-klik laten we aan de browser (nieuw tabblad).
+  const klikOpLink = (e: React.MouseEvent) => {
+    if (e.metaKey || e.ctrlKey) return;
+    const anker = (e.target as HTMLElement).closest?.("a");
+    const href = anker?.getAttribute("href");
+    if (href && href.startsWith("/") && !href.startsWith("//")) {
+      e.preventDefault();
+      e.stopPropagation();
+      router.push(href, { scroll: false });
+    }
+  };
 
   return (
     <LexicalComposer
@@ -537,6 +583,13 @@ export function HmEditor({ autoFocus, onWijzig, placeholder, waarde }: Props) {
           ListNode,
           ListItemNode,
           LinkNode,
+          HmLinkNode,
+          {
+            replace: LinkNode,
+            with: (node: LinkNode) =>
+              new HmLinkNode({ id: node.getID(), fields: node.getFields() }),
+            withKlass: HmLinkNode,
+          },
           AutoLinkNode,
           HorizontalRuleNode,
         ],
@@ -565,7 +618,7 @@ export function HmEditor({ autoFocus, onWijzig, placeholder, waarde }: Props) {
         },
       }}
     >
-      <div className="hm-ed">
+      <div className="hm-ed" onClickCapture={klikOpLink}>
         <Werkbalk />
         <div className="hm-ed__vlak">
           <RichTextPlugin
