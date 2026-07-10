@@ -1,0 +1,653 @@
+/* =========================================================================
+   Second Brain — de graph-view van kennisbank + Platform-wiki (PRD §6.3).
+   Het signatuur: de marge. Links een echte kantlijn-kolom (het Nederlandse
+   schoolschrift), rechts het canvas als leesveld. Community-kleuren komen
+   uit dashboard.scss se­mantische laag; geel (--hm-accent) is uitsluitend
+   voor selectie/zoek/flits, nooit een clusterkleur.
+   Oppervlakken/lijnen erven van --hm-* (die op hun beurt van
+   --theme-elevation-* erven) — licht/donker werkt dus automatisch.
+   Tokens & kit: src/modules/shared/styles/dashboard.scss
+   ========================================================================= */
+
+/* Topbar in shell.scss is 60px hoog (zie .hm-topbar) — de view vult de rest
+   van de viewport en scrollt zelf niet mee (canvas + marge scrollen apart). */
+.hm-sb {
+  --sb-kantlijn: color-mix(in srgb, var(--hm-rood) 55%, transparent);
+
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+  font-family: var(--hm-font);
+  color: var(--hm-ink);
+  background: var(--hm-bg);
+}
+
+/* ── Bedieningsbalk: zoek + schakels ──────────────────────────────────── */
+.hm-sb__balk {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 52px;
+  padding: 0 18px;
+  border-bottom: 1px solid var(--hm-line);
+  background: var(--hm-surface);
+  flex: 0 0 auto;
+}
+
+.hm-sb__zoekwrap {
+  position: relative;
+  flex: 1;
+  max-width: 380px;
+}
+
+.hm-sb__zoekicoon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  translate: 0 -50%;
+  color: var(--hm-faint);
+  pointer-events: none;
+}
+
+.hm-sb__zoekpil {
+  width: 100%;
+  height: 32px;
+  border-radius: var(--hm-pill);
+  border: 1px solid var(--hm-line-2);
+  background: var(--hm-bg);
+  color: var(--hm-ink);
+  padding: 0 36px 0 34px;
+  font-size: 0.82rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s ease;
+
+  &::placeholder {
+    color: var(--hm-faint);
+  }
+
+  &:focus {
+    border-color: var(--hm-accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--hm-accent) 25%, transparent);
+  }
+}
+
+.hm-sb__sneltoets {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  translate: 0 -50%;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.62rem;
+  color: var(--hm-faint);
+  border: 1px solid var(--hm-line);
+  border-radius: 5px;
+  padding: 2px 6px;
+  pointer-events: none;
+  background: var(--hm-surface);
+}
+
+.hm-sb__zoeklijst {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  right: 0;
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-r);
+  box-shadow: var(--hm-sh-3);
+  overflow: hidden;
+  z-index: 50;
+}
+
+.hm-sb__zoekitem {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  width: 100%;
+  color: var(--hm-ink);
+  font-family: inherit;
+  text-align: left;
+
+  &:hover,
+  &:focus-visible {
+    background: var(--hm-surface-2);
+    outline: none;
+  }
+
+  small {
+    color: var(--hm-faint);
+    margin-left: auto;
+    font-size: 0.68rem;
+  }
+}
+
+.hm-sb__zoekleeg {
+  padding: 9px 12px;
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--hm-faint);
+}
+
+.hm-sb__schakels {
+  display: flex;
+  gap: 8px;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
+
+.hm-sb__schakel {
+  height: 30px;
+  padding: 0 12px;
+  font-size: 0.72rem;
+  font-weight: 650;
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-pill);
+  background: transparent;
+  color: var(--hm-muted);
+  cursor: pointer;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  transition: border-color 0.15s ease, color 0.15s ease;
+
+  &[aria-pressed="true"] {
+    color: var(--hm-ink);
+    border-color: var(--hm-line-2);
+
+    .hm-sb__vinkje {
+      background: var(--hm-accent);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--hm-accent);
+    outline-offset: 2px;
+  }
+}
+
+.hm-sb__vinkje {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--hm-faint);
+  transition: background 0.15s ease;
+}
+
+.hm-sb__margetoggle {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  height: 30px;
+  padding: 0 12px;
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-pill);
+  background: transparent;
+  color: var(--hm-muted);
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 650;
+  cursor: pointer;
+  white-space: nowrap;
+
+  @media (max-width: 800px) {
+    display: inline-flex;
+  }
+}
+
+/* ── Hoofdvlak: marge + canvas ─────────────────────────────────────────── */
+.hm-sb__vlak {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+
+.hm-sb__marge {
+  width: 248px;
+  flex: 0 0 auto;
+  padding: 20px 16px 16px 18px;
+  border-right: 1px solid var(--sb-kantlijn);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  background: var(--hm-bg);
+
+  h3 {
+    margin: 0;
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--hm-muted);
+    font-weight: 700;
+  }
+
+  @media (max-width: 800px) {
+    position: absolute;
+    z-index: 25;
+    inset: 0 auto 0 0;
+    translate: -100% 0;
+    transition: translate 0.25s ease;
+    box-shadow: none;
+
+    &.is-open {
+      translate: 0 0;
+      box-shadow: var(--hm-sh-3);
+    }
+  }
+}
+
+.hm-sb__kanttekening {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--hm-ink);
+  margin: 6px 0 0;
+
+  b {
+    font-style: normal;
+    font-weight: 650;
+  }
+}
+
+.hm-sb__margelijst {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 8px;
+}
+
+.hm-sb__margeknop {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  padding: 5px 8px 5px 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--hm-ink);
+  font-size: 0.8rem;
+  text-align: left;
+  border-radius: var(--hm-r-s);
+  width: 100%;
+
+  &:hover {
+    background: var(--hm-surface-2);
+    padding-left: 8px;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--hm-accent);
+    outline-offset: 1px;
+  }
+
+  .hm-sb__nr {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.68rem;
+    color: var(--hm-muted);
+    font-variant-numeric: tabular-nums;
+    min-width: 20px;
+  }
+}
+
+.hm-sb__verrassing {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 0.76rem;
+  line-height: 1.5;
+  color: var(--hm-muted);
+  padding: 7px 0;
+  background: none;
+  border: 0;
+  border-top: 1px dashed var(--hm-line);
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+
+  &:first-of-type {
+    border-top: 0;
+  }
+
+  &:hover {
+    color: var(--hm-ink);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--hm-accent);
+    outline-offset: 1px;
+  }
+}
+
+.hm-sb__paar {
+  color: var(--hm-ink);
+  font-weight: 650;
+  font-style: normal;
+  font-family: var(--hm-font);
+  font-size: 0.76rem;
+}
+
+.hm-sb__legenda {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 8px;
+}
+
+.hm-sb__legendarij {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 5px 8px;
+  margin-left: -8px;
+  background: none;
+  border: 0;
+  border-radius: var(--hm-r-s);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.78rem;
+  color: var(--hm-ink);
+  text-align: left;
+  width: calc(100% + 8px);
+
+  &:hover {
+    background: var(--hm-surface-2);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--hm-accent);
+    outline-offset: 1px;
+  }
+
+  &.is-uit {
+    opacity: 0.4;
+
+    .hm-kleur {
+      opacity: 0.25;
+    }
+  }
+
+  .hm-sb__aantal {
+    margin-left: auto;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.66rem;
+    color: var(--hm-faint);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* ── Canvas ────────────────────────────────────────────────────────────── */
+.hm-sb__canvaswrap {
+  flex: 1;
+  position: relative;
+  min-width: 0;
+}
+
+.hm-sb__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+
+  &.is-sleept {
+    cursor: grabbing;
+  }
+
+  &.is-wijst {
+    cursor: pointer;
+  }
+}
+
+/* ── Inspector (zwevend slideover-paneel) ─────────────────────────────── */
+.hm-sb__inspector {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  bottom: 16px;
+  width: 308px;
+  background: var(--hm-surface);
+  border: 1px solid var(--hm-line);
+  border-radius: var(--hm-r);
+  box-shadow: var(--hm-sh-3);
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 20;
+
+  @media (max-width: 800px) {
+    left: 12px;
+    right: 12px;
+    top: auto;
+    bottom: 12px;
+    width: auto;
+    max-height: 55%;
+  }
+}
+
+.hm-sb__insp-kop {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.hm-sb__insp-titel {
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.3;
+  margin: 0;
+  flex: 1;
+  text-wrap: balance;
+}
+
+.hm-sb__sluit {
+  background: none;
+  border: 0;
+  color: var(--hm-muted);
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: var(--hm-r-s);
+  font-family: inherit;
+
+  &:hover {
+    background: var(--hm-surface-2);
+    color: var(--hm-ink);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--hm-accent);
+  }
+}
+
+.hm-sb__pilrij {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.hm-sb__stip {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.hm-sb__insp-noot {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--hm-muted);
+  margin: 0;
+  padding-left: 12px;
+  border-left: 2px solid var(--sb-kantlijn);
+}
+
+.hm-sb__insp-sectie {
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--hm-muted);
+  font-weight: 700;
+  margin: 4px 0 0;
+}
+
+.hm-sb__buurlijst {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hm-sb__buur {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 9px;
+  border: 0;
+  border-left: 3px solid transparent;
+  border-radius: 0 var(--hm-r-s) var(--hm-r-s) 0;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.78rem;
+  color: var(--hm-ink);
+  text-align: left;
+  width: 100%;
+
+  &:hover {
+    background: var(--hm-surface-2);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--hm-accent);
+    outline-offset: -2px;
+  }
+
+  small {
+    margin-left: auto;
+    color: var(--hm-faint);
+    font-size: 0.66rem;
+    font-style: italic;
+  }
+}
+
+.hm-sb__open-knop {
+  margin-top: auto;
+  height: 42px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 0;
+  background: var(--hm-brand-blue);
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background: var(--hm-accent);
+    color: var(--hm-accent-ink);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--hm-accent);
+    outline-offset: 2px;
+  }
+}
+
+/* ── Statusbalk ────────────────────────────────────────────────────────── */
+.hm-sb__status {
+  flex: 0 0 auto;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 18px;
+  border-top: 1px solid var(--hm-line);
+  background: var(--hm-surface);
+  font-size: 0.76rem;
+  color: var(--hm-muted);
+  overflow-x: auto;
+  white-space: nowrap;
+
+  b {
+    color: var(--hm-ink);
+    font-weight: 650;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.hm-sb__punt {
+  color: var(--hm-faint);
+}
+
+.hm-sb__hermes {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: auto;
+}
+
+.hm-sb__lampje {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--hm-groen);
+}
+
+/* ── Lege / ladende staat ──────────────────────────────────────────────── */
+.hm-sb__leeg {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--hm-muted);
+
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--hm-ink);
+    margin: 6px 0 0;
+  }
+
+  p {
+    max-width: 420px;
+    font-size: 0.86rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.8rem;
+    background: var(--hm-surface-2);
+    padding: 2px 6px;
+    border-radius: var(--hm-r-s);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hm-sb * {
+    transition: none !important;
+  }
+}

@@ -92,6 +92,8 @@ Skills van dit project staan in `.claude/skills/`. **Raadpleeg de juiste skill v
 
 **Onderhoudsplicht (Dottie):** deze skills zijn levende documentatie. Wijzig je blocks, schema, tooling of conventies — werk dan in dezelfde sessie de betreffende SKILL.md bij én deze index als er skills bijkomen of verdwijnen. Nieuwe herbruikbare kennisdomeinen (bv. deploy-runbook, dashboard) krijgen een eigen skill in `.claude/skills/` en een regel in deze tabel.
 
+**Wiki-plicht (Dottie):** de kennisbank bevat de Platform-wiki (map "Platform-wiki"; conventies staan in de wiki-pagina `_Schema — zo werkt deze wiki`). Lever je een feature op of verandert het platform wezenlijk — werk dan in dezelfde sessie de betreffende wiki-pagina('s) én de Index bij (contentbron: `scripts/seed/wiki-content/`, daarna `npx payload run scripts/seed/seed-wiki.ts`; of direct via de `/api/knowledge-docs/:id/md`-endpoints) en schrijf een log-activity op de wiki-root (samenvatting-prefix `[ingest]`). Hermes Agent onderhoudt de runtime-kant dagelijks; code-feiten zijn van Dottie. Na een wiki-wijziging: `scripts/agent/build-second-brain.sh` om de graph te verversen.
+
 ## Sessie-handoffs
 
 Bij sessiestart: lees de **nieuwste** handoff in `docs/memory/handoffs/` (naamconventie `YYYY-MM-DD-HHMM-<slug>.md`, lexicografisch laatste = actueel; zie de README aldaar). Nieuwe handoff maken kan met `/handoff` — sla die voor dit project in dezelfde map op.

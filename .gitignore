@@ -54,3 +54,6 @@ temp/
 
 # Playwright MCP QA-artefacten
 .playwright-mcp/
+
+graphify-corpus/
+graphify-out/

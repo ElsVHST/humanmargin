@@ -38,6 +38,7 @@ import { ProjectenView as ProjectenView_4c0794290fca9793cd96bad9ef80109b } from 
 import { TakenView as TakenView_b658dd106fd11b3e14cedee19664119f } from '../../../modules/projects/views/taken/TakenView'
 import { KalenderView as KalenderView_3b7a9f2c3f256b8966c2ab6081d93acc } from '../../../modules/content/views/kalender/KalenderView'
 import { KennisbankView as KennisbankView_2adc95dfc683e2bcdb9f48ca67f155ea } from '../../../modules/knowledge/views/kennisbank/KennisbankView'
+import { SecondBrainView as SecondBrainView_cc8226d83462f8dfbd11c9af0b06f5f9 } from '../../../modules/knowledge/views/secondbrain/SecondBrainView'
 import { CollectionCards as CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1 } from '@payloadcms/next/rsc'
 
 /** @type import('payload').ImportMap */
@@ -82,5 +83,6 @@ export const importMap = {
   "/modules/projects/views/taken/TakenView#TakenView": TakenView_b658dd106fd11b3e14cedee19664119f,
   "/modules/content/views/kalender/KalenderView#KalenderView": KalenderView_3b7a9f2c3f256b8966c2ab6081d93acc,
   "/modules/knowledge/views/kennisbank/KennisbankView#KennisbankView": KennisbankView_2adc95dfc683e2bcdb9f48ca67f155ea,
+  "/modules/knowledge/views/secondbrain/SecondBrainView#SecondBrainView": SecondBrainView_cc8226d83462f8dfbd11c9af0b06f5f9,
   "@payloadcms/next/rsc#CollectionCards": CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1
 }

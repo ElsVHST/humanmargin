@@ -24,7 +24,8 @@ import {
   Upload,
   X,
 } from "lucide-react";
-import React, { useEffect, useRef, useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 
 import {
   bestandGrootte,
@@ -87,6 +88,19 @@ async function rest<T>(url: string, method: string, body?: unknown): Promise<T> 
   return (await res.json()) as T;
 }
 
+/** Bouwt de huidige URL met de `doc`-param gewijzigd; overige params blijven staan. */
+function urlMetDoc(
+  pathname: string,
+  huidigeQuery: string,
+  id: number | null,
+): string {
+  const p = new URLSearchParams(huidigeQuery);
+  if (id === null) p.delete("doc");
+  else p.set("doc", String(id));
+  const qs = p.toString();
+  return qs ? `${pathname}?${qs}` : pathname;
+}
+
 async function uploadEen(file: File, parent: number | null): Promise<void> {
   const fd = new FormData();
   fd.append("file", file);
@@ -114,6 +128,11 @@ type ContextStand = { x: number; y: number; id: number };
 function Browser({ initialDocs, isBeheerder }: Props) {
   const qc = useQueryClient();
   const fileInput = useRef<HTMLInputElement>(null);
+  const pathname = usePathname();
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const docParam = searchParams.get("doc");
+  const verwerkteDocParam = useRef<string | null>(null);
 
   const [parentId, setParentId] = useState<number | null>(null);
   const [prullenbak, setPrullenbak] = useState(false);
@@ -198,7 +217,9 @@ function Browser({ initialDocs, isBeheerder }: Props) {
       setToast({ tekst: "Actie mislukt — probeer het opnieuw.", soort: "fout" }),
   });
 
-  const docs = docsQuery.data ?? [];
+  // Gememoïzeerd: stabiele referentie zodat het deep-link-effect (hieronder)
+  // niet op elke render opnieuw afvuurt zolang de data inhoudelijk gelijk is.
+  const docs = useMemo(() => docsQuery.data ?? [], [docsQuery.data]);
   const trashDocs = trashQuery.data ?? [];
   const bron = prullenbak ? trashDocs : docs;
   const byId = new Map(bron.map((d) => [d.id, d]));
@@ -294,6 +315,10 @@ function Browser({ initialDocs, isBeheerder }: Props) {
           },
         );
         setLeesDoc(res.doc);
+        router.replace(
+          urlMetDoc(pathname, searchParams.toString(), res.doc.id),
+          { scroll: false },
+        );
       },
     });
 
@@ -391,7 +416,74 @@ function Browser({ initialDocs, isBeheerder }: Props) {
       return;
     }
     setLeesDoc(doc);
+    router.replace(urlMetDoc(pathname, searchParams.toString(), doc.id), {
+      scroll: false,
+    });
   };
+
+  // Altijd de nieuwste openItem beschikbaar voor het deep-link-effect hieronder,
+  // zonder dat de (elke render nieuwe) functie in de dependency-array hoeft.
+  const openItemRef = useRef(openItem);
+  useEffect(() => {
+    openItemRef.current = openItem;
+  });
+
+  /* ── Deep-link: ?doc=<id> ──
+     Opent bij laden/wijziging het bijpassende paneel. Documenten houden de
+     param aan (weerspiegelt het open DocPanel); map/bestand hebben geen
+     persistent paneel op dit bord, dus de param wordt na afhandelen opgeruimd.
+     Onbekend/verwijderd → param stil verwijderen, geen crash. */
+  useEffect(() => {
+    if (!docParam) {
+      verwerkteDocParam.current = null;
+      return;
+    }
+    if (verwerkteDocParam.current === docParam) return;
+
+    const id = Number(docParam);
+    if (!Number.isFinite(id)) {
+      verwerkteDocParam.current = docParam;
+      router.replace(urlMetDoc(pathname, searchParams.toString(), null), {
+        scroll: false,
+      });
+      return;
+    }
+
+    const afronden = (doc: KnowledgeDoc | null) => {
+      verwerkteDocParam.current = docParam;
+      if (!doc) {
+        router.replace(urlMetDoc(pathname, searchParams.toString(), null), {
+          scroll: false,
+        });
+        return;
+      }
+      openItemRef.current(doc);
+      if (doc.soort !== "document") {
+        router.replace(urlMetDoc(pathname, searchParams.toString(), null), {
+          scroll: false,
+        });
+      }
+    };
+
+    const bekend = docs.find((d) => d.id === id) ?? null;
+    if (bekend) {
+      afronden(bekend);
+      return;
+    }
+
+    // Niet in de geladen lijst — kan in een andere map staan, los ophalen.
+    let actief = true;
+    rest<KnowledgeDoc>(`/api/knowledge-docs/${id}?depth=1`, "GET")
+      .then((doc) => {
+        if (actief) afronden(doc);
+      })
+      .catch(() => {
+        if (actief) afronden(null);
+      });
+    return () => {
+      actief = false;
+    };
+  }, [docParam, docs, pathname, router, searchParams]);
 
   const selecteer = (doc: KnowledgeDoc, e: React.MouseEvent) => {
     if (e.metaKey || e.ctrlKey) {
@@ -1099,7 +1191,12 @@ function Browser({ initialDocs, isBeheerder }: Props) {
           doc={leesDoc}
           key={leesDoc.id}
           onGewijzigd={invalidate}
-          onSluit={() => setLeesDoc(null)}
+          onSluit={() => {
+            setLeesDoc(null);
+            router.replace(urlMetDoc(pathname, searchParams.toString(), null), {
+              scroll: false,
+            });
+          }}
         />
       )}
 

@@ -10,7 +10,7 @@ import {
 export const Users: CollectionConfig = {
   slug: "users",
   labels: { singular: "Gebruiker", plural: "Gebruikers" },
-  auth: true,
+  auth: { useAPIKey: true },
   access: {
     read: isAuthenticated,
     create: isBeheerder,

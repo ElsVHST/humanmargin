@@ -4,6 +4,7 @@ import { useAuth } from "@payloadcms/ui";
 import type { LucideIcon } from "lucide-react";
 import {
   BookOpen,
+  Brain,
   CalendarDays,
   Contact,
   FileText,
@@ -42,6 +43,7 @@ const WERKEN: RailLink[] = [
   { href: "/admin/taken", label: "Taken", Icoon: SquareCheck },
   { href: "/admin/kalender", label: "Kalender", Icoon: CalendarDays },
   { href: "/admin/kennisbank", label: "Kennisbank", Icoon: BookOpen },
+  { href: "/admin/second-brain", label: "Second Brain", Icoon: Brain },
 ];
 
 const BEHEER: RailLink[] = [

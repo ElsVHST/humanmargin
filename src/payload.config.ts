@@ -78,6 +78,11 @@ export default buildConfig({
             "/modules/knowledge/views/kennisbank/KennisbankView#KennisbankView",
           path: "/kennisbank",
         },
+        secondBrain: {
+          Component:
+            "/modules/knowledge/views/secondbrain/SecondBrainView#SecondBrainView",
+          path: "/second-brain",
+        },
       },
     },
     // Licht én donker: volgt OS-voorkeur; wisselen kan in het account-menu
