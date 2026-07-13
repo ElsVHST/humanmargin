@@ -4,19 +4,19 @@ Structurele graphify-run, geen LLM (PRD §6.2). Automatisch gegenereerd door scr
 
 ## Totalen
 - Documenten gescand: 0
-- Nodes: 290
-- Edges: 418
-- Clusters: 29
+- Nodes: 315
+- Edges: 441
+- Clusters: 33
 
 ## Clusters
-- **Roadmap Wensen** (42 nodes)
-- **Agents** (34 nodes)
-- **Roadmap Wensen** (32 nodes)
+- **Roadmap Wensen** (49 nodes)
+- **Roadmap Wensen** (33 nodes)
+- **Agents** (32 nodes)
 - **Modules Data** (25 nodes)
 - **Modules Data** (22 nodes)
 - **Platform Wiki** (19 nodes)
-- **Roadmap Wensen** (17 nodes)
-- **Platform Wiki** (9 nodes)
+- **Platform Wiki** (16 nodes)
+- **Roadmap Wensen** (16 nodes)
 - **Modules Data** (8 nodes)
 - **Modules Data** (8 nodes)
 - **Roadmap Wensen** (8 nodes)
@@ -27,7 +27,9 @@ Structurele graphify-run, geen LLM (PRD §6.2). Automatisch gegenereerd door scr
 - **Werkbladen** (6 nodes)
 - **Werkbladen** (6 nodes)
 - **Werkbladen** (6 nodes)
-- **Platform Wiki** (5 nodes)
+- **Seo Ai Agent Compliance** (6 nodes)
+- **Seo Ai Agent Compliance** (5 nodes)
+- **Seo Ai Agent Compliance** (5 nodes)
 - **Agent Skills SOP S** (4 nodes)
 - **Handleiding Dashboard** (4 nodes)
 - **Handleiding Dashboard** (2 nodes)
@@ -38,6 +40,8 @@ Structurele graphify-run, geen LLM (PRD §6.2). Automatisch gegenereerd door scr
 - **Handleiding Dashboard** (1 nodes)
 - **Handleiding Dashboard** (1 nodes)
 - **Handleiding Dashboard** (1 nodes)
+- **Platform Wiki** (1 nodes)
+- **Platform Wiki** (1 nodes)
 
 ## Meest verbonden (god nodes)
 - De vier operaties — graad 5

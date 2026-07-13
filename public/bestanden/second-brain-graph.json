@@ -10,7 +10,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_1_werkwijze_human_margin",
-      "community": 23,
+      "community": 25,
       "community_name": "Algemeen",
       "norm_label": "1--werkwijze-human-margin.md"
     },
@@ -21,7 +21,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_3_handleiding_dashboard",
-      "community": 24,
+      "community": 26,
       "community_name": "Algemeen",
       "norm_label": "3--handleiding-dashboard.md"
     },
@@ -32,7 +32,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_agent_skills_sop_s_12_in_the_loop_werkwijze_lees_mij_eerst",
-      "community": 19,
+      "community": 21,
       "community_name": "Agent Skills SOP S",
       "norm_label": "12--in-the-loop-werkwijze-lees-mij-eerst.md"
     },
@@ -43,7 +43,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "graphify_corpus_agent_skills_sop_s_12_in_the_loop_werkwijze_lees_mij_eerst_de_loop",
-      "community": 19,
+      "community": 21,
       "community_name": "Agent Skills SOP S",
       "norm_label": "de loop"
     },
@@ -54,7 +54,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "graphify_corpus_agent_skills_sop_s_12_in_the_loop_werkwijze_lees_mij_eerst_waarom_loggen",
-      "community": 19,
+      "community": 21,
       "community_name": "Agent Skills SOP S",
       "norm_label": "waarom loggen"
     },
@@ -65,7 +65,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "graphify_corpus_agent_skills_sop_s_12_in_the_loop_werkwijze_lees_mij_eerst_spelregels",
-      "community": 19,
+      "community": 21,
       "community_name": "Agent Skills SOP S",
       "norm_label": "spelregels"
     },
@@ -142,7 +142,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_handleiding_dashboard_4_1_klanten_verkoop_crm",
-      "community": 20,
+      "community": 22,
       "community_name": "Handleiding Dashboard",
       "norm_label": "4--1-klanten-verkoop-crm.md"
     },
@@ -153,7 +153,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "graphify_corpus_handleiding_dashboard_4_1_klanten_verkoop_crm_het_pipeline_board",
-      "community": 20,
+      "community": 22,
       "community_name": "Handleiding Dashboard",
       "norm_label": "het pipeline-board"
     },
@@ -164,7 +164,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "graphify_corpus_handleiding_dashboard_4_1_klanten_verkoop_crm_fases_aanpassen",
-      "community": 20,
+      "community": 22,
       "community_name": "Handleiding Dashboard",
       "norm_label": "fases aanpassen"
     },
@@ -175,7 +175,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "graphify_corpus_handleiding_dashboard_4_1_klanten_verkoop_crm_notities",
-      "community": 20,
+      "community": 22,
       "community_name": "Handleiding Dashboard",
       "norm_label": "notities"
     },
@@ -186,7 +186,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_handleiding_dashboard_5_2_projecten_taken",
-      "community": 25,
+      "community": 27,
       "community_name": "Handleiding Dashboard",
       "norm_label": "5--2-projecten-taken.md"
     },
@@ -197,7 +197,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_handleiding_dashboard_6_3_contentkalender",
-      "community": 21,
+      "community": 23,
       "community_name": "Handleiding Dashboard",
       "norm_label": "6--3-contentkalender.md"
     },
@@ -208,7 +208,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "graphify_corpus_handleiding_dashboard_6_3_contentkalender_magie_voor_blogs",
-      "community": 21,
+      "community": 23,
       "community_name": "Handleiding Dashboard",
       "norm_label": "magie voor blogs"
     },
@@ -219,7 +219,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_handleiding_dashboard_7_4_kennisbank",
-      "community": 26,
+      "community": 28,
       "community_name": "Handleiding Dashboard",
       "norm_label": "7--4-kennisbank.md"
     },
@@ -230,7 +230,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_handleiding_dashboard_8_5_prullenbak_rollen_veiligheid",
-      "community": 27,
+      "community": 29,
       "community_name": "Handleiding Dashboard",
       "norm_label": "8--5-prullenbak-rollen-veiligheid.md"
     },
@@ -241,7 +241,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_handleiding_dashboard_9_6_werken_met_dottie_je_ai_partner",
-      "community": 28,
+      "community": 30,
       "community_name": "Handleiding Dashboard",
       "norm_label": "9--6-werken-met-dottie-je-ai-partner.md"
     },
@@ -252,7 +252,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_21_schema_zo_werkt_deze_wiki",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "21--schema-zo-werkt-deze-wiki.md"
     },
@@ -263,7 +263,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_21_schema_zo_werkt_deze_wiki_wat_deze_wiki_is",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "wat deze wiki is"
     },
@@ -274,7 +274,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_21_schema_zo_werkt_deze_wiki_paginaformaat",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "paginaformaat"
     },
@@ -285,8 +285,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_21_schema_zo_werkt_deze_wiki_de_vier_operaties",
-      "community": 18,
-      "community_name": "Platform Wiki",
+      "community": 2,
+      "community_name": "Agents",
       "norm_label": "de vier operaties"
     },
     {
@@ -296,8 +296,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_21_schema_zo_werkt_deze_wiki_ingest",
-      "community": 18,
-      "community_name": "Platform Wiki",
+      "community": 2,
+      "community_name": "Agents",
       "norm_label": "ingest"
     },
     {
@@ -307,8 +307,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_21_schema_zo_werkt_deze_wiki_query",
-      "community": 18,
-      "community_name": "Platform Wiki",
+      "community": 2,
+      "community_name": "Agents",
       "norm_label": "query"
     },
     {
@@ -318,8 +318,8 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_21_schema_zo_werkt_deze_wiki_lint_wekelijks_hermes",
-      "community": 18,
-      "community_name": "Platform Wiki",
+      "community": 2,
+      "community_name": "Agents",
       "norm_label": "lint (wekelijks, hermes)"
     },
     {
@@ -329,8 +329,8 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_21_schema_zo_werkt_deze_wiki_log",
-      "community": 18,
-      "community_name": "Platform Wiki",
+      "community": 2,
+      "community_name": "Agents",
       "norm_label": "log"
     },
     {
@@ -340,7 +340,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_21_schema_zo_werkt_deze_wiki_domeinverdeling_dottie_versus_hermes",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "domeinverdeling: dottie versus hermes"
     },
@@ -351,7 +351,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_21_schema_zo_werkt_deze_wiki_regels_die_nooit_wijken",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "regels die nooit wijken"
     },
@@ -362,7 +362,7 @@
       "source_location": "L72",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_21_schema_zo_werkt_deze_wiki_gerelateerd",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "gerelateerd"
     },
@@ -373,7 +373,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_22_index",
-      "community": 7,
+      "community": 6,
       "community_name": "Platform Wiki",
       "norm_label": "22--index.md"
     },
@@ -384,7 +384,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_22_index_root",
-      "community": 7,
+      "community": 6,
       "community_name": "Platform Wiki",
       "norm_label": "(root)"
     },
@@ -395,7 +395,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_22_index_werkbladen",
-      "community": 7,
+      "community": 6,
       "community_name": "Platform Wiki",
       "norm_label": "werkbladen"
     },
@@ -406,7 +406,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_22_index_modules_data",
-      "community": 7,
+      "community": 6,
       "community_name": "Platform Wiki",
       "norm_label": "modules & data"
     },
@@ -417,7 +417,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_22_index_automatiseringen",
-      "community": 7,
+      "community": 6,
       "community_name": "Platform Wiki",
       "norm_label": "automatiseringen"
     },
@@ -428,7 +428,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_22_index_api_integraties",
-      "community": 7,
+      "community": 6,
       "community_name": "Platform Wiki",
       "norm_label": "api & integraties"
     },
@@ -439,7 +439,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_22_index_roadmap_wensen",
-      "community": 7,
+      "community": 6,
       "community_name": "Platform Wiki",
       "norm_label": "roadmap & wensen"
     },
@@ -450,7 +450,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_22_index_agents",
-      "community": 7,
+      "community": 6,
       "community_name": "Platform Wiki",
       "norm_label": "agents"
     },
@@ -458,10 +458,10 @@
       "label": "Gerelateerd",
       "file_type": "document",
       "source_file": "graphify-corpus/platform-wiki/22--index.md",
-      "source_location": "L69",
+      "source_location": "L70",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_22_index_gerelateerd",
-      "community": 7,
+      "community": 6,
       "community_name": "Platform Wiki",
       "norm_label": "gerelateerd"
     },
@@ -620,13 +620,35 @@
       "norm_label": "gerelateerd"
     },
     {
+      "label": "57--second-brain-graph-json.md",
+      "file_type": "document",
+      "source_file": "graphify-corpus/platform-wiki/57--second-brain-graph-json.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_corpus_platform_wiki_57_second_brain_graph_json",
+      "community": 31,
+      "community_name": "Platform Wiki",
+      "norm_label": "57--second-brain-graph-json.md"
+    },
+    {
+      "label": "58--second-brain-rapport.md",
+      "file_type": "document",
+      "source_file": "graphify-corpus/platform-wiki/58--second-brain-rapport.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_corpus_platform_wiki_58_second_brain_rapport",
+      "community": 32,
+      "community_name": "Platform Wiki",
+      "norm_label": "58--second-brain-rapport.md"
+    },
+    {
       "label": "55--hermes-agent.md",
       "file_type": "document",
       "source_file": "graphify-corpus/platform-wiki/agents/55--hermes-agent.md",
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_agents_55_hermes_agent",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "55--hermes-agent.md"
     },
@@ -637,7 +659,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_agents_55_hermes_agent_identiteit",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "identiteit"
     },
@@ -648,7 +670,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_agents_55_hermes_agent_toegang",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "toegang"
     },
@@ -659,7 +681,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_agents_55_hermes_agent_tools",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "tools"
     },
@@ -670,7 +692,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_agents_55_hermes_agent_vaste_taken_het_dagelijkse_draaiboek",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "vaste taken (het dagelijkse draaiboek)"
     },
@@ -681,7 +703,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_agents_55_hermes_agent_toekomstige_taken_gepland",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "toekomstige taken (gepland)"
     },
@@ -692,7 +714,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_agents_55_hermes_agent_guardrails",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "guardrails"
     },
@@ -703,7 +725,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_agents_55_hermes_agent_status",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "status"
     },
@@ -714,7 +736,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_agents_55_hermes_agent_gerelateerd",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "gerelateerd"
     },
@@ -725,7 +747,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_agents_56_dottie_sessie_agent",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "56--dottie-sessie-agent.md"
     },
@@ -736,7 +758,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_agents_56_dottie_sessie_agent_wie_dottie_is",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "wie dottie is"
     },
@@ -747,7 +769,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_agents_56_dottie_sessie_agent_hoe_ze_werkt",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "hoe ze werkt"
     },
@@ -758,7 +780,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_agents_56_dottie_sessie_agent_haar_wiki_plicht",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "haar wiki-plicht"
     },
@@ -769,7 +791,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_agents_56_dottie_sessie_agent_domeinverdeling_met_hermes",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "domeinverdeling met hermes"
     },
@@ -780,8 +802,85 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_agents_56_dottie_sessie_agent_gerelateerd",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
+      "norm_label": "gerelateerd"
+    },
+    {
+      "label": "64--hostinger-vps-hermes-host.md",
+      "file_type": "document",
+      "source_file": "graphify-corpus/platform-wiki/agents/64--hostinger-vps-hermes-host.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host",
+      "community": 6,
+      "community_name": "Platform Wiki",
+      "norm_label": "64--hostinger-vps-hermes-host.md"
+    },
+    {
+      "label": "De machine",
+      "file_type": "document",
+      "source_file": "graphify-corpus/platform-wiki/agents/64--hostinger-vps-hermes-host.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host_de_machine",
+      "community": 6,
+      "community_name": "Platform Wiki",
+      "norm_label": "de machine"
+    },
+    {
+      "label": "Wat erop draait (Docker)",
+      "file_type": "document",
+      "source_file": "graphify-corpus/platform-wiki/agents/64--hostinger-vps-hermes-host.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host_wat_erop_draait_docker",
+      "community": 6,
+      "community_name": "Platform Wiki",
+      "norm_label": "wat erop draait (docker)"
+    },
+    {
+      "label": "Beheer & toegang",
+      "file_type": "document",
+      "source_file": "graphify-corpus/platform-wiki/agents/64--hostinger-vps-hermes-host.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host_beheer_toegang",
+      "community": 6,
+      "community_name": "Platform Wiki",
+      "norm_label": "beheer & toegang"
+    },
+    {
+      "label": "Vangnet & geld",
+      "file_type": "document",
+      "source_file": "graphify-corpus/platform-wiki/agents/64--hostinger-vps-hermes-host.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host_vangnet_geld",
+      "community": 6,
+      "community_name": "Platform Wiki",
+      "norm_label": "vangnet & geld"
+    },
+    {
+      "label": "Aandachtspunten (stand 2026-07-13)",
+      "file_type": "document",
+      "source_file": "graphify-corpus/platform-wiki/agents/64--hostinger-vps-hermes-host.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host_aandachtspunten_stand_2026_07_13",
+      "community": 6,
+      "community_name": "Platform Wiki",
+      "norm_label": "aandachtspunten (stand 2026-07-13)"
+    },
+    {
+      "label": "Gerelateerd",
+      "file_type": "document",
+      "source_file": "graphify-corpus/platform-wiki/agents/64--hostinger-vps-hermes-host.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host_gerelateerd",
+      "community": 6,
+      "community_name": "Platform Wiki",
       "norm_label": "gerelateerd"
     },
     {
@@ -868,7 +967,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_api_integraties_42_integratie_landschap",
-      "community": 2,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "42--integratie-landschap.md"
     },
@@ -879,7 +978,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_api_integraties_42_integratie_landschap_behouden",
-      "community": 2,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "behouden"
     },
@@ -890,7 +989,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_api_integraties_42_integratie_landschap_koppelen_later_mogelijk_vervangen",
-      "community": 2,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "koppelen, later mogelijk vervangen"
     },
@@ -901,7 +1000,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_api_integraties_42_integratie_landschap_vervangen",
-      "community": 2,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "vervangen"
     },
@@ -912,7 +1011,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_api_integraties_42_integratie_landschap_niet_aanschaffen",
-      "community": 2,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "niet aanschaffen"
     },
@@ -923,7 +1022,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_api_integraties_42_integratie_landschap_besparing",
-      "community": 2,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "besparing"
     },
@@ -934,7 +1033,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_api_integraties_42_integratie_landschap_gerelateerd",
-      "community": 2,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "gerelateerd"
     },
@@ -1000,7 +1099,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_automatiseringen_40_in_the_loop_os_agent_queue",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "40--in-the-loop-os-agent-queue.md"
     },
@@ -1011,7 +1110,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_automatiseringen_40_in_the_loop_os_agent_queue_de_kolommen",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "de kolommen"
     },
@@ -1022,7 +1121,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_automatiseringen_40_in_the_loop_os_agent_queue_de_loop",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "de loop"
     },
@@ -1033,7 +1132,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_automatiseringen_40_in_the_loop_os_agent_queue_mine_the_trail",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "mine the trail"
     },
@@ -1044,7 +1143,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_automatiseringen_40_in_the_loop_os_agent_queue_kader",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "kader"
     },
@@ -1055,7 +1154,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_automatiseringen_40_in_the_loop_os_agent_queue_gerelateerd",
-      "community": 1,
+      "community": 2,
       "community_name": "Agents",
       "norm_label": "gerelateerd"
     },
@@ -1627,7 +1726,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_43_strategie_de_human_margin_method",
-      "community": 6,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "43--strategie-de-human-margin-method.md"
     },
@@ -1638,7 +1737,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_43_strategie_de_human_margin_method_wat_human_margin_nu_is",
-      "community": 6,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "wat human margin nu is"
     },
@@ -1649,7 +1748,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_43_strategie_de_human_margin_method_human_margin_wordt_de_human_margin_method",
-      "community": 6,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "human margin wordt de human margin method"
     },
@@ -1660,7 +1759,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_43_strategie_de_human_margin_method_aick_wordt_een_product_v\u00e1n_human_margin",
-      "community": 6,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "aick wordt een product van human margin"
     },
@@ -1671,7 +1770,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_43_strategie_de_human_margin_method_academy_sprekersklussen_podcasts_gepland",
-      "community": 6,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "academy, sprekersklussen & podcasts (gepland)"
     },
@@ -1682,7 +1781,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_43_strategie_de_human_margin_method_licentiemodel_team_open_vragen",
-      "community": 6,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "licentiemodel & team (open vragen)"
     },
@@ -1693,7 +1792,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_43_strategie_de_human_margin_method_de_kernpijn_die_alles_stuurt",
-      "community": 6,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "de kernpijn die alles stuurt"
     },
@@ -1704,7 +1803,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_43_strategie_de_human_margin_method_harde_kaders",
-      "community": 6,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "harde kaders"
     },
@@ -1715,7 +1814,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_43_strategie_de_human_margin_method_gerelateerd",
-      "community": 6,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "gerelateerd"
     },
@@ -1825,7 +1924,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_45_fase_a_content_formats",
-      "community": 6,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "45--fase-a-content-formats.md"
     },
@@ -1836,7 +1935,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_45_fase_a_content_formats_doel",
-      "community": 6,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "doel"
     },
@@ -1847,7 +1946,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_45_fase_a_content_formats_wensen_die_dit_oplost",
-      "community": 6,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "wensen die dit oplost"
     },
@@ -1858,7 +1957,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_45_fase_a_content_formats_al_gebouwd",
-      "community": 6,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "al gebouwd (\u2705)"
     },
@@ -1869,7 +1968,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_45_fase_a_content_formats_nog_te_bouwen_gepland",
-      "community": 6,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "nog te bouwen (gepland)"
     },
@@ -1880,7 +1979,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_45_fase_a_content_formats_taken_op_het_bord",
-      "community": 6,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "taken op het bord"
     },
@@ -1891,7 +1990,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_45_fase_a_content_formats_afhankelijkheden",
-      "community": 6,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "afhankelijkheden"
     },
@@ -1902,7 +2001,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_45_fase_a_content_formats_gerelateerd",
-      "community": 6,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "gerelateerd"
     },
@@ -2089,7 +2188,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_48_fase_d_repurposing_ochtendmail",
-      "community": 2,
+      "community": 7,
       "community_name": "Roadmap Wensen",
       "norm_label": "48--fase-d-repurposing-ochtendmail.md"
     },
@@ -2100,7 +2199,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_48_fase_d_repurposing_ochtendmail_doel",
-      "community": 2,
+      "community": 7,
       "community_name": "Roadmap Wensen",
       "norm_label": "doel"
     },
@@ -2111,7 +2210,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_48_fase_d_repurposing_ochtendmail_wensen_die_dit_oplost",
-      "community": 2,
+      "community": 7,
       "community_name": "Roadmap Wensen",
       "norm_label": "wensen die dit oplost"
     },
@@ -2122,7 +2221,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_48_fase_d_repurposing_ochtendmail_wat_er_concreet_gebouwd_wordt",
-      "community": 2,
+      "community": 7,
       "community_name": "Roadmap Wensen",
       "norm_label": "wat er concreet gebouwd wordt"
     },
@@ -2133,7 +2232,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_48_fase_d_repurposing_ochtendmail_afhankelijkheden",
-      "community": 2,
+      "community": 7,
       "community_name": "Roadmap Wensen",
       "norm_label": "afhankelijkheden"
     },
@@ -2144,7 +2243,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_48_fase_d_repurposing_ochtendmail_taken_op_het_bord",
-      "community": 2,
+      "community": 7,
       "community_name": "Roadmap Wensen",
       "norm_label": "taken op het bord"
     },
@@ -2155,7 +2254,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_48_fase_d_repurposing_ochtendmail_status",
-      "community": 2,
+      "community": 7,
       "community_name": "Roadmap Wensen",
       "norm_label": "status"
     },
@@ -2166,7 +2265,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_48_fase_d_repurposing_ochtendmail_gerelateerd",
-      "community": 2,
+      "community": 7,
       "community_name": "Roadmap Wensen",
       "norm_label": "gerelateerd"
     },
@@ -2177,7 +2276,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_49_fase_e_masterclass_automatisering",
-      "community": 2,
+      "community": 7,
       "community_name": "Roadmap Wensen",
       "norm_label": "49--fase-e-masterclass-automatisering.md"
     },
@@ -2188,7 +2287,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_49_fase_e_masterclass_automatisering_doel",
-      "community": 2,
+      "community": 7,
       "community_name": "Roadmap Wensen",
       "norm_label": "doel"
     },
@@ -2199,7 +2298,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_49_fase_e_masterclass_automatisering_wensen_die_dit_oplost",
-      "community": 2,
+      "community": 7,
       "community_name": "Roadmap Wensen",
       "norm_label": "wensen die dit oplost"
     },
@@ -2210,7 +2309,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_49_fase_e_masterclass_automatisering_wat_er_concreet_gebouwd_wordt",
-      "community": 2,
+      "community": 7,
       "community_name": "Roadmap Wensen",
       "norm_label": "wat er concreet gebouwd wordt"
     },
@@ -2221,7 +2320,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_49_fase_e_masterclass_automatisering_afhankelijkheden",
-      "community": 2,
+      "community": 7,
       "community_name": "Roadmap Wensen",
       "norm_label": "afhankelijkheden"
     },
@@ -2232,7 +2331,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_49_fase_e_masterclass_automatisering_taken_op_het_bord",
-      "community": 2,
+      "community": 7,
       "community_name": "Roadmap Wensen",
       "norm_label": "taken op het bord"
     },
@@ -2243,7 +2342,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_49_fase_e_masterclass_automatisering_status",
-      "community": 2,
+      "community": 7,
       "community_name": "Roadmap Wensen",
       "norm_label": "status"
     },
@@ -2254,7 +2353,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_49_fase_e_masterclass_automatisering_gerelateerd",
-      "community": 2,
+      "community": 7,
       "community_name": "Roadmap Wensen",
       "norm_label": "gerelateerd"
     },
@@ -2265,7 +2364,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_50_fase_f_academy_betalingen_affiliates",
-      "community": 2,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "50--fase-f-academy-betalingen-affiliates.md"
     },
@@ -2276,7 +2375,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_50_fase_f_academy_betalingen_affiliates_doel",
-      "community": 2,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "doel"
     },
@@ -2287,7 +2386,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_50_fase_f_academy_betalingen_affiliates_wensen_die_dit_oplost",
-      "community": 2,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "wensen die dit oplost"
     },
@@ -2298,7 +2397,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_50_fase_f_academy_betalingen_affiliates_wat_er_concreet_gebouwd_wordt",
-      "community": 2,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "wat er concreet gebouwd wordt"
     },
@@ -2309,7 +2408,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_50_fase_f_academy_betalingen_affiliates_afhankelijkheden",
-      "community": 2,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "afhankelijkheden"
     },
@@ -2320,7 +2419,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_50_fase_f_academy_betalingen_affiliates_taken_op_het_bord",
-      "community": 2,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "taken op het bord"
     },
@@ -2331,7 +2430,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_50_fase_f_academy_betalingen_affiliates_structurele_besparing",
-      "community": 2,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "structurele besparing"
     },
@@ -2342,7 +2441,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_50_fase_f_academy_betalingen_affiliates_status",
-      "community": 2,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "status"
     },
@@ -2353,7 +2452,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_50_fase_f_academy_betalingen_affiliates_gerelateerd",
-      "community": 2,
+      "community": 1,
       "community_name": "Roadmap Wensen",
       "norm_label": "gerelateerd"
     },
@@ -2639,8 +2738,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_54_kaders_wat_nooit_automatisch_mag",
-      "community": 1,
-      "community_name": "Agents",
+      "community": 0,
+      "community_name": "Roadmap Wensen",
       "norm_label": "54--kaders-wat-nooit-automatisch-mag.md"
     },
     {
@@ -2650,8 +2749,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_54_kaders_wat_nooit_automatisch_mag_niets_automatisch_publiceren_of_versturen",
-      "community": 1,
-      "community_name": "Agents",
+      "community": 0,
+      "community_name": "Roadmap Wensen",
       "norm_label": "niets automatisch publiceren of versturen"
     },
     {
@@ -2661,8 +2760,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_54_kaders_wat_nooit_automatisch_mag_avg",
-      "community": 1,
-      "community_name": "Agents",
+      "community": 0,
+      "community_name": "Roadmap Wensen",
       "norm_label": "avg"
     },
     {
@@ -2672,8 +2771,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_54_kaders_wat_nooit_automatisch_mag_linkedin_instagram_api_beperkingen_eerlijk_benoemen",
-      "community": 1,
-      "community_name": "Agents",
+      "community": 0,
+      "community_name": "Roadmap Wensen",
       "norm_label": "linkedin/instagram-api-beperkingen eerlijk benoemen"
     },
     {
@@ -2683,8 +2782,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_54_kaders_wat_nooit_automatisch_mag_plug_pay_huddle_pas_opzeggen_na_volledige_migratie",
-      "community": 1,
-      "community_name": "Agents",
+      "community": 0,
+      "community_name": "Roadmap Wensen",
       "norm_label": "plug&pay/huddle pas opzeggen na volledige migratie"
     },
     {
@@ -2694,8 +2793,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_54_kaders_wat_nooit_automatisch_mag_agent_guardrails_gelden_bovenop_het_bovenstaande",
-      "community": 1,
-      "community_name": "Agents",
+      "community": 0,
+      "community_name": "Roadmap Wensen",
       "norm_label": "agent-guardrails (gelden bovenop het bovenstaande)"
     },
     {
@@ -2705,8 +2804,8 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "graphify_corpus_platform_wiki_roadmap_wensen_54_kaders_wat_nooit_automatisch_mag_gerelateerd",
-      "community": 1,
-      "community_name": "Agents",
+      "community": 0,
+      "community_name": "Roadmap Wensen",
       "norm_label": "gerelateerd"
     },
     {
@@ -3172,13 +3271,189 @@
       "norm_label": "gerelateerd"
     },
     {
+      "label": "61--plan-ai-agent-compliance-positionering-seo-geo.md",
+      "file_type": "document",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/61--plan-ai-agent-compliance-positionering-seo-geo.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_corpus_seo_ai_agent_compliance_61_plan_ai_agent_compliance_positionering_seo_geo",
+      "community": 19,
+      "community_name": "Seo Ai Agent Compliance",
+      "norm_label": "61--plan-ai-agent-compliance-positionering-seo-geo.md"
+    },
+    {
+      "label": "Waarom nu",
+      "file_type": "document",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/61--plan-ai-agent-compliance-positionering-seo-geo.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "graphify_corpus_seo_ai_agent_compliance_61_plan_ai_agent_compliance_positionering_seo_geo_waarom_nu",
+      "community": 19,
+      "community_name": "Seo Ai Agent Compliance",
+      "norm_label": "waarom nu"
+    },
+    {
+      "label": "De vier bouwstenen",
+      "file_type": "document",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/61--plan-ai-agent-compliance-positionering-seo-geo.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "graphify_corpus_seo_ai_agent_compliance_61_plan_ai_agent_compliance_positionering_seo_geo_de_vier_bouwstenen",
+      "community": 19,
+      "community_name": "Seo Ai Agent Compliance",
+      "norm_label": "de vier bouwstenen"
+    },
+    {
+      "label": "Tijdlijn",
+      "file_type": "document",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/61--plan-ai-agent-compliance-positionering-seo-geo.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "graphify_corpus_seo_ai_agent_compliance_61_plan_ai_agent_compliance_positionering_seo_geo_tijdlijn",
+      "community": 19,
+      "community_name": "Seo Ai Agent Compliance",
+      "norm_label": "tijdlijn"
+    },
+    {
+      "label": "Kaders",
+      "file_type": "document",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/61--plan-ai-agent-compliance-positionering-seo-geo.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "graphify_corpus_seo_ai_agent_compliance_61_plan_ai_agent_compliance_positionering_seo_geo_kaders",
+      "community": 19,
+      "community_name": "Seo Ai Agent Compliance",
+      "norm_label": "kaders"
+    },
+    {
+      "label": "62--pillar-cluster-kaart-zoektermen-agent-compliance.md",
+      "file_type": "document",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/62--pillar-cluster-kaart-zoektermen-agent-compliance.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_corpus_seo_ai_agent_compliance_62_pillar_cluster_kaart_zoektermen_agent_compliance",
+      "community": 18,
+      "community_name": "Seo Ai Agent Compliance",
+      "norm_label": "62--pillar-cluster-kaart-zoektermen-agent-compliance.md"
+    },
+    {
+      "label": "Pijler",
+      "file_type": "document",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/62--pillar-cluster-kaart-zoektermen-agent-compliance.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "graphify_corpus_seo_ai_agent_compliance_62_pillar_cluster_kaart_zoektermen_agent_compliance_pijler",
+      "community": 18,
+      "community_name": "Seo Ai Agent Compliance",
+      "norm_label": "pijler"
+    },
+    {
+      "label": "Clusters (eerste laag, elk 1 artikel)",
+      "file_type": "document",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/62--pillar-cluster-kaart-zoektermen-agent-compliance.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "graphify_corpus_seo_ai_agent_compliance_62_pillar_cluster_kaart_zoektermen_agent_compliance_clusters_eerste_laag_elk_1_artikel",
+      "community": 18,
+      "community_name": "Seo Ai Agent Compliance",
+      "norm_label": "clusters (eerste laag, elk 1 artikel)"
+    },
+    {
+      "label": "Sector-verdieping (tweede laag, maand 4-8)",
+      "file_type": "document",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/62--pillar-cluster-kaart-zoektermen-agent-compliance.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "graphify_corpus_seo_ai_agent_compliance_62_pillar_cluster_kaart_zoektermen_agent_compliance_sector_verdieping_tweede_laag_maand_4_8",
+      "community": 18,
+      "community_name": "Seo Ai Agent Compliance",
+      "norm_label": "sector-verdieping (tweede laag, maand 4-8)"
+    },
+    {
+      "label": "Zoektermen-hypothesen (valideren in de nulmeting)",
+      "file_type": "document",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/62--pillar-cluster-kaart-zoektermen-agent-compliance.md",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "graphify_corpus_seo_ai_agent_compliance_62_pillar_cluster_kaart_zoektermen_agent_compliance_zoektermen_hypothesen_valideren_in_de_nulmeting",
+      "community": 18,
+      "community_name": "Seo Ai Agent Compliance",
+      "norm_label": "zoektermen-hypothesen (valideren in de nulmeting)"
+    },
+    {
+      "label": "GEO-principes per artikel",
+      "file_type": "document",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/62--pillar-cluster-kaart-zoektermen-agent-compliance.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "graphify_corpus_seo_ai_agent_compliance_62_pillar_cluster_kaart_zoektermen_agent_compliance_geo_principes_per_artikel",
+      "community": 18,
+      "community_name": "Seo Ai Agent Compliance",
+      "norm_label": "geo-principes per artikel"
+    },
+    {
+      "label": "63--artikelkalender-q1-agent-compliance.md",
+      "file_type": "document",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/63--artikelkalender-q1-agent-compliance.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_corpus_seo_ai_agent_compliance_63_artikelkalender_q1_agent_compliance",
+      "community": 20,
+      "community_name": "Seo Ai Agent Compliance",
+      "norm_label": "63--artikelkalender-q1-agent-compliance.md"
+    },
+    {
+      "label": "Maand 1",
+      "file_type": "document",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/63--artikelkalender-q1-agent-compliance.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "graphify_corpus_seo_ai_agent_compliance_63_artikelkalender_q1_agent_compliance_maand_1",
+      "community": 20,
+      "community_name": "Seo Ai Agent Compliance",
+      "norm_label": "maand 1"
+    },
+    {
+      "label": "Maand 2",
+      "file_type": "document",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/63--artikelkalender-q1-agent-compliance.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "graphify_corpus_seo_ai_agent_compliance_63_artikelkalender_q1_agent_compliance_maand_2",
+      "community": 20,
+      "community_name": "Seo Ai Agent Compliance",
+      "norm_label": "maand 2"
+    },
+    {
+      "label": "Maand 3",
+      "file_type": "document",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/63--artikelkalender-q1-agent-compliance.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "graphify_corpus_seo_ai_agent_compliance_63_artikelkalender_q1_agent_compliance_maand_3",
+      "community": 20,
+      "community_name": "Seo Ai Agent Compliance",
+      "norm_label": "maand 3"
+    },
+    {
+      "label": "Werkafspraken",
+      "file_type": "document",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/63--artikelkalender-q1-agent-compliance.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "graphify_corpus_seo_ai_agent_compliance_63_artikelkalender_q1_agent_compliance_werkafspraken",
+      "community": 20,
+      "community_name": "Seo Ai Agent Compliance",
+      "norm_label": "werkafspraken"
+    },
+    {
       "label": "2--offerte-checklist.md",
       "file_type": "document",
       "source_file": "graphify-corpus/werkwijze-human-margin/2--offerte-checklist.md",
       "source_location": "L1",
       "_origin": "ast",
       "id": "graphify_corpus_werkwijze_human_margin_2_offerte_checklist",
-      "community": 22,
+      "community": 24,
       "community_name": "Werkwijze Human Margin",
       "norm_label": "2--offerte-checklist.md"
     },
@@ -3189,7 +3464,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "graphify_corpus_werkwijze_human_margin_2_offerte_checklist_checklist_voor_offertes",
-      "community": 22,
+      "community": 24,
       "community_name": "Werkwijze Human Margin",
       "norm_label": "checklist voor offertes"
     }
@@ -3539,7 +3814,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "graphify-corpus/platform-wiki/22--index.md",
-      "source_location": "L69",
+      "source_location": "L70",
       "weight": 1.0,
       "source": "graphify_corpus_platform_wiki_22_index",
       "target": "graphify_corpus_platform_wiki_22_index_gerelateerd",
@@ -3623,6 +3898,16 @@
       "weight": 1.0,
       "source": "graphify_corpus_platform_wiki_22_index",
       "target": "graphify_corpus_platform_wiki_agents_56_dottie_sessie_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/platform-wiki/22--index.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "graphify_corpus_platform_wiki_22_index",
+      "target": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host",
       "confidence_score": 1.0
     },
     {
@@ -4339,7 +4624,17 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "graphify-corpus/platform-wiki/agents/55--hermes-agent.md",
-      "source_location": "L59",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "graphify_corpus_platform_wiki_agents_55_hermes_agent",
+      "target": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/platform-wiki/agents/55--hermes-agent.md",
+      "source_location": "L60",
       "weight": 1.0,
       "source": "graphify_corpus_platform_wiki_agents_55_hermes_agent",
       "target": "graphify_corpus_platform_wiki_api_integraties_41_rest_local_api_recepten",
@@ -4359,7 +4654,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "graphify-corpus/platform-wiki/agents/55--hermes-agent.md",
-      "source_location": "L62",
+      "source_location": "L63",
       "weight": 1.0,
       "source": "graphify_corpus_platform_wiki_agents_55_hermes_agent",
       "target": "graphify_corpus_platform_wiki_roadmap_wensen_45_fase_a_content_formats",
@@ -4369,7 +4664,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "graphify-corpus/platform-wiki/agents/55--hermes-agent.md",
-      "source_location": "L63",
+      "source_location": "L64",
       "weight": 1.0,
       "source": "graphify_corpus_platform_wiki_agents_55_hermes_agent",
       "target": "graphify_corpus_platform_wiki_roadmap_wensen_46_fase_b_reality_check_native",
@@ -4379,7 +4674,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "graphify-corpus/platform-wiki/agents/55--hermes-agent.md",
-      "source_location": "L64",
+      "source_location": "L65",
       "weight": 1.0,
       "source": "graphify_corpus_platform_wiki_agents_55_hermes_agent",
       "target": "graphify_corpus_platform_wiki_roadmap_wensen_47_fase_c_publiek_rapporten",
@@ -4409,7 +4704,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "graphify-corpus/platform-wiki/agents/55--hermes-agent.md",
-      "source_location": "L67",
+      "source_location": "L68",
       "weight": 1.0,
       "source": "graphify_corpus_platform_wiki_agents_55_hermes_agent",
       "target": "graphify_corpus_platform_wiki_roadmap_wensen_50_fase_f_academy_betalingen_affiliates",
@@ -4429,7 +4724,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "graphify-corpus/platform-wiki/agents/55--hermes-agent.md",
-      "source_location": "L69",
+      "source_location": "L70",
       "weight": 1.0,
       "source": "graphify_corpus_platform_wiki_agents_55_hermes_agent",
       "target": "graphify_corpus_platform_wiki_roadmap_wensen_52_fase_h_eigen_mailmotor",
@@ -4533,6 +4828,86 @@
       "weight": 1.0,
       "source": "graphify_corpus_platform_wiki_modules_data_37_gebruikers_rollen_voorkeuren",
       "target": "graphify_corpus_platform_wiki_agents_56_dottie_sessie_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/platform-wiki/agents/64--hostinger-vps-hermes-host.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host",
+      "target": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host_aandachtspunten_stand_2026_07_13",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/platform-wiki/agents/64--hostinger-vps-hermes-host.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host",
+      "target": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host_beheer_toegang",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/platform-wiki/agents/64--hostinger-vps-hermes-host.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host",
+      "target": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host_de_machine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/platform-wiki/agents/64--hostinger-vps-hermes-host.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host",
+      "target": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host_gerelateerd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/platform-wiki/agents/64--hostinger-vps-hermes-host.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host",
+      "target": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host_vangnet_geld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/platform-wiki/agents/64--hostinger-vps-hermes-host.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host",
+      "target": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host_wat_erop_draait_docker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/platform-wiki/agents/64--hostinger-vps-hermes-host.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host",
+      "target": "graphify_corpus_platform_wiki_api_integraties_42_integratie_landschap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/platform-wiki/agents/64--hostinger-vps-hermes-host.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "graphify_corpus_platform_wiki_agents_64_hostinger_vps_hermes_host",
+      "target": "graphify_corpus_platform_wiki_roadmap_wensen_54_kaders_wat_nooit_automatisch_mag",
       "confidence_score": 1.0
     },
     {
@@ -7368,6 +7743,136 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/61--plan-ai-agent-compliance-positionering-seo-geo.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "graphify_corpus_seo_ai_agent_compliance_61_plan_ai_agent_compliance_positionering_seo_geo",
+      "target": "graphify_corpus_seo_ai_agent_compliance_61_plan_ai_agent_compliance_positionering_seo_geo_de_vier_bouwstenen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/61--plan-ai-agent-compliance-positionering-seo-geo.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "graphify_corpus_seo_ai_agent_compliance_61_plan_ai_agent_compliance_positionering_seo_geo",
+      "target": "graphify_corpus_seo_ai_agent_compliance_61_plan_ai_agent_compliance_positionering_seo_geo_kaders",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/61--plan-ai-agent-compliance-positionering-seo-geo.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "graphify_corpus_seo_ai_agent_compliance_61_plan_ai_agent_compliance_positionering_seo_geo",
+      "target": "graphify_corpus_seo_ai_agent_compliance_61_plan_ai_agent_compliance_positionering_seo_geo_tijdlijn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/61--plan-ai-agent-compliance-positionering-seo-geo.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "graphify_corpus_seo_ai_agent_compliance_61_plan_ai_agent_compliance_positionering_seo_geo",
+      "target": "graphify_corpus_seo_ai_agent_compliance_61_plan_ai_agent_compliance_positionering_seo_geo_waarom_nu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/62--pillar-cluster-kaart-zoektermen-agent-compliance.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "graphify_corpus_seo_ai_agent_compliance_62_pillar_cluster_kaart_zoektermen_agent_compliance",
+      "target": "graphify_corpus_seo_ai_agent_compliance_62_pillar_cluster_kaart_zoektermen_agent_compliance_clusters_eerste_laag_elk_1_artikel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/62--pillar-cluster-kaart-zoektermen-agent-compliance.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "graphify_corpus_seo_ai_agent_compliance_62_pillar_cluster_kaart_zoektermen_agent_compliance",
+      "target": "graphify_corpus_seo_ai_agent_compliance_62_pillar_cluster_kaart_zoektermen_agent_compliance_geo_principes_per_artikel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/62--pillar-cluster-kaart-zoektermen-agent-compliance.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "graphify_corpus_seo_ai_agent_compliance_62_pillar_cluster_kaart_zoektermen_agent_compliance",
+      "target": "graphify_corpus_seo_ai_agent_compliance_62_pillar_cluster_kaart_zoektermen_agent_compliance_pijler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/62--pillar-cluster-kaart-zoektermen-agent-compliance.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "graphify_corpus_seo_ai_agent_compliance_62_pillar_cluster_kaart_zoektermen_agent_compliance",
+      "target": "graphify_corpus_seo_ai_agent_compliance_62_pillar_cluster_kaart_zoektermen_agent_compliance_sector_verdieping_tweede_laag_maand_4_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/62--pillar-cluster-kaart-zoektermen-agent-compliance.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "graphify_corpus_seo_ai_agent_compliance_62_pillar_cluster_kaart_zoektermen_agent_compliance",
+      "target": "graphify_corpus_seo_ai_agent_compliance_62_pillar_cluster_kaart_zoektermen_agent_compliance_zoektermen_hypothesen_valideren_in_de_nulmeting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/63--artikelkalender-q1-agent-compliance.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "graphify_corpus_seo_ai_agent_compliance_63_artikelkalender_q1_agent_compliance",
+      "target": "graphify_corpus_seo_ai_agent_compliance_63_artikelkalender_q1_agent_compliance_maand_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/63--artikelkalender-q1-agent-compliance.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "graphify_corpus_seo_ai_agent_compliance_63_artikelkalender_q1_agent_compliance",
+      "target": "graphify_corpus_seo_ai_agent_compliance_63_artikelkalender_q1_agent_compliance_maand_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/63--artikelkalender-q1-agent-compliance.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "graphify_corpus_seo_ai_agent_compliance_63_artikelkalender_q1_agent_compliance",
+      "target": "graphify_corpus_seo_ai_agent_compliance_63_artikelkalender_q1_agent_compliance_maand_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-corpus/seo-ai-agent-compliance/63--artikelkalender-q1-agent-compliance.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "graphify_corpus_seo_ai_agent_compliance_63_artikelkalender_q1_agent_compliance",
+      "target": "graphify_corpus_seo_ai_agent_compliance_63_artikelkalender_q1_agent_compliance_werkafspraken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "graphify-corpus/werkwijze-human-margin/2--offerte-checklist.md",
       "source_location": "L8",
       "weight": 1.0,
@@ -7377,5 +7882,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9288670f8a03b957b7f6c264c895a216a83a0223"
+  "built_at_commit": "f1b3ddcc5d1d5de5944995f4504108c0be884177"
 }

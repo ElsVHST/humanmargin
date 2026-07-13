@@ -99,7 +99,7 @@ Beiden loggen met dezelfde prefix-conventie, dus de tijdlijn op de wiki-root laa
     map: null,
     titel: "Index",
     tags: ["wiki", "index"],
-    markdown: `**Laatst bijgewerkt:** 2026-07-10 door Dottie · **Status:** actueel · **Bronnen:** docs/superpowers/specs/2026-07-10-llm-wiki-hermes-prd.md §3
+    markdown: `**Laatst bijgewerkt:** 2026-07-13 door Dottie · **Status:** actueel · **Bronnen:** docs/superpowers/specs/2026-07-10-llm-wiki-hermes-prd.md §3
 
 Catalogus van de hele Platform-wiki, per map, met per pagina één regel beschrijving. Begin hier bij elke vraag: zoek de sectie, klik door. Deze pagina wordt bijgewerkt bij elke ingest (zie [[_Schema — zo werkt deze wiki]]).
 
@@ -159,6 +159,7 @@ Catalogus van de hele Platform-wiki, per map, met per pagina één regel beschri
 
 - [[Hermes Agent]] — de bootstrap-node voor de VPS-agent (gepland — fase 2).
 - [[Dottie (sessie-agent)]] — de sessie-agent en haar onderhoudsplicht.
+- [[Hostinger VPS (Hermes-host)]] — de fysieke machine: Hostinger-VPS, Docker-projecten, backups, kosten en aandachtspunten.
 
 ## Gerelateerd
 

@@ -89,6 +89,7 @@ Skills van dit project staan in `.claude/skills/`. **Raadpleeg de juiste skill v
 | `humanmargin-website` | Frontend: secties/blocks bouwen of stylen, responsive (390/1440), merkwaarden opzoeken, visuele QA/pixel-diff tegen humanmargin.eu |
 | `humanmargin-payload-cms` | CMS: schema/collections/velden/blocks wijzigen, seeds draaien, admin-branding, generate:types/importmap, database-issues, deploy-voorbereiding |
 | `humanmargin-dashboard` | Els-dashboard: data-vragen en acties voor Els (deals/taken/content/kennisbank via Local API), boards/views/hooks uitbreiden of debuggen — Dottie's systeemindex als AI-partner |
+| `humanmargin-hostinger` | Hostinger: Els's VPS (Hermes-host srv1819178), Docker-projecten, firewall/backups, domeinen/DNS/billing — via de vijf hostinger-MCP-servers of curl; werkregels & gotchas |
 
 **Onderhoudsplicht (Dottie):** deze skills zijn levende documentatie. Wijzig je blocks, schema, tooling of conventies — werk dan in dezelfde sessie de betreffende SKILL.md bij én deze index als er skills bijkomen of verdwijnen. Nieuwe herbruikbare kennisdomeinen (bv. deploy-runbook, dashboard) krijgen een eigen skill in `.claude/skills/` en een regel in deze tabel.
 

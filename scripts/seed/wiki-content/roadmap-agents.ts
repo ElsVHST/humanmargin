@@ -1,5 +1,5 @@
 /**
- * Wiki-contentpack — map "Roadmap & wensen" (12) + map "Agents" (2) — 14 pagina's.
+ * Wiki-contentpack — map "Roadmap & wensen" (12) + map "Agents" (3) — 15 pagina's.
  *
  * Geen seed-logica: alleen content. `scripts/seed/seed-wiki.ts` (T5) leest
  * `PAGINAS` uit dit bestand (en de andere content-packs) en zet ze via de
@@ -580,13 +580,13 @@ Beide tools worden pas opgezegd als de vervanging ([[Fase F — academy, betalin
     map: "Agents",
     titel: "Hermes Agent",
     tags: ["wiki", "agent", "hermes"],
-    markdown: `**Laatst bijgewerkt:** 2026-07-10 door Dottie · **Status:** actueel · **Bronnen:** specs/2026-07-10-llm-wiki-hermes-prd.md §5, §4.5, §6
+    markdown: `**Laatst bijgewerkt:** 2026-07-13 door Dottie · **Status:** actueel · **Bronnen:** specs/2026-07-10-llm-wiki-hermes-prd.md §5, §4.5, §6; Hostinger API (live-inventaris 2026-07-13)
 
 Hermes Agent is Human Margin's autonome onderhouds- en automatiseringsagent — deze pagina is zijn bootstrap-document: de eerste leesopdracht bij élke run.
 
 ## Identiteit
 
-Hermes Agent is de autonome onderhouds- en automatiseringsagent van Human Margin. Hij draait op een **VPS met een dagelijkse cron** en handelt in het dashboard als de user \`hermes@humanmargin.eu\` (rol **teamlid**) — hetzelfde gebruikerspatroon als de Dottie-user, inclusief attributie en tijdlijn-logging bij elke actie.
+Hermes Agent is de autonome onderhouds- en automatiseringsagent van Human Margin. Hij draait op een **VPS met een dagelijkse cron** en handelt in het dashboard als de user \`hermes@humanmargin.eu\` (rol **teamlid**) — hetzelfde gebruikerspatroon als de Dottie-user, inclusief attributie en tijdlijn-logging bij elke actie. De VPS bestaat sinds 2026-07-10 echt en draait Hostinger's Hermes Agent-omgeving in Docker — machine, toegang en aandachtspunten staan op [[Hostinger VPS (Hermes-host)]].
 
 ## Toegang
 
@@ -629,6 +629,7 @@ Fase 1 (deze release) levert alleen de infrastructuur en dit bootstrap-document 
 
 ## Gerelateerd
 
+- [[Hostinger VPS (Hermes-host)]]
 - [[_Schema — zo werkt deze wiki]]
 - [[Index]]
 - [[In-the-loop OS (agent-queue)]]
@@ -683,6 +684,48 @@ Beiden loggen elke wijziging met dezelfde prefix-conventie (\`[ingest|lint|query
 - [[_Schema — zo werkt deze wiki]]
 - [[In-the-loop OS (agent-queue)]]
 - [[Index]]
+- [[Kaders — wat nooit automatisch mag]]
+`,
+  },
+  {
+    map: "Agents",
+    titel: "Hostinger VPS (Hermes-host)",
+    tags: ["wiki", "agent", "hermes", "infra"],
+    markdown: `**Laatst bijgewerkt:** 2026-07-13 door Dottie · **Status:** actueel · **Bronnen:** Hostinger API (live-inventaris 2026-07-13); skill humanmargin-hostinger
+
+De fysieke machine achter [[Hermes Agent]]: een Hostinger-VPS van Els, die Dottie via de Hostinger API van buitenaf kan inspecteren en — met toestemming van Chris — beheren.
+
+## De machine
+
+- **VPS \`1819178\`** — plan KVM 2: 2 vCPU, 8 GB RAM, 100 GB disk, 8 TB bandbreedte; datacenter **Frankfurt**; template "Ubuntu 24.04 with Docker and Traefik"; draait sinds 2026-07-10.
+- **Adres:** \`srv1819178.hstgr.cloud\` (hostname + PTR), IPv4 \`187.124.188.147\`, IPv6 \`2a02:4780:79:f36d::1\`.
+
+## Wat erop draait (Docker)
+
+- **\`hermes-agent-7zmf\`** — Hostinger's eigen Hermes Agent-omgeving (image \`ghcr.io/hostinger/hvps-hermes-agent\`), web-UI via Traefik op \`https://hermes-agent-7zmf.srv1819178.hstgr.cloud\` (Let's Encrypt). Inloggegevens leven uitsluitend in de \`.env\` op de VPS — nooit in wiki, repo of logs.
+- **\`traefik\`** — reverse proxy op poort 80/443 (host-network), HTTP→HTTPS-redirect, automatische certificaten.
+
+## Beheer & toegang
+
+- **Hostinger API** (Dottie): vijf MCP-servers (vps/domains/dns/billing/hosting) met local scope op Chris's machine, plus een curl-fallback. De API ziet ook de Docker-laag (projecten, containers, logs, compose). Details, werkregels en gotchas: skill \`humanmargin-hostinger\` in de repo.
+- **Werkregel:** read-only vrij; elke mutatie (reboot, restore, firewall, DNS, billing) eerst langs Chris — dit is productie-infra, zie [[Kaders — wat nooit automatisch mag]].
+- **SSH:** root-wachtwoord op 2026-07-13 via hPanel gezet; er zijn geen SSH-keys via de API geregistreerd.
+
+## Vangnet & geld
+
+- Automatische backups aanwezig (restore ±30 minuten); er is geen snapshot.
+- Abonnement KVM 2: **$275,88 per jaar (USD)**, auto-renew aan, volgende afschrijving **2027-06-26**.
+
+## Aandachtspunten (stand 2026-07-13)
+
+- **Geen firewall**: alle poorten staan open, inclusief SSH (22) en de direct gepubliceerde Hermes-containerpoort 32768 (zonder TLS, buiten Traefik om).
+- Monarx-malwarescanner is niet geïnstalleerd.
+- **humanmargin.eu staat bij WPProvider, niet bij Hostinger** — als Hermes ooit op een eigen (sub)domein moet, loopt die DNS-wijziging buiten Hostinger om. In het account ligt nog een ongebruikt gratis-domein-tegoed.
+
+## Gerelateerd
+
+- [[Hermes Agent]]
+- [[Integratie-landschap]]
 - [[Kaders — wat nooit automatisch mag]]
 `,
   },

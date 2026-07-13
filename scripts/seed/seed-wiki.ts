@@ -40,10 +40,11 @@ const CANONIEKE_SUBMAPPEN: string[] = [
 /**
  * Canonieke paginatitels per map — uitsluitend voor de dekkingscheck aan het
  * eind (acceptatie-eis "alle canonieke titels gedekt"). Overgetypt uit
- * CONTEXT.md; komt neer op 36 pagina's + 6 mappen. Het T5-taakblad noemt
+ * CONTEXT.md; kwam neer op 36 pagina's + 6 mappen. Het T5-taakblad noemt
  * "37 pagina's", maar de brontabel in CONTEXT.md (en de drie content-packs
- * die er exact op aansluiten) tellen op tot 36 — deze check volgt de
- * brontabel, niet het losse getal in de taaktekst.
+ * die er exact op aansluiten) telden op tot 36 — deze check volgt de
+ * brontabel, niet het losse getal in de taaktekst. Sinds 2026-07-13 is
+ * "Hostinger VPS (Hermes-host)" (map Agents) toegevoegd → 37 pagina's.
  */
 const CANONIEKE_TITELS: Record<string, string[]> = {
   "(root)": [
@@ -89,7 +90,11 @@ const CANONIEKE_TITELS: Record<string, string[]> = {
     "CRM-afronding (gap-index)",
     "Kaders — wat nooit automatisch mag",
   ],
-  Agents: ["Hermes Agent", "Dottie (sessie-agent)"],
+  Agents: [
+    "Hermes Agent",
+    "Dottie (sessie-agent)",
+    "Hostinger VPS (Hermes-host)",
+  ],
 };
 
 const PAGINAS: WikiPagina[] = [
