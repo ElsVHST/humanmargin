@@ -16,7 +16,7 @@ Els's Hostinger-account host de VPS waarop **Hermes Agent** draait — de geplan
 | Docker-projecten | `hermes-agent-7zmf` (image `ghcr.io/hostinger/hvps-hermes-agent:latest`, containerpoort 4860, óók direct gepubliceerd op hostpoort 32768) en `traefik` (host-network, 80/443, HTTP→HTTPS, Let's Encrypt via http-challenge) |
 | Hermes-URL | `https://hermes-agent-7zmf.srv1819178.hstgr.cloud` (Traefik-route met TLS); login staat in de `.env` op de VPS — **nooit ergens vastleggen** |
 | Firewall | **géén** — er bestaat geen enkele firewall in het account en de VPS heeft geen firewall group (aandachtspunt, zie hieronder) |
-| Beveiliging | Monarx niet geïnstalleerd; geen SSH-keys via de API geregistreerd; root-wachtwoord op 2026-07-13 via hPanel gezet (`ct_set_rootpasswd`) |
+| Beveiliging | Monarx niet geïnstalleerd; geen SSH-keys via de API geregistreerd; root-wachtwoord op 2026-07-13 via hPanel gezet (`ct_set_rootpasswd`); SSH met root-wachtwoord geverifieerd (2026-07-13) — het wachtwoord heeft alleen Chris, per sessie aan hem vragen en **nooit vastleggen** |
 | Backups | automatische backups aanwezig (dagelijks-achtig ritme, restore ±30 min, locatie `node764-lt-bnk-2-pbs`); geen snapshot (`VPS_getSnapshotV1` → id 0) |
 | Abonnement | subscription `AzqN7tVOxtL4MnuR` (KVM 2): **$275,88/jaar (USD)**, auto-renew AAN, volgende afschrijving **2027-06-26**; betaalmethode: kaart (default) |
 | Domeinen | **humanmargin.eu staat NIET bij Hostinger** (NS `ns1/ns2.wpprovider.nl`, A `116.202.73.220` — WPProvider). In het account alleen een ongebruikt gratis-domein-tegoed (`pending_setup`) |
